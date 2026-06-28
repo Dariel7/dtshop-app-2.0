@@ -55,6 +55,18 @@ interface ParsedRow {
   rawCourier: string | null
 }
 
+// ── Helpers ───────────────────────────────────────────────────────────────────
+
+function safeDate(s: string | null | undefined): string | null {
+  if (!s) return null
+  try {
+    const d = new Date(s)
+    return isNaN(d.getTime()) ? null : d.toISOString()
+  } catch {
+    return null
+  }
+}
+
 // ── Leer Google Sheet con API Key (sheet público con link) ───────────────────
 
 async function fetchSheetRows(apiKey: string): Promise<{ headers: string[]; rows: string[][] }> {
@@ -253,9 +265,7 @@ async function procesarFila(
         ciudad:                     row.ciudad,
         provincia:                  row.provincia,
         notas:                      row.comentario,
-        ultima_actualizacion_sheet: row.ultimaActualizacion
-          ? new Date(row.ultimaActualizacion).toISOString()
-          : null,
+        ultima_actualizacion_sheet: safeDate(row.ultimaActualizacion),
       }).eq('id', pedidoExistente.id)
 
       return { accion: 'sin_cambio', pedidoNum: row.pedidoNum }
@@ -329,9 +339,7 @@ async function procesarFila(
         ciudad:          row.ciudad,
         provincia:       row.provincia,
         notas:           row.comentario,
-        ultima_actualizacion_sheet: row.ultimaActualizacion
-          ? new Date(row.ultimaActualizacion).toISOString()
-          : null,
+        ultima_actualizacion_sheet: safeDate(row.ultimaActualizacion),
       }).eq('id', pedidoId)
     }
 
@@ -366,9 +374,7 @@ async function procesarFila(
         pedido_num:    row.pedidoNum,
         es_testeo:     isTesteo,
         es_prueba_interna: isPruebaInterna,
-        ultima_actualizacion_sheet: row.ultimaActualizacion
-          ? new Date(row.ultimaActualizacion).toISOString()
-          : null,
+        ultima_actualizacion_sheet: safeDate(row.ultimaActualizacion),
       })
       .select('id')
       .single()
