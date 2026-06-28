@@ -1,14001 +1,2084 @@
 -- ════════════════════════════════════════════════════════
--- Migración de pedidos DT Shop — generado automáticamente
+-- Migración DT Shop — 594 pedidos
 -- ════════════════════════════════════════════════════════
 BEGIN;
 
--- ── Clientes ─────────────────────────────────────────
-CREATE TEMP TABLE _clientes_map (key text PRIMARY KEY, id uuid);
-
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Dariel Tejada', '+18496300294') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Dariel Tejada||+18496300294', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Félix larrion', '+18494591102') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Félix larrion||+18494591102', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Yowanda -', '+18094959187') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Yowanda -||+18094959187', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Joel villaman', '+14807575513') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Joel villaman||+14807575513', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Edward -', '+18495838302') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Edward -||+18495838302', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Josué Jimenez', '+18294953501') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Josué Jimenez||+18294953501', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Reymond Ledesma', '+18298384097') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Reymond Ledesma||+18298384097', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Francisco -', '+18298897861') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Francisco -||+18298897861', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Adriana -', '+18093527277') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Adriana -||+18093527277', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Maria Esther', '+18497512516') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Maria Esther||+18497512516', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Yasmiri -', '+18299845843') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Yasmiri -||+18299845843', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Stalyn -', '+18293122530') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Stalyn -||+18293122530', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Wascar -', '+18092199482') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Wascar -||+18092199482', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Luceliz -', '+18295567059') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Luceliz -||+18295567059', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Jose R', '+18098541232') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Jose R||+18098541232', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Melkys M. Novas F.', '+18492512909') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Melkys M. Novas F.||+18492512909', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Yadara gonzalez', '+18094743296') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Yadara gonzalez||+18094743296', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Eriana -', '+18097587606') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Eriana -||+18097587606', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Kilsis Gonzalez', '+18092248867') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Kilsis Gonzalez||+18092248867', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Vinicio gonzalez', '+18099182254') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Vinicio gonzalez||+18099182254', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Jose Reyes', '+18098528659') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Jose Reyes||+18098528659', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Alberto aquino', '+18294234620') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Alberto aquino||+18294234620', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Cristal -', '+18297306640') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Cristal -||+18297306640', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Martha Santana', '+18097560758') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Martha Santana||+18097560758', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Noemí Fani Ladoo FÍGARO de Devers', '+18296328144') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Noemí Fani Ladoo FÍGARO de Devers||+18296328144', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Noemí Ladoo', '+18296328144') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Noemí Ladoo||+18296328144', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Yasmín reyes', '+18094952270') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Yasmín reyes||+18094952270', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Fidias Mateo', '+18296195465') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Fidias Mateo||+18296195465', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Támara Rome', '+18097699414') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Támara Rome||+18097699414', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Manuel E Sánchez Díaz', '+18299083824') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Manuel E Sánchez Díaz||+18299083824', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Dolores Luna', '+18293528523') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Dolores Luna||+18293528523', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Anyelani franco', '+18297761142') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Anyelani franco||+18297761142', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Kailis inoska', '+18094986812') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Kailis inoska||+18094986812', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Ramón -', '+18096938564') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Ramón -||+18096938564', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Rafael Cuello', '+18295709806') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Rafael Cuello||+18295709806', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Hirquin -', '+18098821680') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Hirquin -||+18098821680', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Alexis Ramírez', '+18296806097') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Alexis Ramírez||+18296806097', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Danilo de los santos', '+18298414298') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Danilo de los santos||+18298414298', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Kelvin -', '+18292801375') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Kelvin -||+18292801375', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Roberto -', '+18493501547') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Roberto -||+18493501547', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Antonio Melican', '+18495350922') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Antonio Melican||+18495350922', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Jose Farias', '+18298701111') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Jose Farias||+18298701111', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Cheferson -', '+18297618450') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Cheferson -||+18297618450', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Luis -', '+18098178550') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Luis -||+18098178550', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Rolando Calderon', '+18095336510') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Rolando Calderon||+18095336510', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Alfredo mariot', '+18492203518') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Alfredo mariot||+18492203518', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('eduard taveras', '+18296390416') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('eduard taveras||+18296390416', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Dindo -', '+18097655438') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Dindo -||+18097655438', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Noelia -', '+18296553562') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Noelia -||+18296553562', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Daniel reyes', '+18495764163') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Daniel reyes||+18495764163', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Dafi Guzmán HerediaelE', '+18097591177') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Dafi Guzmán HerediaelE||+18097591177', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Phito -', '+18493882716') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Phito -||+18493882716', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Isidora abreu ventura', '+14233135467') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Isidora abreu ventura||+14233135467', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Yeremy Perez', '+18093236866') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Yeremy Perez||+18093236866', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Carlos -', '+18094381241') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Carlos -||+18094381241', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Joel santos', '+18294281465') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Joel santos||+18294281465', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Elizabeth -', '+18298771983') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Elizabeth -||+18298771983', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Uilton Rodríguez', '+18099076173') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Uilton Rodríguez||+18099076173', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Juan Alberto Muñoz Duarte', '+18297564151') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Juan Alberto Muñoz Duarte||+18297564151', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Diego Henríquez', '18294290249') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Diego Henríquez||18294290249', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Summer -', '18094327705') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Summer -||18094327705', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Wilfredo rafael', '18493519486') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Wilfredo rafael||18493519486', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Moreno -', '18299252292') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Moreno -||18299252292', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Félix Santana', '18096690797') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Félix Santana||18096690797', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Roberto -', '18093506933') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Roberto -||18093506933', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('caridad gutierrez', '18099620097') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('caridad gutierrez||18099620097', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Jose -', '18097864429') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Jose -||18097864429', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Juan Antonio De La Cruz Rosario', '18293945204') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Juan Antonio De La Cruz Rosario||18293945204', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Marcet -', '18096605900') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Marcet -||18096605900', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Mike lombardini', '18296784731') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Mike lombardini||18296784731', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Antonio -', '18298391017') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Antonio -||18298391017', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Toni -', '18093527370') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Toni -||18093527370', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Aury Moralez de la rosa', '18292280113') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Aury Moralez de la rosa||18292280113', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Kelvin Santana', '18493305609') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Kelvin Santana||18493305609', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Andy de Jesús peña', '18096547027') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Andy de Jesús peña||18096547027', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Rosa Mateo', '18099234020') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Rosa Mateo||18099234020', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Osvaldo Cross', '18293436439') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Osvaldo Cross||18293436439', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Victor -', '18294133206') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Victor -||18294133206', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Diefet Yambati', '18294793809') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Diefet Yambati||18294793809', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Lidia Pacheco', '18292130808') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Lidia Pacheco||18292130808', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Manuel -', '18099147713') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Manuel -||18099147713', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Mirtha Crisóstomo', '18098633132') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Mirtha Crisóstomo||18098633132', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Yoryi jose', '18295516193') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Yoryi jose||18295516193', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Cesar peña Z', '18098432424') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Cesar peña Z||18098432424', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Danilo Monegro', '18494531910') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Danilo Monegro||18494531910', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Domingo Melenciano De La Cruz', '18092600999') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Domingo Melenciano De La Cruz||18092600999', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Estefany -', '18099622392') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Estefany -||18099622392', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Doohan -', '18298374740') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Doohan -||18298374740', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Pedro Romero', '18097492127') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Pedro Romero||18097492127', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Robinson mata', '18099627510') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Robinson mata||18099627510', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Carmen Balbuena', '18296754307') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Carmen Balbuena||18296754307', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Luis Manuel', '18494275022') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Luis Manuel||18494275022', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Jose n', '18096692780') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Jose n||18096692780', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Carolin -', '18293341414') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Carolin -||18293341414', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Alejandro -', '18492468802') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Alejandro -||18492468802', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Cocina -', '18495270722') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Cocina -||18495270722', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Ronald Tejeda', '18298989177') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Ronald Tejeda||18298989177', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('VALENTINA  MERCEDES b -', '18496550734') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('VALENTINA  MERCEDES b -||18496550734', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Manuela -', '18098416286') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Manuela -||18098416286', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Andrés Contreras', '18096276877') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Andrés Contreras||18096276877', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Mirna ortiz', '18092238154') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Mirna ortiz||18092238154', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Teresa Sánchez', '18096677745') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Teresa Sánchez||18096677745', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Clásico flow', '18094882949') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Clásico flow||18094882949', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Tomas -', '18092566799') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Tomas -||18092566799', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Emil Liriano', '18494781147') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Emil Liriano||18494781147', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('raphael castillo', '18094616236') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('raphael castillo||18094616236', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Raphael castillo', '18094616236') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Raphael castillo||18094616236', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('joseph  prophil -', '18092078178') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('joseph  prophil -||18092078178', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Pacifico ayres', '18493520211') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Pacifico ayres||18493520211', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Aquilina.alcequiez. -', '18098564714') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Aquilina.alcequiez. -||18098564714', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Aquilina Alcequiez', '18098564714') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Aquilina Alcequiez||18098564714', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Rolando rosado', '18093908874') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Rolando rosado||18093908874', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Wilbert Geffrard', '18093767066') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Wilbert Geffrard||18093767066', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Dolores acosta s', '18094903973') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Dolores acosta s||18094903973', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Johairis -', '18297991120') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Johairis -||18297991120', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Julio -', '18292735426') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Julio -||18292735426', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Hugo Badia', '18092232991') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Hugo Badia||18092232991', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('ANA TINEO', '17188261828') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('ANA TINEO||17188261828', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Wascarnicolaspolancogarcia -', '18296750278') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Wascarnicolaspolancogarcia -||18296750278', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Nicola de la cruz', '18092823749') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Nicola de la cruz||18092823749', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Yvrose gedeus gedeusyvrose21@gmail.com', '18494409968') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Yvrose gedeus gedeusyvrose21@gmail.com||18494409968', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Francisco -', '18093605881') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Francisco -||18093605881', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Daniel duversaint', '18297921946') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Daniel duversaint||18297921946', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Alfredo Belén', '18096500077') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Alfredo Belén||18096500077', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Jeisson Gabriel', '18296909898') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Jeisson Gabriel||18296909898', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Ejemplo -', '18496450115') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Ejemplo -||18496450115', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Bernardo Calletano', '18299121199') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Bernardo Calletano||18299121199', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Leonor -', '18295091551') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Leonor -||18295091551', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Luis Enrique Sanchez Suarez', '18297685662') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Luis Enrique Sanchez Suarez||18297685662', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Eladio Díaz', '12155326857') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Eladio Díaz||12155326857', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Ederson frias de los santos', '18299227490') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Ederson frias de los santos||18299227490', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Leonela peña', '18096690450') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Leonela peña||18096690450', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Enrique -', '18299581947') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Enrique -||18299581947', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('jose -', '18099861297') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('jose -||18099861297', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Luís manual Santana', '18297079922') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Luís manual Santana||18297079922', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Josué -', '18493522166') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Josué -||18493522166', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Juan lantigua', '18297228373') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Juan lantigua||18297228373', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Francis soler', '18093714992') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Francis soler||18093714992', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Isis bautista', '18092247111') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Isis bautista||18092247111', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Doneisy Bertre', '18097579949') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Doneisy Bertre||18097579949', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Wilson Luciano adames', '18294390905') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Wilson Luciano adames||18294390905', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('JUANCARLOS -', '18292748863') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('JUANCARLOS -||18292748863', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Guadalupe Cruz Mota', '18296766477') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Guadalupe Cruz Mota||18296766477', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Jose -', '18293280170') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Jose -||18293280170', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Nancy santana', '18293383837') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Nancy santana||18293383837', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Ángel Polanco', '18293691378') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Ángel Polanco||18293691378', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Rafael nova', '18297098079') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Rafael nova||18297098079', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Wander García Santana', '18293885300') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Wander García Santana||18293885300', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Aracelis Altagracia', '18299079203') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Aracelis Altagracia||18299079203', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Yudy silverio', '18297073361') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Yudy silverio||18297073361', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Ania Sugey', '18097741525') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Ania Sugey||18097741525', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Nancy Santana', '18293383837') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Nancy Santana||18293383837', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Jose cruz809 223 1455', '18092231455') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Jose cruz809 223 1455||18092231455', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Angela Del Rosario Florian Trinidad', '18298627648') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Angela Del Rosario Florian Trinidad||18298627648', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('David vialet', '18295268109') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('David vialet||18295268109', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Octavio meran', '18099163968') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Octavio meran||18099163968', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Mirian de leon', '18098053532') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Mirian de leon||18098053532', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Carlos Jose', '18296241810') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Carlos Jose||18296241810', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Amable frías', '18492710145') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Amable frías||18492710145', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Wenceslao de la cruz de León', '18299019693') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Wenceslao de la cruz de León||18299019693', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Joel villaman', '14807575513') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Joel villaman||14807575513', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Francisco Dominguez', '18099090997') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Francisco Dominguez||18099090997', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Josefina -', '18296296484') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Josefina -||18296296484', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Ronald -', '18096097448') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Ronald -||18096097448', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Elizabeth -', '18298771983') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Elizabeth -||18298771983', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Sujey pina nuñez', '17063068358') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Sujey pina nuñez||17063068358', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Alan Checo.', '18298682748') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Alan Checo.||18298682748', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Juan Ramírez', '18498168953') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Juan Ramírez||18498168953', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Rafael Díaz Filpo', '18094898149') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Rafael Díaz Filpo||18094898149', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Elvio -', '18096271100') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Elvio -||18096271100', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Gerardo -', '18293406323') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Gerardo -||18293406323', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Maria -', '18098051046') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Maria -||18098051046', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('audy -', '18096502079') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('audy -||18096502079', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Ezequiel soriano', '18494565656') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Ezequiel soriano||18494565656', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Francisco Mora Valenzuela', '18097106150') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Francisco Mora Valenzuela||18097106150', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Natanael javier', '18094497262') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Natanael javier||18094497262', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Daniel Nuñez', '18097121629') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Daniel Nuñez||18097121629', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('José Pérez', '18492590729') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('José Pérez||18492590729', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Michael Aybar', '18095075448') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Michael Aybar||18095075448', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Ingrid Ramírez', '18494760789') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Ingrid Ramírez||18494760789', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Pedro Reyes', '18095193436') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Pedro Reyes||18095193436', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Kirsy  de la cruz -', '18092039189') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Kirsy  de la cruz -||18092039189', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Franck melvin', '18294686298') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Franck melvin||18294686298', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Maria -', '18092325330') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Maria -||18092325330', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Juan Antonio', '18093947668') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Juan Antonio||18093947668', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Estarlin Rodríguez bido', '18296476163') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Estarlin Rodríguez bido||18296476163', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Andrés encarnación Soriano', '18298495030') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Andrés encarnación Soriano||18298495030', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Damari uben zapata', '18096943823') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Damari uben zapata||18096943823', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Caren de Jesús', '18292625101') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Caren de Jesús||18292625101', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Lucy -', '18299887033') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Lucy -||18299887033', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Mario mena', '18494495098') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Mario mena||18494495098', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Wilton -', '18293755678') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Wilton -||18293755678', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Edward Montero', '18296060289') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Edward Montero||18296060289', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Paulina perez', '18292189286') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Paulina perez||18292189286', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Carmen Elizabeth Peña Santos', '18099957037') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Carmen Elizabeth Peña Santos||18099957037', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Adelso -', '18093525711') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Adelso -||18093525711', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Ana Francisco', '18095072372') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Ana Francisco||18095072372', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('María Alvarez', '18298867131') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('María Alvarez||18298867131', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Sonia santos', '18297595637') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Sonia santos||18297595637', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Aracelis Rosario', '18296988062') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Aracelis Rosario||18296988062', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Esteban Vasquez', '18293368714') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Esteban Vasquez||18293368714', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Elías -', '18298478661') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Elías -||18298478661', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Alexandra de los Santos', '18094543293') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Alexandra de los Santos||18094543293', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Diogenes del rosario', '18092090735') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Diogenes del rosario||18092090735', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Richard Freites', '18296339784') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Richard Freites||18296339784', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Estela acevedo', '18296515268') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Estela acevedo||18296515268', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Yrene Beaubrun', '18097754364') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Yrene Beaubrun||18097754364', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Wilson Rodríguez', '18296050915') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Wilson Rodríguez||18296050915', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Victor sanchez', '18093913962') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Victor sanchez||18093913962', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Guarionex Acosta', '18292650497') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Guarionex Acosta||18292650497', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Hilario -', '18096134815') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Hilario -||18096134815', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Jose -', '18495819167') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Jose -||18495819167', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Ramona -', '18297668764') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Ramona -||18297668764', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Aracelis gonzales de perez', '18298877337') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Aracelis gonzales de perez||18298877337', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Jesús Lantigua', '18092242915') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Jesús Lantigua||18092242915', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Julio perez', '18292123367') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Julio perez||18292123367', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Yoeli de la rosa', '18498039854') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Yoeli de la rosa||18498039854', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Feliciano peralta', '18294216705') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Feliciano peralta||18294216705', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Socrates Morel', '18299148855') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Socrates Morel||18299148855', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Benancia santos', '18298908451') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Benancia santos||18298908451', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Gerson Escanio matos', '18093925008') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Gerson Escanio matos||18093925008', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Patricia Inoa', '18097141717') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Patricia Inoa||18097141717', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Yanirys francois', '18292124186') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Yanirys francois||18292124186', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Dilcia -', '18294527349') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Dilcia -||18294527349', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Yokasta carrion', '18299824907') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Yokasta carrion||18299824907', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Yessica Eridania', '18297569280') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Yessica Eridania||18297569280', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Yannely -', '18297300620') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Yannely -||18297300620', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Zuleika altagracia Santana casado', '18295085429') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Zuleika altagracia Santana casado||18295085429', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Joel Joseph', '18293514660') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Joel Joseph||18293514660', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Onasi -', '18097477468') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Onasi -||18097477468', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('José frias', '18096670441') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('José frias||18096670441', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Jesus -', '18496589066') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Jesus -||18496589066', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Yomery -', '18493962388') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Yomery -||18493962388', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Martin López', '18099243141') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Martin López||18099243141', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Altagracia Hidalgo', '18293421937') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Altagracia Hidalgo||18293421937', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Ana -', '18093033786') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Ana -||18093033786', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('La gorda rd', '18298167300') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('La gorda rd||18298167300', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Daniel perdomo', '18295567809') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Daniel perdomo||18295567809', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Yenli Blue', '18097199920') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Yenli Blue||18097199920', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Alejandro Fermín', '18295631206') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Alejandro Fermín||18295631206', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Nelson Martínez', '18295505583') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Nelson Martínez||18295505583', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Ysabel  Contreras -', '18095197969') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Ysabel  Contreras -||18095197969', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Junior Valentín', '18092090404') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Junior Valentín||18092090404', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Ana -', '18099908003') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Ana -||18099908003', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Yoel Mejía', '18097071794') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Yoel Mejía||18097071794', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Ada almanzar', '14074337209') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Ada almanzar||14074337209', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Estela Mendez', '393318230557') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Estela Mendez||393318230557', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Yudelky paulino', '18097717191') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Yudelky paulino||18097717191', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Carolina -', '18295546408') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Carolina -||18295546408', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Domingo Alexander vanterpool', '18098767442') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Domingo Alexander vanterpool||18098767442', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Gustavo cid', '18093507553') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Gustavo cid||18093507553', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Francis -', '18096727400') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Francis -||18096727400', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Andres Capellan', '18297907362') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Andres Capellan||18297907362', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Martha Santana', '18097560758') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Martha Santana||18097560758', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Freddy baez', '18096186841') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Freddy baez||18096186841', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Nector Rosario', '18297061552') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Nector Rosario||18297061552', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('José Alberto Santos', '18092507891') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('José Alberto Santos||18092507891', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Olga Lidia', '18097869410') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Olga Lidia||18097869410', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Claudia rosario diaz', '18493801028') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Claudia rosario diaz||18493801028', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Junior reyes', '18494696562') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Junior reyes||18494696562', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Yajaira Robles', '18492489978') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Yajaira Robles||18492489978', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Yesenia  pinales -', '18297147901') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Yesenia  pinales -||18297147901', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Juan -', '18092081135') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Juan -||18092081135', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Odanel Zabala', '18295363411') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Odanel Zabala||18295363411', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Jesús castillo', '18094866174') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Jesús castillo||18094866174', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Jaice ruiz', '18494016385') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Jaice ruiz||18494016385', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Manuela cespedes', '18293250923') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Manuela cespedes||18293250923', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Wilfrido -', '18292919115') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Wilfrido -||18292919115', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Cristian cuevas', '18493415786') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Cristian cuevas||18493415786', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Yuby Ureña', '18296164753') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Yuby Ureña||18296164753', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Jon -', '18295850251') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Jon -||18295850251', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Leonardo Rojas', '18099432899') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Leonardo Rojas||18099432899', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Ada Almánzar', '14074337209') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Ada Almánzar||14074337209', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Julio M Bonnelly T', '18299865999') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Julio M Bonnelly T||18299865999', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Fausto -', '18094492880') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Fausto -||18094492880', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Yasmin genao', '18299326650') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Yasmin genao||18299326650', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Wilkin Pujols Mendez', '18297972567') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Wilkin Pujols Mendez||18297972567', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Adalberto polanco', '18299783859') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Adalberto polanco||18299783859', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Carlos Agramonte', '18494480704') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Carlos Agramonte||18494480704', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Francisco Alberto paredes', '18496578337') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Francisco Alberto paredes||18496578337', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Deybi Ramirez', '18296367726') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Deybi Ramirez||18296367726', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Yamilex concepcion', '18097208730') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Yamilex concepcion||18097208730', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Rudy de la cruz', '18092817202') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Rudy de la cruz||18092817202', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Faustin François', '18098904886') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Faustin François||18098904886', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('José Vargas', '18096641095') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('José Vargas||18096641095', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Argenis Rosado', '18293488010') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Argenis Rosado||18293488010', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Johana -', '18293580236') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Johana -||18293580236', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Alphi Ruiz', '18098189221') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Alphi Ruiz||18098189221', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Mauricio de jesus', '18095193725') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Mauricio de jesus||18095193725', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('José Manuel Bichara', '18098851213') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('José Manuel Bichara||18098851213', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Claudia Soto', '18298015429') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Claudia Soto||18298015429', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Helen -', '18093999327') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Helen -||18093999327', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Victor Alcantara', '18298288801') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Victor Alcantara||18298288801', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Carlos -', '18097055896') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Carlos -||18097055896', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Jimena foxan', '18293599082') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Jimena foxan||18293599082', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Edinson Ureña', '18297890139') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Edinson Ureña||18297890139', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('cesar martinez', '18092129434') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('cesar martinez||18092129434', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Franklin de lima', '18299318456') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Franklin de lima||18299318456', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Miguel Angel garcias', '18097585780') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Miguel Angel garcias||18097585780', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Nicolino Loche', '18493608700') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Nicolino Loche||18493608700', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Selenia -', '18297985334') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Selenia -||18297985334', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Juan marte', '18295083273') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Juan marte||18295083273', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Jorge -', '18494705098') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Jorge -||18494705098', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Poli -', '18494593629') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Poli -||18494593629', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Miguel angel frías Cruz', '18094155830') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Miguel angel frías Cruz||18094155830', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('La Para De La', '18297731495') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('La Para De La||18297731495', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Rafael pajero Beato', '18493900746') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Rafael pajero Beato||18493900746', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Kelvin Alcántara', '18296509070') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Kelvin Alcántara||18296509070', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('José Antonio Acosta Jiménez', '18296412997') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('José Antonio Acosta Jiménez||18296412997', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('HECTOR MONTERO', '18099868600') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('HECTOR MONTERO||18099868600', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Dominica Rosario', '18093359154') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Dominica Rosario||18093359154', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Dione Cubilete Díaz', '18498848295') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Dione Cubilete Díaz||18498848295', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Joan pilier', '18292848411') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Joan pilier||18292848411', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Juan Antonio Mejia Ruiz', '18094478537') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Juan Antonio Mejia Ruiz||18094478537', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('George Rivas', '18293200303') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('George Rivas||18293200303', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Uver -', '18099563946') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Uver -||18099563946', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Cecilin maria', '18493709428') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Cecilin maria||18493709428', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Dariel Tejada', '18496300294') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Dariel Tejada||18496300294', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Robert -', '13479610412') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Robert -||13479610412', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Yoly Reyes', '18099210560') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Yoly Reyes||18099210560', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Joanna Martínez', '18097131380') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Joanna Martínez||18097131380', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Leonel de la cruz', '18295538987') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Leonel de la cruz||18295538987', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('ARISMENDY López', '18092995266') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('ARISMENDY López||18092995266', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Wislet Carismene', '18296373315') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Wislet Carismene||18296373315', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Marina cueva', '18294100274') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Marina cueva||18294100274', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Prueba -', '18496300294') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Prueba -||18496300294', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Osiris sanchez', '18298774824') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Osiris sanchez||18298774824', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Ambiorys -', '18099811378') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Ambiorys -||18099811378', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Jorge Luis Jorge cabrera', '18093573814') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Jorge Luis Jorge cabrera||18093573814', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Nelson Fernández', '18298699028') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Nelson Fernández||18298699028', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Ana g Duluc', '18092563750') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Ana g Duluc||18092563750', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Sócrates  ramirez -', '18296311389') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Sócrates  ramirez -||18296311389', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Juan Carlos Zamora', '18092640135') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Juan Carlos Zamora||18092640135', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Blas Abreu', '18097058923') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Blas Abreu||18097058923', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Kelele Ninja', '12155432043') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Kelele Ninja||12155432043', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Enyel Diaz', '18492677744') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Enyel Diaz||18492677744', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Wilkin Sanche', '18294616029') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Wilkin Sanche||18294616029', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Amer -', '18293187523') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Amer -||18293187523', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Robert De paula', '18098353450') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Robert De paula||18098353450', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Jefferson Baptiste', '18295179182') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Jefferson Baptiste||18295179182', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Faury -', '18294570284') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Faury -||18294570284', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Massiel Mercedes', '18494260991') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Massiel Mercedes||18494260991', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Daniel tejada', '18296618503') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Daniel tejada||18296618503', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Daneivis Lissett', '18095162284') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Daneivis Lissett||18095162284', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Orlando -', '18495859023') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Orlando -||18495859023', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Suleny Cabrera', '18493547090') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Suleny Cabrera||18493547090', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Lisane -', '18099198355') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Lisane -||18099198355', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Mafeo12 -', '18293328024') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Mafeo12 -||18293328024', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Francisco -', '18097621908') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Francisco -||18097621908', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Yunior -', '18493931822') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Yunior -||18493931822', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Dahiana Reyes', '18294375038') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Dahiana Reyes||18294375038', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Papito almanzar', '18293121305') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Papito almanzar||18293121305', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Madeline Etienne', '18292963172') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Madeline Etienne||18292963172', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Rita -', '18293425814') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Rita -||18293425814', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Ado -', '18299218283') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Ado -||18299218283', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Luis reyes', '18097088918') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Luis reyes||18097088918', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Briank -', '18095132845') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Briank -||18095132845', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Juleisi piña moreno', '18493934011') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Juleisi piña moreno||18493934011', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Edwin ambiori', '18298274138') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Edwin ambiori||18298274138', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Nelvi Felix', '18492753234') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Nelvi Felix||18492753234', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Bronw -', '18299933261') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Bronw -||18299933261', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Banesa Vargas', '18293011999') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Banesa Vargas||18293011999', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Sarah Gonzalez', '18293421155') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Sarah Gonzalez||18293421155', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Anne rose', '18099176522') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Anne rose||18099176522', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Arawak Gonzalez', '18098415781') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Arawak Gonzalez||18098415781', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Rose belon', '18099094172') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Rose belon||18099094172', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Felicia Reyes', '18099235058') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Felicia Reyes||18099235058', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Felícita -', '18295862696') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Felícita -||18295862696', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Ana -', '18298028521') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Ana -||18298028521', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Aney Diaz rojas', '18292977552') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Aney Diaz rojas||18292977552', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Yvelisse Almanzar', '18093109330') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Yvelisse Almanzar||18093109330', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Carmen de la cruz', '18097579441') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Carmen de la cruz||18097579441', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Yajaira -', '18493825212') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Yajaira -||18493825212', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Nerys Martinez', '18097060121') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Nerys Martinez||18097060121', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Miguelina Fernández', '18298637370') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Miguelina Fernández||18298637370', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Lissette Ubiera Rivera', '18098766087') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Lissette Ubiera Rivera||18098766087', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Leidy -', '18292137363') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Leidy -||18292137363', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Carmen de los santos', '18498896129') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Carmen de los santos||18498896129', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Bladimir -', '18497974636') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Bladimir -||18497974636', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Miguel de peña', '18098018929') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Miguel de peña||18098018929', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Támara Rome', '18097699414') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Támara Rome||18097699414', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Yoselyn -', '18093509463') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Yoselyn -||18093509463', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Luis Rosario', '18096971722') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Luis Rosario||18096971722', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Ana belkys berroa payano', '18498796478') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Ana belkys berroa payano||18498796478', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Noelia suero', '18099831423') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Noelia suero||18099831423', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Morena Stephan', '18297236177') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Morena Stephan||18297236177', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Jhonny peralta santos', '18098274553') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Jhonny peralta santos||18098274553', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Deivi -', '18292801583') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Deivi -||18292801583', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Francisco Méndez', '18299227346') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Francisco Méndez||18299227346', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Massiel -', '18099160837') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Massiel -||18099160837', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Yenny -', '18492098954') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Yenny -||18492098954', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Mary Laura', '18494641949') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Mary Laura||18494641949', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Daysi Medina', '18292579997') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Daysi Medina||18292579997', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Dayana -', '18299898171') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Dayana -||18299898171', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Hugo paula', '18095430732') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Hugo paula||18095430732', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Sujey Martínez', '18092999286') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Sujey Martínez||18092999286', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Manolo Divalon', '18093967246') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Manolo Divalon||18093967246', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Yaquelin  salcedo -', '18292627281') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Yaquelin  salcedo -||18292627281', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Nilda  Calderon -', '18293955778') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Nilda  Calderon -||18293955778', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Héctor Lebron', '18094445203') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Héctor Lebron||18094445203', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Rosa moris', '18099733321') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Rosa moris||18099733321', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Rafael -', '18293879062') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Rafael -||18293879062', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Ana Sarita', '18295681486') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Ana Sarita||18295681486', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Ruth Suero', '18498769480') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Ruth Suero||18498769480', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('José esteves', '18292229192') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('José esteves||18292229192', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Lisbeth -', '18295897092') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Lisbeth -||18295897092', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Celia Morales', '18297417289') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Celia Morales||18297417289', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Mayi -', '18092659212') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Mayi -||18092659212', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Ana medina', '18494464960') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Ana medina||18494464960', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('José augusto nuñez', '18095139156') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('José augusto nuñez||18095139156', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Luisana -', '18492804533') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Luisana -||18492804533', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Ana Contreras', '18098475258') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Ana Contreras||18098475258', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('David Corniel', '18298629661') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('David Corniel||18298629661', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Carlos jimenez', '8098474966') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Carlos jimenez||8098474966', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Michel Jeff', '8492437530') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Michel Jeff||8492437530', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Ana rosario', '8294561625') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Ana rosario||8294561625', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Miguel De Peña Antonio', '8098018929') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Miguel De Peña Antonio||8098018929', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Woolendele -', '8097752138') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Woolendele -||8097752138', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Yajaira -', '8299738278') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Yajaira -||8299738278', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Yulys marquez', '8299873084') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Yulys marquez||8299873084', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Angélica María frias', '8293904586') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Angélica María frias||8293904586', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Jose lopez', '8297647180') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Jose lopez||8297647180', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Maribel Tejeda', '8493762434') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Maribel Tejeda||8493762434', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Estefany rosario', '8299371166') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Estefany rosario||8299371166', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Magdelyn  Sánchez -', '8493300335') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Magdelyn  Sánchez -||8493300335', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Katherine -', '8495771314') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Katherine -||8495771314', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Grey -', '8299329761') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Grey -||8299329761', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Maryest Nuñez', '8496525163') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Maryest Nuñez||8496525163', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Solanyi díaz', '8096675356') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Solanyi díaz||8096675356', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Evelyn -', '8099522126') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Evelyn -||8099522126', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Ambar Castro', '8096761626') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Ambar Castro||8096761626', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Natalie Bonifacio', '8296602823') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Natalie Bonifacio||8296602823', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Danerlly Encarnacion', '8294623584') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Danerlly Encarnacion||8294623584', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Steisy Pimentel', '8097744652') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Steisy Pimentel||8097744652', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Yasury Picon feliz', '8292337202') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Yasury Picon feliz||8292337202', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Solange santana', '8298851510') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Solange santana||8298851510', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Lívida -', '8097044919') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Lívida -||8097044919', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Gisselle -', '8494381109') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Gisselle -||8494381109', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Elina sánchez', '8097828894') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Elina sánchez||8097828894', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Carolina -', '8298205364') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Carolina -||8298205364', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Fernando Tiquitik', '8095562341') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Fernando Tiquitik||8095562341', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Alexandra Rodriguez', '8292590343') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Alexandra Rodriguez||8292590343', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Susan Robert', '8493535301') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Susan Robert||8493535301', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Biannely -', '8492640096') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Biannely -||8492640096', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Maria Paulina Rodriguez', '8297946895') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Maria Paulina Rodriguez||8297946895', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Rosa Morales', '8099780805') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Rosa Morales||8099780805', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Gomez -', '8097092008') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Gomez -||8097092008', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Yandelson -', '8296503796') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Yandelson -||8296503796', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Wanda -', '8297564439') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Wanda -||8297564439', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Roberta Almonte Rodriguez', '8295709600') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Roberta Almonte Rodriguez||8295709600', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Osmeldi -', '8097084334') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Osmeldi -||8097084334', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Dasca Joseph', '8296183104') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Dasca Joseph||8296183104', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Maria -', '8295989358') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Maria -||8295989358', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Katherine Romero', '8294828815') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Katherine Romero||8294828815', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Lisseth -', '8097654627') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Lisseth -||8097654627', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Dilenia -', '8295487779') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Dilenia -||8295487779', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Ashlyt vanessa', '8096975969') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Ashlyt vanessa||8096975969', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Yeleini Pujols', '8099319691') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Yeleini Pujols||8099319691', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Claudia Rodríguez', '8098277992') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Claudia Rodríguez||8098277992', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Katerin Gomez', '8494652204') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Katerin Gomez||8494652204', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Noemi -', '8292332100') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Noemi -||8292332100', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Jessica -', '8492074977') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Jessica -||8492074977', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('María Teresa Perez', '8493773063') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('María Teresa Perez||8493773063', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Prieba -', '8496300294') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Prieba -||8496300294', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Luisa Sterling', '8295347586') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Luisa Sterling||8295347586', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Magdelyn Sánchez', '8493300335') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Magdelyn Sánchez||8493300335', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Winton -', '8296198086') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Winton -||8296198086', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Rubens Sanchez', '8498822785') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Rubens Sanchez||8498822785', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Ingrid Ramírez', '8494760789') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Ingrid Ramírez||8494760789', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Yaritza Gomez', '8099621266') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Yaritza Gomez||8099621266', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Isa -', '8098630590') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Isa -||8098630590', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Wendely Díaz', '8093438667') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Wendely Díaz||8093438667', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Nayi torres', '8483651595') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Nayi torres||8483651595', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Wanda ESMERLIN', '8098270453') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Wanda ESMERLIN||8098270453', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Luis Martinez', '8294481626') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Luis Martinez||8294481626', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Magaly guzman', '8493586508') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Magaly guzman||8493586508', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Kenia Berenice', '8294652349') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Kenia Berenice||8294652349', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Efrain Díaz', '7874108976') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Efrain Díaz||7874108976', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Zuleyky Guzmán', '8492495911') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Zuleyky Guzmán||8492495911', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Erick Pérez', '8296935857') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Erick Pérez||8296935857', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Valentina castro', '8297120871') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Valentina castro||8297120871', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('María Santana', '8096775094') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('María Santana||8096775094', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Liliana viola', '8099946210') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Liliana viola||8099946210', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Angela Del Rosario', '8298627648') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Angela Del Rosario||8298627648', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Anna -', '8297874975') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Anna -||8297874975', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Massiel -', '8493606212') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Massiel -||8493606212', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Kenia -', '8495425353') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Kenia -||8495425353', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Deyanira -', '2039421948') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Deyanira -||2039421948', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Marvelin Ovalle Guzmán', '8297514060') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Marvelin Ovalle Guzmán||8297514060', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Janice Vasquez', '8492030626') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Janice Vasquez||8492030626', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Julio Vallejo', '8092324975') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Julio Vallejo||8092324975', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Nelson Mercedes', '8098415123') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Nelson Mercedes||8098415123', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Isaac Ogando Rojas', '8092308451') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Isaac Ogando Rojas||8092308451', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Deyani Santana', '8099099352') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Deyani Santana||8099099352', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Carlos Ferreras', '8092702369') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Carlos Ferreras||8092702369', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Jennifer Jean Louis', '8293549511') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Jennifer Jean Louis||8293549511', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Julio Gómez', '8297626778') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Julio Gómez||8297626778', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Luis moises vanderhorst García', '8098674587') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Luis moises vanderhorst García||8098674587', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Manuela Gómez', '8297880131') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Manuela Gómez||8297880131', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Ignaqui Estevez', '8092237592') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Ignaqui Estevez||8092237592', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Nayeli Mora', '8496523069') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Nayeli Mora||8496523069', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Genesis Mejía', '8295809754') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Genesis Mejía||8295809754', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Yesenia Hernández', '8297561981') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Yesenia Hernández||8297561981', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Sires y encarnacion jaquez', '8092080883') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Sires y encarnacion jaquez||8092080883', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Robeli morel', '8296374877') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Robeli morel||8296374877', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Maria del pilar hernandez', '8493527346') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Maria del pilar hernandez||8493527346', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Sheila Maria Ciscal Almaguer', '8495818159') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Sheila Maria Ciscal Almaguer||8495818159', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('francis rosario', '8093033305') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('francis rosario||8093033305', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Arlene Faneyte', '8092584145') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Arlene Faneyte||8092584145', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Altagracia De Pimentel', '8298755544') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Altagracia De Pimentel||8298755544', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Wismehylin geronimo', '8495297930') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Wismehylin geronimo||8495297930', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Samira santana', '8096091142') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Samira santana||8096091142', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('𝑀𝒶𝓇𝓎 -', '8296642030') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('𝑀𝒶𝓇𝓎 -||8296642030', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Miguel Angel Domínguez', '8298852219') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Miguel Angel Domínguez||8298852219', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Anabel -', '8098734510') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Anabel -||8098734510', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Adilca -', '8293034232') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Adilca -||8293034232', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Rosa miguelina', '8292082581') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Rosa miguelina||8292082581', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('AzLIM MAICA', '8292974315') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('AzLIM MAICA||8292974315', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Manuela -', '8292603526') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Manuela -||8292603526', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Rachel -', '8094601929') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Rachel -||8094601929', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Katherine Sánchez', '8096379236') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Katherine Sánchez||8096379236', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Dinelys -', '8295639307') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Dinelys -||8295639307', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Dessire Taveras', '8492624904') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Dessire Taveras||8492624904', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Maricela cruz', '8299801716') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Maricela cruz||8299801716', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Prueba -', '8496300294') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Prueba -||8496300294', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Maria orquidea franco', '8293362430') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Maria orquidea franco||8293362430', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Madelyn carela', '8292203816') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Madelyn carela||8292203816', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('JoséFrancisco -', '8299227346') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('JoséFrancisco -||8299227346', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Ebony Rivera severino', '8492453912') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Ebony Rivera severino||8492453912', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Yuniffer Viloria', '8296525265') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Yuniffer Viloria||8296525265', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Xiomara -', '8299322055') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Xiomara -||8299322055', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Yelixfer -', '4802384270') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Yelixfer -||4802384270', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Yesenia García', '8296497684') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Yesenia García||8296497684', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Ruhaiddy -', '8494545779') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Ruhaiddy -||8494545779', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Danna yibelis', '8295742430') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Danna yibelis||8295742430', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Raquel -', '8293273843') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Raquel -||8293273843', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Tomairy Ramirez Delgadillo', '8495262164') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Tomairy Ramirez Delgadillo||8495262164', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Mileidys segura', '8097814639') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Mileidys segura||8097814639', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Estefany Paulino', '8498597684') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Estefany Paulino||8498597684', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('sagrario isabel', '8098350530') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('sagrario isabel||8098350530', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Anabell -', '8093862130') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Anabell -||8093862130', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('María Pimentel', '8098932150') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('María Pimentel||8098932150', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Luzbiliana -', '8297551124') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Luzbiliana -||8297551124', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Aracelis -', '8298530501') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Aracelis -||8298530501', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Janna Delgado', '8292525114') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Janna Delgado||8292525114', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Miliangela Veliz', '8494497873') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Miliangela Veliz||8494497873', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Daniela espallat', '8094609908') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Daniela espallat||8094609908', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Cristal veloz', '8296616755') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Cristal veloz||8296616755', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Paulina -', '8292083525') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Paulina -||8292083525', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Anyela María', '8293758025') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Anyela María||8293758025', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Lissette Vásquez', '8298650850') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Lissette Vásquez||8298650850', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Laysha aracena', '8296025625') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Laysha aracena||8296025625', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Eliusy garcia', '8296462717') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Eliusy garcia||8296462717', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Elgin Alberto Richiez', '8093505632') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Elgin Alberto Richiez||8093505632', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Ysmeli Mendoza', '8098531287') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Ysmeli Mendoza||8098531287', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Yulisa de oleo', '8492018121') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Yulisa de oleo||8492018121', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Virgey Mateo Tavarez', '8494561968') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Virgey Mateo Tavarez||8494561968', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Juan Carlos', '8495761702') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Juan Carlos||8495761702', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Julia Hernandez', '8098992101') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Julia Hernandez||8098992101', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Juana -', '8295271780') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Juana -||8295271780', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Evangeline Janice', '8299124056') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Evangeline Janice||8299124056', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Sugeiry magdalin', '8295508009') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Sugeiry magdalin||8295508009', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Anabelis -', '8293844745') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Anabelis -||8293844745', _id);
-END $$;
-DO $$ DECLARE _id uuid; BEGIN
-  INSERT INTO clientes (nombre, telefono) VALUES ('Julieta jiemenez Martinez', '8296348505') RETURNING id INTO _id;
-  INSERT INTO _clientes_map VALUES ('Julieta jiemenez Martinez||8296348505', _id);
-END $$;
-
--- ── Couriers ─────────────────────────────────────────
-CREATE TEMP TABLE _couriers_map (nombre text PRIMARY KEY, id uuid);
-
-INSERT INTO canales_cobro (nombre, tipo_comision) VALUES ('GINTRACOM', 'ninguno')
-  ON CONFLICT (nombre) DO NOTHING;
-INSERT INTO _couriers_map VALUES ('GINTRACOM', (SELECT id FROM canales_cobro WHERE nombre = 'GINTRACOM'));
-
-INSERT INTO canales_cobro (nombre, tipo_comision) VALUES ('MOTORIZADO', 'ninguno')
-  ON CONFLICT (nombre) DO NOTHING;
-INSERT INTO _couriers_map VALUES ('MOTORIZADO', (SELECT id FROM canales_cobro WHERE nombre = 'MOTORIZADO'));
-
-INSERT INTO canales_cobro (nombre, tipo_comision) VALUES ('AUREL', 'ninguno')
-  ON CONFLICT (nombre) DO NOTHING;
-INSERT INTO _couriers_map VALUES ('AUREL', (SELECT id FROM canales_cobro WHERE nombre = 'AUREL'));
-
--- ── Productos ────────────────────────────────────────
-CREATE TEMP TABLE _productos_map (nombre text PRIMARY KEY, id uuid);
-
-DO $$ DECLARE _id uuid; BEGIN
-  SELECT id INTO _id FROM productos WHERE nombre = 'Báscula Digital' LIMIT 1;
-  IF _id IS NULL THEN
-    INSERT INTO productos (nombre, precio_venta) VALUES ('Báscula Digital', 0) RETURNING id INTO _id;
-  END IF;
-  INSERT INTO _productos_map VALUES ('Báscula Digital', _id) ON CONFLICT DO NOTHING;
-END $$;
-
-DO $$ DECLARE _id uuid; BEGIN
-  SELECT id INTO _id FROM productos WHERE nombre = 'Báscula Inteligente' LIMIT 1;
-  IF _id IS NULL THEN
-    INSERT INTO productos (nombre, precio_venta) VALUES ('Báscula Inteligente', 0) RETURNING id INTO _id;
-  END IF;
-  INSERT INTO _productos_map VALUES ('Báscula Inteligente', _id) ON CONFLICT DO NOTHING;
-END $$;
-
-DO $$ DECLARE _id uuid; BEGIN
-  SELECT id INTO _id FROM productos WHERE nombre = 'Luces LED Inteligentes (Pack 2 unidades)' LIMIT 1;
-  IF _id IS NULL THEN
-    INSERT INTO productos (nombre, precio_venta) VALUES ('Luces LED Inteligentes (Pack 2 unidades)', 0) RETURNING id INTO _id;
-  END IF;
-  INSERT INTO _productos_map VALUES ('Luces LED Inteligentes (Pack 2 unidades)', _id) ON CONFLICT DO NOTHING;
-END $$;
-
-DO $$ DECLARE _id uuid; BEGIN
-  SELECT id INTO _id FROM productos WHERE nombre = 'Cepillo Desenredante Hidratante 2-en-1 – Peina Sin Dolor y Reduce el Frizz' LIMIT 1;
-  IF _id IS NULL THEN
-    INSERT INTO productos (nombre, precio_venta) VALUES ('Cepillo Desenredante Hidratante 2-en-1 – Peina Sin Dolor y Reduce el Frizz', 0) RETURNING id INTO _id;
-  END IF;
-  INSERT INTO _productos_map VALUES ('Cepillo Desenredante Hidratante 2-en-1 – Peina Sin Dolor y Reduce el Frizz', _id) ON CONFLICT DO NOTHING;
-END $$;
-
-DO $$ DECLARE _id uuid; BEGIN
-  SELECT id INTO _id FROM productos WHERE nombre = 'Espejo LED Profesional Recargable con 3 Modos de Luz' LIMIT 1;
-  IF _id IS NULL THEN
-    INSERT INTO productos (nombre, precio_venta) VALUES ('Espejo LED Profesional Recargable con 3 Modos de Luz', 0) RETURNING id INTO _id;
-  END IF;
-  INSERT INTO _productos_map VALUES ('Espejo LED Profesional Recargable con 3 Modos de Luz', _id) ON CONFLICT DO NOTHING;
-END $$;
-
-DO $$ DECLARE _id uuid; BEGIN
-  SELECT id INTO _id FROM productos WHERE nombre = 'Luz solar con sensor' LIMIT 1;
-  IF _id IS NULL THEN
-    INSERT INTO productos (nombre, precio_venta) VALUES ('Luz solar con sensor', 0) RETURNING id INTO _id;
-  END IF;
-  INSERT INTO _productos_map VALUES ('Luz solar con sensor', _id) ON CONFLICT DO NOTHING;
-END $$;
-
-DO $$ DECLARE _id uuid; BEGIN
-  SELECT id INTO _id FROM productos WHERE nombre = 'Luz LED RGB - Recargable - Magnética' LIMIT 1;
-  IF _id IS NULL THEN
-    INSERT INTO productos (nombre, precio_venta) VALUES ('Luz LED RGB - Recargable - Magnética', 0) RETURNING id INTO _id;
-  END IF;
-  INSERT INTO _productos_map VALUES ('Luz LED RGB - Recargable - Magnética', _id) ON CONFLICT DO NOTHING;
-END $$;
-
-DO $$ DECLARE _id uuid; BEGIN
-  SELECT id INTO _id FROM productos WHERE nombre = 'Aceite Facial de Limpieza Profunda' LIMIT 1;
-  IF _id IS NULL THEN
-    INSERT INTO productos (nombre, precio_venta) VALUES ('Aceite Facial de Limpieza Profunda', 0) RETURNING id INTO _id;
-  END IF;
-  INSERT INTO _productos_map VALUES ('Aceite Facial de Limpieza Profunda', _id) ON CONFLICT DO NOTHING;
-END $$;
-
-DO $$ DECLARE _id uuid; BEGIN
-  SELECT id INTO _id FROM productos WHERE nombre = 'Corrector de Cicatrices' LIMIT 1;
-  IF _id IS NULL THEN
-    INSERT INTO productos (nombre, precio_venta) VALUES ('Corrector de Cicatrices', 0) RETURNING id INTO _id;
-  END IF;
-  INSERT INTO _productos_map VALUES ('Corrector de Cicatrices', _id) ON CONFLICT DO NOTHING;
-END $$;
-
-DO $$ DECLARE _id uuid; BEGIN
-  SELECT id INTO _id FROM productos WHERE nombre = 'Almohadillas Coreanas Anti Manchas' LIMIT 1;
-  IF _id IS NULL THEN
-    INSERT INTO productos (nombre, precio_venta) VALUES ('Almohadillas Coreanas Anti Manchas', 0) RETURNING id INTO _id;
-  END IF;
-  INSERT INTO _productos_map VALUES ('Almohadillas Coreanas Anti Manchas', _id) ON CONFLICT DO NOTHING;
-END $$;
-
-DO $$ DECLARE _id uuid; BEGIN
-  SELECT id INTO _id FROM productos WHERE nombre = 'Parches para Ojeras y Bolsas Bajo los Ojos' LIMIT 1;
-  IF _id IS NULL THEN
-    INSERT INTO productos (nombre, precio_venta) VALUES ('Parches para Ojeras y Bolsas Bajo los Ojos', 0) RETURNING id INTO _id;
-  END IF;
-  INSERT INTO _productos_map VALUES ('Parches para Ojeras y Bolsas Bajo los Ojos', _id) ON CONFLICT DO NOTHING;
-END $$;
-
-DO $$ DECLARE _id uuid; BEGIN
-  SELECT id INTO _id FROM productos WHERE nombre = 'Meno Vitamina' LIMIT 1;
-  IF _id IS NULL THEN
-    INSERT INTO productos (nombre, precio_venta) VALUES ('Meno Vitamina', 0) RETURNING id INTO _id;
-  END IF;
-  INSERT INTO _productos_map VALUES ('Meno Vitamina', _id) ON CONFLICT DO NOTHING;
-END $$;
-
--- ── Pedidos ──────────────────────────────────────────
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Dariel Tejada||+18496300294';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-01-25', NULL, 2000,
-    false, false, 'CANCELADO', 0,
-    'Sabana Larga', 'Mao', 'PENDIENTE', NULL, 1
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Báscula Digital';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 2000);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Dariel Tejada||+18496300294';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-01-25', NULL, 2000,
-    false, false, 'CANCELADO', 0,
-    'Sabana Larga', 'Mao', 'PENDIENTE', NULL, 2
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Báscula Digital';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 2000);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Dariel Tejada||+18496300294';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-01-25', NULL, 2000,
-    false, false, 'CANCELADO', 0,
-    'Sabana Larga', 'Mao', 'PENDIENTE', NULL, 3
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Báscula Digital';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 2000);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Félix larrion||+18494591102';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-01-27', '2026-01-27', 2300,
-    false, false, 'COMPLETADO', 500,
-    'Hotel excellence del carmen', 'Vabaro', 'RECAUDADO', '2026-01-27', 4
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Báscula Inteligente';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 2300);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      2300, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Yowanda -||+18094959187';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-01-27', '2026-01-27', 1950,
-    false, false, 'COMPLETADO', 500,
-    'Calle luperon', 'Nagua', 'RECAUDADO', '2026-01-27', 5
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Báscula Inteligente';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 1950);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      1950, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Joel villaman||+14807575513';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-01-28', '2026-01-28', 1950,
-    false, false, 'COMPLETADO', 500,
-    'Calls interior H 15', 'Santo Domingo', 'RECAUDADO', '2026-01-28', 6
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Báscula Inteligente';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 1950);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      1950, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Edward -||+18495838302';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-01-28', NULL, 1950,
-    false, false, 'CANCELADO', 0,
-    'Monte Cristi barrio nuevo km 14 el duro', 'Monte Cristi', 'PENDIENTE', NULL, 7
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Báscula Inteligente';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 1950);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Josué Jimenez||+18294953501';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-01-28', NULL, 1950,
-    false, false, 'CANCELADO', 0,
-    'Hermanas mirabal', 'República Dominicana', 'PENDIENTE', NULL, 8
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Báscula Inteligente';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 1950);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Reymond Ledesma||+18298384097';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-01-28', NULL, 1950,
-    false, false, 'CANCELADO', 0,
-    'Calle Girsol #10, sector Jardines del Norte', 'Distrito Nacional', 'PENDIENTE', NULL, 9
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Báscula Inteligente';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 1950);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Francisco -||+18298897861';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-01-28', NULL, 1950,
-    false, false, 'CANCELADO', 0,
-    'CONSTRUSAND', 'Santo domingo', 'PENDIENTE', NULL, 10
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Báscula Inteligente';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 1950);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Adriana -||+18093527277';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-01-28', NULL, 1950,
-    false, false, 'CANCELADO', 0,
-    'La vega', 'La Vega', 'PENDIENTE', NULL, 11
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Báscula Inteligente';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 1950);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Adriana -||+18093527277';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-01-28', NULL, 1950,
-    false, false, 'CANCELADO', 0,
-    'La vega', 'La Vega', 'PENDIENTE', NULL, 12
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Báscula Inteligente';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 1950);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Adriana -||+18093527277';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-01-28', NULL, 1950,
-    false, false, 'CANCELADO', 0,
-    'La vega', 'La Vega', 'PENDIENTE', NULL, 13
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Báscula Inteligente';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 1950);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Maria Esther||+18497512516';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-01-28', '2026-01-28', 1950,
-    false, false, 'COMPLETADO', 500,
-    'Avenida ecológica residencial vista ecológica', 'Santo Domingo Esté', 'RECAUDADO', '2026-01-28', 14
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Báscula Inteligente';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 1950);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      1950, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Yasmiri -||+18299845843';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-01-29', NULL, 1950,
-    false, false, 'CANCELADO', 0,
-    'Bellavista mall', 'Santo Domingo', 'PENDIENTE', NULL, 15
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Báscula Inteligente';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 1950);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Stalyn -||+18293122530';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-01-29', '2026-01-29', 1950,
-    false, false, 'COMPLETADO', 500,
-    'En trada de villa lafe calle maría veron', 'Veron', 'RECAUDADO', '2026-01-29', 16
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Báscula Inteligente';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 1950);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      1950, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Wascar -||+18092199482';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'devuelto', '2026-01-30', NULL, 1950,
-    false, false, 'DEVOLUCION', 400,
-    'Av. Charles de Gaulle no. 66 justo al lado de la sirena', 'Santo Domingo Este', 'PENDIENTE', NULL, 17
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Báscula Inteligente';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 1950);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Luceliz -||+18295567059';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-01-30', '2026-01-30', 1950,
-    false, false, 'COMPLETADO', 500,
-    'Embrujo 3 calle Ana Jiménez residencial balcones universitarios 3 apto o1', 'Santiago De Los Caballeros', 'RECAUDADO', '2026-01-30', 18
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Báscula Inteligente';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 1950);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      1950, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Jose R||+18098541232';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-01-31', '2026-01-31', 1950,
-    false, false, 'COMPLETADO', 500,
-    'Ministerio Relaciones Exteriores, ave. Independencia #752, Hacienda San Geronimo, al lado banco agricola', 'Santo domingo', 'RECAUDADO', '2026-01-31', 19
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Báscula Inteligente';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 1950);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      1950, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Melkys M. Novas F.||+18492512909';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-01-31', NULL, 1950,
-    false, false, 'CANCELADO', 0,
-    'Calle hicotea #16, nuevo Boca de Cachón, Independencia', 'Boca de Cachón', 'PENDIENTE', NULL, 20
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Báscula Inteligente';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 1950);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Yadara gonzalez||+18094743296';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-01-31', NULL, 1950,
-    false, false, 'CANCELADO', 0,
-    'Frente a la escuela vocacional', 'Barahona', 'PENDIENTE', NULL, 21
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Báscula Inteligente';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 1950);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Eriana -||+18097587606';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-02-01', '2026-02-01', 1950,
-    false, false, 'COMPLETADO', 500,
-    'Calle Mella 33', 'Sánchez', 'RECAUDADO', '2026-02-01', 22
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Báscula Inteligente';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 1950);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      1950, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Kilsis Gonzalez||+18092248867';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-02-01', NULL, 1950,
-    false, false, 'CANCELADO', 0,
-    'Calle pedernales', 'Bonao', 'PENDIENTE', NULL, 23
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Báscula Inteligente';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 1950);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Vinicio gonzalez||+18099182254';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'devuelto', '2026-02-01', NULL, 2925,
-    false, false, 'DEVOLUCION', 400,
-    'La mercedes calle 8 casa 17', 'Puerto plata', 'PENDIENTE', NULL, 24
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Báscula Inteligente';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 3900);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Jose Reyes||+18098528659';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'pendiente', '2026-02-04', NULL, 2450,
-    true, false, 'TESTEO', 0,
-    'Julio Postigo 6', 'Santo Domingo', 'PENDIENTE', NULL, 25
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luces LED Inteligentes (Pack 2 unidades)';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 4200);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Alberto aquino||+18294234620';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'pendiente', '2026-02-04', NULL, 2450,
-    true, false, 'TESTEO', 0,
-    'Residencial las palmera 1 madre vieja sur', 'San cristobal', 'PENDIENTE', NULL, 26
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luces LED Inteligentes (Pack 2 unidades)';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 4200);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Cristal -||+18297306640';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'pendiente', '2026-02-05', NULL, 3449.88,
-    true, false, 'TESTEO', 0,
-    'Villa Ofelia zoilo mesa #9', 'Sanjuan de la maguana', 'PENDIENTE', NULL, 27
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luces LED Inteligentes (Pack 2 unidades)';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 6300);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Martha Santana||+18097560758';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'pendiente', '2026-02-05', NULL, 2450,
-    true, false, 'TESTEO', 0,
-    'Calle Las Marias 2 C, ALFIMAR', 'Santo Domingo', 'PENDIENTE', NULL, 28
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luces LED Inteligentes (Pack 2 unidades)';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 4200);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Noemí Fani Ladoo FÍGARO de Devers||+18296328144';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'pendiente', '2026-02-05', NULL, 3449.88,
-    true, false, 'TESTEO', 0,
-    'Emilio morel #44', 'San Pedro de Macoris', 'PENDIENTE', NULL, 29
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luces LED Inteligentes (Pack 2 unidades)';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 6300);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Noemí Ladoo||+18296328144';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'pendiente', '2026-02-05', NULL, 3450,
-    true, false, 'TESTEO', 0,
-    'Calle  Emilio morel #44', 'San Pedro de Macoris', 'PENDIENTE', NULL, 30
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luces LED Inteligentes (Pack 2 unidades)';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 6300);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Yasmín reyes||+18094952270';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'pendiente', '2026-02-05', NULL, 3450,
-    true, false, 'TESTEO', 0,
-    'Autopista Duarte km 12 la penda', 'La Vega', 'PENDIENTE', NULL, 31
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luces LED Inteligentes (Pack 2 unidades)';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 6300);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Fidias Mateo||+18296195465';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'pendiente', '2026-02-06', NULL, 3450,
-    true, false, 'TESTEO', 0,
-    'Pedro Corto', 'Pedro Corto', 'PENDIENTE', NULL, 32
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luces LED Inteligentes (Pack 2 unidades)';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 6300);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Támara Rome||+18097699414';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'pendiente', '2026-02-06', NULL, 3450,
-    true, false, 'TESTEO', 0,
-    'Av Pedro Henriquez Ureña No 135 Torre Tellium II apto 1102 La Esperilla', 'Santo Domingo', 'PENDIENTE', NULL, 33
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luces LED Inteligentes (Pack 2 unidades)';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 6300);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Manuel E Sánchez Díaz||+18299083824';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'pendiente', '2026-02-06', NULL, 2100,
-    true, false, 'TESTEO', 0,
-    'La margarita num.15 Almirante caña', 'Santo Domingo Este', 'PENDIENTE', NULL, 34
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luces LED Inteligentes (Pack 2 unidades)';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 2100);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Dolores Luna||+18293528523';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-02-12', NULL, 2950,
-    false, false, 'CANCELADO', 0,
-    'Calle España Edificio 6 Apartamento 2-2 El Congo', 'Santiago', 'PENDIENTE', NULL, 35
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Cepillo Desenredante Hidratante 2-en-1 – Peina Sin Dolor y Reduce el Frizz';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 3900);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Anyelani franco||+18297761142';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-02-12', NULL, 1950,
-    false, false, 'CANCELADO', 0,
-    '27 de febrero #55 Benito moncion', 'Dajabon', 'PENDIENTE', NULL, 36
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Cepillo Desenredante Hidratante 2-en-1 – Peina Sin Dolor y Reduce el Frizz';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 1950);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Kailis inoska||+18094986812';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-02-12', NULL, 1950,
-    false, false, 'CANCELADO', 0,
-    'Avenida constitución #95', 'San Cristóbal', 'PENDIENTE', NULL, 37
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Cepillo Desenredante Hidratante 2-en-1 – Peina Sin Dolor y Reduce el Frizz';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 1950);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Ramón -||+18096938564';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-02-14', NULL, 2950,
-    false, false, 'CANCELADO', 0,
-    'Los fraile segundo', 'Santos domingo', 'PENDIENTE', NULL, 38
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Espejo LED Profesional Recargable con 3 Modos de Luz';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 3900);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Rafael Cuello||+18295709806';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'MOTORIZADO';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-    'entregado', '2026-02-17', '2026-02-17', 1950,
-    false, false, 'COMPLETADO', 416,
-    'Res. Alameda Este , Santo Domingo Oeste', 'Santo Domingo Oeste', 'RECAUDADO', '2026-02-17', 39
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 1950);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-      1950, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Hirquin -||+18098821680';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-02-17', NULL, 1950,
-    false, false, 'CANCELADO', 0,
-    'Lo varrancone depue de conani', 'La vega', 'PENDIENTE', NULL, 40
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 1950);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Alexis Ramírez||+18296806097';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'devuelto', '2026-02-17', NULL, 1950,
-    false, false, 'DEVOLUCION', 400,
-    'Prado las  cañas de guerra entrando por el pleys de mioki', 'Prado las cañas de guerra', 'PENDIENTE', NULL, 41
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 1950);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Danilo de los santos||+18298414298';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-02-17', NULL, 3450,
-    false, false, 'CANCELADO', 0,
-    'Cabilma del este calle paseo 12 de enero', 'Santo Domingo Oeste', 'PENDIENTE', NULL, 42
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 5850);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Kelvin -||+18292801375';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'devuelto', '2026-02-18', NULL, 3450,
-    false, false, 'DEVOLUCION', 400,
-    'Carretera San Francisco tenare Layaguiza', 'San Francisco tenare Layaguiza', 'PENDIENTE', NULL, 43
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 5850);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Roberto -||+18493501547';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'devuelto', '2026-02-18', NULL, 3450,
-    false, false, 'DEVOLUCION', 400,
-    'Calle las flores', 'Santo Domingo Norte', 'PENDIENTE', NULL, 44
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 5850);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Antonio Melican||+18495350922';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'MOTORIZADO';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-    'entregado', '2026-02-18', '2026-02-18', 3450,
-    false, false, 'COMPLETADO', 416,
-    'Calle playa punta icaco 19 en Los Corales de SAN Luis Santo Domingo Este', 'Santo Domingo Este', 'RECAUDADO', '2026-02-18', 45
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 5850);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-      3450, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Jose Farias||+18298701111';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-02-18', '2026-02-18', 3450,
-    false, false, 'COMPLETADO', 444,
-    'Otilio Mendez # 14', 'San Juan', 'RECAUDADO', '2026-02-18', 46
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 5850);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      3450, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Cheferson -||+18297618450';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-02-19', '2026-02-19', 3450,
-    false, false, 'COMPLETADO', 444,
-    'Calle casa n2 cerro alto Santiago', 'Santiago', 'RECAUDADO', '2026-02-19', 47
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 5850);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      3450, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Luis -||+18098178550';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'devuelto', '2026-02-19', NULL, 1950,
-    false, false, 'DEVOLUCION', 400,
-    'Francisco Villa espesa #240 ensanche la fe', 'Distrito Nacional', 'PENDIENTE', NULL, 48
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 1950);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Rolando Calderon||+18095336510';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'MOTORIZADO';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-    'entregado', '2026-02-19', '2026-02-19', 3950,
-    false, false, 'COMPLETADO', 416,
-    'Av.jose Contreras no.99 edificio empresarial Calderón', 'Santo Domingo', 'RECAUDADO', '2026-02-19', 49
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7350);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-      3950, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Alfredo mariot||+18492203518';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'MOTORIZADO';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-    'entregado', '2026-02-19', '2026-02-19', 3950,
-    false, false, 'COMPLETADO', 650,
-    'C/ antonio guzman fernandez # 47', 'Sto.Dgo. Este', 'RECAUDADO', '2026-02-19', 50
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7350);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-      3950, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'eduard taveras||+18296390416';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-02-19', '2026-02-19', 3950,
-    false, false, 'COMPLETADO', 499,
-    'Tamboril Santiago', 'Tamboril', 'RECAUDADO', '2026-02-19', 51
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7350);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      3950, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Dindo -||+18097655438';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-02-20', '2026-02-20', 3950,
-    false, false, 'COMPLETADO', 345,
-    'Urbanización la Estancia # 5', 'Puerto Plata', 'RECAUDADO', '2026-02-20', 52
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7350);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      3950, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Noelia -||+18296553562';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-02-20', NULL, 3950,
-    false, false, 'CANCELADO', 0,
-    'Santa Cruz el seibo', 'Miches', 'PENDIENTE', NULL, 53
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7350);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Daniel reyes||+18495764163';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-02-20', '2026-02-20', 3950,
-    false, false, 'COMPLETADO', 464,
-    'Cuerpo d bomberos d miches.  Serca d caribe express', 'Miches', 'RECAUDADO', '2026-02-20', 54
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7350);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      3950, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Dafi Guzmán HerediaelE||+18097591177';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'devuelto', '2026-02-21', NULL, 2450,
-    false, false, 'DEVOLUCION', 400,
-    'El limón de jimaní', 'Jimaní', 'PENDIENTE', NULL, 55
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 2450);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Phito -||+18493882716';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-02-21', NULL, 2450,
-    false, false, 'CANCELADO', 0,
-    'Frente del cuartel punta cana', 'BÁvaro', 'PENDIENTE', NULL, 56
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 2450);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Isidora abreu ventura||+14233135467';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'MOTORIZADO';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-    'cancelado', '2026-02-21', NULL, 3950,
-    false, false, 'CANCELADO', 0,
-    'Calle Santa Cruz de tenerife Parmal mirador #48 hondura Republica Dominicana', 'Santo domingo', 'PENDIENTE', NULL, 57
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7350);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Yeremy Perez||+18093236866';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'MOTORIZADO';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-    'cancelado', '2026-02-21', NULL, 3950,
-    false, false, 'CANCELADO', 0,
-    'Calle oeste número 65 los frailes 1', 'Santo Domingo este', 'PENDIENTE', NULL, 58
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7350);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Carlos -||+18094381241';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-02-22', NULL, 2450,
-    false, false, 'CANCELADO', 0,
-    'Benito moncion', 'Bonao', 'PENDIENTE', NULL, 59
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 2450);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Joel santos||+18294281465';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-02-22', NULL, 2450,
-    false, false, 'CANCELADO', 0,
-    'Sábana grande de boya', 'Sábana grande de boya', 'PENDIENTE', NULL, 60
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 2450);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Elizabeth -||+18298771983';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'MOTORIZADO';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-    'cancelado', '2026-02-22', NULL, 3950,
-    false, false, 'CANCELADO', 0,
-    'Barbarin Mojica número uno mejoramiento social', '165.0', 'PENDIENTE', NULL, 61
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7350);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Uilton Rodríguez||+18099076173';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-02-22', '2026-02-22', 3950,
-    false, false, 'COMPLETADO', 499,
-    'Villa Vasque Montecristo', 'Villa Vasque', 'RECAUDADO', '2026-02-22', 62
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7350);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      3950, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Juan Alberto Muñoz Duarte||+18297564151';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-02-22', '2026-02-22', 3950,
-    false, false, 'COMPLETADO', 499,
-    'José Francisco peña Gómez km3', 'Nagua', 'RECAUDADO', '2026-02-22', 63
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7350);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      3950, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Diego Henríquez||18294290249';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-02-23', '2026-02-23', 3950,
-    false, false, 'COMPLETADO', 464,
-    'C/ chachito Díaz 137 boca de juma', 'Bonao', 'RECAUDADO', '2026-02-23', 64
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7350);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      3950, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Summer -||18094327705';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-02-23', NULL, 3950,
-    false, false, 'CANCELADO', 0,
-    'Colina de la Riviera edificio E apt 3', 'Santo Domingo Norte', 'PENDIENTE', NULL, 65
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7350);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Wilfredo rafael||18493519486';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-02-23', '2026-02-23', 3950,
-    false, false, 'COMPLETADO', 464,
-    'Agustín guerrero #26', 'higuey', 'RECAUDADO', '2026-02-23', 66
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7350);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      3950, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Moreno -||18299252292';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-02-23', NULL, 3950,
-    false, false, 'CANCELADO', 0,
-    'Villa verde', 'La Romana', 'PENDIENTE', NULL, 67
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7350);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Félix Santana||18096690797';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-02-23', '2026-02-23', 3950,
-    false, false, 'COMPLETADO', 464,
-    'Las Terrenas calle bulevar el portillo rotonda', 'Las Terrenas', 'RECAUDADO', '2026-02-23', 68
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7350);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      3950, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Roberto -||18093506933';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'MOTORIZADO';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-    'cancelado', '2026-02-24', NULL, 3950,
-    false, false, 'CANCELADO', 0,
-    'Higuey los morales', 'Higuey', 'PENDIENTE', NULL, 69
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7350);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'caridad gutierrez||18099620097';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-02-26', '2026-02-26', 3950,
-    false, false, 'COMPLETADO', 464,
-    'calle los fallos av. pedro Rivera taller gutierrez', 'concepsio de la vega', 'RECAUDADO', '2026-02-26', 70
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7350);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      3950, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Jose -||18097864429';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-02-26', '2026-02-26', 3950,
-    false, false, 'COMPLETADO', 464,
-    'Calle Antonio Valdez Hijo', 'Higüey', 'RECAUDADO', '2026-02-26', 71
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7350);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      3950, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Juan Antonio De La Cruz Rosario||18293945204';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'MOTORIZADO';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-    'entregado', '2026-02-27', '2026-02-27', 3950,
-    false, false, 'COMPLETADO', 400,
-    'HATILLO SHAMPAÑA NO 60,SANTO DOMINGO OESTE', 'Santo Domingo', 'RECAUDADO', '2026-02-27', 72
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7350);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-      3950, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Marcet -||18096605900';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'devuelto', '2026-02-27', NULL, 3950,
-    false, false, 'DEVOLUCION', 400,
-    'Restauración 64', 'Los ríos Neyba', 'PENDIENTE', NULL, 73
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7350);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Mike lombardini||18296784731';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'MOTORIZADO';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-    'entregado', '2026-02-27', '2026-02-27', 3950,
-    false, false, 'COMPLETADO', 400,
-    'Calle hostos 2', 'Colonial', 'RECAUDADO', '2026-02-27', 74
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7350);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-      3950, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Antonio -||18298391017';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'devuelto', '2026-02-27', NULL, 3550,
-    false, false, 'DEVOLUCION', 400,
-    'Dionisio mejía', 'HIGUEY (SALVALEÓN DE HIGUEY)', 'PENDIENTE', NULL, 75
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 4900);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Toni -||18093527370';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-02-27', NULL, 3950,
-    false, false, 'CANCELADO', 0,
-    'Los frailes primero', 'SANTO DOMINGO OESTE', 'PENDIENTE', NULL, 76
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7350);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Aury Moralez de la rosa||18292280113';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-02-28', '2026-02-28', 0,
-    false, false, 'COMPLETADO', 400,
-    'Juan José mota # 42', 'HATO MAYOR (HATO MAYOR DEL REY)', 'RECAUDADO', '2026-02-28', 77
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 4900);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      0, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Kelvin Santana||18493305609';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-02-28', '2026-02-28', 3950,
-    false, false, 'COMPLETADO', 464,
-    'Respaldo avenida manuela diez jimenes los cajuiles', 'EL SEIBO (SANTA CRUZ DEL SEIBO)', 'RECAUDADO', '2026-02-28', 78
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7350);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      3950, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Andy de Jesús peña||18096547027';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-02-28', '2026-02-28', 3950,
-    false, false, 'COMPLETADO', 464,
-    'Carretera Verón Punta cana # 23 urbanización lantigua', 'PUNTA CANA', 'RECAUDADO', '2026-02-28', 79
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7350);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      3950, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Rosa Mateo||18099234020';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'MOTORIZADO';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-    'entregado', '2026-02-28', '2026-02-28', 3950,
-    false, false, 'COMPLETADO', 350,
-    'Residencial III y IV 181 Madre Vieja Sur  SC', 'SAN CRISTOBAL', 'RECAUDADO', '2026-02-28', 80
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7350);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-      3950, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Osvaldo Cross||18293436439';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-02-28', '2026-02-28', 3950,
-    false, false, 'COMPLETADO', 464,
-    'Calle Gregorio Luperon No.33', 'LAS TERRENAS', 'RECAUDADO', '2026-02-28', 81
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7350);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      3950, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Victor -||18294133206';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-01', NULL, 2450,
-    false, false, 'CANCELADO', 0,
-    'Calle 31 esquina2² san Felipe villa mella', 'SANTO DOMINGO', 'PENDIENTE', NULL, 82
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 2450);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Diefet Yambati||18294793809';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-03-01', '2026-03-01', 3950,
-    false, false, 'COMPLETADO', 499,
-    'Calle San Miguel', 'LA OTRA BANDA (HIGUEY)', 'RECAUDADO', '2026-03-01', 83
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7350);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      3950, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Lidia Pacheco||18292130808';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'cancelado', '2026-03-01', NULL, 3950,
-    false, false, 'CANCELADO', 0,
-    'Federico Basilis', 'LA VEGA (CONCEPCIÓN DE LA VEGA)', 'PENDIENTE', NULL, 84
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7350);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Manuel -||18099147713';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-01', NULL, 3950,
-    false, false, 'CANCELADO', 0,
-    'Madre vieja sur', 'SAN CRISTOBAL', 'PENDIENTE', NULL, 85
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7350);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Mirtha Crisóstomo||18098633132';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-02', NULL, 3950,
-    false, false, 'CANCELADO', 0,
-    'Calle 20 gurabo', 'SANTIAGO DE LOS CABALLEROS', 'PENDIENTE', NULL, 86
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7350);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Yoryi jose||18295516193';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'devuelto', '2026-03-02', NULL, 3550,
-    false, false, 'DEVOLUCION', 400,
-    'Avenida luperon en la rotonda de pueblo nuevo donde yoryi moloy', 'BARAHONA (SANTA CRUZ DE BARAHONA)', 'PENDIENTE', NULL, 87
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 4900);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Cesar peña Z||18098432424';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-03-02', '2026-03-02', 3950,
-    false, false, 'COMPLETADO', 464,
-    'Dirección regional Cibao sur policía', 'BONAO', 'RECAUDADO', '2026-03-02', 88
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7350);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      3950, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Danilo Monegro||18494531910';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'devuelto', '2026-03-02', NULL, 2450,
-    false, false, 'DEVOLUCION', 400,
-    'Calle pilar Taveras 56, Sector Santa Ana', 'SAN FRANCISCO DE MACORÍS', 'PENDIENTE', NULL, 89
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 2450);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Domingo Melenciano De La Cruz||18092600999';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'MOTORIZADO';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-    'entregado', '2026-03-03', '2026-03-03', 3950,
-    false, false, 'COMPLETADO', 600,
-    'Rumaldo solano #5 Sabaneta El Carril Haina', 'San Cristóbal', 'RECAUDADO', '2026-03-03', 90
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7350);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-      3950, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Estefany -||18099622392';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-03-03', '2026-03-03', 3950,
-    false, false, 'COMPLETADO', 464,
-    'Los Castillo', 'Sosúa', 'RECAUDADO', '2026-03-03', 91
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7350);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      3950, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Doohan -||18298374740';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-04', NULL, 3950,
-    false, false, 'CANCELADO', 0,
-    'Chivg', 'Santo Domingo Este', 'PENDIENTE', NULL, 92
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7350);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Pedro Romero||18097492127';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'devuelto', '2026-03-04', NULL, 3550,
-    false, false, 'DEVOLUCION', 0,
-    'Residencial punta bavaro', 'Punta Cana', 'PENDIENTE', NULL, 93
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 4900);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Pedro Romero||18097492127';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'devuelto', '2026-03-04', NULL, 3950,
-    false, false, 'DEVOLUCION', 400,
-    'Residencial punta bávaro 6', 'Verón', 'PENDIENTE', NULL, 94
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7350);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Robinson mata||18099627510';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-03-04', '2026-03-04', 3950,
-    false, false, 'COMPLETADO', 464,
-    'Urbanización atlantica calle # 1 , casa # 5 puerto plata', 'Puerto Plata (San Felipe de Puerto Plata)', 'RECAUDADO', '2026-03-04', 95
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7350);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      3950, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Carmen Balbuena||18296754307';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-03-04', '2026-03-04', 3950,
-    false, false, 'COMPLETADO', 464,
-    'Calle las flores 27', 'Mao (Santa Cruz de Mao)', 'RECAUDADO', '2026-03-04', 96
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7350);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      3950, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Luis Manuel||18494275022';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-04', NULL, 3950,
-    false, false, 'CANCELADO', 0,
-    'Calle 26 casa número 12', 'Quisqueya', 'PENDIENTE', NULL, 97
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7350);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Jose n||18096692780';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'pendiente', '2026-03-04', NULL, 3950,
-    false, false, 'EN ESPERA', 0,
-    'Rafael Hernández 16 B naco', 'Santo Domingo', 'PENDIENTE', NULL, 98
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7350);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Carolin -||18293341414';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-04', NULL, 3950,
-    false, false, 'CANCELADO', 0,
-    'Cuesta abajo', 'San José de las Matas', 'PENDIENTE', NULL, 99
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7350);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Alejandro -||18492468802';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-05', NULL, 3550,
-    false, false, 'CANCELADO', 0,
-    'Villa mella', 'Santo Domingo', 'PENDIENTE', NULL, 100
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 4900);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Cocina -||18495270722';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-05', NULL, 3950,
-    false, false, 'CANCELADO', 0,
-    '144 Manga Larga', 'Río Verde Arriba', 'PENDIENTE', NULL, 101
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7350);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Ronald Tejeda||18298989177';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'MOTORIZADO';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-    'entregado', '2026-03-05', '2026-03-05', 3950,
-    false, false, 'COMPLETADO', 250,
-    'Diagonal B #20 renacimiento', 'Santo Domingo', 'RECAUDADO', '2026-03-05', 102
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7350);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-      3950, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'VALENTINA  MERCEDES b -||18496550734';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-05', NULL, 3950,
-    false, false, 'CANCELADO', 0,
-    'Villa cerro la pangolaj  Orlando  martinez 30', 'Higüey (Salvaleón de Higüey)', 'PENDIENTE', NULL, 103
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7350);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Manuela -||18098416286';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-05', NULL, 3950,
-    false, false, 'CANCELADO', 0,
-    'Frente al Play Municipal', 'Partido', 'PENDIENTE', NULL, 104
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7350);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Andrés Contreras||18096276877';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'MOTORIZADO';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-    'entregado', '2026-03-05', '2026-03-05', 3950,
-    false, false, 'COMPLETADO', 250,
-    'Calle la torre barrio gringo #23', 'Haina (Bajos de Haina)', 'RECAUDADO', '2026-03-05', 105
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7350);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-      3950, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Mirna ortiz||18092238154';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-03-06', '2026-03-06', 3950,
-    false, false, 'COMPLETADO', 400,
-    '16 de agosto no. 11', 'Baní', 'RECAUDADO', '2026-03-06', 106
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7350);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      3950, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Mirna ortiz||18092238154';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-03-06', '2026-03-06', 3950,
-    false, false, 'COMPLETADO', 400,
-    '16 de agosto no. 11', 'Baní', 'RECAUDADO', '2026-03-06', 107
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7350);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      3950, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Teresa Sánchez||18096677745';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'MOTORIZADO';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-    'cancelado', '2026-03-06', NULL, 3950,
-    false, false, 'CANCELADO', 0,
-    'Calle Duarte #18,sector la Carolina,  Hacienda Estrella', 'Santo Domingo Norte', 'PENDIENTE', NULL, 108
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7350);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Clásico flow||18094882949';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-08', NULL, 2595,
-    false, false, 'CANCELADO', 0,
-    'Quita sueño de Haina', 'Santo Domingo Oeste', 'PENDIENTE', NULL, 109
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 2595);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Tomas -||18092566799';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'devuelto', '2026-03-09', NULL, 3950,
-    false, false, 'DEVOLUCION', 400,
-    'Los Cajules el Seibo  casa # 19', 'El Seibo (Santa Cruz del Seibo)', 'PENDIENTE', NULL, 110
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7785);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Emil Liriano||18494781147';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-09', NULL, 3490,
-    false, false, 'CANCELADO', 0,
-    'Av Sabana Larga esquina Bonaire Alma Rosa I', 'Santo Domingo Este', 'PENDIENTE', NULL, 111
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7170);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'raphael castillo||18094616236';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-10', NULL, 3490,
-    false, false, 'CANCELADO', 0,
-    'Duarte #30,,bocacanasta ,bani', 'Baní', 'PENDIENTE', NULL, 112
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7170);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Raphael castillo||18094616236';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-10', NULL, 3490,
-    false, false, 'CANCELADO', 0,
-    'Municipio LAS TABLAS,,calle principal,,sin número de casa,,cerca del cementerio y colmado los nietos', 'Matanzas20', 'PENDIENTE', NULL, 113
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7170);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'joseph  prophil -||18092078178';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-10', NULL, 2390,
-    false, false, 'CANCELADO', 0,
-    'Sabana larga frente el mercado binacional', 'Dajabón', 'PENDIENTE', NULL, 114
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 2390);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Pacifico ayres||18493520211';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-03-10', '2026-03-10', 3490,
-    false, false, 'COMPLETADO', 473,
-    '12#16 villa. Olga', 'Santiago de los Caballeros', 'RECAUDADO', '2026-03-10', 115
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7170);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      3490, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Aquilina.alcequiez. -||18098564714';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-03-10', '2026-03-10', 3490,
-    false, false, 'COMPLETADO', 400,
-    'ManzanaF #4 Residencial Gacela.', 'Santo Domingo', 'RECAUDADO', '2026-03-10', 116
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7170);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      3490, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Aquilina Alcequiez||18098564714';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-03-10', '2026-03-10', 3490,
-    false, false, 'COMPLETADO', 400,
-    'Mazana F#4 Residencial Gscela.', 'Santo Domingo', 'RECAUDADO', '2026-03-10', 117
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7170);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      3490, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Rolando rosado||18093908874';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'MOTORIZADO';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-    'entregado', '2026-03-10', '2026-03-10', 3490,
-    false, false, 'COMPLETADO', 300,
-    'Av jimenez moya #4 bella vista', 'Santo Domingo', 'RECAUDADO', '2026-03-10', 118
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7170);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-      3490, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Wilbert Geffrard||18093767066';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'devuelto', '2026-03-10', NULL, 4290,
-    false, false, 'DEVOLUCION', 400,
-    'Calle circunvalación B #4 Villa Francés ( Súper Mercado Olé', 'Bávaro', 'PENDIENTE', NULL, 119
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 4, 9560);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Dolores acosta s||18094903973';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-03-11', '2026-03-11', 4290,
-    false, false, 'COMPLETADO', 505,
-    'Chicago calle primera #980', 'La Romana', 'RECAUDADO', '2026-03-11', 120
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 4, 7170);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      4290, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Johairis -||18297991120';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-11', NULL, 3490,
-    false, false, 'CANCELADO', 0,
-    'Calle proyecto', 'Monte Cristi (San Fernando de Monte Cristi)', 'PENDIENTE', NULL, 121
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7170);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Julio -||18292735426';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'devuelto', '2026-03-11', NULL, 3490,
-    false, false, 'DEVOLUCION', 400,
-    'Boca chica', 'BOCA CHICA', 'PENDIENTE', NULL, 122
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7170);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Hugo Badia||18092232991';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-03-11', '2026-03-11', 3490,
-    false, false, 'COMPLETADO', 473,
-    'Calle 7 casa 117  jardines del este', 'Santiago de los Caballeros', 'RECAUDADO', '2026-03-11', 123
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7170);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      3490, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'ANA TINEO||17188261828';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-03-12', '2026-03-12', 3490,
-    false, false, 'COMPLETADO', 473,
-    'Valle berde 2 calle 5 casa 2', 'Santiago de los Caballeros', 'RECAUDADO', '2026-03-12', 124
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7170);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      3490, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Wascarnicolaspolancogarcia -||18296750278';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-03-12', '2026-03-12', 4290,
-    false, false, 'COMPLETADO', 505,
-    'Monte verde 30b', 'Higüey (Salvaleón de Higüey)', 'RECAUDADO', '2026-03-12', 125
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 4, 9560);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      4290, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Nicola de la cruz||18092823749';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'devuelto', '2026-03-12', NULL, 3490,
-    false, false, 'DEVOLUCION', 400,
-    'Via prinsipal', 'Las Lagunas de Nisibón (Higüey)', 'PENDIENTE', NULL, 126
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7170);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Yvrose gedeus gedeusyvrose21@gmail.com||18494409968';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-12', NULL, 3490,
-    false, false, 'CANCELADO', 0,
-    'Fruisa Bavalo République Dominicaine Punta cana', 'Punta Cana', 'PENDIENTE', NULL, 127
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7170);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Francisco -||18093605881';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-03-12', '2026-03-12', 3490,
-    false, false, 'COMPLETADO', 473,
-    'Calle asomante #41', 'El Seibo (Santa Cruz del Seibo)', 'RECAUDADO', '2026-03-12', 128
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7170);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      3490, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Daniel duversaint||18297921946';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-12', NULL, 3490,
-    false, false, 'CANCELADO', 0,
-    'Calle #12 laurca', 'San Juan', 'PENDIENTE', NULL, 129
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7170);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Alfredo Belén||18096500077';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-12', NULL, 3490,
-    false, false, 'CANCELADO', 0,
-    'Calle 2da #3 proyecto Ana Gabriela santa fez próximo a la oficina de medio ambiente', 'San Pedro de Macorís', 'PENDIENTE', NULL, 130
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7170);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Jeisson Gabriel||18296909898';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-12', NULL, 3490,
-    false, false, 'CANCELADO', 0,
-    'Avenida estado unidos frente a iberia', 'Punta Cana', 'PENDIENTE', NULL, 131
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7170);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Ejemplo -||18496450115';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-13', NULL, 2990,
-    false, false, 'CANCELADO', 0,
-    'Bajando', 'Mao (Santa Cruz de Mao)', 'PENDIENTE', NULL, 132
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 4780);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Bernardo Calletano||18299121199';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-13', NULL, 3490,
-    false, false, 'CANCELADO', 0,
-    'Gregorio luperon 6 el almirante', 'Santo Domingo Este', 'PENDIENTE', NULL, 133
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7170);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Leonor -||18295091551';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-13', NULL, 3490,
-    false, false, 'CANCELADO', 0,
-    'Pueblo bavaro calle principal', 'Verón', 'PENDIENTE', NULL, 134
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7170);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Luis Enrique Sanchez Suarez||18297685662';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-03-13', '2026-03-13', 3490,
-    false, false, 'COMPLETADO', 473,
-    'Calle los locutores Chilo poeriet', 'Higüey (Salvaleón de Higüey)', 'RECAUDADO', '2026-03-13', 135
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7170);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      3490, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Eladio Díaz||12155326857';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'devuelto', '2026-03-13', NULL, 3490,
-    false, false, 'DEVOLUCION', 400,
-    'Calle 2 barrio indri', 'La Mata', 'PENDIENTE', NULL, 136
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7170);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Ederson frias de los santos||18299227490';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-13', NULL, 3490,
-    false, false, 'CANCELADO', 0,
-    'La Mercede', 'Los Alcarrizos', 'PENDIENTE', NULL, 137
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7170);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Leonela peña||18096690450';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-03-13', '2026-03-13', 2990,
-    false, false, 'COMPLETADO', 454,
-    'Calle José Francisco peña Gómez  barrio manteadentro', 'La Mata', 'RECAUDADO', '2026-03-13', 138
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 4780);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      2990, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Enrique -||18299581947';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-13', NULL, 3490,
-    false, false, 'CANCELADO', 0,
-    'La gualliga pedro bran', 'Santo Domingo', 'PENDIENTE', NULL, 139
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7170);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'jose -||18099861297';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-13', NULL, 4290,
-    false, false, 'CANCELADO', 0,
-    'jacobo', 'Santo Domingo Norte', 'PENDIENTE', NULL, 140
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 4, 9560);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Luís manual Santana||18297079922';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'MOTORIZADO';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-    'entregado', '2026-03-13', '2026-03-13', 3490,
-    false, false, 'COMPLETADO', 500,
-    '6 de noviembre#24', 'San Cristóbal', 'RECAUDADO', '2026-03-13', 141
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7170);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-      3490, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Josué -||18493522166';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-03-13', '2026-03-13', 3490,
-    false, false, 'COMPLETADO', 500,
-    'Primera', 'Verón', 'RECAUDADO', '2026-03-13', 142
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7170);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      3490, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Juan lantigua||18297228373';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-03-13', '2026-03-13', 3490,
-    false, false, 'COMPLETADO', 473,
-    'Los reyes calle 2 ed.18 apt 1.', 'Puerto Plata (San Felipe de Puerto Plata)', 'RECAUDADO', '2026-03-13', 143
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7170);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      3490, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Francis soler||18093714992';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-03-13', '2026-03-13', 4290,
-    false, false, 'COMPLETADO', 505,
-    'Mercado nuevo', 'La Romana', 'RECAUDADO', '2026-03-13', 144
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 4, 9560);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      4290, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Isis bautista||18092247111';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'MOTORIZADO';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-    'entregado', '2026-03-13', '2026-03-13', 3490,
-    false, false, 'COMPLETADO', 300,
-    'Ave. Abraham Lincoln 962 edificio Osiris', 'Santo Domingo', 'RECAUDADO', '2026-03-13', 145
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7170);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-      3490, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Doneisy Bertre||18097579949';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-13', NULL, 3490,
-    false, false, 'CANCELADO', 0,
-    'Salome Ureña =23', 'Azua (Azua de Compostela)', 'PENDIENTE', NULL, 146
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7170);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Wilson Luciano adames||18294390905';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-13', NULL, 3490,
-    false, false, 'CANCELADO', 0,
-    'Casita linda Villa Europa #3 colmado Valdez', 'Verón', 'PENDIENTE', NULL, 147
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7170);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'JUANCARLOS -||18292748863';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-03-13', '2026-03-13', 3490,
-    false, false, 'COMPLETADO', 473,
-    'Lotificacion don oxiris calle primera # 4', 'La Vega (Concepción de la Vega)', 'RECAUDADO', '2026-03-13', 148
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7170);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      3490, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Guadalupe Cruz Mota||18296766477';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-13', NULL, 3490,
-    false, false, 'CANCELADO', 0,
-    'Coronel melcado', 'Santo Domingo Norte', 'PENDIENTE', NULL, 149
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7170);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Jose -||18293280170';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-13', NULL, 3490,
-    false, false, 'CANCELADO', 0,
-    'Colmado duran', 'Monción', 'PENDIENTE', NULL, 150
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7170);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Nancy santana||18293383837';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-03-13', '2026-03-13', 3490,
-    false, false, 'COMPLETADO', 473,
-    'Residencial las palmas manzana 9 casa número 5', 'San Pedro de Macorís', 'RECAUDADO', '2026-03-13', 151
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7170);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      3490, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Ángel Polanco||18293691378';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-13', NULL, 3490,
-    false, false, 'CANCELADO', 0,
-    'Calle guayacan Prollerto sol de bavaro', 'Bávaro', 'PENDIENTE', NULL, 152
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7170);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Rafael nova||18297098079';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'MOTORIZADO';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-    'entregado', '2026-03-13', '2026-03-13', 3490,
-    false, false, 'COMPLETADO', 400,
-    'Kilómetro 12 las Américas calle segunda casa número 27', 'Santo Domingo Este', 'RECAUDADO', '2026-03-13', 153
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7170);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-      3490, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Wander García Santana||18293885300';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-13', NULL, 2990,
-    false, false, 'CANCELADO', 0,
-    'Villa hermosa', 'Villa Hermosa', 'PENDIENTE', NULL, 154
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 4780);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Aracelis Altagracia||18299079203';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-13', NULL, 3490,
-    false, false, 'CANCELADO', 0,
-    'Cayemariamonte#26losoto arriba', 'Higüey (Salvaleón de Higüey)', 'PENDIENTE', NULL, 155
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7170);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Yudy silverio||18297073361';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-13', NULL, 3490,
-    false, false, 'CANCELADO', 0,
-    'El javillar calle príncipipal 50', 'Puerto Plata (San Felipe de Puerto Plata)', 'PENDIENTE', NULL, 156
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7170);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Ania Sugey||18097741525';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-13', NULL, 4290,
-    false, false, 'CANCELADO', 0,
-    'Cooperativa', 'Punta Cana', 'PENDIENTE', NULL, 157
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 4, 9560);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Nancy Santana||18293383837';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-14', NULL, 3490,
-    false, false, 'CANCELADO', 0,
-    'Residencial las palmas manzana 9 casa número 5', 'San Pedro de Macorís', 'PENDIENTE', NULL, 158
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7170);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Jose cruz809 223 1455||18092231455';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'MOTORIZADO';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-    'entregado', '2026-03-14', '2026-03-14', 3490,
-    false, false, 'COMPLETADO', 400,
-    'C/ ir mirador del arroyo casa #6 urb ladera  de Arroyo hondo', 'Santo Domingo', 'RECAUDADO', '2026-03-14', 159
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7170);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-      3490, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Angela Del Rosario Florian Trinidad||18298627648';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-14', NULL, 3490,
-    false, false, 'CANCELADO', 0,
-    'Juan Ruperto Polanco casa 11A La Descuebierta', 'JIMANÍ', 'PENDIENTE', NULL, 160
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7170);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'David vialet||18295268109';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-14', NULL, 3490,
-    false, false, 'CANCELADO', 0,
-    'El pocito calle San Rafae', 'Guayubín', 'PENDIENTE', NULL, 161
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7170);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Octavio meran||18099163968';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-03-14', '2026-03-14', 2990,
-    false, false, 'COMPLETADO', 480,
-    'Santa Lucía #2', 'Juan de Herrera', 'RECAUDADO', '2026-03-14', 162
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 4780);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      2990, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Mirian de leon||18098053532';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-14', NULL, 3490,
-    false, false, 'CANCELADO', 0,
-    'Detrás de la cancha de la cueva de cevicos', 'Cevicos', 'PENDIENTE', NULL, 163
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7170);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Carlos Jose||18296241810';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-14', NULL, 3490,
-    false, false, 'CANCELADO', 0,
-    'Moca', 'Moca', 'PENDIENTE', NULL, 164
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7170);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Amable frías||18492710145';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-03-14', '2026-03-14', 0,
-    false, false, 'COMPLETADO', 473,
-    'La malena', 'Higüey (Salvaleón de Higüey)', 'RECAUDADO', '2026-03-14', 165
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7170);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      0, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Wenceslao de la cruz de León||18299019693';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-03-14', '2026-03-14', 3490,
-    false, false, 'COMPLETADO', 473,
-    'Calle 13 casa #1 caleta', 'Caleta', 'RECAUDADO', '2026-03-14', 166
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7170);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      3490, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Joel villaman||14807575513';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'MOTORIZADO';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-    'entregado', '2026-03-15', '2026-03-15', 3490,
-    false, false, 'COMPLETADO', 400,
-    'C/ hermanas mirabal 33 cancino', 'Santo Domingo', 'RECAUDADO', '2026-03-15', 167
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7170);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-      3490, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Francisco Dominguez||18099090997';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-15', NULL, 4290,
-    false, false, 'CANCELADO', 0,
-    'Calle F No8  residencia don Bolívar', 'Santo Domingo', 'PENDIENTE', NULL, 168
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 4, 9560);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Josefina -||18296296484';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-15', NULL, 2990,
-    false, false, 'CANCELADO', 0,
-    'Calle 30 Mata de los Indios', 'Santo Domingo', 'PENDIENTE', NULL, 169
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 4780);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Ronald -||18096097448';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-15', NULL, 3490,
-    false, false, 'CANCELADO', 0,
-    'Ernesto de la massa 104', 'Santo Domingo', 'PENDIENTE', NULL, 170
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7170);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Elizabeth -||18298771983';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-15', NULL, 3490,
-    false, false, 'CANCELADO', 0,
-    'Barbarin Mojica número 1 mejoramiento social', 'Santo Domingo Este', 'PENDIENTE', NULL, 171
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7170);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Sujey pina nuñez||17063068358';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-03-15', '2026-03-15', 3490,
-    false, false, 'COMPLETADO', 500,
-    'Calle la joya #53', 'Jarabacoa', 'RECAUDADO', '2026-03-15', 172
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7170);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      3490, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Alan Checo.||18298682748';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-15', NULL, 3490,
-    false, false, 'CANCELADO', 0,
-    'Calle Duarte #6', 'Río San Juan', 'PENDIENTE', NULL, 173
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7170);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Juan Ramírez||18498168953';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-15', NULL, 3490,
-    false, false, 'CANCELADO', 0,
-    'Calle capotillo no. 4 detrás de ferreteria agrofer', 'Río San Juan', 'PENDIENTE', NULL, 174
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7170);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Rafael Díaz Filpo||18094898149';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'MOTORIZADO';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-    'entregado', '2026-03-15', '2026-03-15', 5500,
-    false, false, 'COMPLETADO', 250,
-    'Torre Sherry', 'Santo Domingo', 'RECAUDADO', '2026-03-15', 175
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 8, 7170);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-      5500, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Elvio -||18096271100';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-03-15', '2026-03-15', 3490,
-    false, false, 'COMPLETADO', 500,
-    'Calle belén #3 bario 5to centenario', 'Villa Altagracia', 'RECAUDADO', '2026-03-15', 176
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7170);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      3490, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Gerardo -||18293406323';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-15', NULL, 2990,
-    false, false, 'CANCELADO', 0,
-    'Francisco bido 3', 'SANTO DOMINGO', 'PENDIENTE', NULL, 177
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 4780);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Maria -||18098051046';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-15', NULL, 3490,
-    false, false, 'CANCELADO', 0,
-    'Nunez de Caceres 110, plaza mirador', 'Santo Domingo', 'PENDIENTE', NULL, 178
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7170);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'audy -||18096502079';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-15', NULL, 3490,
-    false, false, 'CANCELADO', 0,
-    'ave  lincoln , plaza francesa', 'SANTO DOMINGO', 'PENDIENTE', NULL, 179
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7170);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Ezequiel soriano||18494565656';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-15', NULL, 3490,
-    false, false, 'CANCELADO', 0,
-    'Calle 5  no 59 las palmeras 3 y 4 madre vieja sur san cristobal', 'San Cristóbal', 'PENDIENTE', NULL, 180
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7170);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Francisco Mora Valenzuela||18097106150';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-03-15', '2026-03-15', 1163,
-    false, false, 'COMPLETADO', 473,
-    'Calle2da # 3', 'San Juan', 'RECAUDADO', '2026-03-15', 181
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7170);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      1163, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Natanael javier||18094497262';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'MOTORIZADO';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-    'entregado', '2026-03-15', '2026-03-15', 3490,
-    false, false, 'COMPLETADO', 450,
-    'C/ Carlos Manuel pumarol km 4 frente al complejo deportivo Ray de Tampa bay', 'San Antonio de Guerra', 'RECAUDADO', '2026-03-15', 182
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7170);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-      3490, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Daniel Nuñez||18097121629';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-15', NULL, 3490,
-    false, false, 'CANCELADO', 0,
-    'Manzana R24', 'Pedro Brand', 'PENDIENTE', NULL, 183
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7170);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'José Pérez||18492590729';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-15', NULL, 2990,
-    false, false, 'CANCELADO', 0,
-    'Sánchez', 'Azua (Azua de Compostela)', 'PENDIENTE', NULL, 184
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 4780);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Michael Aybar||18095075448';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-03-16', '2026-03-16', 3490,
-    false, false, 'COMPLETADO', 473,
-    'Avenida Fabio Herrera Residencial Don Marcelo #44 sector Bocacanasta', 'Baní', 'RECAUDADO', '2026-03-16', 185
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7170);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      3490, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Ingrid Ramírez||18494760789';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-03-16', '2026-03-16', 3490,
-    false, false, 'COMPLETADO', 400,
-    'Calle flamboyanes', 'Villa Montellano', 'RECAUDADO', '2026-03-16', 186
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7170);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      3490, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Ingrid Ramírez||18494760789';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-03-16', '2026-03-16', 3490,
-    false, false, 'COMPLETADO', 473,
-    'Calle flamboyanes montebravo', 'Villa Montellano', 'RECAUDADO', '2026-03-16', 187
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7170);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      3490, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Pedro Reyes||18095193436';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'cancelado', '2026-03-16', NULL, 3490,
-    false, false, 'CANCELADO', 0,
-    'Calle Manuel de Jesús Silverio #62', 'Hato Mayor (Hato Mayor del Rey)', 'PENDIENTE', NULL, 188
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7170);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Pedro Reyes||18095193436';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'cancelado', '2026-03-16', NULL, 3490,
-    false, false, 'CANCELADO', 0,
-    'Calle Manuel de Jesús Silverio #62', 'Hato Mayor (Hato Mayor del Rey)', 'PENDIENTE', NULL, 189
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7170);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Kirsy  de la cruz -||18092039189';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-16', NULL, 3490,
-    false, false, 'CANCELADO', 0,
-    'Piedra blanca del salto después del campo de golf', 'Jarabacoa', 'PENDIENTE', NULL, 190
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7170);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Franck melvin||18294686298';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'MOTORIZADO';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-    'entregado', '2026-03-16', '2026-03-16', 2990,
-    false, false, 'COMPLETADO', 450,
-    'Calles 20 casa #17', 'La Caleta', 'RECAUDADO', '2026-03-16', 191
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 4780);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-      2990, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Maria -||18092325330';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-16', NULL, 3490,
-    false, false, 'CANCELADO', 0,
-    'La colonia', 'Piedra Blanca', 'PENDIENTE', NULL, 192
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7170);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Juan Antonio||18093947668';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'MOTORIZADO';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-    'entregado', '2026-03-17', '2026-03-17', 4290,
-    false, false, 'COMPLETADO', 400,
-    'Aguas Buenas No. 18', 'Santo Domingo', 'RECAUDADO', '2026-03-17', 193
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 4, 9560);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-      4290, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Estarlin Rodríguez bido||18296476163';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-03-17', '2026-03-17', 1495,
-    false, false, 'COMPLETADO', 453,
-    '19 de marzo #43', 'Las Matas de Farfán', 'RECAUDADO', '2026-03-17', 194
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 4780);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      1495, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Andrés encarnación Soriano||18298495030';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'MOTORIZADO';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-    'devuelto', '2026-03-17', NULL, 3490,
-    false, false, 'DEVOLUCION', 0,
-    'C p no 52 bendaño atiyo', 'San Cristóbal', 'PENDIENTE', NULL, 195
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7170);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Damari uben zapata||18096943823';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'devuelto', '2026-03-17', NULL, 4290,
-    false, false, 'DEVOLUCION', 400,
-    'Vista cana paseo del cendero lake paradise villa 2', 'Bávaro', 'PENDIENTE', NULL, 196
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 4, 9560);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Caren de Jesús||18292625101';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-17', NULL, 3490,
-    false, false, 'CANCELADO', 0,
-    'Calle 1ra #24 Isabelita. Casi frente a escuela primaria Escolástica Paez', 'Santo Domingo Este', 'PENDIENTE', NULL, 197
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7170);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Lucy -||18299887033';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-17', NULL, 2990,
-    false, false, 'CANCELADO', 0,
-    'Av. Mauricio baez #57', 'San Pedro de Macorís', 'PENDIENTE', NULL, 198
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 4780);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Mario mena||18494495098';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-17', NULL, 3490,
-    false, false, 'CANCELADO', 0,
-    'Carretera el morro presa de tabera', 'La Vega (Concepción de la Vega)', 'PENDIENTE', NULL, 199
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7170);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Wilton -||18293755678';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-03-17', '2026-03-17', 3490,
-    false, false, 'COMPLETADO', 500,
-    'José Francisco Peña gomes', 'Las Charcas', 'RECAUDADO', '2026-03-17', 200
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7170);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      3490, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Edward Montero||18296060289';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-17', NULL, 3490,
-    false, false, 'CANCELADO', 0,
-    'C/General Cabral #77', 'El Cercado', 'PENDIENTE', NULL, 201
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7170);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Paulina perez||18292189286';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-17', NULL, 3490,
-    false, false, 'CANCELADO', 0,
-    'Carretera,José Duran', 'Constanza', 'PENDIENTE', NULL, 202
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7170);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Carmen Elizabeth Peña Santos||18099957037';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-18', NULL, 3490,
-    false, false, 'CANCELADO', 0,
-    'la pared de jarna', 'Santo Domingo Este', 'PENDIENTE', NULL, 203
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7170);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Adelso -||18093525711';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-03-18', '2026-03-18', 3490,
-    false, false, 'COMPLETADO', 500,
-    'C/ Jesús Diplan #45', 'Licey al Medio', 'RECAUDADO', '2026-03-18', 204
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7170);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      3490, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Ana Francisco||18095072372';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-03-18', '2026-03-18', 3490,
-    false, false, 'COMPLETADO', 500,
-    'Calle 41 esq 2 del invi las colinas', 'Santiago de los Caballeros', 'RECAUDADO', '2026-03-18', 205
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7170);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      3490, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'María Alvarez||18298867131';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'MOTORIZADO';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-    'entregado', '2026-03-18', '2026-03-18', 3490,
-    false, false, 'COMPLETADO', 300,
-    'Calle la vaguada  9 colina de los rios', 'Santo Domingo', 'RECAUDADO', '2026-03-18', 206
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7170);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-      3490, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Sonia santos||18297595637';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-03-18', '2026-03-18', 3490,
-    false, false, 'COMPLETADO', 500,
-    'Calle colibrí casa ##2 residencial la herencia', 'Jarabacoa', 'RECAUDADO', '2026-03-18', 207
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7170);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      3490, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Aracelis Rosario||18296988062';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-18', NULL, 3490,
-    false, false, 'CANCELADO', 0,
-    'Calle castillo 62', 'San Francisco de Macorís', 'PENDIENTE', NULL, 208
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7170);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Aracelis Rosario||18296988062';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-18', NULL, 3490,
-    false, false, 'CANCELADO', 0,
-    'Calle castillo 62', 'San Francisco de Macorís', 'PENDIENTE', NULL, 209
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7170);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Esteban Vasquez||18293368714';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'MOTORIZADO';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-    'entregado', '2026-03-18', '2026-03-18', 3490,
-    false, false, 'COMPLETADO', 400,
-    'La carrera #20 agua loca km15.5de las américas', 'Santo Domingo Este', 'RECAUDADO', '2026-03-18', 210
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7170);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-      3490, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Elías -||18298478661';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-03-18', '2026-03-18', 3490,
-    false, false, 'COMPLETADO', 473,
-    'C. Máximo Gómez #47 - Villa Verde', 'La Romana', 'RECAUDADO', '2026-03-18', 211
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 7170);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      3490, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Alexandra de los Santos||18094543293';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-03-18', '2026-03-18', 2990,
-    false, false, 'COMPLETADO', 453,
-    'Barrio hoyo del cacao, sector la bujuquera, colmado Alvarez', 'Las Terrenas', 'RECAUDADO', '2026-03-18', 212
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 5980);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      2990, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Diogenes del rosario||18092090735';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-19', NULL, 3490,
-    false, false, 'CANCELADO', 0,
-    'Pepe Santana', 'Higüey (Salvaleón de Higüey)', 'PENDIENTE', NULL, 213
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Richard Freites||18296339784';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-19', NULL, 3490,
-    false, false, 'CANCELADO', 0,
-    'Calle central #11 bellas colinas, San Miguel de manoguayabo. Santo Domingo oeste', 'Santo Domingo', 'PENDIENTE', NULL, 214
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Estela acevedo||18296515268';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'MOTORIZADO';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-    'entregado', '2026-03-19', '2026-03-19', 3490,
-    false, false, 'COMPLETADO', 400,
-    'Saturno 13A sol de luz villa mella', 'Santo Domingo', 'RECAUDADO', '2026-03-19', 215
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-      3490, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Yrene Beaubrun||18097754364';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-03-19', '2026-03-19', 3490,
-    false, false, 'COMPLETADO', 473,
-    'Luz celeste Lara', 'Comendador', 'RECAUDADO', '2026-03-19', 216
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      3490, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Wilson Rodríguez||18296050915';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'MOTORIZADO';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-    'devuelto', '2026-03-19', NULL, 3490,
-    false, false, 'DEVOLUCION', 0,
-    'Calle progreso número 9 brisas del este', 'Santo Domingo Este', 'PENDIENTE', NULL, 217
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Victor sanchez||18093913962';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'cancelado', '2026-03-19', NULL, 3490,
-    false, false, 'CANCELADO', 0,
-    '21 de enero', 'Higüey (Salvaleón de Higüey)', 'PENDIENTE', NULL, 218
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Victor sanchez||18093913962';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'cancelado', '2026-03-19', NULL, 8970,
-    false, false, 'CANCELADO', 0,
-    '21 de enero', 'Higüey (Salvaleón de Higüey)', 'PENDIENTE', NULL, 219
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Guarionex Acosta||18292650497';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-03-19', '2026-03-19', 4290,
-    false, false, 'COMPLETADO', 505,
-    'Calle Enrriquillo #6 , centro ciudad  .', 'Neiba', 'RECAUDADO', '2026-03-19', 220
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 4, 8970);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      4290, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Hilario -||18096134815';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-03-19', '2026-03-19', 4290,
-    false, false, 'COMPLETADO', 505,
-    'Miguel de regla mota #1 urbanización blanquizales', 'Barahona (Santa Cruz de Barahona)', 'RECAUDADO', '2026-03-19', 221
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 4, 11960);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      4290, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Jose -||18495819167';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-19', NULL, 3490,
-    false, false, 'CANCELADO', 0,
-    'Pepe herr', 'Villa Tapia (La Jagua)', 'PENDIENTE', NULL, 222
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Ramona -||18297668764';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-03-19', '2026-03-19', 2990,
-    false, false, 'COMPLETADO', 480,
-    'La circunvalación', 'Verón', 'RECAUDADO', '2026-03-19', 223
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 5980);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      2990, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Aracelis gonzales de perez||18298877337';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'MOTORIZADO';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-    'devuelto', '2026-03-19', NULL, 3490,
-    false, false, 'DEVOLUCION', 0,
-    'Calle 12numero 2 ponce los giaricano', 'Santo Domingo', 'PENDIENTE', NULL, 224
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Jesús Lantigua||18092242915';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-03-19', '2026-03-19', 2990,
-    false, false, 'COMPLETADO', 483,
-    'Calle Duarte esquina padre castellanos (segunda planta edificio circuito Musa)', 'Puerto Plata (San Felipe de Puerto Plata)', 'RECAUDADO', '2026-03-19', 225
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 5980);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      2990, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Julio perez||18292123367';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'MOTORIZADO';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-    'entregado', '2026-03-20', '2026-03-20', 3490,
-    false, false, 'COMPLETADO', 500,
-    'Super Mercado Ole, La Caleta', 'La otra Banda (Higüey)', 'RECAUDADO', '2026-03-20', 226
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-      3490, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Yoeli de la rosa||18498039854';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-20', NULL, 3490,
-    false, false, 'CANCELADO', 0,
-    'Calle 37, número 6, barrio 24 de abrir, los alcarrizos', 'Los Alcarrizos', 'PENDIENTE', NULL, 227
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Feliciano peralta||18294216705';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'pendiente', '2026-03-20', NULL, 3490,
-    false, false, 'NOVEDAD', 0,
-    'Calle principal #30 cerro del castillo la trinitaria', 'Santiago de los Caballeros', 'PENDIENTE', NULL, 228
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Socrates Morel||18299148855';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-20', NULL, 3490,
-    false, false, 'CANCELADO', 0,
-    'Kilómetros 10 de Cumayasa', 'La Romana', 'PENDIENTE', NULL, 229
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Benancia santos||18298908451';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-20', NULL, 3490,
-    false, false, 'CANCELADO', 0,
-    'Calle el pley casa 26', 'Castañuelas', 'PENDIENTE', NULL, 230
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Gerson Escanio matos||18093925008';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-03-20', '2026-03-20', 3490,
-    false, false, 'COMPLETADO', 500,
-    'Distrito municipal de palo alto', 'Jaquimeyes', 'RECAUDADO', '2026-03-20', 231
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      3490, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Patricia Inoa||18097141717';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-03-20', '2026-03-20', 3490,
-    false, false, 'COMPLETADO', 473,
-    'Ave Los Roboes #401, Buena Vista Norte', 'La Romana', 'RECAUDADO', '2026-03-20', 232
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      3490, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Yanirys francois||18292124186';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-21', NULL, 3490,
-    false, false, 'CANCELADO', 0,
-    'Carretera Seibo km9', 'El Seibo (Santa Cruz del Seibo)', 'PENDIENTE', NULL, 233
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Dilcia -||18294527349';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-21', NULL, 2990,
-    false, false, 'CANCELADO', 0,
-    'Presidente Vásquez', 'Moca', 'PENDIENTE', NULL, 234
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 5980);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Yokasta carrion||18299824907';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-21', NULL, 3490,
-    false, false, 'CANCELADO', 0,
-    'Duarte esquina colon#53', 'Higüey (Salvaleón de Higüey)', 'PENDIENTE', NULL, 235
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Yessica Eridania||18297569280';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-21', NULL, 3490,
-    false, false, 'CANCELADO', 0,
-    'Rincón de Veragua', 'Gaspar Hernández', 'PENDIENTE', NULL, 236
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Yannely -||18297300620';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-21', NULL, 2990,
-    false, false, 'CANCELADO', 0,
-    'Carmen Celia Balaguer #3 el millón', 'Santo Domingo Norte', 'PENDIENTE', NULL, 237
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 5980);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Zuleika altagracia Santana casado||18295085429';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-03-21', '2026-03-21', 3490,
-    false, false, 'COMPLETADO', 473,
-    'Ingenio santafe barrio buenos aires, calle Lluis Felipe de aza . Casa número 6+', 'San Pedro de Macorís', 'RECAUDADO', '2026-03-21', 238
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      3490, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Joel Joseph||18293514660';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-21', NULL, 3490,
-    false, false, 'CANCELADO', 0,
-    'La seiba del salado', 'La otra Banda (Higüey)', 'PENDIENTE', NULL, 239
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Onasi -||18097477468';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-21', NULL, 3490,
-    false, false, 'CANCELADO', 0,
-    'Canasta', 'San Cristóbal', 'PENDIENTE', NULL, 240
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'audy -||18096502079';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-21', NULL, 3490,
-    false, false, 'CANCELADO', 0,
-    'ave abraham lincoln plaza francesa 331', 'Santo Domingo', 'PENDIENTE', NULL, 241
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'José frias||18096670441';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-03-21', '2026-03-21', 3490,
-    false, false, 'COMPLETADO', 473,
-    'Calle sanche númer 4nunmercado nuevo frente a donde venden los plátanos en nuestro negocio', 'San Francisco de Macorís', 'RECAUDADO', '2026-03-21', 242
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      3490, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Jesus -||18496589066';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-21', NULL, 3490,
-    false, false, 'CANCELADO', 0,
-    'Calle 9, #24, residencial Santo Domingo', 'Santo Domingo', 'PENDIENTE', NULL, 243
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Yomery -||18493962388';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-03-21', '2026-03-21', 4290,
-    false, false, 'COMPLETADO', 505,
-    'Calle López de Vega #34, proyecto 2c', 'Azua (Azua de Compostela)', 'RECAUDADO', '2026-03-21', 244
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 4, 11960);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      4290, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Martin López||18099243141';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-03-22', '2026-03-22', 3490,
-    false, false, 'COMPLETADO', 473,
-    'Los Guallos', 'La Vega (Concepción de la Vega)', 'RECAUDADO', '2026-03-22', 245
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      3490, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Altagracia Hidalgo||18293421937';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'devuelto', '2026-03-22', NULL, 2990,
-    false, false, 'DEVOLUCION', 400,
-    'Los pomos tenares', 'Tenares', 'PENDIENTE', NULL, 246
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 5980);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Ana -||18093033786';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'MOTORIZADO';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-    'entregado', '2026-03-22', '2026-03-22', 3490,
-    false, false, 'COMPLETADO', 300,
-    'Fantino falco 43 edificio naco real apto 1bn Frente al salón palacio de la belleza', 'Santo Domingo', 'RECAUDADO', '2026-03-22', 247
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-      3490, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'La gorda rd||18298167300';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-22', NULL, 3490,
-    false, false, 'CANCELADO', 0,
-    'La seiba del salado', 'Punta Cana', 'PENDIENTE', NULL, 248
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Daniel perdomo||18295567809';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-22', NULL, 3490,
-    false, false, 'CANCELADO', 0,
-    'acto de rafey sona franca etapa 5', 'Santiago de los Caballeros', 'PENDIENTE', NULL, 249
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Yenli Blue||18097199920';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-22', NULL, 3490,
-    false, false, 'CANCELADO', 0,
-    'La Ciénaga, frente a la agroquímica La Fiera', 'El Naranjal', 'PENDIENTE', NULL, 250
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Alejandro Fermín||18295631206';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-03-22', '2026-03-22', 3490,
-    false, false, 'COMPLETADO', 473,
-    'Calle 9 número 24 las Antillas', 'Santiago de los Caballeros', 'RECAUDADO', '2026-03-22', 251
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      3490, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Nelson Martínez||18295505583';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'devuelto', '2026-03-22', NULL, 3290,
-    false, false, 'DEVOLUCION', 400,
-    'Benerito por el colmadon', 'Bayahíbe (San Rafael del Yuma)', 'PENDIENTE', NULL, 252
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Ysabel  Contreras -||18095197969';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-22', NULL, 2990,
-    false, false, 'CANCELADO', 0,
-    'Ciudad las palmas', 'Punta Cana', 'PENDIENTE', NULL, 253
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 5980);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Junior Valentín||18092090404';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'devuelto', '2026-03-23', NULL, 2990,
-    false, false, 'DEVOLUCION', 400,
-    'Torre Río, tercer nivel, suite 306', 'San Francisco de Macorís', 'PENDIENTE', NULL, 254
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 5980);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Ana -||18099908003';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-23', NULL, 3490,
-    false, false, 'CANCELADO', 0,
-    'Esta es la ubicación:   C/ Dr. Nuñez y Dominguez #28 Torre Marevento , La Julia', 'Santo Domingo', 'PENDIENTE', NULL, 255
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Yoel Mejía||18097071794';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-23', NULL, 3490,
-    false, false, 'CANCELADO', 0,
-    'Padre Abreu 96', 'La Romana', 'PENDIENTE', NULL, 256
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Ada almanzar||14074337209';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-03-23', '2026-03-23', 2990,
-    false, false, 'COMPLETADO', 453,
-    'Urbanización maría cristina #3', 'Cotuí', 'RECAUDADO', '2026-03-23', 257
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 5980);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      2990, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Estela Mendez||393318230557';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'MOTORIZADO';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-    'entregado', '2026-03-23', '2026-03-23', 3490,
-    false, false, 'COMPLETADO', 350,
-    'Principe negro #20 sector El Rosal', 'Santo Domingo Este', 'RECAUDADO', '2026-03-23', 258
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-      3490, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Yudelky paulino||18097717191';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-23', NULL, 3490,
-    false, false, 'CANCELADO', 0,
-    'Doctor tejada florentino floristería yanil tenares', 'Tenares', 'PENDIENTE', NULL, 259
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Carolina -||18295546408';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-23', NULL, 2990,
-    false, false, 'CANCELADO', 0,
-    'Calle Omar torrijo 4 ballona', 'Santo Domingo Oeste', 'PENDIENTE', NULL, 260
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 5980);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Domingo Alexander vanterpool||18098767442';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-03-23', '2026-03-23', 3490,
-    false, false, 'COMPLETADO', 473,
-    'Santa Fe villa blanca en el parquesito', 'San Pedro de Macorís', 'RECAUDADO', '2026-03-23', 261
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      3490, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Gustavo cid||18093507553';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-23', NULL, 3490,
-    false, false, 'CANCELADO', 0,
-    'Prinvipal', 'Cabrera (Tres Amarras)', 'PENDIENTE', NULL, 262
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Francis -||18096727400';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-23', NULL, 2990,
-    false, false, 'CANCELADO', 0,
-    'Complejo Iberostar Bavaro', 'Bávaro', 'PENDIENTE', NULL, 263
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 5980);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Andres Capellan||18297907362';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'MOTORIZADO';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-    'entregado', '2026-03-24', '2026-03-24', 3490,
-    false, false, 'COMPLETADO', 300,
-    'Constanza', 'Constanza', 'RECAUDADO', '2026-03-24', 264
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-      3490, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Martha Santana||18097560758';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'MOTORIZADO';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-    'entregado', '2026-03-24', '2026-03-24', 3490,
-    false, false, 'COMPLETADO', 300,
-    'Calle Las Marias 2 C, ALFIMAR', 'Santo Domingo', 'RECAUDADO', '2026-03-24', 265
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-      3490, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Freddy baez||18096186841';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-03-24', '2026-03-24', 3490,
-    false, false, 'COMPLETADO', 473,
-    'Abigail 10 Cristo rey dan juan', 'San Juan', 'RECAUDADO', '2026-03-24', 266
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      3490, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Nector Rosario||18297061552';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'devuelto', '2026-03-24', NULL, 3490,
-    false, false, 'DEVOLUCION', 400,
-    'C/ Principal Anamuya #29', 'Higüey (Salvaleón de Higüey)', 'PENDIENTE', NULL, 267
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'José Alberto Santos||18092507891';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'MOTORIZADO';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-    'entregado', '2026-03-24', '2026-03-24', 3490,
-    false, false, 'COMPLETADO', 350,
-    'C/ interior B14, Alma Rosa Segunda', 'Santo Domingo Este', 'RECAUDADO', '2026-03-24', 268
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-      3490, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Olga Lidia||18097869410';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-03-24', '2026-03-24', 3490,
-    false, false, 'COMPLETADO', 473,
-    'C/ L #35, Villa Progreso / San Pedro de Macorís', 'San Pedro de Macorís', 'RECAUDADO', '2026-03-24', 269
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      3490, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Claudia rosario diaz||18493801028';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-25', NULL, 2990,
-    false, false, 'CANCELADO', 0,
-    'Calle ernesto chequevara 10 al lado de la gallera', 'Cevicos', 'PENDIENTE', NULL, 270
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 5980);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Junior reyes||18494696562';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-25', NULL, 2990,
-    false, false, 'CANCELADO', 0,
-    'Av francisco alberto caamoño barrio blanc los multis', 'San Pedro de Macorís', 'PENDIENTE', NULL, 271
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 5980);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Yajaira Robles||18492489978';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-03-25', '2026-03-25', 3490,
-    false, false, 'COMPLETADO', 473,
-    'Calle 4 de marzo  casa 7', 'La Vega (Concepción de la Vega)', 'RECAUDADO', '2026-03-25', 272
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      3490, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Yesenia  pinales -||18297147901';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-03-25', '2026-03-25', 4290,
-    false, false, 'COMPLETADO', 505,
-    'Viya liberación manzana 19 casa 37 b', 'San Juan', 'RECAUDADO', '2026-03-25', 273
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 4, 11960);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      4290, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Juan -||18092081135';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-25', NULL, 3490,
-    false, false, 'CANCELADO', 0,
-    'La victoria', 'Santo Domingo Norte', 'PENDIENTE', NULL, 274
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Odanel Zabala||18295363411';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'MOTORIZADO';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-    'devuelto', '2026-03-25', NULL, 3490,
-    false, false, 'DEVOLUCION', 0,
-    'Calle c # 32  el perla antillana', 'Santo Domingo Este', 'PENDIENTE', NULL, 275
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Jesús castillo||18094866174';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-03-25', '2026-03-25', 3490,
-    false, false, 'COMPLETADO', 473,
-    'Brisa del llano, próximo a la villa de Alondra', 'Higüey (Salvaleón de Higüey)', 'RECAUDADO', '2026-03-25', 276
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      3490, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Jaice ruiz||18494016385';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-25', NULL, 2990,
-    false, false, 'CANCELADO', 0,
-    '99 santa rosa', 'La Romana', 'PENDIENTE', NULL, 277
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 5980);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Manuela cespedes||18293250923';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-25', NULL, 3490,
-    false, false, 'CANCELADO', 0,
-    'El casique barahona', 'Barahona (Santa Cruz de Barahona)', 'PENDIENTE', NULL, 278
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Wilfrido -||18292919115';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-03-25', '2026-03-25', 3490,
-    false, false, 'COMPLETADO', 473,
-    'Calle principal #4/ Batey Olivares', 'San Pedro de Macorís', 'RECAUDADO', '2026-03-25', 279
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      3490, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Cristian cuevas||18493415786';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-26', NULL, 2990,
-    false, false, 'CANCELADO', 0,
-    'Manolo Tavares justo', 'San Francisco de Macorís', 'PENDIENTE', NULL, 280
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 5980);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Yuby Ureña||18296164753';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-26', NULL, 3490,
-    false, false, 'CANCELADO', 0,
-    'Carretera Don Pedro', 'Santiago de los Caballeros', 'PENDIENTE', NULL, 281
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Jon -||18295850251';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-26', NULL, 3490,
-    false, false, 'CANCELADO', 0,
-    'Los tocones', 'Santiago de los Caballeros', 'PENDIENTE', NULL, 282
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Leonardo Rojas||18099432899';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'MOTORIZADO';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-    'entregado', '2026-03-26', '2026-03-26', 4290,
-    false, false, 'COMPLETADO', 350,
-    'Constructora AMRZ', 'Santo Domingo Norte', 'RECAUDADO', '2026-03-26', 283
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 4, 11960);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-      4290, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Ada Almánzar||14074337209';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-03-26', '2026-03-26', 4290,
-    false, false, 'COMPLETADO', 505,
-    'Urbanización maría cristina #3', 'Cotuí', 'RECAUDADO', '2026-03-26', 284
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 4, 11960);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      4290, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Julio M Bonnelly T||18299865999';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-03-26', '2026-03-26', 3490,
-    false, false, 'COMPLETADO', 473,
-    'Carretera Don Pedro Residencial Las Mercedes', 'Santiago de los Caballeros', 'RECAUDADO', '2026-03-26', 285
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      3490, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Fausto -||18094492880';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-26', NULL, 3490,
-    false, false, 'CANCELADO', 0,
-    'Hotel Rancho Guacamayo', 'La Salvia - Los Quemados', 'PENDIENTE', NULL, 286
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Yasmin genao||18299326650';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-03-27', '2026-03-27', 3490,
-    false, false, 'COMPLETADO', 473,
-    'Calles las sombrillas', 'Puerto Plata (San Felipe de Puerto Plata)', 'RECAUDADO', '2026-03-27', 287
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      3490, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Wilkin Pujols Mendez||18297972567';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-03-27', '2026-03-27', 4290,
-    false, false, 'COMPLETADO', 505,
-    'Av. República de Argentina, Resid. Argelin el embrujo 1 - Apt 2-A', 'Santiago de los Caballeros', 'RECAUDADO', '2026-03-27', 288
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 4, 11960);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      4290, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Adalberto polanco||18299783859';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-03-27', '2026-03-27', 2990,
-    false, false, 'COMPLETADO', 453,
-    'C/ Pablo néruda # 1', 'Bonao', 'RECAUDADO', '2026-03-27', 289
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 5980);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      2990, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Carlos Agramonte||18494480704';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'devuelto', '2026-03-27', NULL, 2990,
-    false, false, 'DEVOLUCION', 400,
-    'Calle A  número 98 sector las callenas santiago entrando por tanu.', 'Santiago de los Caballeros', 'PENDIENTE', NULL, 290
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 5980);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Francisco Alberto paredes||18496578337';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-03-27', '2026-03-27', 3490,
-    false, false, 'COMPLETADO', 473,
-    'Calle Pérez marque', 'San Pedro de Macorís', 'RECAUDADO', '2026-03-27', 291
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      3490, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Deybi Ramirez||18296367726';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-03-27', '2026-03-27', 3490,
-    false, false, 'COMPLETADO', 473,
-    'Principal villa visan', 'San Pedro de Macorís', 'RECAUDADO', '2026-03-27', 292
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      3490, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Yamilex concepcion||18097208730';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-27', NULL, 3490,
-    false, false, 'CANCELADO', 0,
-    'Fantino frente al parque', 'Fantino', 'PENDIENTE', NULL, 293
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Rudy de la cruz||18092817202';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-03-27', '2026-03-27', 3490,
-    false, false, 'COMPLETADO', 473,
-    'Los indios 48 barrio lindo', 'San Pedro de Macorís', 'RECAUDADO', '2026-03-27', 294
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      3490, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Faustin François||18098904886';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-03-28', '2026-03-28', 3490,
-    false, false, 'COMPLETADO', 473,
-    'Detrás escuela en la Sánchez', 'Sabaneta (San Ignacio de Sabaneta)', 'RECAUDADO', '2026-03-28', 295
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      3490, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'José Vargas||18096641095';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-03-28', '2026-03-28', 3490,
-    false, false, 'COMPLETADO', 473,
-    'Calle 14, edeificio Mariela, número 15, cerro don Antonio, santiago', 'Santiago de los Caballeros', 'RECAUDADO', '2026-03-28', 296
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      3490, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Argenis Rosado||18293488010';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-03-28', '2026-03-28', 3490,
-    false, false, 'COMPLETADO', 500,
-    'La colonia', 'Jarabacoa', 'RECAUDADO', '2026-03-28', 297
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      3490, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Johana -||18293580236';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'devuelto', '2026-03-28', NULL, 3490,
-    false, false, 'DEVOLUCION', 400,
-    'Barrio San Pedro', 'Higüey (Salvaleón de Higüey)', 'PENDIENTE', NULL, 298
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Alphi Ruiz||18098189221';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-03-28', '2026-03-28', 3490,
-    false, false, 'COMPLETADO', 473,
-    'Calle segunda, edificio H&S 2 apartamento 203, detrás de repuesto sandro', 'La Romana', 'RECAUDADO', '2026-03-28', 299
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      3490, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Mauricio de jesus||18095193725';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'MOTORIZADO';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-    'entregado', '2026-03-28', '2026-03-28', 3490,
-    false, false, 'COMPLETADO', 530,
-    'Darío franco', 'Nigua (San Gregorio de Nigua)', 'RECAUDADO', '2026-03-28', 300
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-      3490, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'José Manuel Bichara||18098851213';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'MOTORIZADO';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-    'entregado', '2026-03-28', '2026-03-28', 3490,
-    false, false, 'COMPLETADO', 450,
-    'Calle Juan Goico Alix #57, Ensanchez ozama', 'Santo Domingo Este', 'RECAUDADO', '2026-03-28', 301
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-      3490, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Claudia Soto||18298015429';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'MOTORIZADO';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-    'cancelado', '2026-03-28', NULL, 3490,
-    false, false, 'CANCELADO', 0,
-    'Calle máximo Cabral #4 Gazcue', 'Santo Domingo', 'PENDIENTE', NULL, 302
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Claudia Soto||18298015429';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'MOTORIZADO';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-    'cancelado', '2026-03-28', NULL, 3490,
-    false, false, 'CANCELADO', 0,
-    'Calle máximo Cabral #4 Gazcue', 'Santo Domingo', 'PENDIENTE', NULL, 303
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Helen -||18093999327';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-03-28', '2026-03-28', 2990,
-    false, false, 'COMPLETADO', 453,
-    'Carretera Higüey , yuma km 1 , Auto Haus , a Higüey , la Altagracua', 'Higüey (Salvaleón de Higüey)', 'RECAUDADO', '2026-03-28', 304
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 5980);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      2990, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Victor Alcantara||18298288801';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-03-28', '2026-03-28', 3490,
-    false, false, 'COMPLETADO', 453,
-    'Calle principal #38 los parmarito', 'San José de Ocoa', 'RECAUDADO', '2026-03-28', 305
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      3490, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Carlos -||18097055896';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'devuelto', '2026-03-29', NULL, 3490,
-    false, false, 'DEVOLUCION', 400,
-    'Mella  número 106 frénateal banco de reservas', 'Cotuí', 'PENDIENTE', NULL, 306
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Jimena foxan||18293599082';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-03-29', '2026-03-29', 2990,
-    false, false, 'COMPLETADO', 453,
-    'Bario puerto rico a 5 casa del colmado julio', 'Hato Mayor (Hato Mayor del Rey)', 'RECAUDADO', '2026-03-29', 307
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 5980);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      2990, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Edinson Ureña||18297890139';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-03-29', '2026-03-29', 4290,
-    false, false, 'COMPLETADO', 532,
-    'Pinar quemado', 'Jarabacoa', 'RECAUDADO', '2026-03-29', 308
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 4, 11960);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      4290, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'cesar martinez||18092129434';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-29', NULL, 3490,
-    false, false, 'CANCELADO', 0,
-    'callé circunvalación', 'Haina (Bajos de Haina)', 'PENDIENTE', NULL, 309
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Franklin de lima||18299318456';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-03-29', NULL, 3490,
-    false, false, 'CANCELADO', 0,
-    'María Trinidad Sánchez k/17 las americas sector nuevos amanecer', 'Santo Domingo Este', 'PENDIENTE', NULL, 310
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Miguel Angel garcias||18097585780';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'MOTORIZADO';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-    'entregado', '2026-03-29', '2026-03-29', 3490,
-    false, false, 'COMPLETADO', 400,
-    'Calle pupito peguero # 11', 'Santo Domingo Este', 'RECAUDADO', '2026-03-29', 311
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-      3490, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Nicolino Loche||18493608700';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-04-05', '2026-04-05', 2990,
-    false, false, 'COMPLETADO', 453,
-    'En los jardines metropolitanos calle 1.', 'Santiago de los Caballeros', 'RECAUDADO', '2026-04-05', 312
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 5980);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      2990, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Selenia -||18297985334';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-04-05', NULL, 3490,
-    false, false, 'CANCELADO', 0,
-    'Don jaime', 'Santiago de los Caballeros', 'PENDIENTE', NULL, 313
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Juan marte||18295083273';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-04-05', NULL, 2990,
-    false, false, 'CANCELADO', 0,
-    'Los tocone', 'Cotuí', 'PENDIENTE', NULL, 314
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 5980);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Jorge -||18494705098';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-04-05', NULL, 3490,
-    false, false, 'CANCELADO', 0,
-    'Los callenes', 'Las Lagunas de Nisibón (Higüey)', 'PENDIENTE', NULL, 315
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Poli -||18494593629';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-04-05', NULL, 3490,
-    false, false, 'CANCELADO', 0,
-    'Poli', 'San Juan', 'PENDIENTE', NULL, 316
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Miguel angel frías Cruz||18094155830';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-04-05', '2026-04-05', 4290,
-    false, false, 'COMPLETADO', 532,
-    'Avenida España, Lobato  de Friusa y yo', 'Bávaro', 'RECAUDADO', '2026-04-05', 317
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 4, 11960);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      4290, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'La Para De La||18297731495';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-04-06', NULL, 3490,
-    false, false, 'CANCELADO', 0,
-    'San Cristóbal', 'San Cristóbal', 'PENDIENTE', NULL, 318
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Rafael pajero Beato||18493900746';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-04-06', NULL, 3490,
-    false, false, 'CANCELADO', 0,
-    'Callejón Los Espinales, C. Parada Vieja 77', 'Licey al Medio', 'PENDIENTE', NULL, 319
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Kelvin Alcántara||18296509070';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-04-06', NULL, 3490,
-    false, false, 'CANCELADO', 0,
-    'Residencial palmera oriental etapa 4 edificio k 103', 'Santo Domingo Este', 'PENDIENTE', NULL, 320
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Kelvin Alcántara||18296509070';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-04-06', NULL, 3490,
-    false, false, 'CANCELADO', 0,
-    'Residencial palmera oriental etapa 4 edificio k 103 autopista de san Isidro', 'Santo Domingo Este', 'PENDIENTE', NULL, 321
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'José Antonio Acosta Jiménez||18296412997';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-04-06', '2026-04-06', 3490,
-    false, false, 'COMPLETADO', 473,
-    'Prolongación hostos sector Juan Pablo Duarte justo detrás de la fortaleza', 'Cotuí', 'RECAUDADO', '2026-04-06', 322
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      3490, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'HECTOR MONTERO||18099868600';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-04-06', '2026-04-06', 3490,
-    false, false, 'COMPLETADO', 473,
-    'Edifico 5 apto D, manzana 4, Villa Liberación', 'San Juan', 'RECAUDADO', '2026-04-06', 323
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      3490, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Dominica Rosario||18093359154';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'pendiente', '2026-04-07', NULL, 3490,
-    false, false, 'EN ESPERA', 0,
-    'Km 19 las Américas en el sector La Ureña', 'Santo Domingo Este', 'PENDIENTE', NULL, 324
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Dione Cubilete Díaz||18498848295';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'MOTORIZADO';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-    'entregado', '2026-04-07', '2026-04-07', 4290,
-    false, false, 'COMPLETADO', 400,
-    'Sector km.12 de Haina, Autopista 30 de Mayo B/Guzman, C/ 1ra. #37', 'Santo Domingo Oeste', 'RECAUDADO', '2026-04-07', 325
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 4, 11960);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-      4290, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Joan pilier||18292848411';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'confirmado', '2026-04-07', NULL, 3490,
-    false, false, 'EN RUTA', 0,
-    'Ciudad del sol 318', 'Verón', 'PENDIENTE', NULL, 326
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Juan Antonio Mejia Ruiz||18094478537';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'MOTORIZADO';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-    'entregado', '2026-04-07', '2026-04-07', 3490,
-    false, false, 'COMPLETADO', 400,
-    'Calle 2da. NO. 8,URB.MRRBELLA 2DA.LOS FRAILES ll', 'Santo Domingo Este', 'RECAUDADO', '2026-04-07', 327
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-      3490, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'George Rivas||18293200303';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-04-08', NULL, 3490,
-    false, false, 'CANCELADO', 0,
-    'San Antonio, calle primera casa número 26', 'La Vega (Concepción de la Vega)', 'PENDIENTE', NULL, 328
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Uver -||18099563946';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-04-08', '2026-04-08', 3490,
-    false, false, 'COMPLETADO', 473,
-    'Calle Antonio Guzmán', 'Monte Plata', 'RECAUDADO', '2026-04-08', 329
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      3490, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Cecilin maria||18493709428';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-04-08', '2026-04-08', 3490,
-    false, false, 'COMPLETADO', 473,
-    'Matancitas, al lado de la escuela primaria clara brens', 'Nagua', 'RECAUDADO', '2026-04-08', 330
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      3490, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Dariel Tejada||18496300294';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'pendiente', '2026-04-08', NULL, 3490,
-    false, false, 'LLAMAR', 0,
-    'Sabana Larga', 'Mao (Santa Cruz de Mao)', 'PENDIENTE', NULL, 331
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Robert -||13479610412';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'MOTORIZADO';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-    'devuelto', '2026-04-08', NULL, 2990,
-    false, false, 'DEVOLUCION', 0,
-    'Calle Puerto Rico número 44 de Sánchez Ozama', 'Santo Domingo Este', 'PENDIENTE', NULL, 332
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 5980);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Yoly Reyes||18099210560';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'AUREL';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-    'entregado', '2026-04-09', '2026-04-09', 4290,
-    false, false, 'COMPLETADO', 350,
-    'C/6#25 resd. Brisas del Valle las charcas', 'Santiago de los Caballeros', 'RECAUDADO', '2026-04-09', 333
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 4, 11960);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-      4290, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Joanna Martínez||18097131380';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'AUREL';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-    'devuelto', '2026-04-09', NULL, 4290,
-    false, false, 'DEVOLUCION', 0,
-    'Calle Plácida del Río 3', 'La otra Banda (Higüey)', 'PENDIENTE', NULL, 334
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 4, 11960);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Leonel de la cruz||18295538987';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'AUREL';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-    'entregado', '2026-04-09', '2026-04-09', 4290,
-    false, false, 'COMPLETADO', 350,
-    'Viya nabarro', 'Hato Mayor (Hato Mayor del Rey)', 'RECAUDADO', '2026-04-09', 335
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 4, 11960);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-      4290, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Dariel Tejada||18496300294';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-04-09', NULL, 3490,
-    false, false, 'CANCELADO', 0,
-    'Sabana Larga', 'Mao (Santa Cruz de Mao)', 'PENDIENTE', NULL, 336
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'ARISMENDY López||18092995266';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'AUREL';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-    'entregado', '2026-04-10', '2026-04-10', 3490,
-    false, false, 'COMPLETADO', 350,
-    'Presidencial, La Palma, calle Palma, Real, esquina, licuada número uno', 'La Romana', 'RECAUDADO', '2026-04-10', 337
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-      3490, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Wislet Carismene||18296373315';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-04-10', NULL, 3490,
-    false, false, 'SIN COBERTURA', 0,
-    'Calle principal número 1', 'Yaguate (San Gregorio de Yaguate)', 'PENDIENTE', NULL, 338
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Ysabel  Contreras -||18095197969';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'AUREL';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-    'cancelado', '2026-04-10', NULL, 2990,
-    false, false, 'CANCELADO', 0,
-    'Ciudad las palmas', 'Punta Cana', 'PENDIENTE', NULL, 339
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 5980);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Marina cueva||18294100274';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-04-10', NULL, 4118.2,
-    false, false, 'SIN COBERTURA', 0,
-    'cabarete, casa67 atras de electromueble mario', 'sosua', 'PENDIENTE', NULL, 340
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Prueba -||18496300294';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-04-10', NULL, 3490,
-    false, true, 'PRUEBA', 0,
-    'Prueba', 'Santo Domingo', 'PENDIENTE', NULL, 341
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Osiris sanchez||18298774824';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'AUREL';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-    'cancelado', '2026-04-10', NULL, 1950,
-    false, false, 'CANCELADO', 0,
-    'Circunvalación veron', 'Punta Cana', 'PENDIENTE', NULL, 342
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 2990);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Ambiorys -||18099811378';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'AUREL';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-    'cancelado', '2026-04-11', NULL, 3490,
-    false, false, 'CANCELADO', 0,
-    'C1era.31, San Antonio', 'Laguna Salada', 'PENDIENTE', NULL, 343
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Jorge Luis Jorge cabrera||18093573814';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'AUREL';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-    'entregado', '2026-04-11', '2026-04-11', 1950,
-    false, false, 'COMPLETADO', 350,
-    'Calle Altagracia esquina luperon plaza empire local  #5', 'Nagua', 'RECAUDADO', '2026-04-11', 344
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 2990);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-      1950, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Nelson Fernández||18298699028';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'AUREL';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-    'cancelado', '2026-04-11', NULL, 1950,
-    false, false, 'CANCELADO', 0,
-    'Hermano buenas', 'Azua (Azua de Compostela)', 'PENDIENTE', NULL, 345
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 2990);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Ana g Duluc||18092563750';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'AUREL';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-    'cancelado', '2026-04-12', NULL, 3490,
-    false, false, 'CONFIRMADO  SIN STOCK', 0,
-    'ALTAGRACIA #69', 'Higüey (Salvaleón de Higüey)', 'PENDIENTE', NULL, 346
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 8970);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Sócrates  ramirez -||18296311389';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-04-13', NULL, 3390,
-    false, false, 'CANCELADO', 0,
-    '6omelia', 'La Vega (Concepción de la Vega)', 'PENDIENTE', NULL, 347
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz LED RGB - Recargable - Magnética';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 4, 7800);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Juan Carlos Zamora||18092640135';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'AUREL';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-    'entregado', '2026-04-13', '2026-04-13', 4290,
-    false, false, 'COMPLETADO', 350,
-    'Res. Don Julián #22. Sector La Villa; C/Los Santos.', 'Bonao', 'RECAUDADO', '2026-04-13', 348
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz LED RGB - Recargable - Magnética';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 6, 11700);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-      4290, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Blas Abreu||18097058923';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'MOTORIZADO';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-    'entregado', '2026-04-14', '2026-04-14', 2490,
-    false, false, 'COMPLETADO', 400,
-    'Av Romulo Betancourt No. 1149, Plaza Daviana, Mirador Norte', 'Santo Domingo', 'RECAUDADO', '2026-04-14', 349
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz LED RGB - Recargable - Magnética';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 3900);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-      2490, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Kelele Ninja||12155432043';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'MOTORIZADO';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-    'devuelto', '2026-04-14', NULL, 1990,
-    false, false, 'DEVOLUCIÓN', 0,
-    'San isidro', 'Santo Domingo Este', 'PENDIENTE', NULL, 350
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz LED RGB - Recargable - Magnética';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 3900);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Enyel Diaz||18492677744';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'AUREL';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-    'cancelado', '2026-04-14', NULL, 2490,
-    false, false, 'CANCELADO', 0,
-    'Avenida del Francisco Sanchez', 'Samaná (Santa Bárbara de Samaná)', 'PENDIENTE', NULL, 351
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz LED RGB - Recargable - Magnética';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 4, 7800);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Wilkin Sanche||18294616029';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'MOTORIZADO';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-    'devuelto', '2026-04-15', NULL, 2490,
-    false, false, 'DEVOLUCIÓN', 0,
-    'La balsa', 'San Luis', 'PENDIENTE', NULL, 352
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz LED RGB - Recargable - Magnética';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 4, 7800);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Amer -||18293187523';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-04-15', NULL, 2490,
-    false, false, 'CANCELADO', 0,
-    'Próximo al parque', 'Juan Santiago', 'PENDIENTE', NULL, 353
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz LED RGB - Recargable - Magnética';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 4, 7800);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Robert De paula||18098353450';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'AUREL';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-    'devuelto', '2026-04-15', NULL, 2490,
-    false, false, 'DEVOLUCION', 370,
-    'Principal', 'Monte Plata', 'PENDIENTE', NULL, 354
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz LED RGB - Recargable - Magnética';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 4, 7800);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Jefferson Baptiste||18295179182';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-04-15', NULL, 2490,
-    false, false, 'CANCELADO', 0,
-    'Domingo mais', 'Verón', 'PENDIENTE', NULL, 355
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz LED RGB - Recargable - Magnética';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 4, 7800);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Faury -||18294570284';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'MOTORIZADO';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-    'devuelto', '2026-04-15', NULL, 2490,
-    false, false, 'DEVOLUCIÓN', 0,
-    'Buena vista primera calle 36 8', 'Santo Domingo Norte', 'PENDIENTE', NULL, 356
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz LED RGB - Recargable - Magnética';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 4, 7800);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Massiel Mercedes||18494260991';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-04-15', NULL, 3190,
-    false, false, 'CANCELADO', 0,
-    'Boulevard turístico del este friusa', 'Punta Cana', 'PENDIENTE', NULL, 357
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz LED RGB - Recargable - Magnética';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 6, 11700);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Daniel tejada||18296618503';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'AUREL';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-    'entregado', '2026-04-15', '2026-04-15', 2938.2,
-    false, false, 'COMPLETADO', 350,
-    'barrio carlos daniel, calle Simon Bolivar 34', 'mao', 'RECAUDADO', '2026-04-15', 358
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz LED RGB - Recargable - Magnética';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 4, 7800);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-      2938.2, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Daneivis Lissett||18095162284';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'MOTORIZADO';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-    'devuelto', '2026-04-16', NULL, 2490,
-    false, false, 'DEVOLUCIÓN', 0,
-    'Cjon B, Av. México 50', 'Santo Domingo Oeste', 'PENDIENTE', NULL, 359
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz LED RGB - Recargable - Magnética';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 4, 7800);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Orlando -||18495859023';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-04-16', NULL, 1990,
-    false, false, 'CANCELADO', 400,
-    'Calle higuera esquina carambola', 'Puerto Plata (San Felipe de Puerto Plata)', 'PENDIENTE', NULL, 360
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz LED RGB - Recargable - Magnética';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 3900);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Suleny Cabrera||18493547090';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'pendiente', '2026-04-17', NULL, 2390,
-    true, false, 'TESTEO EN ESPERA', 0,
-    'Nordesa 111 calle d 64', 'Santo Domingo Este', 'PENDIENTE', NULL, 361
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Aceite Facial de Limpieza Profunda';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 2390);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Lisane -||18099198355';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'AUREL';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-    'confirmado', '2026-04-17', NULL, 2390,
-    true, false, 'TESTEO CONFIRMADO', 0,
-    'Torre real II apt G5', 'Santiago de los Caballeros', 'PENDIENTE', NULL, 362
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Aceite Facial de Limpieza Profunda';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 2390);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Mafeo12 -||18293328024';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'MOTORIZADO';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-    'devuelto', '2026-04-17', NULL, 2490,
-    false, false, 'DEVOLUCIÓN', 0,
-    'Betty palave', 'Santo Domingo', 'PENDIENTE', NULL, 363
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz LED RGB - Recargable - Magnética';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 4, 7800);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Francisco -||18097621908';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-04-17', NULL, 2490,
-    false, false, 'SIN COBERTURA', 0,
-    'C/ Duarte  34', 'Villa Isabela', 'PENDIENTE', NULL, 364
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz LED RGB - Recargable - Magnética';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 4, 7800);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Yunior -||18493931822';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'MOTORIZADO';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-    'entregado', '2026-04-17', '2026-04-17', 2490,
-    false, false, 'COMPLETADO', 400,
-    'Villa juana', 'Santo Domingo Norte', 'RECAUDADO', '2026-04-17', 365
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz LED RGB - Recargable - Magnética';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 4, 7800);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-      2490, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Dahiana Reyes||18294375038';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'AUREL';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-    'entregado', '2026-04-18', '2026-04-18', 2490,
-    false, false, 'COMPLETADO', 350,
-    'Calle 9 esq niño rizek', 'San Francisco de Macorís', 'RECAUDADO', '2026-04-18', 366
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz LED RGB - Recargable - Magnética';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 4, 7800);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-      2490, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Papito almanzar||18293121305';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'AUREL';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-    'devuelto', '2026-04-18', NULL, 2490,
-    false, false, 'DEVOLUCION', 0,
-    'Detra de los bombero', 'Salcedo (Juana Núñez)', 'PENDIENTE', NULL, 367
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz LED RGB - Recargable - Magnética';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 4, 7800);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Madeline Etienne||18292963172';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'AUREL';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-    'entregado', '2026-04-18', '2026-04-18', 3190,
-    false, false, 'COMPLETADO', 350,
-    'Las Palomas carretera sabaneta, Residencial Ciprés', 'Las Palomas', 'RECAUDADO', '2026-04-18', 368
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz LED RGB - Recargable - Magnética';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 6, 11700);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-      3190, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Rita -||18293425814';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'AUREL';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-    'entregado', '2026-04-18', '2026-04-18', 2490,
-    false, false, 'COMPLETADO', 350,
-    'Azucena 111 Apto E-401 El portal al lado de Pricesmart', 'Santiago de los Caballeros', 'RECAUDADO', '2026-04-18', 369
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz LED RGB - Recargable - Magnética';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 4, 7800);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-      2490, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Ado -||18299218283';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'MOTORIZADO';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-    'devuelto', '2026-04-19', NULL, 2490,
-    false, false, 'DEVOLUCIÓN', 0,
-    'Timoteo ogando numero 31 san geronimonimo', 'Santo Domingo', 'PENDIENTE', NULL, 370
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz LED RGB - Recargable - Magnética';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 4, 7800);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Luis reyes||18097088918';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'MOTORIZADO';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-    'devuelto', '2026-04-19', NULL, 1990,
-    false, false, 'DEVOLUCION', 0,
-    'Juan Gomez', 'Santo Domingo Este', 'PENDIENTE', NULL, 371
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz LED RGB - Recargable - Magnética';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 3900);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Briank -||18095132845';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'pendiente', '2026-04-19', NULL, 3190,
-    false, false, 'SIN WHATSAP', 0,
-    'Joaquín Balaguer / villa cerro #16', 'Higüey (Salvaleón de Higüey)', 'PENDIENTE', NULL, 372
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz LED RGB - Recargable - Magnética';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 6, 11700);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Juleisi piña moreno||18493934011';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-04-20', NULL, 2490,
-    false, false, 'CANCELADO', 0,
-    'Hectáreas p.quezada #1', 'La Romana', 'PENDIENTE', NULL, 373
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz LED RGB - Recargable - Magnética';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 4, 7800);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Edwin ambiori||18298274138';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'AUREL';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-    'entregado', '2026-04-20', '2026-04-20', 2490,
-    false, false, 'COMPLETADO', 350,
-    'Carretera Sánchez salida Azúa San Juan', 'Azua (Azua de Compostela)', 'RECAUDADO', '2026-04-20', 374
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz LED RGB - Recargable - Magnética';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 4, 7800);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-      2490, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Nelvi Felix||18492753234';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'AUREL';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-    'entregado', '2026-04-21', '2026-04-21', 1990,
-    false, false, 'COMPLETADO', 350,
-    'Primera complejo deportivo', 'San Pedro de Macorís', 'RECAUDADO', '2026-04-21', 375
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz LED RGB - Recargable - Magnética';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 3900);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-      1990, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Bronw -||18299933261';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-04-21', NULL, 2490,
-    false, false, 'SIN COBERTURA', 0,
-    '102 av francisco rosario', 'Juan Santiago', 'PENDIENTE', NULL, 376
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz LED RGB - Recargable - Magnética';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 4, 7800);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Banesa Vargas||18293011999';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'AUREL';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-    'confirmado', '2026-04-22', NULL, 2500,
-    true, false, 'TESTEO CONFIRMADO', 0,
-    'Coronel Rafael Thomas Fernandez Domínguez Cayenas 3 Edf G 304', 'Santo Domingo Este', 'PENDIENTE', NULL, 377
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Corrector de Cicatrices';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 3900);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Sarah Gonzalez||18293421155';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'MOTORIZADO';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-    'confirmado', '2026-04-22', NULL, 1950,
-    true, false, 'TESTEO CONFIRMADO', 0,
-    'Miguel Ángel Monclus #72, Torre Kairos III, mirador norte (cerca de la Núñez de Cáceres)', 'Santo Domingo', 'PENDIENTE', NULL, 378
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Corrector de Cicatrices';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 1950);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Anne rose||18099176522';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'pendiente', '2026-04-22', NULL, 2500,
-    true, false, 'TESTEO', 0,
-    'Santiago', 'Santiago de los Caballeros', 'PENDIENTE', NULL, 379
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Corrector de Cicatrices';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 3900);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Arawak Gonzalez||18098415781';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'AUREL';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-    'confirmado', '2026-04-22', NULL, 1950,
-    true, false, 'TESTEO CONFIRMADO', 0,
-    'Escribir Antes De Entregar', 'Puerto Plata (San Felipe de Puerto Plata)', 'PENDIENTE', NULL, 380
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Corrector de Cicatrices';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 1950);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Rose belon||18099094172';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'pendiente', '2026-04-22', NULL, 2500,
-    true, false, 'TESTEO', 0,
-    'Cambelen', 'Higüey (Salvaleón de Higüey)', 'PENDIENTE', NULL, 381
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Corrector de Cicatrices';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 3900);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Felicia Reyes||18099235058';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'pendiente', '2026-04-23', NULL, 2500,
-    true, false, 'TESTEO', 0,
-    'Ave. Caonabo #10 torre Taurus III, apartamento 3A', 'Santo Domingo', 'PENDIENTE', NULL, 382
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Corrector de Cicatrices';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 3900);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Felícita -||18295862696';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'AUREL';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-    'confirmado', '2026-04-23', NULL, 2500,
-    true, false, 'TESTEO CONFIRMADO', 0,
-    'Calle Manuela diez edificio L apto 306', 'Santo Domingo', 'PENDIENTE', NULL, 383
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Corrector de Cicatrices';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 3900);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Ana -||18298028521';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'AUREL';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-    'confirmado', '2026-04-23', NULL, 2900,
-    true, false, 'TESTEO CONFIRMADO', 0,
-    'Charle de gol brisa los palmarés', 'Santo Domingo', 'PENDIENTE', NULL, 384
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Corrector de Cicatrices';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 5850);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Aney Diaz rojas||18292977552';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'AUREL';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-    'confirmado', '2026-04-23', NULL, 2500,
-    true, false, 'TESTEO CONFIRMADO', 0,
-    'Pueblo bavaro las palma 21', 'Verón', 'PENDIENTE', NULL, 385
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Corrector de Cicatrices';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 3900);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Yvelisse Almanzar||18093109330';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'pendiente', '2026-04-23', NULL, 2500,
-    true, false, 'TESTEO', 0,
-    'Calla Plutón no 9 Residencial Galaxia', 'Santo Domingo Oeste', 'PENDIENTE', NULL, 386
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Corrector de Cicatrices';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 3900);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Carmen de la cruz||18097579441';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'AUREL';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-    'cancelado', '2026-04-23', NULL, 2490,
-    false, false, 'CANCELADO', 0,
-    'Calle colonia 94', 'San Francisco de Macorís', 'PENDIENTE', NULL, 387
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz LED RGB - Recargable - Magnética';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 4, 7800);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Yajaira -||18493825212';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'AUREL';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-    'entregado', '2026-04-23', '2026-04-23', 2490,
-    false, false, 'COMPLETADO', 350,
-    'Calle meran Villa Mercedes Madrevieja sur', 'San Cristóbal', 'RECAUDADO', '2026-04-23', 388
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz LED RGB - Recargable - Magnética';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 4, 7800);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-      2490, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Nerys Martinez||18097060121';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'AUREL';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-    'entregado', '2026-04-23', '2026-04-23', 2490,
-    false, false, 'COMPLETADO', 350,
-    'Carretera Jacagua No 65, Los ciruelitos Yadira Center Transmisión', 'Santiago de los Caballeros', 'RECAUDADO', '2026-04-23', 389
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz LED RGB - Recargable - Magnética';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 4, 7800);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-      2490, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Miguelina Fernández||18298637370';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'MOTORIZADO';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-    'devuelto', '2026-04-23', NULL, 2490,
-    false, false, 'DEVOLUCION', 0,
-    'Residencial Amarilys 3, Manzana F #3, Pista San Isidro', 'Santo Domingo Este', 'PENDIENTE', NULL, 390
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz LED RGB - Recargable - Magnética';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 4, 7800);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Lissette Ubiera Rivera||18098766087';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'AUREL';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-    'confirmado', '2026-04-23', NULL, 2500,
-    true, false, 'TESTEO CONFIRMADO', 0,
-    'Cámara junior 6, barrio los maestros', 'San Pedro de Macorís', 'PENDIENTE', NULL, 391
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Corrector de Cicatrices';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 3900);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Leidy -||18292137363';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'AUREL';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-    'confirmado', '2026-04-24', NULL, 2900,
-    true, false, 'TESTEO CONFIRMADO', 0,
-    'Próceres de la Restauración #168', 'Sabaneta (San Ignacio de Sabaneta)', 'PENDIENTE', NULL, 392
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Corrector de Cicatrices';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 5850);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Carmen de los santos||18498896129';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'pendiente', '2026-04-24', NULL, 2500,
-    true, false, 'TESTEO EN ESPERA', 0,
-    'Calle caracol #15 Andrés Boca Chica', 'Boca Chica', 'PENDIENTE', NULL, 393
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Corrector de Cicatrices';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 3900);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Bladimir -||18497974636';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'pendiente', '2026-04-24', NULL, 1950,
-    true, false, 'TESTEO EN ESPERA', 0,
-    'María Mercedes calle D #23', 'Santo Domingo Este', 'PENDIENTE', NULL, 394
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Corrector de Cicatrices';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 1950);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Miguel de peña||18098018929';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'AUREL';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-    'entregado', '2026-04-24', '2026-04-24', 2490,
-    false, false, 'COMPLETADO', 350,
-    'García Godoy 60 Suite 107', 'La Vega (Concepción de la Vega)', 'RECAUDADO', '2026-04-24', 395
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz LED RGB - Recargable - Magnética';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 4, 7800);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-      2490, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Támara Rome||18097699414';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'MOTORIZADO';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-    'devuelto', '2026-04-24', NULL, 3190,
-    false, false, 'DEVOLUCION', 0,
-    'Av Pedro Henriquez Ureña No 135 Torre Tellium II apto 1102', 'Santo Domingo', 'PENDIENTE', NULL, 396
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz LED RGB - Recargable - Magnética';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 6, 11700);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Rose belon||18099094172';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'AUREL';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-    'confirmado', '2026-04-24', NULL, 2500,
-    true, false, 'TESTEO CONFIRMADO', 0,
-    'Cambelen', 'Higüey (Salvaleón de Higüey)', 'PENDIENTE', NULL, 397
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Corrector de Cicatrices';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 3900);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Yoselyn -||18093509463';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'AUREL';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-    'entregado', '2026-04-24', '2026-04-24', 2490,
-    false, false, 'COMPLETADO', 350,
-    'Yunbo', 'La Vega (Concepción de la Vega)', 'RECAUDADO', '2026-04-24', 398
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz LED RGB - Recargable - Magnética';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 4, 7800);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-      2490, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Luis Rosario||18096971722';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'MOTORIZADO';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-    'entregado', '2026-04-24', '2026-04-24', 3190,
-    false, false, 'COMPLETADO', 400,
-    'Calle puerto Rico edificio patricia apartamento 4c', 'Santo Domingo', 'RECAUDADO', '2026-04-24', 399
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz LED RGB - Recargable - Magnética';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 6, 11700);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-      3190, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Ana belkys berroa payano||18498796478';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-04-24', NULL, 2490,
-    false, false, 'SIN COBERTURA', 0,
-    'Los 4 caminos de miches', 'Miches (El Jovero)', 'PENDIENTE', NULL, 400
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz LED RGB - Recargable - Magnética';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 4, 7800);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Noelia suero||18099831423';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-04-24', NULL, 1990,
-    false, false, 'SIN COBERTURA', 0,
-    'La unión', 'Sosúa', 'PENDIENTE', NULL, 401
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz LED RGB - Recargable - Magnética';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 3900);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Sarah Gonzalez||18293421155';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'pendiente', '2026-04-24', NULL, 1950,
-    true, false, 'TESTEO', 0,
-    'Miguel Ángel Monclus #72, Torre Kairos III, mirador norte (cerca Núñez de Cáceres)', 'Santo Domingo', 'PENDIENTE', NULL, 402
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Corrector de Cicatrices';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 1950);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Morena Stephan||18297236177';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-04-24', NULL, 2490,
-    false, false, 'CANCELADO', 0,
-    'Paraíso calle Ortiz #3', 'Barahona (Santa Cruz de Barahona)', 'PENDIENTE', NULL, 403
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz LED RGB - Recargable - Magnética';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 4, 7800);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Jhonny peralta santos||18098274553';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'AUREL';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-    'entregado', '2026-04-25', '2026-04-25', 2490,
-    false, false, 'COMPLETADO', 350,
-    'Costambar calle gurabito condominio luperon edf#7 apto #1', 'Puerto Plata (San Felipe de Puerto Plata)', 'RECAUDADO', '2026-04-25', 404
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz LED RGB - Recargable - Magnética';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 4, 7800);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-      2490, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Deivi -||18292801583';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-04-25', NULL, 2490,
-    false, false, 'SIN COBERTURA', 0,
-    '18#44', 'Quisqueya', 'PENDIENTE', NULL, 405
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz LED RGB - Recargable - Magnética';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 4, 7800);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Francisco Méndez||18299227346';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'pendiente', '2026-04-25', NULL, 2490,
-    false, false, 'LLAMAR', 0,
-    'Calle republica de colombia alto de arroyo  homdo', 'Santo Domingo', 'PENDIENTE', NULL, 406
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz LED RGB - Recargable - Magnética';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 4, 7800);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Massiel -||18099160837';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'AUREL';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-    'entregado', '2026-04-25', '2026-04-25', 2490,
-    false, false, 'COMPLETADO', 350,
-    'Mercado publico bonao', 'Bonao', 'RECAUDADO', '2026-04-25', 407
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz LED RGB - Recargable - Magnética';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 4, 7800);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-      2490, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Yenny -||18492098954';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'AUREL';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-    'devuelto', '2026-04-26', NULL, 2490,
-    false, false, 'DEVOLUCION', 0,
-    'Avenida Mario concepción edificio cornelio apto 4a los robles la 3', 'La Vega (Concepción de la Vega)', 'PENDIENTE', NULL, 408
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz LED RGB - Recargable - Magnética';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 4, 7800);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Mary Laura||18494641949';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'AUREL';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-    'entregado', '2026-04-26', '2026-04-26', 2490,
-    false, false, 'COMPLETADO', 350,
-    'Urbanización Hidalgo, entrando por el Dealer papi motor, edificio nirvana 4 apartamento 201', 'San Francisco de Macorís', 'RECAUDADO', '2026-04-26', 409
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz LED RGB - Recargable - Magnética';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 4, 7800);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-      2490, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Daysi Medina||18292579997';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'MOTORIZADO';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-    'devuelto', '2026-04-26', NULL, 2490,
-    false, false, 'DEVOLUCION', 0,
-    'Calle Juan de la Cruz Alvarez no. 1 edificio Reynita Linda', 'Santo Domingo', 'PENDIENTE', NULL, 410
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz LED RGB - Recargable - Magnética';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 4, 7800);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Dayana -||18299898171';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'MOTORIZADO';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-    'devuelto', '2026-04-26', NULL, 2490,
-    false, false, 'DEVOLUCION', 0,
-    'Independiente', 'Santo Domingo', 'PENDIENTE', NULL, 411
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz LED RGB - Recargable - Magnética';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 4, 7800);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Carolin -||18293341414';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-04-26', NULL, 2490,
-    false, false, 'SIN COBERTURA', 0,
-    'La barranquita', 'Santiago de los Caballeros', 'PENDIENTE', NULL, 412
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz LED RGB - Recargable - Magnética';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 4, 7800);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Hugo paula||18095430732';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-04-26', NULL, 3190,
-    false, false, 'CANCELADO', 0,
-    'Avenida libertad #06', 'San Francisco de Macorís', 'PENDIENTE', NULL, 413
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz LED RGB - Recargable - Magnética';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 6, 11700);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Sujey Martínez||18092999286';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-04-26', NULL, 2490,
-    false, false, 'SIN COBERTURA', 0,
-    'Calle mella #83nizao', 'Nizao', 'PENDIENTE', NULL, 414
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz LED RGB - Recargable - Magnética';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 4, 7800);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Manolo Divalon||18093967246';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'devuelto', '2026-04-26', NULL, 2490,
-    false, false, 'DEVOLUCION', 400,
-    'calle los maestro 13', 'Villa Hermosa', 'PENDIENTE', NULL, 415
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz LED RGB - Recargable - Magnética';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 4, 7800);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Yaquelin  salcedo -||18292627281';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'AUREL';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-    'entregado', '2026-04-26', '2026-04-26', 2490,
-    false, false, 'COMPLETADO', 350,
-    'Federico de Jesús garcia #85', 'Villa Vásquez (Santa Ana, Villa Isabel)', 'RECAUDADO', '2026-04-26', 416
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz LED RGB - Recargable - Magnética';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 4, 7800);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-      2490, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Nilda  Calderon -||18293955778';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'AUREL';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-    'devuelto', '2026-04-27', NULL, 2490,
-    false, false, 'DEVOLUCION', 0,
-    '6 de noviembre Sajuor', 'Higüey (Salvaleón de Higüey)', 'PENDIENTE', NULL, 417
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz LED RGB - Recargable - Magnética';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 4, 7800);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Héctor Lebron||18094445203';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'MOTORIZADO';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-    'devuelto', '2026-04-27', NULL, 2490,
-    false, false, 'DEVOLUCION', 0,
-    'Av. Máximo Gomez ministerio de educación', 'Santo Domingo', 'PENDIENTE', NULL, 418
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz LED RGB - Recargable - Magnética';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 4, 7800);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Rosa moris||18099733321';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-04-27', NULL, 2490,
-    false, false, 'SIN COBERTURA', 0,
-    'Calle Sanchez  #24', 'Miches (El Jovero)', 'PENDIENTE', NULL, 419
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz LED RGB - Recargable - Magnética';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 4, 7800);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Rafael -||18293879062';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'MOTORIZADO';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-    'entregado', '2026-04-27', '2026-04-27', 2490,
-    false, false, 'COMPLETADO', 400,
-    'Av. Jacobo majluta #23', 'Santo Domingo Norte', 'RECAUDADO', '2026-04-27', 420
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz LED RGB - Recargable - Magnética';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 4, 7800);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-      2490, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Ana Sarita||18295681486';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'AUREL';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-    'devuelto', '2026-04-27', NULL, 2490,
-    false, false, 'DEVOLUCION', 0,
-    'Calle de la cancha callejón aridio casa de dos niveles al lado de Elias y foco', 'Sosúa', 'PENDIENTE', NULL, 421
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz LED RGB - Recargable - Magnética';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 4, 7800);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Ruth Suero||18498769480';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'MOTORIZADO';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-    'entregado', '2026-04-27', '2026-04-27', 2490,
-    false, false, 'COMPLETADO', 350,
-    'Manuel Emilio Perdomo #12. Naco', 'Santo Domingo', 'RECAUDADO', '2026-04-27', 422
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz LED RGB - Recargable - Magnética';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 4, 7800);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-      2490, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'José esteves||18292229192';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'MOTORIZADO';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-    'entregado', '2026-04-27', '2026-04-27', 3190,
-    false, false, 'COMPLETADO', 400,
-    '27 de febrero 346 mirador norte', 'Santo Domingo', 'RECAUDADO', '2026-04-27', 423
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz LED RGB - Recargable - Magnética';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 6, 11700);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-      3190, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Lisbeth -||18295897092';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'AUREL';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-    'devuelto', '2026-04-27', NULL, 2490,
-    false, false, 'DEVOLUCION', 0,
-    'Avenida aniana Vargas', 'Bonao', 'PENDIENTE', NULL, 424
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz LED RGB - Recargable - Magnética';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 4, 7800);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Celia Morales||18297417289';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'MOTORIZADO';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-    'entregado', '2026-04-27', '2026-04-27', 2490,
-    false, false, 'COMPLETADO', 400,
-    'Ave. Independencia 608, Residencial Yaris', 'Santo Domingo', 'RECAUDADO', '2026-04-27', 425
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz LED RGB - Recargable - Magnética';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 4, 7800);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-      2490, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Papito almanzar||18293121305';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'AUREL';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-    'entregado', '2026-04-28', '2026-04-28', 2490,
-    false, false, 'COMPLETADO', 350,
-    'Calle A detra de los bomberos en salcedo', 'Salcedo (Juana Núñez)', 'RECAUDADO', '2026-04-28', 426
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz LED RGB - Recargable - Magnética';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 4, 7800);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-      2490, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Mayi -||18092659212';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'AUREL';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-    'devuelto', '2026-04-23', NULL, 2938.2,
-    false, false, 'DEVOLUCION', 0,
-    '-', 'Licey al Medio', 'PENDIENTE', NULL, 427
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz LED RGB - Recargable - Magnética';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 4, 7800);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Ana medina||18494464960';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-04-28', '2026-04-28', 2490,
-    false, false, 'COMPLETADO', 400,
-    'Orlando Martínez', 'Sabana Larga', 'RECAUDADO', '2026-04-28', 428
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz LED RGB - Recargable - Magnética';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 4, 7800);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      2490, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'José augusto nuñez||18095139156';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-04-28', '2026-04-28', 2490,
-    false, false, 'COMPLETADO', 460,
-    'Lo ciruelo montellano', 'Villa Montellano', 'RECAUDADO', '2026-04-28', 429
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz LED RGB - Recargable - Magnética';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 4, 7800);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      2490, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Luisana -||18492804533';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'MOTORIZADO';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-    'devuelto', '2026-04-28', NULL, 2490,
-    false, false, 'DEVOLUCION', 0,
-    'Amalia', 'Santo Domingo Este', 'PENDIENTE', NULL, 430
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz LED RGB - Recargable - Magnética';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 4, 7800);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Ana Contreras||18098475258';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'MOTORIZADO';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-    'entregado', '2026-04-28', '2026-04-28', 2490,
-    false, false, 'COMPLETADO', 400,
-    'Cul de sac 12 colina de los Ríos', 'Santo Domingo', 'RECAUDADO', '2026-04-28', 431
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz LED RGB - Recargable - Magnética';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 4, 7800);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-      2490, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'David Corniel||18298629661';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-04-28', NULL, 2490,
-    false, false, 'SIN COBERTURA', 0,
-    'La Yautia, La Vega, Jarabacoa', 'Jarabacoa', 'PENDIENTE', NULL, 432
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz LED RGB - Recargable - Magnética';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 4, 7800);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Carlos jimenez||8098474966';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'AUREL';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-    'entregado', '2026-04-24', '2026-04-24', 2938.2,
-    false, false, 'COMPLETADO', 350,
-    'carrer veron punta cana plaza coral hotel local#6', 'Punta Cana', 'RECAUDADO', '2026-04-24', 433
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz LED RGB - Recargable - Magnética';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 4, 7800);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-      2938.2, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Michel Jeff||8492437530';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-04-16', NULL, 2490,
-    false, false, 'SIN COBERTURA', 0,
-    'Colmado', 'Sosúa', 'PENDIENTE', NULL, 436
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz LED RGB - Recargable - Magnética';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 4, 7800);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Ana rosario||8294561625';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-05-02', NULL, 2690,
-    false, false, 'CANCELADO', 0,
-    'Los jardines Santiago plaza don pino', 'Santiago de los Caballeros', 'PENDIENTE', NULL, 437
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz LED RGB - Recargable - Magnética';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 4, 7800);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Miguel De Peña Antonio||8098018929';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'AUREL';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-    'devuelto', '2026-05-02', NULL, 2690,
-    false, false, 'DEVOLUCION', 0,
-    'García Godoy 60 Suite 107', 'La Vega (Concepción de la Vega)', 'PENDIENTE', NULL, 439
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz LED RGB - Recargable - Magnética';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 4, 7800);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Woolendele -||8097752138';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-05-02', NULL, 3490,
-    false, false, 'CANCELADO', 0,
-    'Calle #6', 'Santo Domingo Este', 'PENDIENTE', NULL, 440
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz LED RGB - Recargable - Magnética';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 6, 11700);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Yajaira -||8299738278';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'AUREL';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-    'para_devolucion', '2026-04-28', NULL, 2938.2,
-    false, false, 'PARA DEVOLUCION', 0,
-    'los cocos calle 7', 'Puerto Plata (San Felipe de Puerto Plata)', 'PENDIENTE', NULL, 441
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz LED RGB - Recargable - Magnética';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 4, 7800);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Yulys marquez||8299873084';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'MOTORIZADO';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-    'entregado', '2026-05-02', '2026-05-02', 2690,
-    false, false, 'COMPLETADO', 300,
-    'Banco bhd frente al parque independencia', 'Santo Domingo', 'RECAUDADO', '2026-05-02', 442
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz LED RGB - Recargable - Magnética';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 4, 7800);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-      2690, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Angélica María frias||8293904586';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'AUREL';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-    'para_devolucion', '2026-05-02', NULL, 2690,
-    false, false, 'PARA DEVOLUCION', 0,
-    'La Jolla', 'Jarabacoa', 'PENDIENTE', NULL, 443
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz LED RGB - Recargable - Magnética';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 4, 7800);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Jose lopez||8297647180';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'MOTORIZADO';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-    'cancelado', '2026-05-03', NULL, 3174.2,
-    false, false, 'CANCELADO', 0,
-    '-', 'Santo Domingo', 'PENDIENTE', NULL, 444
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz LED RGB - Recargable - Magnética';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 4, 7800);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Maribel Tejeda||8493762434';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'AUREL';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-    'cancelado', '2026-05-03', NULL, 3174.2,
-    false, false, 'CANCELADO', 0,
-    '-', 'Sosúa', 'PENDIENTE', NULL, 445
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz LED RGB - Recargable - Magnética';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 4, 7800);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Estefany rosario||8299371166';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-05-09', NULL, 3190,
-    false, false, 'CANCELADO', 0,
-    'Interiol sol 20 el radiante Villa mella', 'Santo Domingo', 'PENDIENTE', NULL, 446
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 4980);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Magdelyn  Sánchez -||8493300335';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'AUREL';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-    'confirmado', '2026-05-09', NULL, 3190,
-    true, false, 'TESTEO CONFIRMADO', 0,
-    'Arenoso. La vega. Residencial Don Rafael', 'La Vega (Concepción de la Vega)', 'PENDIENTE', NULL, 447
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 4980);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Katherine -||8495771314';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-05-09', NULL, 3190,
-    false, false, 'SIN COBERTURA', 0,
-    'Calle Miguel mercado #17( calle de Santiago)', 'Villa Bisonó (Navarrete)', 'PENDIENTE', NULL, 448
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 4980);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Grey -||8299329761';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'AUREL';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-    'confirmado', '2026-05-09', NULL, 2490,
-    true, false, 'TESTEO CONFIRMADO', 0,
-    'Calle inviviendad proyecto', 'Santo Domingo Este', 'PENDIENTE', NULL, 449
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 2490);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Maryest Nuñez||8496525163';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-05-09', NULL, 3190,
-    false, false, 'CANCELADO', 0,
-    'Santo Domingo', 'Distrito Nacional', 'PENDIENTE', NULL, 450
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 3190);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Solanyi díaz||8096675356';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'AUREL';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-    'cancelado', '2026-05-10', NULL, 3190,
-    false, false, 'CANCELADO', 0,
-    'San Cristóbal', 'San Cristóbal', 'PENDIENTE', NULL, 451
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 3190);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Evelyn -||8099522126';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'pendiente', '2026-05-10', NULL, 2490,
-    false, false, 'NUEVO', 0,
-    'Santo Domingo Este', 'Santo Domingo', 'PENDIENTE', NULL, 452
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 2490);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Ambar Castro||8096761626';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'AUREL';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-    'cancelado', '2026-05-10', NULL, 3190,
-    false, false, 'CANCELADO', 0,
-    'San Pedro de Macorís', 'San Pedro de Macorís', 'PENDIENTE', NULL, 453
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 3190);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Natalie Bonifacio||8296602823';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'AUREL';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-    'confirmado', '2026-05-10', NULL, 3890,
-    true, false, 'TESTEO CONFIRMADO', 0,
-    'Jarabacoa', 'La Vega', 'PENDIENTE', NULL, 454
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 3890);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Danerlly Encarnacion||8294623584';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'AUREL';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-    'confirmado', '2026-05-10', NULL, 2490,
-    true, false, 'TESTEO CONFIRMADO', 0,
-    'Higüey (Salvaleón de Higüey)', 'La Altagracia', 'PENDIENTE', NULL, 455
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 2490);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Steisy Pimentel||8097744652';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'MOTORIZADO';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-    'cancelado', '2026-05-10', NULL, 2490,
-    false, false, 'CANCELADO', 0,
-    'Santo Domingo Este', 'Santo Domingo', 'PENDIENTE', NULL, 456
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 2490);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Yasury Picon feliz||8292337202';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'AUREL';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-    'confirmado', '2026-05-10', NULL, 2490,
-    true, false, 'TESTEO CONFIRMADO', 0,
-    'Barahona (Santa Cruz de Barahona)', 'Barahona', 'PENDIENTE', NULL, 457
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 2490);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Solange santana||8298851510';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'AUREL';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-    'confirmado', '2026-05-10', NULL, 3890,
-    true, false, 'TESTEO CONFIRMADO', 0,
-    'Santiago de los Caballeros', 'Santiago', 'PENDIENTE', NULL, 458
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 3890);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Lívida -||8097044919';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'AUREL';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-    'confirmado', '2026-05-11', NULL, 2490,
-    true, false, 'TESTEO CONFIRMADO', 0,
-    'Santo Domingo', 'Distrito Nacional', 'PENDIENTE', NULL, 459
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 2490);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Gisselle -||8494381109';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'AUREL';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-    'confirmado', '2026-05-11', NULL, 2490,
-    true, false, 'TESTEO CONFIRMADO', 0,
-    'Puerto Plata (San Felipe de Puerto Plata)', 'Puerto Plata', 'PENDIENTE', NULL, 460
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 2490);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Elina sánchez||8097828894';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'AUREL';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-    'confirmado', '2026-05-11', NULL, 2490,
-    true, false, 'TESTEO CONFIRMADO', 0,
-    'Santiago de los Caballeros', 'Santiago', 'PENDIENTE', NULL, 461
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 2490);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Carolina -||8298205364';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-05-11', NULL, 2490,
-    false, false, 'CANCELADO', 0,
-    'Santo Domingo', 'Distrito Nacional', 'PENDIENTE', NULL, 462
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 2490);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Fernando Tiquitik||8095562341';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'pendiente', '2026-05-11', NULL, 3890,
-    false, false, 'DUPLICADO SIN WHATSAP', 0,
-    'El Pino', 'Dajabón', 'PENDIENTE', NULL, 463
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 3890);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Fernando Tiquitik||8095562341';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'pendiente', '2026-05-11', NULL, 2490,
-    false, false, 'DUPLICADO SIN WHATSAP', 0,
-    'Cañongo', 'Dajabón', 'PENDIENTE', NULL, 464
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 2490);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Fernando Tiquitik||8095562341';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'pendiente', '2026-05-11', NULL, 2490,
-    false, false, 'DUPLICADO SIN WHATSAP', 0,
-    'Dajabón', 'Dajabón', 'PENDIENTE', NULL, 465
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 2490);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Alexandra Rodriguez||8292590343';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'AUREL';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-    'confirmado', '2026-05-11', NULL, 3190,
-    true, false, 'TESTEO CONFIRMADO', 0,
-    'Santo Domingo', 'Distrito Nacional', 'PENDIENTE', NULL, 466
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 3190);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Susan Robert||8493535301';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-05-11', NULL, 3190,
-    false, false, 'CANCELADO', 0,
-    'Santo Domingo Norte', 'Santo Domingo', 'PENDIENTE', NULL, 467
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 3190);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Biannely -||8492640096';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'AUREL';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-    'confirmado', '2026-05-11', NULL, 3190,
-    true, false, 'TESTEO CONFIRMADO', 0,
-    'La Vega (Concepción de la Vega)', 'La Vega', 'PENDIENTE', NULL, 468
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 3190);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Maria Paulina Rodriguez||8297946895';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-05-11', NULL, 2490,
-    false, false, 'SIN COBERTURA', 0,
-    'Peralvillo', 'Monte Plata', 'PENDIENTE', NULL, 469
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 2490);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Rosa Morales||8099780805';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'pendiente', '2026-05-11', NULL, 3190,
-    true, false, 'TESTEO', 0,
-    'San Pedro de Macorís', 'San Pedro de Macorís', 'PENDIENTE', NULL, 470
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 3190);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Gomez -||8097092008';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'AUREL';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-    'confirmado', '2026-06-05', NULL, 2199,
-    true, false, 'TESTEO CONFIRMADO', 0,
-    'Santo Domingo', 'Distrito Nacional', 'PENDIENTE', NULL, 471
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Parches para Ojeras y Bolsas Bajo los Ojos';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 2199);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Gomez -||8097092008';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'AUREL';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-    'confirmado', '2026-06-11', NULL, 2199,
-    true, false, 'TESTEO CONFIRMADO', 0,
-    'Santo Domingo', 'Distrito Nacional', 'PENDIENTE', NULL, 472
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Parches para Ojeras y Bolsas Bajo los Ojos';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 2199);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Lívida -||8097044919';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'MOTORIZADO';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-    'devuelto', '2026-06-11', NULL, 2490,
-    false, false, 'DEVOLUCION', 400,
-    'Santo Domingo', 'Distrito Nacional', 'PENDIENTE', NULL, 473
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 2490);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Yandelson -||8296503796';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'MOTORIZADO';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-    'entregado', '2026-06-11', '2026-06-13', 2490,
-    false, false, 'COMPLETADO', 300,
-    'Santo Domingo', 'Distrito Nacional', 'RECAUDADO', '2026-06-13', 474
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 2490);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-      2490, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Evelyn -||8099522126';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'MOTORIZADO';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-    'devuelto', '2026-06-11', NULL, 2490,
-    false, false, 'DEVOLUCION', 400,
-    'Santo Domingo Este', 'Santo Domingo', 'PENDIENTE', NULL, 475
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 2490);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Natalie Bonifacio||8296602823';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'AUREL';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-    'entregado', '2026-06-11', '2026-06-16', 3890,
-    false, false, 'COMPLETADO', 350,
-    'Jarabacoa', 'La Vega', 'RECAUDADO', '2026-06-16', 476
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 3890);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-      3890, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Yasury Picon feliz||8292337202';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-06-11', '2026-06-22', 2490,
-    false, false, 'COMPLETADO', 435,
-    'Barahona (Santa Cruz de Barahona)', 'Barahona', 'RECAUDADO', '2026-06-22', 477
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 2490);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      2490, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Solange santana||8298851510';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'AUREL';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-    'entregado', '2026-06-11', '2026-06-23', 3890,
-    false, false, 'COMPLETADO', 350,
-    'Santiago de los Caballeros', 'Santiago', 'RECAUDADO', '2026-06-23', 478
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 3890);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-      3890, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Wanda -||8297564439';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'AUREL';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-    'confirmado', '2026-06-13', NULL, 1950,
-    false, false, 'EN RUTA', 0,
-    'Higüey (Salvaleón de Higüey)', 'La Altagracia', 'PENDIENTE', NULL, 479
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 1950);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Roberta Almonte Rodriguez||8295709600';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'AUREL';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-    'cancelado', '2026-06-13', NULL, 2650,
-    false, false, 'SIN COBERTURA', 0,
-    'Sosúa', 'Puerto Plata', 'PENDIENTE', NULL, 480
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 2650);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Osmeldi -||8097084334';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'AUREL';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-    'entregado', '2026-06-13', '2026-06-23', 2650,
-    false, false, 'COMPLETADO', 350,
-    'Moca', 'Espaillat', 'RECAUDADO', '2026-06-23', 481
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 2650);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-      2650, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Dasca Joseph||8296183104';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'AUREL';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-    'confirmado', '2026-06-13', NULL, 1950,
-    false, false, 'EN RUTA', 0,
-    'Las Terrenas', 'Samaná', 'PENDIENTE', NULL, 482
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 1950);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Maria -||8295989358';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'MOTORIZADO';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-    'entregado', '2026-06-13', '2026-06-16', 2650,
-    false, false, 'COMPLETADO', 300,
-    'Santo Domingo Oeste', 'Santo Domingo', 'RECAUDADO', '2026-06-16', 483
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 2650);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-      2650, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Katherine Romero||8294828815';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'AUREL';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-    'confirmado', '2026-06-13', NULL, 1950,
-    false, false, 'EN RUTA', 0,
-    'Moca', 'Espaillat', 'PENDIENTE', NULL, 484
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 1950);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Lisseth -||8097654627';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'MOTORIZADO';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-    'entregado', '2026-06-13', '2026-06-17', 2650,
-    false, false, 'COMPLETADO', 300,
-    'Santo Domingo', 'Distrito Nacional', 'RECAUDADO', '2026-06-17', 485
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 2650);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-      2650, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Dilenia -||8295487779';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'AUREL';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-    'entregado', '2026-06-14', '2026-06-20', 1950,
-    false, false, 'COMPLETADO', 350,
-    'Moca', 'Espaillat', 'RECAUDADO', '2026-06-20', 486
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 1950);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-      1950, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Ashlyt vanessa||8096975969';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'AUREL';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-    'confirmado', '2026-06-14', NULL, 1950,
-    false, false, 'EN RUTA', 0,
-    'Bávaro', 'La Altagracia', 'PENDIENTE', NULL, 487
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 1950);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Yeleini Pujols||8099319691';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'AUREL';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-    'confirmado', '2026-06-14', NULL, 1950,
-    false, false, 'EN RUTA', 0,
-    'Bávaro', 'La Altagracia', 'PENDIENTE', NULL, 488
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 1950);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Claudia Rodríguez||8098277992';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'MOTORIZADO';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-    'entregado', '2026-06-14', '2026-06-17', 1950,
-    false, false, 'COMPLETADO', 300,
-    'Santo Domingo', 'Distrito Nacional', 'RECAUDADO', '2026-06-17', 489
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 1950);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-      1950, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Katerin Gomez||8494652204';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'para_devolucion', '2026-06-14', NULL, 1950,
-    false, false, 'PARA DEVOLUCION', 400,
-    'Villa Los Almácigos', 'Santiago Rodríguez', 'PENDIENTE', NULL, 490
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 1950);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Noemi -||8292332100';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'AUREL';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-    'confirmado', '2026-06-14', NULL, 2650,
-    false, false, 'EN RUTA', 0,
-    'Las Terrenas', 'Samaná', 'PENDIENTE', NULL, 491
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 2650);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Jessica -||8492074977';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'AUREL';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-    'entregado', '2026-06-14', '2026-06-23', 1950,
-    false, false, 'COMPLETADO', 350,
-    'Bávaro', 'La Altagracia', 'RECAUDADO', '2026-06-23', 492
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 1950);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-      1950, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'María Teresa Perez||8493773063';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'confirmado', '2026-06-15', NULL, 2650,
-    false, false, 'EN RUTA', 400,
-    'Neiba', 'Bahoruco', 'PENDIENTE', NULL, 493
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 2650);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Prieba -||8496300294';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-06-15', NULL, 1950,
-    false, false, 'CANCELADO', 0,
-    'Bávaro', 'La Altagracia', 'PENDIENTE', NULL, 494
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 1950);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Luisa Sterling||8295347586';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-06-16', NULL, 1950,
-    false, false, 'SIN COBERTURA', 0,
-    'Mao (Santa Cruz de Mao)', 'Valverde', 'PENDIENTE', NULL, 495
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 1950);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Magdelyn Sánchez||8493300335';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'AUREL';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-    'entregado', '2026-06-16', '2026-06-23', 2990,
-    false, false, 'COMPLETADO', 350,
-    'La Vega (Concepción de la Vega)', 'La Vega', 'RECAUDADO', '2026-06-23', 496
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 2990);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-      2990, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Winton -||8296198086';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-06-16', NULL, 2990,
-    false, false, 'CANCELADO', 0,
-    'Bayaguana', 'Monte Plata', 'PENDIENTE', NULL, 497
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 2990);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Rubens Sanchez||8498822785';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'confirmado', '2026-06-16', NULL, 2390,
-    false, false, 'CONFIRMADO', 0,
-    'San Pedro de Macorís', 'San Pedro de Macorís', 'PENDIENTE', NULL, 498
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 2390);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Ingrid Ramírez||8494760789';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'GINTRACOM';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-    'entregado', '2026-06-16', '2026-06-22', 2650,
-    false, false, 'COMPLETADO', 466,
-    'Villa Montellano', 'Puerto Plata', 'RECAUDADO', '2026-06-22', 499
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 2650);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'GINTRACOM'),
-      2650, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Yaritza Gomez||8099621266';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'AUREL';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-    'entregado', '2026-06-16', '2026-06-23', 1950,
-    false, false, 'COMPLETADO', 350,
-    'Villa Hermosa', 'La Romana', 'RECAUDADO', '2026-06-23', 500
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 1950);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-      1950, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Isa -||8098630590';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'AUREL';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-    'para_devolucion', '2026-06-16', NULL, 1950,
-    false, false, 'PARA DEVOLUCION', 0,
-    'San Cristóbal', 'San Cristóbal', 'PENDIENTE', NULL, 501
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 1950);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Wendely Díaz||8093438667';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'AUREL';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-    'confirmado', '2026-06-16', NULL, 1950,
-    false, false, 'EN RUTA', 0,
-    'Bávaro', 'La Altagracia', 'PENDIENTE', NULL, 502
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 1950);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Nayi torres||8483651595';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-06-17', NULL, 1950,
-    false, false, 'CANCELADO', 0,
-    'Santo Domingo Este', 'Santo Domingo', 'PENDIENTE', NULL, 503
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 1950);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Wanda ESMERLIN||8098270453';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-06-17', NULL, 2650,
-    false, false, 'SIN COBERTURA', 0,
-    'Castillo', 'Duarte', 'PENDIENTE', NULL, 504
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 2650);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Luis Martinez||8294481626';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'confirmado', '2026-06-17', NULL, 2990,
-    false, false, 'EN RUTA', 0,
-    'Maimón', 'Monseñor Nouel', 'PENDIENTE', NULL, 505
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 2990);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Magaly guzman||8493586508';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'AUREL';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-    'entregado', '2026-06-17', '2026-06-25', 2650,
-    false, false, 'COMPLETADO', 350,
-    'Moca', 'Espaillat', 'RECAUDADO', '2026-06-25', 506
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 2650);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-      2650, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Kenia Berenice||8294652349';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'confirmado', '2026-06-17', NULL, 2650,
-    false, false, 'EN RUTA', 0,
-    'Canca La Reina', 'Espaillat', 'PENDIENTE', NULL, 507
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 2650);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Efrain Díaz||7874108976';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-06-17', NULL, 2990,
-    false, false, 'CANCELADO', 0,
-    'Santo Domingo', 'Distrito Nacional', 'PENDIENTE', NULL, 508
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 2990);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Zuleyky Guzmán||8492495911';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'AUREL';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-    'entregado', '2026-06-18', '2026-06-25', 1950,
-    false, false, 'COMPLETADO', 350,
-    'Moca', 'Espaillat', 'RECAUDADO', '2026-06-25', 509
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 1950);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-      1950, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Erick Pérez||8296935857';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'confirmado', '2026-06-18', NULL, 3490,
-    false, false, 'EN RUTA', 0,
-    'Cabral', 'Barahona', 'PENDIENTE', NULL, 510
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 4, 3490);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Efrain Díaz||7874108976';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-06-17', NULL, 2990,
-    false, false, 'CANCELADO', 0,
-    'Santo Domingo', 'Distrito Nacional', 'PENDIENTE', NULL, 511
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 2990);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Valentina castro||8297120871';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-06-18', NULL, 1950,
-    false, false, 'CANCELADO', 0,
-    'Cotuí', 'Sánchez Ramírez', 'PENDIENTE', NULL, 513
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 1950);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Erick Pérez||8296935857';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'confirmado', '2026-06-18', NULL, 3490,
-    false, false, 'EN RUTA', 0,
-    'Cabral', 'Barahona', 'PENDIENTE', NULL, 514
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 4, 3490);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Valentina castro||8297120871';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-06-18', NULL, 1950,
-    false, false, 'CANCELADO', 0,
-    'Cotuí', 'Sánchez Ramírez', 'PENDIENTE', NULL, 515
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 1950);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'María Santana||8096775094';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'AUREL';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-    'entregado', '2026-06-18', '2026-06-25', 2650,
-    false, false, 'COMPLETADO', 350,
-    'Santiago de los Caballeros', 'Santiago', 'RECAUDADO', '2026-06-25', 516
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 2650);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-      2650, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Liliana viola||8099946210';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'AUREL';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-    'entregado', '2026-06-18', '2026-06-23', 1950,
-    false, false, 'COMPLETADO', 350,
-    'San Juan', 'San Juan', 'RECAUDADO', '2026-06-23', 517
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 1950);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-      1950, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Angela Del Rosario||8298627648';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'confirmado', '2026-06-18', NULL, 2990,
-    false, false, 'EN RUTA', 0,
-    'Jimaní', 'Independencia', 'PENDIENTE', NULL, 518
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 2990);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Anna -||8297874975';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'devuelto', '2026-06-18', NULL, 1950,
-    false, false, 'DEVOLUCION', 0,
-    'Santo Domingo Oeste', 'Santo Domingo', 'PENDIENTE', NULL, 519
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 1950);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Massiel -||8493606212';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-06-18', NULL, 1950,
-    false, false, 'CANCELADO', 0,
-    'San Francisco de Macorís', 'Duarte', 'PENDIENTE', NULL, 520
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 1950);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Kenia -||8495425353';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'entregado', '2026-06-18', NULL, 2650,
-    false, false, 'COMPLETADO', 0,
-    'Santo Domingo Este', 'Santo Domingo', 'PENDIENTE', NULL, 521
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 2650);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Deyanira -||2039421948';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'confirmado', '2026-06-18', NULL, 2650,
-    false, false, 'EN RUTA', 0,
-    'Bávaro', 'La Altagracia', 'PENDIENTE', NULL, 522
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 2650);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Marvelin Ovalle Guzmán||8297514060';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'entregado', '2026-06-18', NULL, 2650,
-    false, false, 'COMPLETADO', 0,
-    'San Francisco de Macorís', 'Duarte', 'PENDIENTE', NULL, 523
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 2650);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Janice Vasquez||8492030626';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'AUREL';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-    'entregado', '2026-06-18', '2026-06-23', 1950,
-    false, false, 'COMPLETADO', 350,
-    'Puerto Plata (San Felipe de Puerto Plata)', 'Puerto Plata', 'RECAUDADO', '2026-06-23', 524
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 1950);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-      1950, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Julio Vallejo||8092324975';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'AUREL';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-    'entregado', '2026-06-18', '2026-06-25', 3490,
-    false, false, 'COMPLETADO', 350,
-    'Santo Domingo Este', 'Santo Domingo', 'RECAUDADO', '2026-06-25', 525
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 4, 3490);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-      3490, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Nelson Mercedes||8098415123';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'AUREL';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-    'entregado', '2026-06-18', '2026-06-26', 2990,
-    false, false, 'COMPLETADO', 350,
-    'Gaspar Hernández', 'Espaillat', 'RECAUDADO', '2026-06-26', 526
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 2990);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-      2990, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Isaac Ogando Rojas||8092308451';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'entregado', '2026-06-18', NULL, 2990,
-    false, false, 'COMPLETADO', 0,
-    'Bayaguana', 'Monte Plata', 'PENDIENTE', NULL, 527
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 2990);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Deyani Santana||8099099352';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'AUREL';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-    'entregado', '2026-06-18', '2026-06-23', 2650,
-    false, false, 'COMPLETADO', 350,
-    'La Romana', 'La Romana', 'RECAUDADO', '2026-06-23', 528
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 2650);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-      2650, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Carlos Ferreras||8092702369';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-06-18', NULL, 2390,
-    false, false, 'SIN COBERTURA', 0,
-    'Los Ríos', 'Bahoruco', 'PENDIENTE', NULL, 529
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 2390);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Jennifer Jean Louis||8293549511';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-06-18', NULL, 2650,
-    false, false, 'SIN COBERTURA', 0,
-    'Cabrera (Tres Amarras)', 'Maria Trinidad Sanchez', 'PENDIENTE', NULL, 530
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 2650);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Julio Gómez||8297626778';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'confirmado', '2026-06-18', NULL, 2990,
-    false, false, 'EN RUTA', 0,
-    'Santo Domingo Oeste', 'Santo Domingo', 'PENDIENTE', NULL, 531
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 2990);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Luis moises vanderhorst García||8098674587';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'AUREL';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-    'entregado', '2026-06-18', '2026-06-26', 2990,
-    false, false, 'COMPLETADO', 350,
-    'Las Terrenas', 'Samaná', 'RECAUDADO', '2026-06-26', 532
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 2990);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-      2990, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Manuela Gómez||8297880131';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'para_devolucion', '2026-06-19', NULL, 2650,
-    false, false, 'PARA DEVOLUCION', 0,
-    'Santiago de los Caballeros', 'Santiago', 'PENDIENTE', NULL, 533
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 2650);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Ignaqui Estevez||8092237592';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'AUREL';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-    'entregado', '2026-06-19', '2026-06-26', 1950,
-    false, false, 'COMPLETADO', 350,
-    'La Vega (Concepción de la Vega)', 'La Vega', 'RECAUDADO', '2026-06-26', 534
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 1950);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-      1950, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Nayeli Mora||8496523069';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-06-19', NULL, 1950,
-    false, false, 'CANCELADO', 0,
-    'Santiago de los Caballeros', 'Santiago', 'PENDIENTE', NULL, 535
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 1950);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Genesis Mejía||8295809754';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'confirmado', '2026-06-19', NULL, 2650,
-    false, false, 'EN RUTA', 0,
-    'Constanza', 'La Vega', 'PENDIENTE', NULL, 536
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 2650);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Yesenia Hernández||8297561981';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-06-19', NULL, 2650,
-    false, false, 'SIN COBERTURA', 0,
-    'San José de las Matas', 'Santiago', 'PENDIENTE', NULL, 537
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 2650);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Sires y encarnacion jaquez||8092080883';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-06-19', NULL, 3490,
-    false, false, 'CANCELADO', 0,
-    'Comendador', 'Elías Piña', 'PENDIENTE', NULL, 538
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz solar con sensor';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 4, 3490);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Robeli morel||8296374877';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'AUREL';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-    'entregado', '2026-06-19', '2026-06-26', 1950,
-    false, false, 'COMPLETADO', 350,
-    'Las Terrenas', 'Samaná', 'RECAUDADO', '2026-06-26', 539
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 1950);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'AUREL'),
-      1950, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Maria del pilar hernandez||8493527346';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'MOTORIZADO';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-    'entregado', '2026-06-19', '2026-06-20', 2650,
-    false, false, 'COMPLETADO', 300,
-    'Santo Domingo', 'Distrito Nacional', 'RECAUDADO', '2026-06-20', 540
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 2650);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-      2650, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Sheila Maria Ciscal Almaguer||8495818159';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'confirmado', '2026-06-20', NULL, 1950,
-    false, false, 'EN RUTA', 0,
-    'Bávaro', 'La Altagracia', 'PENDIENTE', NULL, 541
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 1950);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'francis rosario||8093033305';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'MOTORIZADO';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-    'entregado', '2026-06-20', '2026-06-20', 2650,
-    false, false, 'COMPLETADO', 350,
-    'Santo Domingo Este', 'Santo Domingo', 'RECAUDADO', '2026-06-20', 542
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 2650);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-      2650, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Arlene Faneyte||8092584145';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'MOTORIZADO';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-    'entregado', '2026-06-20', '2026-06-20', 1950,
-    false, false, 'COMPLETADO', 300,
-    'Santo Domingo', 'Distrito Nacional', 'RECAUDADO', '2026-06-20', 543
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 1950);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-      1950, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Altagracia De Pimentel||8298755544';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'MOTORIZADO';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-    'entregado', '2026-06-20', '2026-06-23', 1950,
-    false, false, 'COMPLETADO', 300,
-    'Santo Domingo', 'Distrito Nacional', 'RECAUDADO', '2026-06-23', 544
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 1950);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-      1950, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Wismehylin geronimo||8495297930';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-06-20', NULL, 1950,
-    false, false, 'CANCELADO', 0,
-    'Santo Domingo Este', 'Santo Domingo', 'PENDIENTE', NULL, 545
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 1950);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Samira santana||8096091142';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'MOTORIZADO';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-    'entregado', '2026-06-20', '2026-06-23', 2650,
-    false, false, 'COMPLETADO', 300,
-    'Santo Domingo', 'Distrito Nacional', 'RECAUDADO', '2026-06-23', 546
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 2650);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-      2650, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = '𝑀𝒶𝓇𝓎 -||8296642030';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-06-20', NULL, 2650,
-    false, false, 'CANCELADO', 0,
-    'San Pedro de Macorís', 'San Pedro de Macorís', 'PENDIENTE', NULL, 547
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 2650);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Miguel Angel Domínguez||8298852219';
-  SELECT id INTO _prod FROM _couriers_map WHERE nombre = 'MOTORIZADO';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-    'entregado', '2026-06-20', '2026-06-23', 2190,
-    false, false, 'COMPLETADO', 300,
-    'Santo Domingo', 'Distrito Nacional', 'RECAUDADO', '2026-06-23', 548
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz LED RGB - Recargable - Magnética';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 2190);
-  INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado)
-    VALUES (_pid, (SELECT id FROM _couriers_map WHERE nombre = 'MOTORIZADO'),
-      2190, 'liquidado');
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Anabel -||8098734510';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'confirmado', '2026-06-20', NULL, 3690,
-    false, false, 'EN RUTA', 0,
-    'Santo Domingo Este', 'Santo Domingo', 'PENDIENTE', NULL, 549
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz LED RGB - Recargable - Magnética';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 6, 3690);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Adilca -||8293034232';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'entregado', '2026-06-20', NULL, 1950,
-    false, false, 'COMPLETADO', 0,
-    'Santiago de los Caballeros', 'Santiago', 'PENDIENTE', NULL, 550
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 1950);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Rosa miguelina||8292082581';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-06-20', NULL, 1950,
-    false, false, 'CANCELADO', 0,
-    'Bonao', 'Monseñor Nouel', 'PENDIENTE', NULL, 551
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 1950);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'AzLIM MAICA||8292974315';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-06-21', NULL, 2650,
-    false, false, 'SIN COBERTURA', 0,
-    'Guayubín', 'Monte Cristi', 'PENDIENTE', NULL, 552
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 2650);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Manuela -||8292603526';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'confirmado', '2026-06-21', NULL, 2650,
-    false, false, 'EN RUTA', 0,
-    'San Juan', 'San Juan', 'PENDIENTE', NULL, 553
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 2650);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Rachel -||8094601929';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'confirmado', '2026-06-21', NULL, 1950,
-    false, false, 'EN RUTA', 0,
-    'San Pedro de Macorís', 'San Pedro de Macorís', 'PENDIENTE', NULL, 554
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 1950);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Katherine Sánchez||8096379236';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'confirmado', '2026-06-21', NULL, 2650,
-    false, false, 'EN RUTA', 0,
-    'Bávaro', 'La Altagracia', 'PENDIENTE', NULL, 555
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 2650);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Dinelys -||8295639307';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-06-21', NULL, 2650,
-    false, false, 'SIN COBERTURA', 0,
-    'Las Matas de Farfán', 'San Juan', 'PENDIENTE', NULL, 556
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 2650);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Dessire Taveras||8492624904';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-06-21', NULL, 2990,
-    false, false, 'CANCELADO', 0,
-    'San Francisco de Macorís', 'Duarte', 'PENDIENTE', NULL, 557
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz LED RGB - Recargable - Magnética';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 2990);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Maricela cruz||8299801716';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'entregado', '2026-06-21', NULL, 2650,
-    false, false, 'COMPLETADO', 0,
-    'Santiago de los Caballeros', 'Santiago', 'PENDIENTE', NULL, 558
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 2650);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Prueba -||8496300294';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-06-22', NULL, 2990,
-    false, false, 'CANCELADO', 0,
-    'Azua (Azua de Compostela)', 'Azua', 'PENDIENTE', NULL, 559
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz LED RGB - Recargable - Magnética';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 2990);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Maria orquidea franco||8293362430';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-06-22', NULL, 1950,
-    false, false, 'SIN COBERTURA', 0,
-    'Sabana Iglesia', 'Santiago', 'PENDIENTE', NULL, 560
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 1950);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Madelyn carela||8292203816';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-06-22', NULL, 1950,
-    false, false, 'CANCELADO', 0,
-    'Guayabal', 'Santiago', 'PENDIENTE', NULL, 561
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 1950);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'JoséFrancisco -||8299227346';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-06-22', NULL, 2990,
-    false, false, 'CANCELADO', 0,
-    'Santo Domingo', 'Distrito Nacional', 'PENDIENTE', NULL, 562
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz LED RGB - Recargable - Magnética';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 2990);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Ebony Rivera severino||8492453912';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-06-23', NULL, 1950,
-    false, false, 'CANCELADO', 0,
-    'Santo Domingo Este', 'Santo Domingo', 'PENDIENTE', NULL, 563
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 1950);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Yuniffer Viloria||8296525265';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'confirmado', '2026-06-23', NULL, 2650,
-    false, false, 'EN RUTA', 0,
-    'Santiago de los Caballeros', 'Santiago', 'PENDIENTE', NULL, 564
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 2650);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Xiomara -||8299322055';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'entregado', '2026-06-23', NULL, 2650,
-    false, false, 'COMPLETADO', 0,
-    'Santo Domingo', 'Distrito Nacional', 'PENDIENTE', NULL, 565
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 2650);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Yelixfer -||4802384270';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-06-23', NULL, 1950,
-    false, false, 'CANCELADO', 0,
-    'Santo Domingo Oeste', 'Santo Domingo', 'PENDIENTE', NULL, 566
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 1950);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Yesenia García||8296497684';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-06-23', NULL, 2650,
-    false, false, 'CANCELADO', 0,
-    'Santo Domingo', 'Distrito Nacional', 'PENDIENTE', NULL, 567
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 2650);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Ruhaiddy -||8494545779';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-06-23', NULL, 2650,
-    false, false, 'CANCELADO', 0,
-    'Santo Domingo Norte', 'Santo Domingo', 'PENDIENTE', NULL, 568
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 2650);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Danna yibelis||8295742430';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'confirmado', '2026-06-23', NULL, 1950,
-    false, false, 'EN RUTA', 0,
-    'Jarabacoa', 'La Vega', 'PENDIENTE', NULL, 569
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 1950);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Raquel -||8293273843';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'confirmado', '2026-06-23', NULL, 1950,
-    false, false, 'EN RUTA', 0,
-    'Santiago de los Caballeros', 'Santiago', 'PENDIENTE', NULL, 570
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 1950);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Tomairy Ramirez Delgadillo||8495262164';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'confirmado', '2026-06-23', NULL, 1950,
-    false, false, 'EN RUTA', 0,
-    'Azua (Azua de Compostela)', 'Azua', 'PENDIENTE', NULL, 571
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 1950);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Mileidys segura||8097814639';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'confirmado', '2026-06-24', NULL, 1950,
-    false, false, 'EN RUTA', 0,
-    'Bávaro', 'La Altagracia', 'PENDIENTE', NULL, 572
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 1950);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Estefany Paulino||8498597684';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'confirmado', '2026-06-24', NULL, 1950,
-    false, false, 'CONFIRMADO EXPRESS', 0,
-    'Santo Domingo Oeste', 'Santo Domingo', 'PENDIENTE', NULL, 573
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 1950);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'sagrario isabel||8098350530';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'confirmado', '2026-06-24', NULL, 2490,
-    true, false, 'TESTEO CONFIRMADO', 0,
-    'San Francisco de Macorís', 'Duarte', 'PENDIENTE', NULL, 574
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Meno Vitamina';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 2490);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Anabell -||8093862130';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'confirmado', '2026-06-24', NULL, 2490,
-    true, false, 'TESTEO CONFIRMADO', 0,
-    'Santo Domingo Este', 'Santo Domingo', 'PENDIENTE', NULL, 575
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Meno Vitamina';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 2490);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'María Pimentel||8098932150';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-06-24', NULL, 2650,
-    false, false, 'CANCELADO', 0,
-    'Villa Bisonó (Navarrete)', 'Santiago', 'PENDIENTE', NULL, 576
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 2650);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Luzbiliana -||8297551124';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'confirmado', '2026-06-24', NULL, 2650,
-    false, false, 'EN RUTA', 0,
-    'Santo Domingo', 'Distrito Nacional', 'PENDIENTE', NULL, 577
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 2650);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Aracelis -||8298530501';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'confirmado', '2026-06-24', NULL, 1950,
-    false, false, 'EN RUTA', 0,
-    'Tenares', 'Hermanas Mirabal (Salcedo)', 'PENDIENTE', NULL, 578
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 1950);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Janna Delgado||8292525114';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'entregado', '2026-06-24', NULL, 2650,
-    false, false, 'COMPLETADO', 0,
-    'La Vega (Concepción de la Vega)', 'La Vega', 'PENDIENTE', NULL, 579
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 2650);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Miliangela Veliz||8494497873';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-06-24', NULL, 1950,
-    false, false, 'CONFIRMADO SIN STOCK', 0,
-    'Verón', 'La Altagracia', 'PENDIENTE', NULL, 580
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 1950);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Daniela espallat||8094609908';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'confirmado', '2026-06-24', NULL, 1950,
-    false, false, 'EN RUTA', 0,
-    'Santo Domingo Oeste', 'Santo Domingo', 'PENDIENTE', NULL, 581
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 1950);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Cristal veloz||8296616755';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'confirmado', '2026-06-24', NULL, 1950,
-    false, false, 'EN RUTA', 0,
-    'Cotuí', 'Sánchez Ramírez', 'PENDIENTE', NULL, 582
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 1950);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Paulina -||8292083525';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-06-24', NULL, 1950,
-    false, false, 'CANCELADO', 0,
-    'Santo Domingo Este', 'Santo Domingo', 'PENDIENTE', NULL, 583
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 1950);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Anyela María||8293758025';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'confirmado', '2026-06-24', NULL, 1990,
-    false, false, 'EN RUTA', 0,
-    'Santiago de los Caballeros', 'Santiago', 'PENDIENTE', NULL, 584
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 1990);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Lissette Vásquez||8298650850';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'entregado', '2026-06-25', NULL, 2690,
-    false, false, 'COMPLETADO', 0,
-    'Santo Domingo', 'Distrito Nacional', 'PENDIENTE', NULL, 585
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 2690);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Laysha aracena||8296025625';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'confirmado', '2026-06-25', NULL, 1990,
-    false, false, 'CONFIRMADO', 0,
-    'Jarabacoa', 'La Vega', 'PENDIENTE', NULL, 586
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 1, 1990);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Eliusy garcia||8296462717';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'entregado', '2026-06-25', NULL, 2690,
-    false, false, 'COMPLETADO', 0,
-    'Santo Domingo Este', 'Santo Domingo', 'PENDIENTE', NULL, 587
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 2690);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Elgin Alberto Richiez||8093505632';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'confirmado', '2026-06-25', NULL, 3840,
-    false, false, 'EN RUTA', 0,
-    'La Romana', 'La Romana', 'PENDIENTE', NULL, 588
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz LED RGB - Recargable - Magnética';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 6, 3840);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Ysmeli Mendoza||8098531287';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-06-25', NULL, 2690,
-    false, false, 'CONFIRMADO SIN STOCK', 0,
-    'Cotuí', 'Sánchez Ramírez', 'PENDIENTE', NULL, 589
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 2690);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Yulisa de oleo||8492018121';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'confirmado', '2026-06-25', NULL, 2690,
-    false, false, 'EN RUTA', 0,
-    'Los Alcarrizos', 'Santo Domingo', 'PENDIENTE', NULL, 590
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Almohadillas Coreanas Anti Manchas';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 2, 2690);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Virgey Mateo Tavarez||8494561968';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'confirmado', '2026-06-25', NULL, 3690,
-    false, false, 'EN RUTA', 0,
-    'La Romana', 'La Romana', 'PENDIENTE', NULL, 591
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz LED RGB - Recargable - Magnética';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 6, 3690);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Juan Carlos||8495761702';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'confirmado', '2026-06-25', NULL, 2490,
-    false, false, 'EN RUTA', 0,
-    'Santo Domingo Este', 'Santo Domingo', 'PENDIENTE', NULL, 592
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz LED RGB - Recargable - Magnética';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 2490);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Julia Hernandez||8098992101';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'confirmado', '2026-06-25', NULL, 2490,
-    false, false, 'EN RUTA', 0,
-    'Santiago de los Caballeros', 'Santiago', 'PENDIENTE', NULL, 593
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz LED RGB - Recargable - Magnética';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 2490);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Juana -||8295271780';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'confirmado', '2026-06-25', NULL, 2490,
-    false, false, 'EN RUTA', 0,
-    'Esperanza', 'Valverde', 'PENDIENTE', NULL, 594
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz LED RGB - Recargable - Magnética';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 2490);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Evangeline Janice||8299124056';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'entregado', '2026-06-25', NULL, 2490,
-    false, false, 'COMPLETADO', 0,
-    'Santo Domingo', 'Distrito Nacional', 'PENDIENTE', NULL, 595
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz LED RGB - Recargable - Magnética';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 2490);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Sugeiry magdalin||8295508009';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-06-25', NULL, 3690,
-    false, false, 'CANCELADO', 0,
-    'Santiago de los Caballeros', 'Santiago', 'PENDIENTE', NULL, 596
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz LED RGB - Recargable - Magnética';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 6, 3690);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Anabelis -||8293844745';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-06-25', NULL, 2490,
-    false, false, 'CANCELADO', 0,
-    'Higüey (Salvaleón de Higüey)', 'La Altagracia', 'PENDIENTE', NULL, 597
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz LED RGB - Recargable - Magnética';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 2490);
-END $$;
-
-DO $$ DECLARE _pid uuid; _cid uuid; _prod uuid; BEGIN
-  SELECT id INTO _cid FROM _clientes_map WHERE key = 'Julieta jiemenez Martinez||8296348505';
-  INSERT INTO pedidos (
-    cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega, precio_total,
-    es_testeo, es_prueba_interna, estado_original, costo_envio,
-    ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num
-  ) VALUES (
-    _cid,
-    NULL,
-    'cancelado', '2026-06-26', NULL, 2490,
-    false, false, 'CANCELADO', 0,
-    'Santiago de los Caballeros', 'Santiago', 'PENDIENTE', NULL, 598
-  ) RETURNING id INTO _pid;
-  SELECT id INTO _prod FROM _productos_map WHERE nombre = 'Luz LED RGB - Recargable - Magnética';
-  INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario)
-    VALUES (_pid, _prod, 3, 2490);
-END $$;
-
--- Limpieza de tablas temporales
-DROP TABLE IF EXISTS _clientes_map, _couriers_map, _productos_map;
+-- Clientes
+INSERT INTO clientes (id, nombre, telefono) VALUES
+('ae10596b-a9cd-4624-8be1-6efca44eaf36', 'Dariel Tejada', '+18496300294'),
+('53346b50-f65c-466b-97ce-13f387b9a4ac', 'Félix larrion', '+18494591102'),
+('06c42a12-b626-4a38-9141-6ee0f6937287', 'Yowanda -', '+18094959187'),
+('37d61b17-289d-496d-a749-0dc01611aa2e', 'Joel villaman', '+14807575513'),
+('8da35378-9d53-41b3-9cac-a2dffd3a2f4b', 'Edward -', '+18495838302'),
+('6296049b-ed1e-4bd0-9765-c89613d5b2a7', 'Josué Jimenez', '+18294953501'),
+('1fc98748-4a45-4085-b51f-840d1fe76041', 'Reymond Ledesma', '+18298384097'),
+('808a152a-4e80-452d-a27a-59adf775651a', 'Francisco -', '+18298897861'),
+('6fa7b0de-15aa-4070-9d63-514055a03a60', 'Adriana -', '+18093527277'),
+('54d131e6-edb7-49f8-8bca-db36979b0acf', 'Maria Esther', '+18497512516'),
+('fa984851-7a21-4e5e-bb93-4ff16513db27', 'Yasmiri -', '+18299845843'),
+('93067338-9d81-4e29-8072-542eb14a6856', 'Stalyn -', '+18293122530'),
+('a873755f-5f0a-47c9-96fe-3e8ee51209c5', 'Wascar -', '+18092199482'),
+('6a263c3c-2d15-47db-83f5-9dc701b8959c', 'Luceliz -', '+18295567059'),
+('73ed478a-f465-467a-8ffc-80318377bb3a', 'Jose R', '+18098541232'),
+('7347b674-06c6-4722-b368-996304b34aec', 'Melkys M. Novas F.', '+18492512909'),
+('e261481d-7230-4d72-ae34-70fcb7df31ce', 'Yadara gonzalez', '+18094743296'),
+('41a5ea69-f5af-4798-b4b5-002ee6869442', 'Eriana -', '+18097587606'),
+('17b0f4cc-bace-4b90-b2a7-346efbf694b2', 'Kilsis Gonzalez', '+18092248867'),
+('1b1cd81d-61e7-45d1-b4d1-48cbf01c3027', 'Vinicio gonzalez', '+18099182254'),
+('c66635a6-4ecd-4952-a414-4e9bf1d2e7a8', 'Jose Reyes', '+18098528659'),
+('72c4d317-aed9-4234-9be0-cbc259027763', 'Alberto aquino', '+18294234620'),
+('233367c7-ce00-43f9-879c-0507783b527c', 'Cristal -', '+18297306640'),
+('f6d5ff13-3a10-49b3-afac-3e6d49dbd03f', 'Martha Santana', '+18097560758'),
+('b90a59d0-f791-41f6-b825-41d2bd7eec55', 'Noemí Fani Ladoo FÍGARO de Devers', '+18296328144'),
+('0f4845fc-91f9-4b94-8318-cdcfec8c3552', 'Noemí Ladoo', '+18296328144'),
+('bf71ab39-a7fd-4063-a43c-75c0c7429e75', 'Yasmín reyes', '+18094952270'),
+('014820bd-69a3-4558-8494-9af0fb14bb9c', 'Fidias Mateo', '+18296195465'),
+('2409c67c-d38e-4f87-ab8a-01293a994e36', 'Támara Rome', '+18097699414'),
+('9b2fa3a7-0683-4e86-8ac2-fa41ef94ca4f', 'Manuel E Sánchez Díaz', '+18299083824'),
+('60341867-a483-4b79-8332-a95d6fc46bae', 'Dolores Luna', '+18293528523'),
+('1cfd81f9-813e-4f96-9d30-32f6f160fac4', 'Anyelani franco', '+18297761142'),
+('a7aa0215-ef6f-4bd2-9825-f6464e9fc062', 'Kailis inoska', '+18094986812'),
+('7c04f275-9b03-4f3c-b071-bbb0cd42fe53', 'Ramón -', '+18096938564'),
+('789077dc-e3de-41df-ba5c-b3a6b14cddbf', 'Rafael Cuello', '+18295709806'),
+('0459887b-424f-4a16-93dc-f7d39c5e02eb', 'Hirquin -', '+18098821680'),
+('63161586-6f5f-4d5d-b34b-0464f4007c2c', 'Alexis Ramírez', '+18296806097'),
+('cf046627-c29e-4332-b627-1fccea67a1f8', 'Danilo de los santos', '+18298414298'),
+('c392a34c-163d-437e-bfc1-554adc3eeffe', 'Kelvin -', '+18292801375'),
+('6ce6bac5-3289-4f33-ab5b-e095aea2cdf3', 'Roberto -', '+18493501547'),
+('3be3038b-916e-4d41-9a62-fa59ac692823', 'Antonio Melican', '+18495350922'),
+('f3992643-e63b-4c29-854a-233eb4a70190', 'Jose Farias', '+18298701111'),
+('f63ac7b3-8313-475b-bb13-053c1e93815d', 'Cheferson -', '+18297618450'),
+('96540292-ff2c-4aa0-82d3-5f8d6fdddaa4', 'Luis -', '+18098178550'),
+('93e94f30-5990-4599-9a77-bd5bf92c36df', 'Rolando Calderon', '+18095336510'),
+('b6943060-a95a-497b-a1d3-5aec51830eae', 'Alfredo mariot', '+18492203518'),
+('3c23328a-97a5-4a54-86b3-4eb15bbe053e', 'eduard taveras', '+18296390416'),
+('8c6c20df-a202-415a-b79c-278ef22e371c', 'Dindo -', '+18097655438'),
+('e6aaeb4c-4bec-4081-a50b-df56170d778b', 'Noelia -', '+18296553562'),
+('ab1efbed-c580-482c-812b-bd90d662c600', 'Daniel reyes', '+18495764163');
+
+INSERT INTO clientes (id, nombre, telefono) VALUES
+('569f9724-95ba-4b94-a2c3-f5af97b015ed', 'Dafi Guzmán HerediaelE', '+18097591177'),
+('a15581c5-68eb-402c-9baf-0e843618c9fc', 'Phito -', '+18493882716'),
+('ba857599-4021-4b00-b3ff-7c132ada43ac', 'Isidora abreu ventura', '+14233135467'),
+('bc3c163c-c795-4a39-9b59-f1c409f3d33c', 'Yeremy Perez', '+18093236866'),
+('cc3d2118-8b97-4bb0-a8e0-d3cb875151e5', 'Carlos -', '+18094381241'),
+('b387ebc7-d991-4743-8711-c2bb00855811', 'Joel santos', '+18294281465'),
+('18e114e5-3c05-4d8e-8b3f-fe71a15887b6', 'Elizabeth -', '+18298771983'),
+('6cea8925-b85f-4e18-9642-0e14233addff', 'Uilton Rodríguez', '+18099076173'),
+('b0e3c282-65f1-4092-b953-5c91610ce933', 'Juan Alberto Muñoz Duarte', '+18297564151'),
+('e38d86c4-c85a-4117-b7aa-2997b5bee5fd', 'Diego Henríquez', '18294290249'),
+('c92e5b55-1bea-40f8-80d6-cf2d4ae0f307', 'Summer -', '18094327705'),
+('30c5e044-3907-4689-8e02-62bc98825ebd', 'Wilfredo rafael', '18493519486'),
+('a69c85a0-abff-4a8b-ba28-a7d092bc4553', 'Moreno -', '18299252292'),
+('38cc42bd-80d4-4102-b6cc-683ed315f183', 'Félix Santana', '18096690797'),
+('1683131c-0b8c-445f-9078-75f5386a6e0c', 'Roberto -', '18093506933'),
+('aba715bf-2f87-447c-a775-54f0d734ffdc', 'caridad gutierrez', '18099620097'),
+('9bace4c5-b861-48f2-81ed-a5d96b491efa', 'Jose -', '18097864429'),
+('1a85e7f7-07c1-4465-9fc6-3361a8cfbed4', 'Juan Antonio De La Cruz Rosario', '18293945204'),
+('08a4383d-f82d-4741-a196-cf8f817e47e1', 'Marcet -', '18096605900'),
+('9e368e6f-9b2b-4e35-a64c-d9b0f8e8d9d8', 'Mike lombardini', '18296784731'),
+('c925587e-4ca1-4e57-a446-9b386c97d4e3', 'Antonio -', '18298391017'),
+('024f024d-9ef8-40c3-8624-8300872025f9', 'Toni -', '18093527370'),
+('56d1de07-6c06-4009-80af-f29e8a15ef9a', 'Aury Moralez de la rosa', '18292280113'),
+('69a7ddd0-7b1c-41df-9d8d-0e3e708b3cf1', 'Kelvin Santana', '18493305609'),
+('41d7f9af-21f0-421f-9561-c8328e6b5942', 'Andy de Jesús peña', '18096547027'),
+('4f0193ed-31aa-4f68-a04c-2a2ff8f14046', 'Rosa Mateo', '18099234020'),
+('9ceb703b-db12-43d0-bba5-915be621807a', 'Osvaldo Cross', '18293436439'),
+('350f2b4b-8359-46cb-930b-893a22c71ca3', 'Victor -', '18294133206'),
+('5ace50b4-b95c-45f1-ab76-848ab86565e3', 'Diefet Yambati', '18294793809'),
+('966321f5-8301-45e5-8b7a-ecf39c1adf17', 'Lidia Pacheco', '18292130808'),
+('72eeec7d-068e-4bb2-b6dc-32d833dfecea', 'Manuel -', '18099147713'),
+('e9e731d0-3357-478c-98ce-682e3b75e9b7', 'Mirtha Crisóstomo', '18098633132'),
+('4cc8bedd-de4a-4fa6-8c07-fc7ed7f526a8', 'Yoryi jose', '18295516193'),
+('8f292d23-312a-4431-a8ca-92935fee14d4', 'Cesar peña Z', '18098432424'),
+('29285081-d95f-43bc-8cf0-d53f3783193e', 'Danilo Monegro', '18494531910'),
+('6761a630-7c52-4b6c-8773-17c13aefa03a', 'Domingo Melenciano De La Cruz', '18092600999'),
+('ee785da4-36b9-40d8-8f3e-08d38dcd71ba', 'Estefany -', '18099622392'),
+('c4d58d80-7130-4213-9f20-a41a76a50ade', 'Doohan -', '18298374740'),
+('94d2739d-3ecd-40e6-a87d-c2c6194d868d', 'Pedro Romero', '18097492127'),
+('09e28a2b-6bf5-4ccf-a26a-e95e8087791c', 'Robinson mata', '18099627510'),
+('3624be42-7470-4525-8332-0a6a766e732a', 'Carmen Balbuena', '18296754307'),
+('ef62a3b0-e946-41ad-a050-bf40b3f923b5', 'Luis Manuel', '18494275022'),
+('6935f39e-a9fe-4427-816c-5e1ebc80c8f5', 'Jose n', '18096692780'),
+('33d4a53f-1ad6-4bd5-9ef3-59398b7eae4d', 'Carolin -', '18293341414'),
+('e0342822-4e3e-4cf7-8a66-0e9a9df77a5e', 'Alejandro -', '18492468802'),
+('d2786586-e0ba-42f4-8284-ac310e9646e2', 'Cocina -', '18495270722'),
+('90ad0ee2-7e45-4b0a-a954-e10154e72338', 'Ronald Tejeda', '18298989177'),
+('45e45546-52e0-4997-8190-fca0f16f594f', 'VALENTINA  MERCEDES b -', '18496550734'),
+('494edcf6-1da4-44b9-8e45-221cbad08e2c', 'Manuela -', '18098416286'),
+('771867d0-f51d-4808-8598-c01f2bb96b01', 'Andrés Contreras', '18096276877');
+
+INSERT INTO clientes (id, nombre, telefono) VALUES
+('d8d42ca5-fc2f-4e76-a7c5-f5b648b67cb0', 'Mirna ortiz', '18092238154'),
+('2d3c7e91-1e34-476d-8e99-1d86d3507ada', 'Teresa Sánchez', '18096677745'),
+('e48b88e8-0c94-49db-a6fa-00857031977f', 'Clásico flow', '18094882949'),
+('d9f4d6bb-9788-4bb0-9808-c529a4e97fe1', 'Tomas -', '18092566799'),
+('495cf928-9a49-410e-bd13-c92568894358', 'Emil Liriano', '18494781147'),
+('9ea301ef-ba3e-4ddf-b39d-c5fec9648537', 'raphael castillo', '18094616236'),
+('17947b11-aad8-4586-b933-ca49c659be1d', 'Raphael castillo', '18094616236'),
+('e68c0220-44f5-4535-b614-c02f994a68d0', 'joseph  prophil -', '18092078178'),
+('5a545e64-b3b7-4d95-adbd-df7fe35a09e4', 'Pacifico ayres', '18493520211'),
+('0f340096-61a7-4afc-a567-02a4eba00c31', 'Aquilina.alcequiez. -', '18098564714'),
+('7e8ae942-9027-467a-9bbe-e134fff5754a', 'Aquilina Alcequiez', '18098564714'),
+('a80f071b-8285-4bd2-9b41-583a647c4d8a', 'Rolando rosado', '18093908874'),
+('062e8967-8c95-4c51-9b99-21583181c10a', 'Wilbert Geffrard', '18093767066'),
+('01b37e28-7895-462f-ba99-b96a8729d14d', 'Dolores acosta s', '18094903973'),
+('a973d278-2f41-4a9d-ad6c-23b25e744a27', 'Johairis -', '18297991120'),
+('f11028ba-b99e-4e14-96d9-2c3b056d375c', 'Julio -', '18292735426'),
+('99cba003-170e-4d5a-abfc-700974b91286', 'Hugo Badia', '18092232991'),
+('2332ee9a-3b90-419e-8059-ffceaeea3caf', 'ANA TINEO', '17188261828'),
+('9fc850eb-93c3-4125-9015-1f383d932a8b', 'Wascarnicolaspolancogarcia -', '18296750278'),
+('85d9d8ba-3fd0-4cd5-b574-01e78a128f99', 'Nicola de la cruz', '18092823749'),
+('864631ae-0328-4b7e-a249-4c1a2f27017a', 'Yvrose gedeus gedeusyvrose21@gmail.com', '18494409968'),
+('510b2935-a490-4a55-88f2-c866d001e1bf', 'Francisco -', '18093605881'),
+('40ba06d2-6a35-4c13-ab72-ba03351e5a88', 'Daniel duversaint', '18297921946'),
+('e6d16c64-b3d8-42ad-bfbd-51b56a6821ac', 'Alfredo Belén', '18096500077'),
+('2488a5fe-d610-42c6-80dd-7f0afdbacd1c', 'Jeisson Gabriel', '18296909898'),
+('2a5798e8-d9a0-4f11-aff7-003b0ed9cd4b', 'Ejemplo -', '18496450115'),
+('8dad6bbe-7104-455d-b5ef-fede45b82976', 'Bernardo Calletano', '18299121199'),
+('a033c058-5cb6-4f40-9027-be8787eb87f3', 'Leonor -', '18295091551'),
+('c8fac7c8-e9f8-4f51-89ea-6994ff7a4587', 'Luis Enrique Sanchez Suarez', '18297685662'),
+('32e884c2-5ee1-4709-a864-ea7a75003860', 'Eladio Díaz', '12155326857'),
+('4189b0a8-263e-4c99-9451-7792ab60882e', 'Ederson frias de los santos', '18299227490'),
+('67f68ba4-2a0a-4ebb-afad-1db6f8506a03', 'Leonela peña', '18096690450'),
+('8e4b0874-ce21-4c25-9568-6ce0cebb699e', 'Enrique -', '18299581947'),
+('27a4baeb-b458-4d5c-a28c-94142b588d2b', 'jose -', '18099861297'),
+('9b440f59-3985-447c-8459-8b433bd877c0', 'Luís manual Santana', '18297079922'),
+('8921e889-7bf7-4ba7-b2e0-94ecec86b1fc', 'Josué -', '18493522166'),
+('d8198f27-a7c4-4da9-be25-2cd2aab34f66', 'Juan lantigua', '18297228373'),
+('f2e1befe-010b-4c7a-a921-16fba4899ac9', 'Francis soler', '18093714992'),
+('d8124bf0-a1b7-40ae-bc6b-694d82f63817', 'Isis bautista', '18092247111'),
+('859bc12e-e8ea-4445-a30b-58895f20eff3', 'Doneisy Bertre', '18097579949'),
+('6b46cdc6-71a7-4b92-a356-f8e8abec2490', 'Wilson Luciano adames', '18294390905'),
+('5f7a020f-35d3-4d59-aded-c9adb3a60c59', 'JUANCARLOS -', '18292748863'),
+('d0877f52-9de3-415b-b855-bcd6192d7281', 'Guadalupe Cruz Mota', '18296766477'),
+('171f16ca-b80f-4670-ba90-92f9d1a66ff0', 'Jose -', '18293280170'),
+('da664441-5cb1-4008-82c2-33d4b2089770', 'Nancy santana', '18293383837'),
+('552fcbd7-a5f4-4420-908d-4e38022fff6a', 'Ángel Polanco', '18293691378'),
+('aeac2d45-68c7-4a29-b292-a6dfe87cbf0b', 'Rafael nova', '18297098079'),
+('0497df34-feec-43fd-9ec2-e00052933de9', 'Wander García Santana', '18293885300'),
+('289c07ad-2607-4ec9-9be8-80ec3ee0a89e', 'Aracelis Altagracia', '18299079203'),
+('e9ccdb9f-a6af-470b-86ff-b20059ac8efb', 'Yudy silverio', '18297073361');
+
+INSERT INTO clientes (id, nombre, telefono) VALUES
+('d869059e-bd2a-47f3-b50e-898446cbbff5', 'Ania Sugey', '18097741525'),
+('1618fb41-8e66-4d17-ac5b-8c1248b7f54c', 'Nancy Santana', '18293383837'),
+('45ef79c8-4f43-425f-b3e3-1f0f803bd119', 'Jose cruz809 223 1455', '18092231455'),
+('f1713762-f71d-4e17-ac47-bbde67d93ea5', 'Angela Del Rosario Florian Trinidad', '18298627648'),
+('ab0309c7-294b-44cd-adf5-b41bb95ff2d4', 'David vialet', '18295268109'),
+('d3ca135d-aa49-4d03-b4e6-a6d97ae07b08', 'Octavio meran', '18099163968'),
+('64a2051f-c1f9-4d61-8154-efd3bb6a5ba4', 'Mirian de leon', '18098053532'),
+('fb9ff96a-dac5-45e2-9e05-fe285de685ac', 'Carlos Jose', '18296241810'),
+('5e0b998e-59ad-47a1-b9ed-bdd97bae9d48', 'Amable frías', '18492710145'),
+('3b7c21e4-64bb-4f8e-ae85-cfc120b0fd5e', 'Wenceslao de la cruz de León', '18299019693'),
+('0b8a41e0-8492-4491-bd17-175686ec1022', 'Joel villaman', '14807575513'),
+('3be8818c-437c-4a31-842c-b98928d2da16', 'Francisco Dominguez', '18099090997'),
+('64706d40-6819-498e-8991-050987287f64', 'Josefina -', '18296296484'),
+('18ba1cc4-de70-4afe-8e59-787b0ceec89b', 'Ronald -', '18096097448'),
+('e103c69e-1a7d-43e0-9f0c-acfea7e9717d', 'Elizabeth -', '18298771983'),
+('7954bef2-c2dd-40a6-b8e7-ca86e43320e8', 'Sujey pina nuñez', '17063068358'),
+('34f921ab-02eb-4648-93a3-8ad768dc48e4', 'Alan Checo.', '18298682748'),
+('728b16f9-4365-4cdb-bb6c-c5373f91d8a9', 'Juan Ramírez', '18498168953'),
+('eced89ac-1bd2-46f4-8f30-8bc8401dd740', 'Rafael Díaz Filpo', '18094898149'),
+('b36c377e-58a7-4abc-b3d2-be88c2b2cecb', 'Elvio -', '18096271100'),
+('1fc89e55-3e0e-431b-8090-b7cf82c51aac', 'Gerardo -', '18293406323'),
+('db18fe93-f459-4095-8af9-4b4169b1fb00', 'Maria -', '18098051046'),
+('6fc3479e-05fe-43f8-9058-ae41477af532', 'audy -', '18096502079'),
+('bb45f10c-37f6-4b71-a9db-3a297cf386f2', 'Ezequiel soriano', '18494565656'),
+('8eb35e48-68e4-4169-95c8-23696f56f771', 'Francisco Mora Valenzuela', '18097106150'),
+('c9613e1c-7ea8-4403-bbe1-bb30e78cc7af', 'Natanael javier', '18094497262'),
+('e88f8be4-e913-4ee9-8e3d-63c28ae15f66', 'Daniel Nuñez', '18097121629'),
+('1e5f7b0e-deed-474a-8777-d76c13615219', 'José Pérez', '18492590729'),
+('bf19735b-6d5a-45ff-ad67-dcfe1af701b3', 'Michael Aybar', '18095075448'),
+('281b1741-7a1c-41d0-90fe-ec1c970f36e3', 'Ingrid Ramírez', '18494760789'),
+('a47c0d71-bd4f-4ab7-b3ea-fd8d56a44155', 'Pedro Reyes', '18095193436'),
+('f0d4c23f-aef1-4c4c-83aa-a5c6e3a62d71', 'Kirsy  de la cruz -', '18092039189'),
+('22aa714f-a3da-47d2-aac0-7e0630975028', 'Franck melvin', '18294686298'),
+('5a66c4ed-d66f-4e6b-b285-4eb78ff3505b', 'Maria -', '18092325330'),
+('afe869a3-e656-4aad-9907-103fceec3d40', 'Juan Antonio', '18093947668'),
+('85eafa3b-78e1-46e8-9d23-fa620560ef6c', 'Estarlin Rodríguez bido', '18296476163'),
+('f441ba98-8cc8-44a0-ab17-9999ebea190a', 'Andrés encarnación Soriano', '18298495030'),
+('4859a984-5d79-460a-913b-2be288c58c0f', 'Damari uben zapata', '18096943823'),
+('1f59311a-e6f1-4222-a0f7-7e7fb6954b3e', 'Caren de Jesús', '18292625101'),
+('6c346fbd-ec7e-40a8-90af-41b608f57341', 'Lucy -', '18299887033'),
+('f3a64753-adf9-4e41-8855-f5702cc4d19d', 'Mario mena', '18494495098'),
+('2db3e396-09ed-4d30-bf62-2a4cf1332290', 'Wilton -', '18293755678'),
+('d859826c-7640-492f-8c54-a1c414e981b6', 'Edward Montero', '18296060289'),
+('9f0ad90e-56e9-40d0-9d67-3f64f939dbb0', 'Paulina perez', '18292189286'),
+('e3ed9922-fbdf-4286-ac85-6f95afa2da22', 'Carmen Elizabeth Peña Santos', '18099957037'),
+('cf263223-5534-4a78-930f-86902eb6b9b5', 'Adelso -', '18093525711'),
+('3870b6e1-cad0-475d-8aa7-5f0cfa73f107', 'Ana Francisco', '18095072372'),
+('41cca79e-90fc-4a1e-abb2-d42b52459d84', 'María Alvarez', '18298867131'),
+('c8828cd1-d07c-491a-80f8-1ef956dc22f6', 'Sonia santos', '18297595637'),
+('9d7f1227-c3c4-43c7-9cb0-776d63a87ab2', 'Aracelis Rosario', '18296988062');
+
+INSERT INTO clientes (id, nombre, telefono) VALUES
+('3465567d-2ad4-4151-a0b5-caaaf372b972', 'Esteban Vasquez', '18293368714'),
+('12a17d05-8734-4c0b-b52e-2388bbf51d5d', 'Elías -', '18298478661'),
+('0be8c45f-fd4d-4703-ad03-955dc8e39771', 'Alexandra de los Santos', '18094543293'),
+('b2e54bf5-bbae-447d-bcea-551ff3a5f280', 'Diogenes del rosario', '18092090735'),
+('f10b9d66-913a-493b-aeb2-4352b052d7cb', 'Richard Freites', '18296339784'),
+('ea791c1b-dd2a-484d-a78c-9f03170f0ccc', 'Estela acevedo', '18296515268'),
+('897abd9a-356c-40cd-a984-42783f58a095', 'Yrene Beaubrun', '18097754364'),
+('0a7390ab-87f4-4852-bcfa-d3dde797df2c', 'Wilson Rodríguez', '18296050915'),
+('d34b8c5e-afed-4950-a151-ca20b8bc201a', 'Victor sanchez', '18093913962'),
+('441f7ab5-f9e2-4158-9749-10ed3986dbde', 'Guarionex Acosta', '18292650497'),
+('37d08b12-58c5-42ed-b437-2171a359eca8', 'Hilario -', '18096134815'),
+('4ddc557a-fed0-47d4-8733-5e76f8ef816b', 'Jose -', '18495819167'),
+('d19d8906-929d-4842-9ba3-f3eb83064e0d', 'Ramona -', '18297668764'),
+('70ba3bec-7020-41e2-807d-35f24b18b007', 'Aracelis gonzales de perez', '18298877337'),
+('9e737ea8-ca8d-446f-8b64-16d41fc5719f', 'Jesús Lantigua', '18092242915'),
+('8640cfaa-9884-460c-a67a-df5626d761ae', 'Julio perez', '18292123367'),
+('7dbf6f0d-47c4-4d88-95df-d6ec32ce9931', 'Yoeli de la rosa', '18498039854'),
+('59fecbe3-3203-494f-b1e4-ff28c59dbcbc', 'Feliciano peralta', '18294216705'),
+('f9d59261-051d-4e6c-8c44-5e7e57619e15', 'Socrates Morel', '18299148855'),
+('7499cee3-13ee-4018-9319-9c3a3c50aa66', 'Benancia santos', '18298908451'),
+('68f5ebbe-ba32-4a5d-a431-deef4acfb9ff', 'Gerson Escanio matos', '18093925008'),
+('bbf75e3a-1864-4ee1-985d-f9f0ac4daa3a', 'Patricia Inoa', '18097141717'),
+('dd9d2049-b997-45d4-a981-766d6dba0ffb', 'Yanirys francois', '18292124186'),
+('7de39510-66fb-4464-b654-d85b913692f7', 'Dilcia -', '18294527349'),
+('abba526b-3b86-456b-92c8-b90490943ace', 'Yokasta carrion', '18299824907'),
+('e1a41bda-a129-4b24-8104-573c159ae1f7', 'Yessica Eridania', '18297569280'),
+('ab168beb-4705-4471-932a-b03843d3ac38', 'Yannely -', '18297300620'),
+('d8eccc26-4727-4e5c-b4a0-8bdf78c65c10', 'Zuleika altagracia Santana casado', '18295085429'),
+('a857bf08-0547-4828-80d1-77ed92adc6e5', 'Joel Joseph', '18293514660'),
+('e5ffc6ee-38df-40f0-ab2b-6f9c65543979', 'Onasi -', '18097477468'),
+('c3fdf1a8-fa35-4fda-9a89-e2298b70605f', 'José frias', '18096670441'),
+('165c3508-4ab1-449b-bbeb-86a9d7cda143', 'Jesus -', '18496589066'),
+('bd769d76-96d0-49de-9158-7d9e590b84ec', 'Yomery -', '18493962388'),
+('375be660-3676-473f-895c-9a89af543c82', 'Martin López', '18099243141'),
+('362fe6c8-1a26-4c19-a353-5921c32a0910', 'Altagracia Hidalgo', '18293421937'),
+('972dd748-8b0a-4a9f-9b3d-9b04959d5cc3', 'Ana -', '18093033786'),
+('dfef510b-dd16-4b30-912d-1a43ef38c84b', 'La gorda rd', '18298167300'),
+('f5bb9dbd-1fec-44c9-8c9e-5c2e87cb4d2c', 'Daniel perdomo', '18295567809'),
+('f49ddc72-6eed-4dcb-bf6f-7173894b5376', 'Yenli Blue', '18097199920'),
+('39dcd9cb-66d7-452e-9df4-eb9c95bde234', 'Alejandro Fermín', '18295631206'),
+('e236e718-7f45-4a00-8730-4f24d0f4e08c', 'Nelson Martínez', '18295505583'),
+('70481ddd-682b-4b85-9571-2ddc2985c517', 'Ysabel  Contreras -', '18095197969'),
+('c8521892-a1e5-4c00-a5bc-edbb62ccbf92', 'Junior Valentín', '18092090404'),
+('1f903c54-c4de-4d7d-89ac-1119892d7f24', 'Ana -', '18099908003'),
+('a49d3986-a99e-4c6d-9fa3-6f849e9daad3', 'Yoel Mejía', '18097071794'),
+('1cdb317b-f1e5-407e-8534-e73a327d5be8', 'Ada almanzar', '14074337209'),
+('27d96cd1-f44f-4d62-8e9b-7656512af457', 'Estela Mendez', '393318230557'),
+('49490ffc-d304-4843-b8fd-94a30611894e', 'Yudelky paulino', '18097717191'),
+('d33c6cc0-79fb-41bf-af60-2f00da2852b7', 'Carolina -', '18295546408'),
+('32f1cd2e-84d0-43b4-9282-10aa7133e977', 'Domingo Alexander vanterpool', '18098767442');
+
+INSERT INTO clientes (id, nombre, telefono) VALUES
+('ff606dee-9b1d-449d-b503-82679d77d461', 'Gustavo cid', '18093507553'),
+('73f3d29e-6108-4960-8bda-ed010cde5f59', 'Francis -', '18096727400'),
+('1ffc0d85-5abc-4684-9048-08b7f22fdaa3', 'Andres Capellan', '18297907362'),
+('df6b18b0-c37b-4fdb-a76b-33fa77e32fd9', 'Martha Santana', '18097560758'),
+('88c44168-55b2-4750-b046-e02483522e2f', 'Freddy baez', '18096186841'),
+('f45fcd9a-259a-4dc0-8cf3-711916085e8b', 'Nector Rosario', '18297061552'),
+('94f380f4-2a1c-4ddd-a90e-69b18d739053', 'José Alberto Santos', '18092507891'),
+('2c9cbba4-92b1-46bb-9bd4-426b4232a3fb', 'Olga Lidia', '18097869410'),
+('36c5796e-19bb-4708-ae9d-edd871336339', 'Claudia rosario diaz', '18493801028'),
+('20c77fef-808b-44cf-bd7d-bfe17e10dfd7', 'Junior reyes', '18494696562'),
+('5107c8f2-d348-44bc-af01-ab1eb18bcf17', 'Yajaira Robles', '18492489978'),
+('3a85a0ef-0b16-4f00-af49-3a3d7cdfd758', 'Yesenia  pinales -', '18297147901'),
+('c10fc2e5-d8e8-472b-bac6-89e946a74c18', 'Juan -', '18092081135'),
+('d16c83b6-c222-4d1f-94d4-d191e1a6206d', 'Odanel Zabala', '18295363411'),
+('9829abde-9b7d-46ee-810a-729439824ca5', 'Jesús castillo', '18094866174'),
+('3e07efdc-c966-4248-8976-1ef10c9ca2f9', 'Jaice ruiz', '18494016385'),
+('06105af0-f472-4f51-901e-d11f1ef44165', 'Manuela cespedes', '18293250923'),
+('b1b12f17-cacf-43ff-ac6b-ab0902901170', 'Wilfrido -', '18292919115'),
+('8fc52865-59b3-41e7-b527-235ee825931a', 'Cristian cuevas', '18493415786'),
+('55e0e50c-9158-4786-9033-e95502244c34', 'Yuby Ureña', '18296164753'),
+('6e4b6e21-2fef-4a65-a21d-6c2f669c3492', 'Jon -', '18295850251'),
+('27bd952a-2259-4025-a088-c8ef0d2d9392', 'Leonardo Rojas', '18099432899'),
+('2a54d51e-a4fe-43a1-8045-303a2f002c6f', 'Ada Almánzar', '14074337209'),
+('dc858505-0fff-4e72-8735-bac978183c73', 'Julio M Bonnelly T', '18299865999'),
+('7119c52b-9143-4e7e-8b2d-765d3c647310', 'Fausto -', '18094492880'),
+('95f44f72-9b67-4781-9e8d-07d9d83a243f', 'Yasmin genao', '18299326650'),
+('5cd82b2b-9318-4c13-a574-f92d1b32959a', 'Wilkin Pujols Mendez', '18297972567'),
+('4f1f76e0-d8be-458e-a132-38d3441f9553', 'Adalberto polanco', '18299783859'),
+('1572b50a-1990-4e26-8172-20cb704e23f2', 'Carlos Agramonte', '18494480704'),
+('f4a6c8b0-076f-4d0e-bccb-2624ab834cf4', 'Francisco Alberto paredes', '18496578337'),
+('e00885dc-c3a8-4895-91ea-7b188dd70572', 'Deybi Ramirez', '18296367726'),
+('b372eb39-38d5-4061-84f3-427506be04e1', 'Yamilex concepcion', '18097208730'),
+('539bbf17-20a0-4193-af35-4dbc0bc2b6d7', 'Rudy de la cruz', '18092817202'),
+('f1686120-f79e-45e7-87e3-4c753203fb29', 'Faustin François', '18098904886'),
+('9fa10049-3ba2-4ff9-b0f0-edfe71283434', 'José Vargas', '18096641095'),
+('1215ca30-5cf9-4a29-acd7-2fb698d7ccbb', 'Argenis Rosado', '18293488010'),
+('2df294e9-05d2-46f1-b58d-3c61b7c6525b', 'Johana -', '18293580236'),
+('b4637e2d-4352-4c19-8528-bd8a95ed9aff', 'Alphi Ruiz', '18098189221'),
+('079bf3df-3c84-4aca-a901-119ee32309e1', 'Mauricio de jesus', '18095193725'),
+('59ed10d9-378c-4520-8fe9-f8c011bff09a', 'José Manuel Bichara', '18098851213'),
+('47d84e4f-4e02-4ff7-a1db-4d6d522c095a', 'Claudia Soto', '18298015429'),
+('5d9555e3-c759-4385-bc0e-22faec453b7a', 'Helen -', '18093999327'),
+('80e0008b-4b8c-4324-aeb1-bda21d75df56', 'Victor Alcantara', '18298288801'),
+('be363dff-22f5-40d9-9530-13d2506c297f', 'Carlos -', '18097055896'),
+('7b2815b6-a7e2-40af-8757-a833805c1023', 'Jimena foxan', '18293599082'),
+('f1e3561c-7787-4184-99c8-9fa20227829c', 'Edinson Ureña', '18297890139'),
+('9d5b8172-26f0-4713-a4e2-01baa288a9c4', 'cesar martinez', '18092129434'),
+('53b70f12-754b-4b1f-bb7e-28bb482622a5', 'Franklin de lima', '18299318456'),
+('5b27897b-07bc-4624-85c4-0c7b220ab3e7', 'Miguel Angel garcias', '18097585780'),
+('d89e691e-dcf4-46e5-bf77-d31d8dc6e88f', 'Nicolino Loche', '18493608700');
+
+INSERT INTO clientes (id, nombre, telefono) VALUES
+('f847ac5a-caa9-40df-8a8e-480a08afafc9', 'Selenia -', '18297985334'),
+('20c492cc-d155-4153-9164-80829abef55f', 'Juan marte', '18295083273'),
+('b72a205d-85de-41e8-b107-254cd8caaaa6', 'Jorge -', '18494705098'),
+('b0628b60-ed93-4fa6-aba6-fd3150d17ca2', 'Poli -', '18494593629'),
+('78af0da6-8858-4a68-b59a-e76ff6ee9125', 'Miguel angel frías Cruz', '18094155830'),
+('fc92ebc6-e8b1-4245-a0c0-6357afbbe3d2', 'La Para De La', '18297731495'),
+('1e65a9fa-f9f8-434b-ace3-595a1ab79352', 'Rafael pajero Beato', '18493900746'),
+('dcc81e53-35d8-42e9-a09e-15a737b832d6', 'Kelvin Alcántara', '18296509070'),
+('f4fa3e7d-26ec-463b-a770-22b362531023', 'José Antonio Acosta Jiménez', '18296412997'),
+('abd153ed-ecaa-4a86-b04c-c690ca75f9fc', 'HECTOR MONTERO', '18099868600'),
+('47740852-747c-4f36-9ab3-38dd50ac6e1e', 'Dominica Rosario', '18093359154'),
+('0918f9d7-6011-4bef-8b5f-03997c51ce11', 'Dione Cubilete Díaz', '18498848295'),
+('2632b391-b556-42a7-aa7d-c7b0ab3a326b', 'Joan pilier', '18292848411'),
+('93941c12-ece5-4172-bbd8-26e6036f7011', 'Juan Antonio Mejia Ruiz', '18094478537'),
+('bee030e3-58b1-4076-b2fe-b4a2b852f1c5', 'George Rivas', '18293200303'),
+('ecc430c1-0f8f-4f10-8728-294f254e85dd', 'Uver -', '18099563946'),
+('4abeac91-4a28-4e53-ae98-c72a3a50efbe', 'Cecilin maria', '18493709428'),
+('76bec5c1-22f4-4bd6-a6f7-e4fc91393a8e', 'Dariel Tejada', '18496300294'),
+('650e33e7-d5b7-4a62-a276-fad0ba65d4bd', 'Robert -', '13479610412'),
+('0bbade16-3102-4b4b-b235-0d1cc2750592', 'Yoly Reyes', '18099210560'),
+('bfea99b5-5b5d-4545-a96e-0e9de81bc521', 'Joanna Martínez', '18097131380'),
+('f2b47842-9f87-46cd-a511-4e9d7f9e91a7', 'Leonel de la cruz', '18295538987'),
+('b9ec323f-5f70-4da7-afa2-1840b5cd9028', 'ARISMENDY López', '18092995266'),
+('0c002b9d-ff05-48a5-b877-f4403d62add6', 'Wislet Carismene', '18296373315'),
+('31b4b708-b0d9-4716-b292-fb1e7233cfde', 'Marina cueva', '18294100274'),
+('d852dd5a-ca03-4eb3-a2e6-648b457113c5', 'Prueba -', '18496300294'),
+('282cc57b-2bfe-4663-aaa2-9a56c54a2aeb', 'Osiris sanchez', '18298774824'),
+('1739e739-fa7d-41e6-bcb6-73b12e393b5f', 'Ambiorys -', '18099811378'),
+('087f8094-f58b-484d-8da6-04dd891d2ff3', 'Jorge Luis Jorge cabrera', '18093573814'),
+('e19d2aef-e090-4195-837f-17334cfbf597', 'Nelson Fernández', '18298699028'),
+('f4775fca-db11-494d-ac2b-d63dfaeb3235', 'Ana g Duluc', '18092563750'),
+('9db4bc5b-8d1b-48ac-bb3e-746c588a7c60', 'Sócrates  ramirez -', '18296311389'),
+('637bdcdb-25d1-4100-98a3-71ec65ba529d', 'Juan Carlos Zamora', '18092640135'),
+('3880bca2-1380-45b4-84e3-3804898dbebb', 'Blas Abreu', '18097058923'),
+('06f73b93-0913-4fe7-a660-c46cf9510122', 'Kelele Ninja', '12155432043'),
+('c2585958-b0cc-4a4a-8b7a-3612da3e557b', 'Enyel Diaz', '18492677744'),
+('d3c5c2c9-e3a6-4075-83f8-bf85818ab1b3', 'Wilkin Sanche', '18294616029'),
+('4083ccc8-6b4d-48ac-bb03-02be0f46e5d7', 'Amer -', '18293187523'),
+('a9c25384-cb19-450a-acc2-bf4ee12857c5', 'Robert De paula', '18098353450'),
+('d513201e-bb12-40c4-871d-11df3bb100dd', 'Jefferson Baptiste', '18295179182'),
+('f2273b1e-da85-424e-a9eb-272e851c595c', 'Faury -', '18294570284'),
+('cf908a6c-7f5d-4cee-9532-5223d0a89724', 'Massiel Mercedes', '18494260991'),
+('c96d6a51-88b0-4614-ad9c-da297d9f3d9d', 'Daniel tejada', '18296618503'),
+('13bc40a9-f243-492d-b9fa-49e46656a97e', 'Daneivis Lissett', '18095162284'),
+('77c87aea-c8ba-461e-bb9e-3ea04817ab32', 'Orlando -', '18495859023'),
+('bb47a0af-c44d-4d7f-a710-1118f08551d4', 'Suleny Cabrera', '18493547090'),
+('6e66725f-051c-42b0-8681-9cc273eabdf5', 'Lisane -', '18099198355'),
+('07545efd-fc22-433a-85ac-bf29fc6bdb37', 'Mafeo12 -', '18293328024'),
+('fb0bde35-ca78-4265-984f-5b899b55349b', 'Francisco -', '18097621908'),
+('f71f077d-dbd1-4050-9cff-7c44a20a9da1', 'Yunior -', '18493931822');
+
+INSERT INTO clientes (id, nombre, telefono) VALUES
+('75a11bac-c654-481a-96e9-eecdf7bccbca', 'Dahiana Reyes', '18294375038'),
+('752a06f5-b78e-4e40-b134-9ac37d12187b', 'Papito almanzar', '18293121305'),
+('7d7335a3-c825-451f-872e-e978554472b8', 'Madeline Etienne', '18292963172'),
+('10031de9-eee1-4bd2-bd11-d296a9217464', 'Rita -', '18293425814'),
+('36408cf1-86ed-4db8-a8f4-bec998b9aaf9', 'Ado -', '18299218283'),
+('93587ef9-146c-45b1-a3ef-22b7d2377837', 'Luis reyes', '18097088918'),
+('e4a580fc-2360-4af1-a71a-69d98a9f3b11', 'Briank -', '18095132845'),
+('8eae6f08-6da4-4ec5-b304-dc466050e913', 'Juleisi piña moreno', '18493934011'),
+('bea32038-4c98-41fb-9f82-9d7fde0f26e6', 'Edwin ambiori', '18298274138'),
+('bdd24c6e-22c7-4a0f-b30a-562deb753b16', 'Nelvi Felix', '18492753234'),
+('8b7b6933-c033-4923-96b5-4826d0287a78', 'Bronw -', '18299933261'),
+('d44bb0b8-214b-49bb-88c9-f6c719181320', 'Banesa Vargas', '18293011999'),
+('f42f98a2-1df6-490d-ac59-840a27805272', 'Sarah Gonzalez', '18293421155'),
+('0937d115-8285-4091-ad92-6dd02be610ee', 'Anne rose', '18099176522'),
+('eaef8b6a-4c90-406d-a8a0-1907ffb628ee', 'Arawak Gonzalez', '18098415781'),
+('a1625998-42cf-41fe-bb28-b2161fe1e27c', 'Rose belon', '18099094172'),
+('f065bcc8-e847-4d32-a57b-40980a83abca', 'Felicia Reyes', '18099235058'),
+('08115de4-11de-414f-b34b-1b59b64e390b', 'Felícita -', '18295862696'),
+('03196186-d35c-423b-9329-0c642db93640', 'Ana -', '18298028521'),
+('58600fa7-6463-4e83-aaf9-fd9a71fc3b98', 'Aney Diaz rojas', '18292977552'),
+('6cc77827-e8f2-4be2-902a-a16d173994e3', 'Yvelisse Almanzar', '18093109330'),
+('92cc2834-c67a-4446-92db-4f5d72afcaf0', 'Carmen de la cruz', '18097579441'),
+('7d9bdce4-c60a-4e68-ae84-0418020a853f', 'Yajaira -', '18493825212'),
+('1acbd342-8f5b-4c6f-920c-bd3a1f24b1da', 'Nerys Martinez', '18097060121'),
+('8d1e0766-6c87-4e71-b7b1-fefc17401316', 'Miguelina Fernández', '18298637370'),
+('cc075260-51b0-494a-b41a-27ab6ea2a91b', 'Lissette Ubiera Rivera', '18098766087'),
+('dfb7fe7a-0364-432d-845b-1defee19b2c2', 'Leidy -', '18292137363'),
+('874a3411-9248-4723-bd4f-15d0f37c4a06', 'Carmen de los santos', '18498896129'),
+('c2db8098-6876-44b0-ac13-79c7aa4f4620', 'Bladimir -', '18497974636'),
+('ed5fb0b9-3c29-4e7f-8d77-0926895528f2', 'Miguel de peña', '18098018929'),
+('1e5f0e2b-ae76-4b3c-a6bd-ef2049d40288', 'Támara Rome', '18097699414'),
+('94bc0346-98e0-41c1-a08d-9c48c6537843', 'Yoselyn -', '18093509463'),
+('db69cef0-9bd8-46dc-aa7b-6936a7c2e7c9', 'Luis Rosario', '18096971722'),
+('1cbf6a27-7c1f-478c-a37e-b74b71ebaea3', 'Ana belkys berroa payano', '18498796478'),
+('1322bac5-203e-4939-b2bc-600533898dba', 'Noelia suero', '18099831423'),
+('3b585796-2caf-4af3-9ff1-5e130ac3929a', 'Morena Stephan', '18297236177'),
+('f8c0c493-41a9-4f0d-94ff-114f078039c8', 'Jhonny peralta santos', '18098274553'),
+('f5d5d91c-c5a4-457d-82f9-bf2664a6b3c6', 'Deivi -', '18292801583'),
+('4db79c37-c05a-485e-87ed-e18f452b0e5a', 'Francisco Méndez', '18299227346'),
+('26447fab-d066-43ff-b0c2-72fea9c5056b', 'Massiel -', '18099160837'),
+('9dfc6b4e-73bd-494c-821a-bb7499eaf09e', 'Yenny -', '18492098954'),
+('08f51413-b2d8-4cc4-babd-f7e1d4b22ad9', 'Mary Laura', '18494641949'),
+('02c8dd58-c234-4246-baca-aa76fe87611a', 'Daysi Medina', '18292579997'),
+('b44803f9-27f4-4c93-96a5-7ba437d8651c', 'Dayana -', '18299898171'),
+('0d1968ed-a9b6-4797-9044-7a4c0ba09175', 'Hugo paula', '18095430732'),
+('fde9afc2-fd86-44db-a1d3-2129de4f5c4f', 'Sujey Martínez', '18092999286'),
+('5d6baf60-1b71-4a30-a854-5387d454e15b', 'Manolo Divalon', '18093967246'),
+('c0b9b13b-a4d6-48f5-85ae-d7f2eb7b0dce', 'Yaquelin  salcedo -', '18292627281'),
+('621d42ab-72d0-4f00-9685-b188fada7f6e', 'Nilda  Calderon -', '18293955778'),
+('9cdeca03-1c1c-4980-9640-d6e2c695882e', 'Héctor Lebron', '18094445203');
+
+INSERT INTO clientes (id, nombre, telefono) VALUES
+('aa76e9f9-469b-445a-99c1-fe731b6e6f0d', 'Rosa moris', '18099733321'),
+('cf5ae537-a7f0-4018-a29d-618381c0c246', 'Rafael -', '18293879062'),
+('15ab10d1-dc77-4870-b06a-be0f6f4a43a2', 'Ana Sarita', '18295681486'),
+('f036cc73-5d0f-4995-ac2b-31b9088e50f7', 'Ruth Suero', '18498769480'),
+('0773b9c4-8ccf-4b67-ab6f-10727e3e24db', 'José esteves', '18292229192'),
+('aa85b1b8-7319-4a5d-b969-8b49171f3727', 'Lisbeth -', '18295897092'),
+('98336279-e77d-49f7-997a-1777a52931e0', 'Celia Morales', '18297417289'),
+('286037cf-7f58-4f7f-a8ca-c08794a32136', 'Mayi -', '18092659212'),
+('8b7f2dd6-f2e3-483e-acc0-a8ad82e452f9', 'Ana medina', '18494464960'),
+('61d53d96-2468-4a53-b78b-8d9abc40d344', 'José augusto nuñez', '18095139156'),
+('0c90b64f-a73a-466b-9835-4f24b5d4723c', 'Luisana -', '18492804533'),
+('15d7b13a-99ed-4d83-9394-a03f98775b07', 'Ana Contreras', '18098475258'),
+('56e4a3b0-9312-49dd-afdb-71b9d5761fab', 'David Corniel', '18298629661'),
+('c55df7c1-ead4-45e9-b2ab-b0e5681aa679', 'Carlos jimenez', '8098474966'),
+('82726b09-52e8-4562-890c-c77ce6bcfba3', 'Michel Jeff', '8492437530'),
+('5b7daaa8-b46a-47b5-882f-07ae7f9d8eec', 'Ana rosario', '8294561625'),
+('29c6965a-25f7-4545-9edc-d0b62a6d3a4f', 'Miguel De Peña Antonio', '8098018929'),
+('766dbcf2-da4d-4dee-9109-1204c0f86064', 'Woolendele -', '8097752138'),
+('794eb022-c938-400f-9616-21af1eab4aaa', 'Yajaira -', '8299738278'),
+('66cbded2-fe1d-446f-851f-e854d9b2a752', 'Yulys marquez', '8299873084'),
+('9341099c-7d8c-4bd4-ac8d-fd5115ed9821', 'Angélica María frias', '8293904586'),
+('b1217df5-6b44-450e-bf3e-0887a5467f6c', 'Jose lopez', '8297647180'),
+('b1332aeb-bf65-455b-9fef-298c202f06b0', 'Maribel Tejeda', '8493762434'),
+('fef10d96-a57c-4cad-b40e-07f6820690d4', 'Estefany rosario', '8299371166'),
+('cafb76da-3e15-41f2-a87c-05d14fd0b788', 'Magdelyn  Sánchez -', '8493300335'),
+('dfadffed-4c93-4c54-be58-00b0d9fd9adf', 'Katherine -', '8495771314'),
+('b91ead83-f5c1-4b3f-a57c-574fb18a61cd', 'Grey -', '8299329761'),
+('a42c9610-b67c-4ab5-8ad5-4a95744be552', 'Maryest Nuñez', '8496525163'),
+('e731848c-ecab-41dd-9140-57f32d7060fa', 'Solanyi díaz', '8096675356'),
+('39a7b57b-6bab-4783-93c9-2df09d40e34c', 'Evelyn -', '8099522126'),
+('c20b7e13-8d3b-49e2-8801-ff0a1a4c0bc6', 'Ambar Castro', '8096761626'),
+('91cc67c6-1d9a-491a-aae3-6091b01c9211', 'Natalie Bonifacio', '8296602823'),
+('d91a2e28-d531-4f1f-81b6-8e878f7ecfaf', 'Danerlly Encarnacion', '8294623584'),
+('0219ee67-143c-47c8-bfbd-cfe059104755', 'Steisy Pimentel', '8097744652'),
+('2335f4a1-4407-4097-b8eb-fe927ed933f2', 'Yasury Picon feliz', '8292337202'),
+('a3fa20ff-dd05-423f-af8e-e1f5e26633ea', 'Solange santana', '8298851510'),
+('2129a8ed-ff8d-401c-83e8-d84910b4e6b9', 'Lívida -', '8097044919'),
+('c1f6abbb-004d-4f61-8790-50075ac93eb6', 'Gisselle -', '8494381109'),
+('0138ce45-6570-49ad-85c4-5c40dec30484', 'Elina sánchez', '8097828894'),
+('37d65d12-1fea-4d29-b73b-e58ed908ab93', 'Carolina -', '8298205364'),
+('0daa1048-c571-47e1-baa7-7424a0832cf8', 'Fernando Tiquitik', '8095562341'),
+('35e37254-79ed-4fa8-9c3f-964a5334fa2f', 'Alexandra Rodriguez', '8292590343'),
+('251496e7-c54b-486e-b560-4e4a3a4fe327', 'Susan Robert', '8493535301'),
+('699d45f8-825b-40f2-bdd4-254797791818', 'Biannely -', '8492640096'),
+('74ff5bb7-4e52-41e8-9990-8b597886a8bd', 'Maria Paulina Rodriguez', '8297946895'),
+('054b3391-f0b9-4c4a-aff0-38e0bd05046e', 'Rosa Morales', '8099780805'),
+('ab4e4a72-5550-4e92-85ff-8ebae5e158b7', 'Gomez -', '8097092008'),
+('e4f70be9-a1f6-47ed-aa2b-e678873b90ad', 'Yandelson -', '8296503796'),
+('43767ae8-a213-43fe-921c-16e059bebe37', 'Wanda -', '8297564439'),
+('c677233a-38a3-4336-98e7-05bfb260812d', 'Roberta Almonte Rodriguez', '8295709600');
+
+INSERT INTO clientes (id, nombre, telefono) VALUES
+('31b6ebfb-8840-4996-b2f1-2565e07852dd', 'Osmeldi -', '8097084334'),
+('b917f10e-82a5-4753-b40f-2dcc04af119a', 'Dasca Joseph', '8296183104'),
+('3694d342-18c3-400f-a965-87307a018790', 'Maria -', '8295989358'),
+('21655801-0358-4e38-865d-5c20bd2ef776', 'Katherine Romero', '8294828815'),
+('b3c7750b-a63b-4ed4-b560-aac1ae3943a0', 'Lisseth -', '8097654627'),
+('300993c6-6247-49ff-9c5a-b4939d6300ea', 'Dilenia -', '8295487779'),
+('55d341e7-59ad-454d-90d3-14e9444f23a9', 'Ashlyt vanessa', '8096975969'),
+('d549146c-02e4-4ad7-9872-d3b11d24fc6f', 'Yeleini Pujols', '8099319691'),
+('44d2c686-da34-48fb-8693-0f137891a044', 'Claudia Rodríguez', '8098277992'),
+('b0f4126a-0be1-48c7-a30f-283ab225296e', 'Katerin Gomez', '8494652204'),
+('039d23b8-a284-469e-a134-aff67742294d', 'Noemi -', '8292332100'),
+('1b697057-78e2-4cc8-bd09-3ce7e48a3a50', 'Jessica -', '8492074977'),
+('c1a083b4-f86b-4ae2-b22e-df80387faf1a', 'María Teresa Perez', '8493773063'),
+('8b4efd6f-d5ac-452a-aad7-106d88fffdb3', 'Prieba -', '8496300294'),
+('fefb56e3-342f-45b5-a0e7-064255da5533', 'Luisa Sterling', '8295347586'),
+('bed81dc9-c37d-46a2-ba38-69e9cd36ce8f', 'Magdelyn Sánchez', '8493300335'),
+('dd9371f6-5a07-4e08-8ecf-ab7cfedda840', 'Winton -', '8296198086'),
+('a00c7897-d2b5-4666-9a32-5b0f6eef473c', 'Rubens Sanchez', '8498822785'),
+('3dc2befa-0d9c-4518-9a07-8bc8b5352985', 'Ingrid Ramírez', '8494760789'),
+('ad30bb62-084d-43b2-9a13-9baa16957bbd', 'Yaritza Gomez', '8099621266'),
+('59d1ad9d-a285-4750-964f-76b74bbc7005', 'Isa -', '8098630590'),
+('45c7e1eb-da53-48bd-a940-301e5981c95e', 'Wendely Díaz', '8093438667'),
+('e5a9d0ba-ee79-41b2-8f16-5f818356efb8', 'Nayi torres', '8483651595'),
+('c5c50bb8-0f40-4145-a555-ce47d6885aa3', 'Wanda ESMERLIN', '8098270453'),
+('64bebe14-e6ac-4c7c-82f5-2f0c04511e93', 'Luis Martinez', '8294481626'),
+('5db1bc2d-a92a-484b-bac4-c8e836f6bfd3', 'Magaly guzman', '8493586508'),
+('eec6ffa8-81c8-42c6-823e-96d051ddef95', 'Kenia Berenice', '8294652349'),
+('43657471-68d6-4327-951d-20c1ec6f7b3f', 'Efrain Díaz', '7874108976'),
+('449c28a3-1606-479a-a069-6c51a36d6319', 'Zuleyky Guzmán', '8492495911'),
+('2f79875c-b904-407e-8353-7288258c208c', 'Erick Pérez', '8296935857'),
+('40d9b2d4-414e-4b35-a703-6b27f4efa62a', 'Valentina castro', '8297120871'),
+('ce2a8448-e5f0-467d-9fb8-c95a563f72fe', 'María Santana', '8096775094'),
+('4d196af9-1386-43d8-81c8-e4f9c80274ff', 'Liliana viola', '8099946210'),
+('a1f84860-d867-4b4d-ad52-33797041aeb2', 'Angela Del Rosario', '8298627648'),
+('e8465408-bbf8-43ea-921b-2f169c0be2d6', 'Anna -', '8297874975'),
+('8455b93e-5404-4fed-9b4f-70d4c90691f6', 'Massiel -', '8493606212'),
+('5c29c3b8-38a1-4c00-9c68-280796872d34', 'Kenia -', '8495425353'),
+('8ab95905-32b3-4ad6-85ae-20314c9e98e8', 'Deyanira -', '2039421948'),
+('7c51b553-455a-47ff-ab5c-702e9b32d226', 'Marvelin Ovalle Guzmán', '8297514060'),
+('c6162bdf-0d7b-4bf9-997d-495827f39304', 'Janice Vasquez', '8492030626'),
+('99ae88ff-7e70-46e0-8eb1-7fb35ee5fc6d', 'Julio Vallejo', '8092324975'),
+('97429de6-5011-44cd-8fcc-40e059081c81', 'Nelson Mercedes', '8098415123'),
+('74b68c4c-160f-48cb-be74-d90adc8b3479', 'Isaac Ogando Rojas', '8092308451'),
+('0a7c7bb0-9e86-44dc-acf1-196478e8c302', 'Deyani Santana', '8099099352'),
+('9eb44b36-00d1-47ca-92e0-f07729abf41a', 'Carlos Ferreras', '8092702369'),
+('e628ae52-d214-4f0e-8959-4c3889093c1e', 'Jennifer Jean Louis', '8293549511'),
+('77d96e3b-3b9a-4c73-8a47-d311e0f25610', 'Julio Gómez', '8297626778'),
+('9dfce7c1-4a85-425a-9ab1-99fbd31de4ed', 'Luis moises vanderhorst García', '8098674587'),
+('9014c368-e079-416a-9fb0-0b1381604093', 'Manuela Gómez', '8297880131'),
+('e81834b3-5e06-4426-8b27-efd0abf0e247', 'Ignaqui Estevez', '8092237592');
+
+INSERT INTO clientes (id, nombre, telefono) VALUES
+('d44a32c3-1fd4-4316-bae4-5e469d28299a', 'Nayeli Mora', '8496523069'),
+('95e13c2e-b08f-4fa0-baa9-792e199474f1', 'Genesis Mejía', '8295809754'),
+('55ebbde9-8797-46d1-856a-2095eb58061a', 'Yesenia Hernández', '8297561981'),
+('6a797887-10c0-4cd3-9e7b-7f5bb20d7282', 'Sires y encarnacion jaquez', '8092080883'),
+('bf1e02fb-1195-4cbd-acb1-2643600c4ddb', 'Robeli morel', '8296374877'),
+('5b74b623-1382-41db-93fe-d6272c0ded2d', 'Maria del pilar hernandez', '8493527346'),
+('73362ec0-2948-4f82-9332-490dd3431b1c', 'Sheila Maria Ciscal Almaguer', '8495818159'),
+('303c64c7-65c5-40b3-963f-8a1f4085b2f6', 'francis rosario', '8093033305'),
+('df7aa0a5-7394-44dc-b992-0083672a0d2c', 'Arlene Faneyte', '8092584145'),
+('c2ba0f39-4394-4ac2-b14d-fd2ff7506128', 'Altagracia De Pimentel', '8298755544'),
+('1ac830c0-03b9-483e-8396-3e761daa443d', 'Wismehylin geronimo', '8495297930'),
+('14b92b7c-d378-4673-98a7-7199a51ca2c2', 'Samira santana', '8096091142'),
+('c3e43e1e-d342-488f-8722-66d7beb38f73', '𝑀𝒶𝓇𝓎 -', '8296642030'),
+('c1d9f093-598a-43c2-9a32-3055137ced47', 'Miguel Angel Domínguez', '8298852219'),
+('367c5d77-ab0f-49f0-9266-14abf63bfb0a', 'Anabel -', '8098734510'),
+('23593f77-6a9c-464b-a2ee-4535ffcf121f', 'Adilca -', '8293034232'),
+('52c91f64-ebcb-4565-b8d7-26ff06e2fc25', 'Rosa miguelina', '8292082581'),
+('d82b4e48-9183-4781-95e1-b1bdc7dd4126', 'AzLIM MAICA', '8292974315'),
+('0332aeb8-64da-4b9e-b70a-937d5b4c6e1f', 'Manuela -', '8292603526'),
+('e0c9309d-b92c-4f5e-aa74-675f3febd701', 'Rachel -', '8094601929'),
+('e9e0b4c3-4e90-40e1-9b28-4f9301453b52', 'Katherine Sánchez', '8096379236'),
+('06fa4397-711d-49c1-90cd-895b62310900', 'Dinelys -', '8295639307'),
+('5c6ae825-32f2-40f0-91b5-5aec9ea911fa', 'Dessire Taveras', '8492624904'),
+('7f54f866-9745-4d43-a8ee-70370dd02d29', 'Maricela cruz', '8299801716'),
+('2d6feabe-a9cf-418f-b8b1-ce03174ed1db', 'Prueba -', '8496300294'),
+('a40cb135-12dc-4814-89b9-d387db5491f3', 'Maria orquidea franco', '8293362430'),
+('2a591882-f644-42fe-a1cc-f300040ebbc9', 'Madelyn carela', '8292203816'),
+('ca5f0332-b1d0-406f-9165-3f80717812e3', 'JoséFrancisco -', '8299227346'),
+('249604de-5baf-494a-b39d-55921cc60531', 'Ebony Rivera severino', '8492453912'),
+('4334c259-f99e-4b98-9aa5-64546f412ea7', 'Yuniffer Viloria', '8296525265'),
+('174211b4-5dec-45bc-8f91-f12f3318e07a', 'Xiomara -', '8299322055'),
+('7471a2af-1ba5-480b-9ae6-ac0a9f7524ea', 'Yelixfer -', '4802384270'),
+('cdba35b6-e0b4-4cd2-85b0-e9c0b70dbc5f', 'Yesenia García', '8296497684'),
+('fc4055fd-2fb6-473b-8f75-8629c311170c', 'Ruhaiddy -', '8494545779'),
+('90d0e174-4c5f-445e-8467-730c196366cf', 'Danna yibelis', '8295742430'),
+('322022b4-488b-4ce0-8918-510fd2b6b515', 'Raquel -', '8293273843'),
+('4f213bac-a560-4f4d-9738-19af6179ca64', 'Tomairy Ramirez Delgadillo', '8495262164'),
+('ac85ee3a-eee1-4433-a581-7b1641a12b05', 'Mileidys segura', '8097814639'),
+('51dcdd74-1b1a-4a02-a577-1ced340fa40f', 'Estefany Paulino', '8498597684'),
+('4054efe7-07c6-41a5-bd4f-ecbfaa3cbd54', 'sagrario isabel', '8098350530'),
+('0049b9e8-a758-4c90-8ed5-ae6f5eebb7c3', 'Anabell -', '8093862130'),
+('864c2127-be09-48db-b972-e36c3b6748be', 'María Pimentel', '8098932150'),
+('9b01b613-c590-46a6-b6b7-0f5ceb4b74f2', 'Luzbiliana -', '8297551124'),
+('39a30209-d90b-424c-830e-a1b448d74faa', 'Aracelis -', '8298530501'),
+('296c6dab-2411-4f52-95a4-ad8707d2229f', 'Janna Delgado', '8292525114'),
+('6877650c-fb0c-4468-b9df-f8fdc028c7f3', 'Miliangela Veliz', '8494497873'),
+('fff41adc-1ad7-4f95-8643-d40de3fd32e4', 'Daniela espallat', '8094609908'),
+('0d2078a0-c40c-4624-a8f0-548af2e0b586', 'Cristal veloz', '8296616755'),
+('6e12085f-669c-489d-ab88-0ba63d1c46bb', 'Paulina -', '8292083525'),
+('ef412c05-f5ca-4fd3-a88c-a1d667090bf4', 'Anyela María', '8293758025');
+
+INSERT INTO clientes (id, nombre, telefono) VALUES
+('319bec2d-d1b4-4a60-9aba-99e6388a5678', 'Lissette Vásquez', '8298650850'),
+('d313643d-b637-4f15-a95a-1a274a3ae1f4', 'Laysha aracena', '8296025625'),
+('9cc377d0-b71d-4478-8411-dbcc6e2e8a84', 'Eliusy garcia', '8296462717'),
+('0a344aad-d678-429d-b495-9af0b7da9060', 'Elgin Alberto Richiez', '8093505632'),
+('d5dbeab1-274e-4142-addf-36187586b2cc', 'Ysmeli Mendoza', '8098531287'),
+('dd2248e4-3c29-4e83-8377-78dcc87cac03', 'Yulisa de oleo', '8492018121'),
+('3589ad62-e2a0-4478-beb4-4bf06e347e90', 'Virgey Mateo Tavarez', '8494561968'),
+('b3cc7e01-d3f8-4850-a4eb-c5c59a3eabeb', 'Juan Carlos', '8495761702'),
+('f42c38c9-924c-4f85-a09d-1454043cafde', 'Julia Hernandez', '8098992101'),
+('b815b18f-f522-4d2a-b438-1c32b41e8c49', 'Juana -', '8295271780'),
+('b9edf549-6b42-42b2-9468-2192a85cf206', 'Evangeline Janice', '8299124056'),
+('ea395bef-378b-432f-abc9-e872cb7f8bb9', 'Sugeiry magdalin', '8295508009'),
+('07811a52-d8a3-4e7c-b94d-a966d2b4450a', 'Anabelis -', '8293844745'),
+('ee38de78-fde6-4cb9-b4fd-3bd18b88b0ed', 'Julieta jiemenez Martinez', '8296348505');
+
+-- Couriers
+INSERT INTO canales_cobro (id, nombre, tipo_comision)
+  VALUES ('cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'GINTRACOM', 'ninguno')
+  ON CONFLICT (nombre) DO UPDATE SET nombre = EXCLUDED.nombre;
+INSERT INTO canales_cobro (id, nombre, tipo_comision)
+  VALUES ('d155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 'MOTORIZADO', 'ninguno')
+  ON CONFLICT (nombre) DO UPDATE SET nombre = EXCLUDED.nombre;
+INSERT INTO canales_cobro (id, nombre, tipo_comision)
+  VALUES ('d85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 'AUREL', 'ninguno')
+  ON CONFLICT (nombre) DO UPDATE SET nombre = EXCLUDED.nombre;
+
+-- Productos
+INSERT INTO productos (id, nombre, precio_venta) VALUES
+('2cedc02f-83a2-40eb-84ab-69796df32d9f', 'Báscula Digital', 0),
+('e3235f4b-25ed-4f4c-90d3-69f3f0c23eef', 'Báscula Inteligente', 0),
+('38ec764c-7785-4cae-b158-27b9d7eb18f6', 'Luces LED Inteligentes (Pack 2 unidades)', 0),
+('0b0084be-14d2-44a7-8059-f23baa004720', 'Cepillo Desenredante Hidratante 2-en-1 – Peina Sin Dolor y Reduce el Frizz', 0),
+('4026919c-e302-4233-8095-4d1a7393daf0', 'Espejo LED Profesional Recargable con 3 Modos de Luz', 0),
+('f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 'Luz solar con sensor', 0),
+('3c2755ef-df46-4515-9756-be554b0f2323', 'Luz LED RGB - Recargable - Magnética', 0),
+('864ee632-1011-4b09-ac55-5762d6761368', 'Aceite Facial de Limpieza Profunda', 0),
+('15d614b1-6bb4-461a-9c2a-c28edfc24f28', 'Corrector de Cicatrices', 0),
+('0f710b5e-23a3-402b-842f-81ec16b46d20', 'Almohadillas Coreanas Anti Manchas', 0),
+('1142531d-2f6c-4799-a7e8-f106930dc373', 'Parches para Ojeras y Bolsas Bajo los Ojos', 0),
+('fec10e47-b902-4940-bac7-bff6ffb29430', 'Meno Vitamina', 0);
+
+-- Pedidos
+INSERT INTO pedidos (id, cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega,
+  precio_total, es_testeo, es_prueba_interna, estado_original, costo_envio,
+  ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num) VALUES
+('02a29be7-b9bd-4326-b7ab-10ab228fc5fd', 'ae10596b-a9cd-4624-8be1-6efca44eaf36', NULL, 'cancelado', '2026-01-25', NULL, 2000, FALSE, FALSE, 'CANCELADO', 0, 'Sabana Larga', 'Mao', 'PENDIENTE', NULL, 1),
+('cc74810d-370a-426b-b26a-30690f7b6721', 'ae10596b-a9cd-4624-8be1-6efca44eaf36', NULL, 'cancelado', '2026-01-25', NULL, 2000, FALSE, FALSE, 'CANCELADO', 0, 'Sabana Larga', 'Mao', 'PENDIENTE', NULL, 2),
+('e98dc9aa-39c7-491b-9e8b-50eabe651b30', 'ae10596b-a9cd-4624-8be1-6efca44eaf36', NULL, 'cancelado', '2026-01-25', NULL, 2000, FALSE, FALSE, 'CANCELADO', 0, 'Sabana Larga', 'Mao', 'PENDIENTE', NULL, 3),
+('8673cff9-b3a9-48c7-8756-7d27309d1d10', '53346b50-f65c-466b-97ce-13f387b9a4ac', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-01-27', '2026-01-27', 2300, FALSE, FALSE, 'COMPLETADO', 500, 'Hotel excellence del carmen', 'Vabaro', 'RECAUDADO', '2026-01-27', 4),
+('812e0b5a-17b9-4fce-be46-ae1edb41b0dd', '06c42a12-b626-4a38-9141-6ee0f6937287', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-01-27', '2026-01-27', 1950, FALSE, FALSE, 'COMPLETADO', 500, 'Calle luperon', 'Nagua', 'RECAUDADO', '2026-01-27', 5),
+('b1228870-a5c1-43ea-80c7-245fe6106918', '37d61b17-289d-496d-a749-0dc01611aa2e', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-01-28', '2026-01-28', 1950, FALSE, FALSE, 'COMPLETADO', 500, 'Calls interior H 15', 'Santo Domingo', 'RECAUDADO', '2026-01-28', 6),
+('5d156241-2326-4a46-8eea-a57d4d3458a8', '8da35378-9d53-41b3-9cac-a2dffd3a2f4b', NULL, 'cancelado', '2026-01-28', NULL, 1950, FALSE, FALSE, 'CANCELADO', 0, 'Monte Cristi barrio nuevo km 14 el duro', 'Monte Cristi', 'PENDIENTE', NULL, 7),
+('664241ca-60ca-40be-aa25-44b09bc11ba6', '6296049b-ed1e-4bd0-9765-c89613d5b2a7', NULL, 'cancelado', '2026-01-28', NULL, 1950, FALSE, FALSE, 'CANCELADO', 0, 'Hermanas mirabal', 'República Dominicana', 'PENDIENTE', NULL, 8),
+('cdaaaf41-d6e3-4e76-8e94-a3bd18a9e4f6', '1fc98748-4a45-4085-b51f-840d1fe76041', NULL, 'cancelado', '2026-01-28', NULL, 1950, FALSE, FALSE, 'CANCELADO', 0, 'Calle Girsol #10, sector Jardines del Norte', 'Distrito Nacional', 'PENDIENTE', NULL, 9),
+('4141641f-375c-42f0-9a75-38755ff27e76', '808a152a-4e80-452d-a27a-59adf775651a', NULL, 'cancelado', '2026-01-28', NULL, 1950, FALSE, FALSE, 'CANCELADO', 0, 'CONSTRUSAND', 'Santo domingo', 'PENDIENTE', NULL, 10),
+('34895893-f9bb-4c07-b52a-ce5a6b513982', '6fa7b0de-15aa-4070-9d63-514055a03a60', NULL, 'cancelado', '2026-01-28', NULL, 1950, FALSE, FALSE, 'CANCELADO', 0, 'La vega', 'La Vega', 'PENDIENTE', NULL, 11),
+('fb568149-abf2-4b94-ad6a-89fb391727b9', '6fa7b0de-15aa-4070-9d63-514055a03a60', NULL, 'cancelado', '2026-01-28', NULL, 1950, FALSE, FALSE, 'CANCELADO', 0, 'La vega', 'La Vega', 'PENDIENTE', NULL, 12),
+('b7d53b28-a8a7-496f-b2cf-2e27e4b1d1ed', '6fa7b0de-15aa-4070-9d63-514055a03a60', NULL, 'cancelado', '2026-01-28', NULL, 1950, FALSE, FALSE, 'CANCELADO', 0, 'La vega', 'La Vega', 'PENDIENTE', NULL, 13),
+('866a9eac-f6c1-42b6-b4db-82f4862d3e3a', '54d131e6-edb7-49f8-8bca-db36979b0acf', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-01-28', '2026-01-28', 1950, FALSE, FALSE, 'COMPLETADO', 500, 'Avenida ecológica residencial vista ecológica', 'Santo Domingo Esté', 'RECAUDADO', '2026-01-28', 14),
+('6d09d3cc-27a8-44e5-9f46-3e8de8132ed3', 'fa984851-7a21-4e5e-bb93-4ff16513db27', NULL, 'cancelado', '2026-01-29', NULL, 1950, FALSE, FALSE, 'CANCELADO', 0, 'Bellavista mall', 'Santo Domingo', 'PENDIENTE', NULL, 15),
+('b05964d0-784f-4a70-92de-b0b23ce8622a', '93067338-9d81-4e29-8072-542eb14a6856', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-01-29', '2026-01-29', 1950, FALSE, FALSE, 'COMPLETADO', 500, 'En trada de villa lafe calle maría veron', 'Veron', 'RECAUDADO', '2026-01-29', 16),
+('2de496f6-675c-42ab-8671-ef208ff40f9c', 'a873755f-5f0a-47c9-96fe-3e8ee51209c5', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'devuelto', '2026-01-30', NULL, 1950, FALSE, FALSE, 'DEVOLUCION', 400, 'Av. Charles de Gaulle no. 66 justo al lado de la sirena', 'Santo Domingo Este', 'PENDIENTE', NULL, 17),
+('dd53a02a-0549-441e-b894-0e02e5e15f97', '6a263c3c-2d15-47db-83f5-9dc701b8959c', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-01-30', '2026-01-30', 1950, FALSE, FALSE, 'COMPLETADO', 500, 'Embrujo 3 calle Ana Jiménez residencial balcones universitarios 3 apto o1', 'Santiago De Los Caballeros', 'RECAUDADO', '2026-01-30', 18),
+('ec6dac25-4952-485b-947b-de6c169764c6', '73ed478a-f465-467a-8ffc-80318377bb3a', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-01-31', '2026-01-31', 1950, FALSE, FALSE, 'COMPLETADO', 500, 'Ministerio Relaciones Exteriores, ave. Independencia #752, Hacienda San Geronimo, al lado banco agricola', 'Santo domingo', 'RECAUDADO', '2026-01-31', 19),
+('89daf47d-5958-4eca-92c4-e8581ef0ece8', '7347b674-06c6-4722-b368-996304b34aec', NULL, 'cancelado', '2026-01-31', NULL, 1950, FALSE, FALSE, 'CANCELADO', 0, 'Calle hicotea #16, nuevo Boca de Cachón, Independencia', 'Boca de Cachón', 'PENDIENTE', NULL, 20),
+('6041a683-e6ae-4201-90ee-f95e722fa548', 'e261481d-7230-4d72-ae34-70fcb7df31ce', NULL, 'cancelado', '2026-01-31', NULL, 1950, FALSE, FALSE, 'CANCELADO', 0, 'Frente a la escuela vocacional', 'Barahona', 'PENDIENTE', NULL, 21),
+('13a976f8-f476-45d1-95ab-9a33239cb89f', '41a5ea69-f5af-4798-b4b5-002ee6869442', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-02-01', '2026-02-01', 1950, FALSE, FALSE, 'COMPLETADO', 500, 'Calle Mella 33', 'Sánchez', 'RECAUDADO', '2026-02-01', 22),
+('a6946b05-d5e0-4c3f-999e-7748c4beb3ea', '17b0f4cc-bace-4b90-b2a7-346efbf694b2', NULL, 'cancelado', '2026-02-01', NULL, 1950, FALSE, FALSE, 'CANCELADO', 0, 'Calle pedernales', 'Bonao', 'PENDIENTE', NULL, 23),
+('8f291d95-aeb7-4fab-945f-f2d3e2fa2f3e', '1b1cd81d-61e7-45d1-b4d1-48cbf01c3027', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'devuelto', '2026-02-01', NULL, 2925, FALSE, FALSE, 'DEVOLUCION', 400, 'La mercedes calle 8 casa 17', 'Puerto plata', 'PENDIENTE', NULL, 24),
+('0ab42d52-2bf4-470b-be66-4a90b032845e', 'c66635a6-4ecd-4952-a414-4e9bf1d2e7a8', NULL, 'pendiente', '2026-02-04', NULL, 2450, TRUE, FALSE, 'TESTEO', 0, 'Julio Postigo 6', 'Santo Domingo', 'PENDIENTE', NULL, 25),
+('30ba0a84-f448-4a4f-a92a-e0d9534e84ac', '72c4d317-aed9-4234-9be0-cbc259027763', NULL, 'pendiente', '2026-02-04', NULL, 2450, TRUE, FALSE, 'TESTEO', 0, 'Residencial las palmera 1 madre vieja sur', 'San cristobal', 'PENDIENTE', NULL, 26),
+('13089e52-fa34-428f-ac34-dccf660e94d8', '233367c7-ce00-43f9-879c-0507783b527c', NULL, 'pendiente', '2026-02-05', NULL, 3449.88, TRUE, FALSE, 'TESTEO', 0, 'Villa Ofelia zoilo mesa #9', 'Sanjuan de la maguana', 'PENDIENTE', NULL, 27),
+('30264ad0-a1d2-41c4-a803-ae19ccd6ee8e', 'f6d5ff13-3a10-49b3-afac-3e6d49dbd03f', NULL, 'pendiente', '2026-02-05', NULL, 2450, TRUE, FALSE, 'TESTEO', 0, 'Calle Las Marias 2 C, ALFIMAR', 'Santo Domingo', 'PENDIENTE', NULL, 28),
+('b0102827-ce6b-49dc-a18d-f98d079e83aa', 'b90a59d0-f791-41f6-b825-41d2bd7eec55', NULL, 'pendiente', '2026-02-05', NULL, 3449.88, TRUE, FALSE, 'TESTEO', 0, 'Emilio morel #44', 'San Pedro de Macoris', 'PENDIENTE', NULL, 29),
+('5da9a4f9-7243-4a0d-8b16-cfb174f1ee37', '0f4845fc-91f9-4b94-8318-cdcfec8c3552', NULL, 'pendiente', '2026-02-05', NULL, 3450, TRUE, FALSE, 'TESTEO', 0, 'Calle  Emilio morel #44', 'San Pedro de Macoris', 'PENDIENTE', NULL, 30),
+('5aa07b01-1767-4fde-ad90-74ba1c8d9e4b', 'bf71ab39-a7fd-4063-a43c-75c0c7429e75', NULL, 'pendiente', '2026-02-05', NULL, 3450, TRUE, FALSE, 'TESTEO', 0, 'Autopista Duarte km 12 la penda', 'La Vega', 'PENDIENTE', NULL, 31),
+('8dd37952-dfd9-4585-a2ef-b259f030d0ce', '014820bd-69a3-4558-8494-9af0fb14bb9c', NULL, 'pendiente', '2026-02-06', NULL, 3450, TRUE, FALSE, 'TESTEO', 0, 'Pedro Corto', 'Pedro Corto', 'PENDIENTE', NULL, 32),
+('1bfb343f-b57c-474c-928d-ffd846ac5142', '2409c67c-d38e-4f87-ab8a-01293a994e36', NULL, 'pendiente', '2026-02-06', NULL, 3450, TRUE, FALSE, 'TESTEO', 0, 'Av Pedro Henriquez Ureña No 135 Torre Tellium II apto 1102 La Esperilla', 'Santo Domingo', 'PENDIENTE', NULL, 33),
+('358f9323-8edb-4e77-be04-8728f8690bda', '9b2fa3a7-0683-4e86-8ac2-fa41ef94ca4f', NULL, 'pendiente', '2026-02-06', NULL, 2100, TRUE, FALSE, 'TESTEO', 0, 'La margarita num.15 Almirante caña', 'Santo Domingo Este', 'PENDIENTE', NULL, 34),
+('9baa7693-8be6-44a6-bc29-d8efcde419ce', '60341867-a483-4b79-8332-a95d6fc46bae', NULL, 'cancelado', '2026-02-12', NULL, 2950, FALSE, FALSE, 'CANCELADO', 0, 'Calle España Edificio 6 Apartamento 2-2 El Congo', 'Santiago', 'PENDIENTE', NULL, 35),
+('3def2d66-ace8-43be-8c9a-374b8569037f', '1cfd81f9-813e-4f96-9d30-32f6f160fac4', NULL, 'cancelado', '2026-02-12', NULL, 1950, FALSE, FALSE, 'CANCELADO', 0, '27 de febrero #55 Benito moncion', 'Dajabon', 'PENDIENTE', NULL, 36),
+('aaf2e5cf-6509-4fe2-8515-65db2f0a0fec', 'a7aa0215-ef6f-4bd2-9825-f6464e9fc062', NULL, 'cancelado', '2026-02-12', NULL, 1950, FALSE, FALSE, 'CANCELADO', 0, 'Avenida constitución #95', 'San Cristóbal', 'PENDIENTE', NULL, 37),
+('06984ab8-c44e-4d02-be06-7fce25a0c6b3', '7c04f275-9b03-4f3c-b071-bbb0cd42fe53', NULL, 'cancelado', '2026-02-14', NULL, 2950, FALSE, FALSE, 'CANCELADO', 0, 'Los fraile segundo', 'Santos domingo', 'PENDIENTE', NULL, 38),
+('8fb881aa-2a6c-4b0f-a8bd-20872d333d25', '789077dc-e3de-41df-ba5c-b3a6b14cddbf', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 'entregado', '2026-02-17', '2026-02-17', 1950, FALSE, FALSE, 'COMPLETADO', 416, 'Res. Alameda Este , Santo Domingo Oeste', 'Santo Domingo Oeste', 'RECAUDADO', '2026-02-17', 39),
+('00a58d4a-670b-4385-b3f3-3e651810285f', '0459887b-424f-4a16-93dc-f7d39c5e02eb', NULL, 'cancelado', '2026-02-17', NULL, 1950, FALSE, FALSE, 'CANCELADO', 0, 'Lo varrancone depue de conani', 'La vega', 'PENDIENTE', NULL, 40),
+('458e4c25-c64d-4c5a-bfbf-c169848d46bc', '63161586-6f5f-4d5d-b34b-0464f4007c2c', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'devuelto', '2026-02-17', NULL, 1950, FALSE, FALSE, 'DEVOLUCION', 400, 'Prado las  cañas de guerra entrando por el pleys de mioki', 'Prado las cañas de guerra', 'PENDIENTE', NULL, 41),
+('92d0f0a0-430f-4089-add8-7f1e16d699d4', 'cf046627-c29e-4332-b627-1fccea67a1f8', NULL, 'cancelado', '2026-02-17', NULL, 3450, FALSE, FALSE, 'CANCELADO', 0, 'Cabilma del este calle paseo 12 de enero', 'Santo Domingo Oeste', 'PENDIENTE', NULL, 42),
+('b3e61370-13d1-4323-a698-a1b43d6a2ee0', 'c392a34c-163d-437e-bfc1-554adc3eeffe', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'devuelto', '2026-02-18', NULL, 3450, FALSE, FALSE, 'DEVOLUCION', 400, 'Carretera San Francisco tenare Layaguiza', 'San Francisco tenare Layaguiza', 'PENDIENTE', NULL, 43),
+('0e4b2f0d-a77d-46cd-931e-945a382c70a6', '6ce6bac5-3289-4f33-ab5b-e095aea2cdf3', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'devuelto', '2026-02-18', NULL, 3450, FALSE, FALSE, 'DEVOLUCION', 400, 'Calle las flores', 'Santo Domingo Norte', 'PENDIENTE', NULL, 44),
+('6f2f202c-4ddf-430d-945c-88f10a6f3a8a', '3be3038b-916e-4d41-9a62-fa59ac692823', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 'entregado', '2026-02-18', '2026-02-18', 3450, FALSE, FALSE, 'COMPLETADO', 416, 'Calle playa punta icaco 19 en Los Corales de SAN Luis Santo Domingo Este', 'Santo Domingo Este', 'RECAUDADO', '2026-02-18', 45),
+('774ecde3-16bb-4fc6-bed7-19418434f7f2', 'f3992643-e63b-4c29-854a-233eb4a70190', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-02-18', '2026-02-18', 3450, FALSE, FALSE, 'COMPLETADO', 444, 'Otilio Mendez # 14', 'San Juan', 'RECAUDADO', '2026-02-18', 46),
+('b57d7143-cd0d-4b3d-9b8b-90d333c8c266', 'f63ac7b3-8313-475b-bb13-053c1e93815d', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-02-19', '2026-02-19', 3450, FALSE, FALSE, 'COMPLETADO', 444, 'Calle casa n2 cerro alto Santiago', 'Santiago', 'RECAUDADO', '2026-02-19', 47),
+('84d57cbc-9b12-4658-a103-1f6d2630ce20', '96540292-ff2c-4aa0-82d3-5f8d6fdddaa4', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'devuelto', '2026-02-19', NULL, 1950, FALSE, FALSE, 'DEVOLUCION', 400, 'Francisco Villa espesa #240 ensanche la fe', 'Distrito Nacional', 'PENDIENTE', NULL, 48),
+('c03a6741-f63d-4d1d-a4eb-19312b798fb4', '93e94f30-5990-4599-9a77-bd5bf92c36df', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 'entregado', '2026-02-19', '2026-02-19', 3950, FALSE, FALSE, 'COMPLETADO', 416, 'Av.jose Contreras no.99 edificio empresarial Calderón', 'Santo Domingo', 'RECAUDADO', '2026-02-19', 49),
+('25392a63-0f23-49cd-bd36-f8005115a0c0', 'b6943060-a95a-497b-a1d3-5aec51830eae', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 'entregado', '2026-02-19', '2026-02-19', 3950, FALSE, FALSE, 'COMPLETADO', 650, 'C/ antonio guzman fernandez # 47', 'Sto.Dgo. Este', 'RECAUDADO', '2026-02-19', 50);
+
+INSERT INTO pedidos (id, cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega,
+  precio_total, es_testeo, es_prueba_interna, estado_original, costo_envio,
+  ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num) VALUES
+('5bbae189-18b4-435e-8b8d-cd92b63148c6', '3c23328a-97a5-4a54-86b3-4eb15bbe053e', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-02-19', '2026-02-19', 3950, FALSE, FALSE, 'COMPLETADO', 499, 'Tamboril Santiago', 'Tamboril', 'RECAUDADO', '2026-02-19', 51),
+('833f47e7-ae5e-4990-ac8b-62ae4a7ada22', '8c6c20df-a202-415a-b79c-278ef22e371c', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-02-20', '2026-02-20', 3950, FALSE, FALSE, 'COMPLETADO', 345, 'Urbanización la Estancia # 5', 'Puerto Plata', 'RECAUDADO', '2026-02-20', 52),
+('f08d2d7a-aefa-426d-a52f-85eb28011e16', 'e6aaeb4c-4bec-4081-a50b-df56170d778b', NULL, 'cancelado', '2026-02-20', NULL, 3950, FALSE, FALSE, 'CANCELADO', 0, 'Santa Cruz el seibo', 'Miches', 'PENDIENTE', NULL, 53),
+('4c17d798-8a05-45f4-87ca-4a5fcb54f908', 'ab1efbed-c580-482c-812b-bd90d662c600', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-02-20', '2026-02-20', 3950, FALSE, FALSE, 'COMPLETADO', 464, 'Cuerpo d bomberos d miches.  Serca d caribe express', 'Miches', 'RECAUDADO', '2026-02-20', 54),
+('aac00cd7-65a4-4e6d-9c51-c7cf63aa0881', '569f9724-95ba-4b94-a2c3-f5af97b015ed', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'devuelto', '2026-02-21', NULL, 2450, FALSE, FALSE, 'DEVOLUCION', 400, 'El limón de jimaní', 'Jimaní', 'PENDIENTE', NULL, 55),
+('ebf87291-ee72-4c44-86f7-70f09ce51d6a', 'a15581c5-68eb-402c-9baf-0e843618c9fc', NULL, 'cancelado', '2026-02-21', NULL, 2450, FALSE, FALSE, 'CANCELADO', 0, 'Frente del cuartel punta cana', 'BÁvaro', 'PENDIENTE', NULL, 56),
+('0a876da5-69a9-44b0-95e0-12f0f82ddf8d', 'ba857599-4021-4b00-b3ff-7c132ada43ac', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 'cancelado', '2026-02-21', NULL, 3950, FALSE, FALSE, 'CANCELADO', 0, 'Calle Santa Cruz de tenerife Parmal mirador #48 hondura Republica Dominicana', 'Santo domingo', 'PENDIENTE', NULL, 57),
+('16a17375-c3fd-4047-ad80-8c03133bae96', 'bc3c163c-c795-4a39-9b59-f1c409f3d33c', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 'cancelado', '2026-02-21', NULL, 3950, FALSE, FALSE, 'CANCELADO', 0, 'Calle oeste número 65 los frailes 1', 'Santo Domingo este', 'PENDIENTE', NULL, 58),
+('f21d04d9-853d-4350-b909-25188d68d0c0', 'cc3d2118-8b97-4bb0-a8e0-d3cb875151e5', NULL, 'cancelado', '2026-02-22', NULL, 2450, FALSE, FALSE, 'CANCELADO', 0, 'Benito moncion', 'Bonao', 'PENDIENTE', NULL, 59),
+('204b228c-cbe5-4973-8451-3a801ce0b0fb', 'b387ebc7-d991-4743-8711-c2bb00855811', NULL, 'cancelado', '2026-02-22', NULL, 2450, FALSE, FALSE, 'CANCELADO', 0, 'Sábana grande de boya', 'Sábana grande de boya', 'PENDIENTE', NULL, 60),
+('98219211-33d0-4ef7-87ce-920a2b3416d3', '18e114e5-3c05-4d8e-8b3f-fe71a15887b6', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 'cancelado', '2026-02-22', NULL, 3950, FALSE, FALSE, 'CANCELADO', 0, 'Barbarin Mojica número uno mejoramiento social', '165.0', 'PENDIENTE', NULL, 61),
+('7b807261-bc74-4c46-9a2d-887a86c6c616', '6cea8925-b85f-4e18-9642-0e14233addff', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-02-22', '2026-02-22', 3950, FALSE, FALSE, 'COMPLETADO', 499, 'Villa Vasque Montecristo', 'Villa Vasque', 'RECAUDADO', '2026-02-22', 62),
+('c8eb7abe-7cde-43b8-a393-07bbe78b2216', 'b0e3c282-65f1-4092-b953-5c91610ce933', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-02-22', '2026-02-22', 3950, FALSE, FALSE, 'COMPLETADO', 499, 'José Francisco peña Gómez km3', 'Nagua', 'RECAUDADO', '2026-02-22', 63),
+('98c5565b-d866-461d-94c5-17ffbcffeb1d', 'e38d86c4-c85a-4117-b7aa-2997b5bee5fd', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-02-23', '2026-02-23', 3950, FALSE, FALSE, 'COMPLETADO', 464, 'C/ chachito Díaz 137 boca de juma', 'Bonao', 'RECAUDADO', '2026-02-23', 64),
+('534fc1c6-cfac-4f37-bcec-545e5f6aa8a3', 'c92e5b55-1bea-40f8-80d6-cf2d4ae0f307', NULL, 'cancelado', '2026-02-23', NULL, 3950, FALSE, FALSE, 'CANCELADO', 0, 'Colina de la Riviera edificio E apt 3', 'Santo Domingo Norte', 'PENDIENTE', NULL, 65),
+('cf7169f3-2cb8-4c48-811e-203e3984387f', '30c5e044-3907-4689-8e02-62bc98825ebd', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-02-23', '2026-02-23', 3950, FALSE, FALSE, 'COMPLETADO', 464, 'Agustín guerrero #26', 'higuey', 'RECAUDADO', '2026-02-23', 66),
+('7d737112-5967-4c9f-a849-a0ae0c4e2652', 'a69c85a0-abff-4a8b-ba28-a7d092bc4553', NULL, 'cancelado', '2026-02-23', NULL, 3950, FALSE, FALSE, 'CANCELADO', 0, 'Villa verde', 'La Romana', 'PENDIENTE', NULL, 67),
+('e5cf7213-9f8c-4142-b6bb-03b71ceb568d', '38cc42bd-80d4-4102-b6cc-683ed315f183', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-02-23', '2026-02-23', 3950, FALSE, FALSE, 'COMPLETADO', 464, 'Las Terrenas calle bulevar el portillo rotonda', 'Las Terrenas', 'RECAUDADO', '2026-02-23', 68),
+('910ae770-96bb-4d26-a3b6-0e3052b3046c', '1683131c-0b8c-445f-9078-75f5386a6e0c', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 'cancelado', '2026-02-24', NULL, 3950, FALSE, FALSE, 'CANCELADO', 0, 'Higuey los morales', 'Higuey', 'PENDIENTE', NULL, 69),
+('d84ac02f-5d81-4c97-8eb5-b077b347c62b', 'aba715bf-2f87-447c-a775-54f0d734ffdc', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-02-26', '2026-02-26', 3950, FALSE, FALSE, 'COMPLETADO', 464, 'calle los fallos av. pedro Rivera taller gutierrez', 'concepsio de la vega', 'RECAUDADO', '2026-02-26', 70),
+('ec606539-cfc3-48b4-971d-6dec3f90740f', '9bace4c5-b861-48f2-81ed-a5d96b491efa', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-02-26', '2026-02-26', 3950, FALSE, FALSE, 'COMPLETADO', 464, 'Calle Antonio Valdez Hijo', 'Higüey', 'RECAUDADO', '2026-02-26', 71),
+('e3f0f166-7b57-4494-8635-7b60b1c75171', '1a85e7f7-07c1-4465-9fc6-3361a8cfbed4', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 'entregado', '2026-02-27', '2026-02-27', 3950, FALSE, FALSE, 'COMPLETADO', 400, 'HATILLO SHAMPAÑA NO 60,SANTO DOMINGO OESTE', 'Santo Domingo', 'RECAUDADO', '2026-02-27', 72),
+('30cf7201-9bf5-473f-9e1a-8151cf2a4342', '08a4383d-f82d-4741-a196-cf8f817e47e1', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'devuelto', '2026-02-27', NULL, 3950, FALSE, FALSE, 'DEVOLUCION', 400, 'Restauración 64', 'Los ríos Neyba', 'PENDIENTE', NULL, 73),
+('3edf971e-d3d4-44a1-9b6e-09f54351e079', '9e368e6f-9b2b-4e35-a64c-d9b0f8e8d9d8', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 'entregado', '2026-02-27', '2026-02-27', 3950, FALSE, FALSE, 'COMPLETADO', 400, 'Calle hostos 2', 'Colonial', 'RECAUDADO', '2026-02-27', 74),
+('eb3a3ef2-d50c-4e0c-83d5-6a5b627bf646', 'c925587e-4ca1-4e57-a446-9b386c97d4e3', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'devuelto', '2026-02-27', NULL, 3550, FALSE, FALSE, 'DEVOLUCION', 400, 'Dionisio mejía', 'HIGUEY (SALVALEÓN DE HIGUEY)', 'PENDIENTE', NULL, 75),
+('ee475876-4251-40b9-8053-204e59309670', '024f024d-9ef8-40c3-8624-8300872025f9', NULL, 'cancelado', '2026-02-27', NULL, 3950, FALSE, FALSE, 'CANCELADO', 0, 'Los frailes primero', 'SANTO DOMINGO OESTE', 'PENDIENTE', NULL, 76),
+('fc53d7f5-4b75-4ac1-be16-f1d21da12e2d', '56d1de07-6c06-4009-80af-f29e8a15ef9a', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-02-28', '2026-02-28', 0, FALSE, FALSE, 'COMPLETADO', 400, 'Juan José mota # 42', 'HATO MAYOR (HATO MAYOR DEL REY)', 'RECAUDADO', '2026-02-28', 77),
+('e91b40a6-e130-4891-a1e5-bca664c8a84a', '69a7ddd0-7b1c-41df-9d8d-0e3e708b3cf1', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-02-28', '2026-02-28', 3950, FALSE, FALSE, 'COMPLETADO', 464, 'Respaldo avenida manuela diez jimenes los cajuiles', 'EL SEIBO (SANTA CRUZ DEL SEIBO)', 'RECAUDADO', '2026-02-28', 78),
+('1bc6bae1-0c48-4fe1-83f0-e99c914e452f', '41d7f9af-21f0-421f-9561-c8328e6b5942', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-02-28', '2026-02-28', 3950, FALSE, FALSE, 'COMPLETADO', 464, 'Carretera Verón Punta cana # 23 urbanización lantigua', 'PUNTA CANA', 'RECAUDADO', '2026-02-28', 79),
+('c930239a-d59c-49e3-a19f-c00efd3ac6d3', '4f0193ed-31aa-4f68-a04c-2a2ff8f14046', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 'entregado', '2026-02-28', '2026-02-28', 3950, FALSE, FALSE, 'COMPLETADO', 350, 'Residencial III y IV 181 Madre Vieja Sur  SC', 'SAN CRISTOBAL', 'RECAUDADO', '2026-02-28', 80),
+('d7597988-720f-4928-909e-5ea7065dc998', '9ceb703b-db12-43d0-bba5-915be621807a', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-02-28', '2026-02-28', 3950, FALSE, FALSE, 'COMPLETADO', 464, 'Calle Gregorio Luperon No.33', 'LAS TERRENAS', 'RECAUDADO', '2026-02-28', 81),
+('f31ae009-5e80-452e-845c-b4889334d9a6', '350f2b4b-8359-46cb-930b-893a22c71ca3', NULL, 'cancelado', '2026-03-01', NULL, 2450, FALSE, FALSE, 'CANCELADO', 0, 'Calle 31 esquina2² san Felipe villa mella', 'SANTO DOMINGO', 'PENDIENTE', NULL, 82),
+('16572192-c7e4-4837-a91f-11f6233b1300', '5ace50b4-b95c-45f1-ab76-848ab86565e3', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-03-01', '2026-03-01', 3950, FALSE, FALSE, 'COMPLETADO', 499, 'Calle San Miguel', 'LA OTRA BANDA (HIGUEY)', 'RECAUDADO', '2026-03-01', 83),
+('898c36e0-edf6-4000-90d3-5d24ef476e22', '966321f5-8301-45e5-8b7a-ecf39c1adf17', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'cancelado', '2026-03-01', NULL, 3950, FALSE, FALSE, 'CANCELADO', 0, 'Federico Basilis', 'LA VEGA (CONCEPCIÓN DE LA VEGA)', 'PENDIENTE', NULL, 84),
+('62355f15-4db1-419f-9418-4231c608f8dc', '72eeec7d-068e-4bb2-b6dc-32d833dfecea', NULL, 'cancelado', '2026-03-01', NULL, 3950, FALSE, FALSE, 'CANCELADO', 0, 'Madre vieja sur', 'SAN CRISTOBAL', 'PENDIENTE', NULL, 85),
+('f57a17a3-63fc-4b85-a359-f84fe5fd7f02', 'e9e731d0-3357-478c-98ce-682e3b75e9b7', NULL, 'cancelado', '2026-03-02', NULL, 3950, FALSE, FALSE, 'CANCELADO', 0, 'Calle 20 gurabo', 'SANTIAGO DE LOS CABALLEROS', 'PENDIENTE', NULL, 86),
+('5f9882fb-7fc3-443c-bd1b-b4eca0437fba', '4cc8bedd-de4a-4fa6-8c07-fc7ed7f526a8', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'devuelto', '2026-03-02', NULL, 3550, FALSE, FALSE, 'DEVOLUCION', 400, 'Avenida luperon en la rotonda de pueblo nuevo donde yoryi moloy', 'BARAHONA (SANTA CRUZ DE BARAHONA)', 'PENDIENTE', NULL, 87),
+('d286e613-aa08-42ef-ad5b-5592b4a92595', '8f292d23-312a-4431-a8ca-92935fee14d4', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-03-02', '2026-03-02', 3950, FALSE, FALSE, 'COMPLETADO', 464, 'Dirección regional Cibao sur policía', 'BONAO', 'RECAUDADO', '2026-03-02', 88),
+('760c2330-739a-416e-ba8e-5d669aed1caf', '29285081-d95f-43bc-8cf0-d53f3783193e', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'devuelto', '2026-03-02', NULL, 2450, FALSE, FALSE, 'DEVOLUCION', 400, 'Calle pilar Taveras 56, Sector Santa Ana', 'SAN FRANCISCO DE MACORÍS', 'PENDIENTE', NULL, 89),
+('7eee5528-e993-4937-9a95-4f6fff8530db', '6761a630-7c52-4b6c-8773-17c13aefa03a', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 'entregado', '2026-03-03', '2026-03-03', 3950, FALSE, FALSE, 'COMPLETADO', 600, 'Rumaldo solano #5 Sabaneta El Carril Haina', 'San Cristóbal', 'RECAUDADO', '2026-03-03', 90),
+('4be69585-c7ea-4c46-aa95-9473acd01902', 'ee785da4-36b9-40d8-8f3e-08d38dcd71ba', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-03-03', '2026-03-03', 3950, FALSE, FALSE, 'COMPLETADO', 464, 'Los Castillo', 'Sosúa', 'RECAUDADO', '2026-03-03', 91),
+('6401cd21-8575-43ce-ac6a-c8d6a2884d03', 'c4d58d80-7130-4213-9f20-a41a76a50ade', NULL, 'cancelado', '2026-03-04', NULL, 3950, FALSE, FALSE, 'CANCELADO', 0, 'Chivg', 'Santo Domingo Este', 'PENDIENTE', NULL, 92),
+('39f3645d-613e-43f3-b84f-4990334db853', '94d2739d-3ecd-40e6-a87d-c2c6194d868d', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'devuelto', '2026-03-04', NULL, 3550, FALSE, FALSE, 'DEVOLUCION', 0, 'Residencial punta bavaro', 'Punta Cana', 'PENDIENTE', NULL, 93),
+('b1ecbd4a-45c4-4335-9a56-fea856002453', '94d2739d-3ecd-40e6-a87d-c2c6194d868d', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'devuelto', '2026-03-04', NULL, 3950, FALSE, FALSE, 'DEVOLUCION', 400, 'Residencial punta bávaro 6', 'Verón', 'PENDIENTE', NULL, 94),
+('0ce60ec4-4407-4487-a87a-4ca5e542abcb', '09e28a2b-6bf5-4ccf-a26a-e95e8087791c', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-03-04', '2026-03-04', 3950, FALSE, FALSE, 'COMPLETADO', 464, 'Urbanización atlantica calle # 1 , casa # 5 puerto plata', 'Puerto Plata (San Felipe de Puerto Plata)', 'RECAUDADO', '2026-03-04', 95),
+('8de7f002-0cbd-4bd3-8dc7-b43228527eb6', '3624be42-7470-4525-8332-0a6a766e732a', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-03-04', '2026-03-04', 3950, FALSE, FALSE, 'COMPLETADO', 464, 'Calle las flores 27', 'Mao (Santa Cruz de Mao)', 'RECAUDADO', '2026-03-04', 96),
+('b77b9d87-0d84-403a-8433-298e356d3949', 'ef62a3b0-e946-41ad-a050-bf40b3f923b5', NULL, 'cancelado', '2026-03-04', NULL, 3950, FALSE, FALSE, 'CANCELADO', 0, 'Calle 26 casa número 12', 'Quisqueya', 'PENDIENTE', NULL, 97),
+('3bce8a4f-6b19-4bb3-a58a-50f47d045f52', '6935f39e-a9fe-4427-816c-5e1ebc80c8f5', NULL, 'pendiente', '2026-03-04', NULL, 3950, FALSE, FALSE, 'EN ESPERA', 0, 'Rafael Hernández 16 B naco', 'Santo Domingo', 'PENDIENTE', NULL, 98),
+('3c3606f4-f5a0-4d9c-8da7-24fe66c8ab02', '33d4a53f-1ad6-4bd5-9ef3-59398b7eae4d', NULL, 'cancelado', '2026-03-04', NULL, 3950, FALSE, FALSE, 'CANCELADO', 0, 'Cuesta abajo', 'San José de las Matas', 'PENDIENTE', NULL, 99),
+('57711a35-8e0d-4df6-b2ce-8b28f3cc4b2a', 'e0342822-4e3e-4cf7-8a66-0e9a9df77a5e', NULL, 'cancelado', '2026-03-05', NULL, 3550, FALSE, FALSE, 'CANCELADO', 0, 'Villa mella', 'Santo Domingo', 'PENDIENTE', NULL, 100);
+
+INSERT INTO pedidos (id, cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega,
+  precio_total, es_testeo, es_prueba_interna, estado_original, costo_envio,
+  ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num) VALUES
+('c6397dfb-8b65-4777-acd0-16c86d291cd4', 'd2786586-e0ba-42f4-8284-ac310e9646e2', NULL, 'cancelado', '2026-03-05', NULL, 3950, FALSE, FALSE, 'CANCELADO', 0, '144 Manga Larga', 'Río Verde Arriba', 'PENDIENTE', NULL, 101),
+('3ee2be8d-1684-404a-bb34-614ee7714c95', '90ad0ee2-7e45-4b0a-a954-e10154e72338', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 'entregado', '2026-03-05', '2026-03-05', 3950, FALSE, FALSE, 'COMPLETADO', 250, 'Diagonal B #20 renacimiento', 'Santo Domingo', 'RECAUDADO', '2026-03-05', 102),
+('ac6d062f-ed78-4573-9f1b-7c64871378f7', '45e45546-52e0-4997-8190-fca0f16f594f', NULL, 'cancelado', '2026-03-05', NULL, 3950, FALSE, FALSE, 'CANCELADO', 0, 'Villa cerro la pangolaj  Orlando  martinez 30', 'Higüey (Salvaleón de Higüey)', 'PENDIENTE', NULL, 103),
+('6a1c69a6-6973-47e3-a2f8-7e8aa7ae19b0', '494edcf6-1da4-44b9-8e45-221cbad08e2c', NULL, 'cancelado', '2026-03-05', NULL, 3950, FALSE, FALSE, 'CANCELADO', 0, 'Frente al Play Municipal', 'Partido', 'PENDIENTE', NULL, 104),
+('a9571fc6-9ead-42b4-885f-3f63c61c8dcd', '771867d0-f51d-4808-8598-c01f2bb96b01', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 'entregado', '2026-03-05', '2026-03-05', 3950, FALSE, FALSE, 'COMPLETADO', 250, 'Calle la torre barrio gringo #23', 'Haina (Bajos de Haina)', 'RECAUDADO', '2026-03-05', 105),
+('5078fa04-0cc4-4abf-8ebe-7f8e1f1bd1ac', 'd8d42ca5-fc2f-4e76-a7c5-f5b648b67cb0', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-03-06', '2026-03-06', 3950, FALSE, FALSE, 'COMPLETADO', 400, '16 de agosto no. 11', 'Baní', 'RECAUDADO', '2026-03-06', 106),
+('841f949a-5069-4792-b362-b50e011f11f7', 'd8d42ca5-fc2f-4e76-a7c5-f5b648b67cb0', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-03-06', '2026-03-06', 3950, FALSE, FALSE, 'COMPLETADO', 400, '16 de agosto no. 11', 'Baní', 'RECAUDADO', '2026-03-06', 107),
+('75f6116c-48b5-44c9-8f07-84643b1704aa', '2d3c7e91-1e34-476d-8e99-1d86d3507ada', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 'cancelado', '2026-03-06', NULL, 3950, FALSE, FALSE, 'CANCELADO', 0, 'Calle Duarte #18,sector la Carolina,  Hacienda Estrella', 'Santo Domingo Norte', 'PENDIENTE', NULL, 108),
+('ab9feb6f-e70e-4668-a272-8431419db373', 'e48b88e8-0c94-49db-a6fa-00857031977f', NULL, 'cancelado', '2026-03-08', NULL, 2595, FALSE, FALSE, 'CANCELADO', 0, 'Quita sueño de Haina', 'Santo Domingo Oeste', 'PENDIENTE', NULL, 109),
+('cb47fad5-28fe-41bf-9513-99c35e87394f', 'd9f4d6bb-9788-4bb0-9808-c529a4e97fe1', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'devuelto', '2026-03-09', NULL, 3950, FALSE, FALSE, 'DEVOLUCION', 400, 'Los Cajules el Seibo  casa # 19', 'El Seibo (Santa Cruz del Seibo)', 'PENDIENTE', NULL, 110),
+('d29a2d7f-2019-4991-90de-a9213429f0b2', '495cf928-9a49-410e-bd13-c92568894358', NULL, 'cancelado', '2026-03-09', NULL, 3490, FALSE, FALSE, 'CANCELADO', 0, 'Av Sabana Larga esquina Bonaire Alma Rosa I', 'Santo Domingo Este', 'PENDIENTE', NULL, 111),
+('b2d67118-bf6c-4cf7-8d73-cb702170bbdb', '9ea301ef-ba3e-4ddf-b39d-c5fec9648537', NULL, 'cancelado', '2026-03-10', NULL, 3490, FALSE, FALSE, 'CANCELADO', 0, 'Duarte #30,,bocacanasta ,bani', 'Baní', 'PENDIENTE', NULL, 112),
+('05d2a402-c3c6-4657-87cb-43ce532ed2e5', '17947b11-aad8-4586-b933-ca49c659be1d', NULL, 'cancelado', '2026-03-10', NULL, 3490, FALSE, FALSE, 'CANCELADO', 0, 'Municipio LAS TABLAS,,calle principal,,sin número de casa,,cerca del cementerio y colmado los nietos', 'Matanzas20', 'PENDIENTE', NULL, 113),
+('7a98a6b5-22b5-4f8a-b2b8-41019a9a3ae9', 'e68c0220-44f5-4535-b614-c02f994a68d0', NULL, 'cancelado', '2026-03-10', NULL, 2390, FALSE, FALSE, 'CANCELADO', 0, 'Sabana larga frente el mercado binacional', 'Dajabón', 'PENDIENTE', NULL, 114),
+('fb29430c-df70-40c3-9624-2999d35fa31a', '5a545e64-b3b7-4d95-adbd-df7fe35a09e4', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-03-10', '2026-03-10', 3490, FALSE, FALSE, 'COMPLETADO', 473, '12#16 villa. Olga', 'Santiago de los Caballeros', 'RECAUDADO', '2026-03-10', 115),
+('f6170ef8-d0e9-4a9d-9bf9-7176befbf493', '0f340096-61a7-4afc-a567-02a4eba00c31', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-03-10', '2026-03-10', 3490, FALSE, FALSE, 'COMPLETADO', 400, 'ManzanaF #4 Residencial Gacela.', 'Santo Domingo', 'RECAUDADO', '2026-03-10', 116),
+('d11819ac-e240-46ec-9b3c-9a5efb8446ff', '7e8ae942-9027-467a-9bbe-e134fff5754a', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-03-10', '2026-03-10', 3490, FALSE, FALSE, 'COMPLETADO', 400, 'Mazana F#4 Residencial Gscela.', 'Santo Domingo', 'RECAUDADO', '2026-03-10', 117),
+('0a7eab10-a5ec-4d39-ba45-f93b0921a015', 'a80f071b-8285-4bd2-9b41-583a647c4d8a', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 'entregado', '2026-03-10', '2026-03-10', 3490, FALSE, FALSE, 'COMPLETADO', 300, 'Av jimenez moya #4 bella vista', 'Santo Domingo', 'RECAUDADO', '2026-03-10', 118),
+('2ed94ad0-f66c-4d27-855f-4771dc727b84', '062e8967-8c95-4c51-9b99-21583181c10a', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'devuelto', '2026-03-10', NULL, 4290, FALSE, FALSE, 'DEVOLUCION', 400, 'Calle circunvalación B #4 Villa Francés ( Súper Mercado Olé', 'Bávaro', 'PENDIENTE', NULL, 119),
+('df0c9645-bb6e-4121-bbce-a5fcce92c00c', '01b37e28-7895-462f-ba99-b96a8729d14d', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-03-11', '2026-03-11', 4290, FALSE, FALSE, 'COMPLETADO', 505, 'Chicago calle primera #980', 'La Romana', 'RECAUDADO', '2026-03-11', 120),
+('f5cb97e8-e75c-4d30-af78-1b3606e4554b', 'a973d278-2f41-4a9d-ad6c-23b25e744a27', NULL, 'cancelado', '2026-03-11', NULL, 3490, FALSE, FALSE, 'CANCELADO', 0, 'Calle proyecto', 'Monte Cristi (San Fernando de Monte Cristi)', 'PENDIENTE', NULL, 121),
+('cfcce71f-581f-4134-803b-c7a00bb12a30', 'f11028ba-b99e-4e14-96d9-2c3b056d375c', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'devuelto', '2026-03-11', NULL, 3490, FALSE, FALSE, 'DEVOLUCION', 400, 'Boca chica', 'BOCA CHICA', 'PENDIENTE', NULL, 122),
+('5aa75818-0681-43b8-bb3f-2ce542caf5e1', '99cba003-170e-4d5a-abfc-700974b91286', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-03-11', '2026-03-11', 3490, FALSE, FALSE, 'COMPLETADO', 473, 'Calle 7 casa 117  jardines del este', 'Santiago de los Caballeros', 'RECAUDADO', '2026-03-11', 123),
+('561e39bc-1516-42f9-ad60-de1e5951e9e2', '2332ee9a-3b90-419e-8059-ffceaeea3caf', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-03-12', '2026-03-12', 3490, FALSE, FALSE, 'COMPLETADO', 473, 'Valle berde 2 calle 5 casa 2', 'Santiago de los Caballeros', 'RECAUDADO', '2026-03-12', 124),
+('435ed2b3-2bc1-436b-9d4e-d0ac86ed31bd', '9fc850eb-93c3-4125-9015-1f383d932a8b', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-03-12', '2026-03-12', 4290, FALSE, FALSE, 'COMPLETADO', 505, 'Monte verde 30b', 'Higüey (Salvaleón de Higüey)', 'RECAUDADO', '2026-03-12', 125),
+('8606e8ae-abe2-40c7-9e03-199da70d289a', '85d9d8ba-3fd0-4cd5-b574-01e78a128f99', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'devuelto', '2026-03-12', NULL, 3490, FALSE, FALSE, 'DEVOLUCION', 400, 'Via prinsipal', 'Las Lagunas de Nisibón (Higüey)', 'PENDIENTE', NULL, 126),
+('718233f9-9750-4789-8a61-1524dfa0fd48', '864631ae-0328-4b7e-a249-4c1a2f27017a', NULL, 'cancelado', '2026-03-12', NULL, 3490, FALSE, FALSE, 'CANCELADO', 0, 'Fruisa Bavalo République Dominicaine Punta cana', 'Punta Cana', 'PENDIENTE', NULL, 127),
+('364381e5-5400-4730-95d1-ba1b6ed3bd67', '510b2935-a490-4a55-88f2-c866d001e1bf', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-03-12', '2026-03-12', 3490, FALSE, FALSE, 'COMPLETADO', 473, 'Calle asomante #41', 'El Seibo (Santa Cruz del Seibo)', 'RECAUDADO', '2026-03-12', 128),
+('40d9f905-c4b8-43d8-a63e-e69c1ff4fcee', '40ba06d2-6a35-4c13-ab72-ba03351e5a88', NULL, 'cancelado', '2026-03-12', NULL, 3490, FALSE, FALSE, 'CANCELADO', 0, 'Calle #12 laurca', 'San Juan', 'PENDIENTE', NULL, 129),
+('3ea8cfc8-4cd1-486a-9198-58e663721859', 'e6d16c64-b3d8-42ad-bfbd-51b56a6821ac', NULL, 'cancelado', '2026-03-12', NULL, 3490, FALSE, FALSE, 'CANCELADO', 0, 'Calle 2da #3 proyecto Ana Gabriela santa fez próximo a la oficina de medio ambiente', 'San Pedro de Macorís', 'PENDIENTE', NULL, 130),
+('4629ddfb-2abe-4248-b0ea-fd005aa55cde', '2488a5fe-d610-42c6-80dd-7f0afdbacd1c', NULL, 'cancelado', '2026-03-12', NULL, 3490, FALSE, FALSE, 'CANCELADO', 0, 'Avenida estado unidos frente a iberia', 'Punta Cana', 'PENDIENTE', NULL, 131),
+('1b1a0099-a733-4961-9e98-61a23fd479b9', '2a5798e8-d9a0-4f11-aff7-003b0ed9cd4b', NULL, 'cancelado', '2026-03-13', NULL, 2990, FALSE, FALSE, 'CANCELADO', 0, 'Bajando', 'Mao (Santa Cruz de Mao)', 'PENDIENTE', NULL, 132),
+('169df1f6-8fea-4959-8b59-1fde30f1d3ac', '8dad6bbe-7104-455d-b5ef-fede45b82976', NULL, 'cancelado', '2026-03-13', NULL, 3490, FALSE, FALSE, 'CANCELADO', 0, 'Gregorio luperon 6 el almirante', 'Santo Domingo Este', 'PENDIENTE', NULL, 133),
+('eb627eae-5b68-46ca-9715-36469df859e2', 'a033c058-5cb6-4f40-9027-be8787eb87f3', NULL, 'cancelado', '2026-03-13', NULL, 3490, FALSE, FALSE, 'CANCELADO', 0, 'Pueblo bavaro calle principal', 'Verón', 'PENDIENTE', NULL, 134),
+('7aa378e6-bb74-4a1b-9929-9548417c3028', 'c8fac7c8-e9f8-4f51-89ea-6994ff7a4587', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-03-13', '2026-03-13', 3490, FALSE, FALSE, 'COMPLETADO', 473, 'Calle los locutores Chilo poeriet', 'Higüey (Salvaleón de Higüey)', 'RECAUDADO', '2026-03-13', 135),
+('fb904b89-01cf-4387-af5c-66485e7de819', '32e884c2-5ee1-4709-a864-ea7a75003860', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'devuelto', '2026-03-13', NULL, 3490, FALSE, FALSE, 'DEVOLUCION', 400, 'Calle 2 barrio indri', 'La Mata', 'PENDIENTE', NULL, 136),
+('68e75902-c4d7-458d-9759-c8376733f6ed', '4189b0a8-263e-4c99-9451-7792ab60882e', NULL, 'cancelado', '2026-03-13', NULL, 3490, FALSE, FALSE, 'CANCELADO', 0, 'La Mercede', 'Los Alcarrizos', 'PENDIENTE', NULL, 137),
+('ee07c008-619f-4084-8297-ddb21f41ea99', '67f68ba4-2a0a-4ebb-afad-1db6f8506a03', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-03-13', '2026-03-13', 2990, FALSE, FALSE, 'COMPLETADO', 454, 'Calle José Francisco peña Gómez  barrio manteadentro', 'La Mata', 'RECAUDADO', '2026-03-13', 138),
+('9d15d3d6-ac98-4240-8ba8-47f211d33f75', '8e4b0874-ce21-4c25-9568-6ce0cebb699e', NULL, 'cancelado', '2026-03-13', NULL, 3490, FALSE, FALSE, 'CANCELADO', 0, 'La gualliga pedro bran', 'Santo Domingo', 'PENDIENTE', NULL, 139),
+('1268ebc0-b8c8-452d-96f3-e7f085854aeb', '27a4baeb-b458-4d5c-a28c-94142b588d2b', NULL, 'cancelado', '2026-03-13', NULL, 4290, FALSE, FALSE, 'CANCELADO', 0, 'jacobo', 'Santo Domingo Norte', 'PENDIENTE', NULL, 140),
+('8c9ea46f-d367-4b50-af13-8a2b133b11dc', '9b440f59-3985-447c-8459-8b433bd877c0', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 'entregado', '2026-03-13', '2026-03-13', 3490, FALSE, FALSE, 'COMPLETADO', 500, '6 de noviembre#24', 'San Cristóbal', 'RECAUDADO', '2026-03-13', 141),
+('df16de93-7452-40e6-b28f-8780a5884b03', '8921e889-7bf7-4ba7-b2e0-94ecec86b1fc', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-03-13', '2026-03-13', 3490, FALSE, FALSE, 'COMPLETADO', 500, 'Primera', 'Verón', 'RECAUDADO', '2026-03-13', 142),
+('2f677143-7682-44e7-836a-ed024ad258e5', 'd8198f27-a7c4-4da9-be25-2cd2aab34f66', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-03-13', '2026-03-13', 3490, FALSE, FALSE, 'COMPLETADO', 473, 'Los reyes calle 2 ed.18 apt 1.', 'Puerto Plata (San Felipe de Puerto Plata)', 'RECAUDADO', '2026-03-13', 143),
+('4a7d3f37-8307-4948-b962-5a2818547d89', 'f2e1befe-010b-4c7a-a921-16fba4899ac9', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-03-13', '2026-03-13', 4290, FALSE, FALSE, 'COMPLETADO', 505, 'Mercado nuevo', 'La Romana', 'RECAUDADO', '2026-03-13', 144),
+('01f2d979-1967-49a6-9e20-8714c9c98648', 'd8124bf0-a1b7-40ae-bc6b-694d82f63817', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 'entregado', '2026-03-13', '2026-03-13', 3490, FALSE, FALSE, 'COMPLETADO', 300, 'Ave. Abraham Lincoln 962 edificio Osiris', 'Santo Domingo', 'RECAUDADO', '2026-03-13', 145),
+('51c5d39e-c92c-4458-be4e-3fd6c21087b5', '859bc12e-e8ea-4445-a30b-58895f20eff3', NULL, 'cancelado', '2026-03-13', NULL, 3490, FALSE, FALSE, 'CANCELADO', 0, 'Salome Ureña =23', 'Azua (Azua de Compostela)', 'PENDIENTE', NULL, 146),
+('4188439d-1100-49a0-8c34-2b13767380e4', '6b46cdc6-71a7-4b92-a356-f8e8abec2490', NULL, 'cancelado', '2026-03-13', NULL, 3490, FALSE, FALSE, 'CANCELADO', 0, 'Casita linda Villa Europa #3 colmado Valdez', 'Verón', 'PENDIENTE', NULL, 147),
+('22a1c1a3-5fbd-4f29-ad09-553bc54392cf', '5f7a020f-35d3-4d59-aded-c9adb3a60c59', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-03-13', '2026-03-13', 3490, FALSE, FALSE, 'COMPLETADO', 473, 'Lotificacion don oxiris calle primera # 4', 'La Vega (Concepción de la Vega)', 'RECAUDADO', '2026-03-13', 148),
+('05ec0a16-db25-42e7-86ae-637d3ac7bea3', 'd0877f52-9de3-415b-b855-bcd6192d7281', NULL, 'cancelado', '2026-03-13', NULL, 3490, FALSE, FALSE, 'CANCELADO', 0, 'Coronel melcado', 'Santo Domingo Norte', 'PENDIENTE', NULL, 149),
+('5464f9cb-b647-4083-ba18-f23fb1f6a30a', '171f16ca-b80f-4670-ba90-92f9d1a66ff0', NULL, 'cancelado', '2026-03-13', NULL, 3490, FALSE, FALSE, 'CANCELADO', 0, 'Colmado duran', 'Monción', 'PENDIENTE', NULL, 150);
+
+INSERT INTO pedidos (id, cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega,
+  precio_total, es_testeo, es_prueba_interna, estado_original, costo_envio,
+  ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num) VALUES
+('94a93424-413c-42ce-a05a-d3ee92d23d4f', 'da664441-5cb1-4008-82c2-33d4b2089770', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-03-13', '2026-03-13', 3490, FALSE, FALSE, 'COMPLETADO', 473, 'Residencial las palmas manzana 9 casa número 5', 'San Pedro de Macorís', 'RECAUDADO', '2026-03-13', 151),
+('9c87b87b-5461-4a36-9560-64e03487f200', '552fcbd7-a5f4-4420-908d-4e38022fff6a', NULL, 'cancelado', '2026-03-13', NULL, 3490, FALSE, FALSE, 'CANCELADO', 0, 'Calle guayacan Prollerto sol de bavaro', 'Bávaro', 'PENDIENTE', NULL, 152),
+('10878b29-cce6-4350-abee-6988036bc58d', 'aeac2d45-68c7-4a29-b292-a6dfe87cbf0b', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 'entregado', '2026-03-13', '2026-03-13', 3490, FALSE, FALSE, 'COMPLETADO', 400, 'Kilómetro 12 las Américas calle segunda casa número 27', 'Santo Domingo Este', 'RECAUDADO', '2026-03-13', 153),
+('2d364b10-1f32-43b2-a435-8ddd726f75ff', '0497df34-feec-43fd-9ec2-e00052933de9', NULL, 'cancelado', '2026-03-13', NULL, 2990, FALSE, FALSE, 'CANCELADO', 0, 'Villa hermosa', 'Villa Hermosa', 'PENDIENTE', NULL, 154),
+('ff5817ff-1d17-4fe0-88be-cc16e8f57219', '289c07ad-2607-4ec9-9be8-80ec3ee0a89e', NULL, 'cancelado', '2026-03-13', NULL, 3490, FALSE, FALSE, 'CANCELADO', 0, 'Cayemariamonte#26losoto arriba', 'Higüey (Salvaleón de Higüey)', 'PENDIENTE', NULL, 155),
+('f0a3ad0c-ba32-4392-862d-86d5fb661648', 'e9ccdb9f-a6af-470b-86ff-b20059ac8efb', NULL, 'cancelado', '2026-03-13', NULL, 3490, FALSE, FALSE, 'CANCELADO', 0, 'El javillar calle príncipipal 50', 'Puerto Plata (San Felipe de Puerto Plata)', 'PENDIENTE', NULL, 156),
+('9581f6b0-0d39-4907-825f-d1acafc67d02', 'd869059e-bd2a-47f3-b50e-898446cbbff5', NULL, 'cancelado', '2026-03-13', NULL, 4290, FALSE, FALSE, 'CANCELADO', 0, 'Cooperativa', 'Punta Cana', 'PENDIENTE', NULL, 157),
+('4e5d9729-6245-49b7-8791-e45808a2b74a', '1618fb41-8e66-4d17-ac5b-8c1248b7f54c', NULL, 'cancelado', '2026-03-14', NULL, 3490, FALSE, FALSE, 'CANCELADO', 0, 'Residencial las palmas manzana 9 casa número 5', 'San Pedro de Macorís', 'PENDIENTE', NULL, 158),
+('1cce7a46-b07a-48b1-af5f-f4154c6c5784', '45ef79c8-4f43-425f-b3e3-1f0f803bd119', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 'entregado', '2026-03-14', '2026-03-14', 3490, FALSE, FALSE, 'COMPLETADO', 400, 'C/ ir mirador del arroyo casa #6 urb ladera  de Arroyo hondo', 'Santo Domingo', 'RECAUDADO', '2026-03-14', 159),
+('5ae75431-7210-4ad3-8981-0ae9ddfa933b', 'f1713762-f71d-4e17-ac47-bbde67d93ea5', NULL, 'cancelado', '2026-03-14', NULL, 3490, FALSE, FALSE, 'CANCELADO', 0, 'Juan Ruperto Polanco casa 11A La Descuebierta', 'JIMANÍ', 'PENDIENTE', NULL, 160),
+('cc38f20d-85db-416b-8439-f18b1054853a', 'ab0309c7-294b-44cd-adf5-b41bb95ff2d4', NULL, 'cancelado', '2026-03-14', NULL, 3490, FALSE, FALSE, 'CANCELADO', 0, 'El pocito calle San Rafae', 'Guayubín', 'PENDIENTE', NULL, 161),
+('673c7a25-47ee-4ec1-a86c-25e6856141a0', 'd3ca135d-aa49-4d03-b4e6-a6d97ae07b08', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-03-14', '2026-03-14', 2990, FALSE, FALSE, 'COMPLETADO', 480, 'Santa Lucía #2', 'Juan de Herrera', 'RECAUDADO', '2026-03-14', 162),
+('133c53a3-35a5-4fa8-bc3f-a04629b16896', '64a2051f-c1f9-4d61-8154-efd3bb6a5ba4', NULL, 'cancelado', '2026-03-14', NULL, 3490, FALSE, FALSE, 'CANCELADO', 0, 'Detrás de la cancha de la cueva de cevicos', 'Cevicos', 'PENDIENTE', NULL, 163),
+('64ecd4c0-274f-4c03-a813-e25ca9056df0', 'fb9ff96a-dac5-45e2-9e05-fe285de685ac', NULL, 'cancelado', '2026-03-14', NULL, 3490, FALSE, FALSE, 'CANCELADO', 0, 'Moca', 'Moca', 'PENDIENTE', NULL, 164),
+('0178b492-2b2c-4171-9251-581af65fec41', '5e0b998e-59ad-47a1-b9ed-bdd97bae9d48', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-03-14', '2026-03-14', 0, FALSE, FALSE, 'COMPLETADO', 473, 'La malena', 'Higüey (Salvaleón de Higüey)', 'RECAUDADO', '2026-03-14', 165),
+('a652e199-8e3c-44fc-89fd-8be7a7a6e1ae', '3b7c21e4-64bb-4f8e-ae85-cfc120b0fd5e', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-03-14', '2026-03-14', 3490, FALSE, FALSE, 'COMPLETADO', 473, 'Calle 13 casa #1 caleta', 'Caleta', 'RECAUDADO', '2026-03-14', 166),
+('d0909868-3ed3-456d-9638-45f8d6f3030a', '0b8a41e0-8492-4491-bd17-175686ec1022', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 'entregado', '2026-03-15', '2026-03-15', 3490, FALSE, FALSE, 'COMPLETADO', 400, 'C/ hermanas mirabal 33 cancino', 'Santo Domingo', 'RECAUDADO', '2026-03-15', 167),
+('1a45ee05-0f40-4e65-a7c8-3cf8735020ee', '3be8818c-437c-4a31-842c-b98928d2da16', NULL, 'cancelado', '2026-03-15', NULL, 4290, FALSE, FALSE, 'CANCELADO', 0, 'Calle F No8  residencia don Bolívar', 'Santo Domingo', 'PENDIENTE', NULL, 168),
+('9d1fa462-34d2-4650-bc95-3fe579d32bdf', '64706d40-6819-498e-8991-050987287f64', NULL, 'cancelado', '2026-03-15', NULL, 2990, FALSE, FALSE, 'CANCELADO', 0, 'Calle 30 Mata de los Indios', 'Santo Domingo', 'PENDIENTE', NULL, 169),
+('577175fc-0c74-40b0-bb75-3f50786859fe', '18ba1cc4-de70-4afe-8e59-787b0ceec89b', NULL, 'cancelado', '2026-03-15', NULL, 3490, FALSE, FALSE, 'CANCELADO', 0, 'Ernesto de la massa 104', 'Santo Domingo', 'PENDIENTE', NULL, 170),
+('aef125d0-a7fa-4b68-b8bd-11b00de97f9b', 'e103c69e-1a7d-43e0-9f0c-acfea7e9717d', NULL, 'cancelado', '2026-03-15', NULL, 3490, FALSE, FALSE, 'CANCELADO', 0, 'Barbarin Mojica número 1 mejoramiento social', 'Santo Domingo Este', 'PENDIENTE', NULL, 171),
+('d815b074-823b-43c2-bc25-91e6d5412a14', '7954bef2-c2dd-40a6-b8e7-ca86e43320e8', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-03-15', '2026-03-15', 3490, FALSE, FALSE, 'COMPLETADO', 500, 'Calle la joya #53', 'Jarabacoa', 'RECAUDADO', '2026-03-15', 172),
+('7537fb96-df19-4782-b3f3-b0502fcead4b', '34f921ab-02eb-4648-93a3-8ad768dc48e4', NULL, 'cancelado', '2026-03-15', NULL, 3490, FALSE, FALSE, 'CANCELADO', 0, 'Calle Duarte #6', 'Río San Juan', 'PENDIENTE', NULL, 173),
+('d0bb7e66-7eb6-4ec7-9223-2e0fcbb4292e', '728b16f9-4365-4cdb-bb6c-c5373f91d8a9', NULL, 'cancelado', '2026-03-15', NULL, 3490, FALSE, FALSE, 'CANCELADO', 0, 'Calle capotillo no. 4 detrás de ferreteria agrofer', 'Río San Juan', 'PENDIENTE', NULL, 174),
+('06a1b187-dc63-485c-9bd9-0e3d20c49baa', 'eced89ac-1bd2-46f4-8f30-8bc8401dd740', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 'entregado', '2026-03-15', '2026-03-15', 5500, FALSE, FALSE, 'COMPLETADO', 250, 'Torre Sherry', 'Santo Domingo', 'RECAUDADO', '2026-03-15', 175),
+('dd6b5503-9f2f-4272-9407-57db47e3f050', 'b36c377e-58a7-4abc-b3d2-be88c2b2cecb', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-03-15', '2026-03-15', 3490, FALSE, FALSE, 'COMPLETADO', 500, 'Calle belén #3 bario 5to centenario', 'Villa Altagracia', 'RECAUDADO', '2026-03-15', 176),
+('297608aa-4d7a-40f6-b98d-ff3bf31d45bc', '1fc89e55-3e0e-431b-8090-b7cf82c51aac', NULL, 'cancelado', '2026-03-15', NULL, 2990, FALSE, FALSE, 'CANCELADO', 0, 'Francisco bido 3', 'SANTO DOMINGO', 'PENDIENTE', NULL, 177),
+('89d48d9f-be7f-43f7-ac37-cb03872f40e0', 'db18fe93-f459-4095-8af9-4b4169b1fb00', NULL, 'cancelado', '2026-03-15', NULL, 3490, FALSE, FALSE, 'CANCELADO', 0, 'Nunez de Caceres 110, plaza mirador', 'Santo Domingo', 'PENDIENTE', NULL, 178),
+('62aeeb42-0840-4c1c-a60b-0063fa3dcba3', '6fc3479e-05fe-43f8-9058-ae41477af532', NULL, 'cancelado', '2026-03-15', NULL, 3490, FALSE, FALSE, 'CANCELADO', 0, 'ave  lincoln , plaza francesa', 'SANTO DOMINGO', 'PENDIENTE', NULL, 179),
+('135244a9-cff0-4480-9054-911e987c87f0', 'bb45f10c-37f6-4b71-a9db-3a297cf386f2', NULL, 'cancelado', '2026-03-15', NULL, 3490, FALSE, FALSE, 'CANCELADO', 0, 'Calle 5  no 59 las palmeras 3 y 4 madre vieja sur san cristobal', 'San Cristóbal', 'PENDIENTE', NULL, 180),
+('0da162ad-9115-4636-abcc-b89f876fc1a3', '8eb35e48-68e4-4169-95c8-23696f56f771', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-03-15', '2026-03-15', 1163, FALSE, FALSE, 'COMPLETADO', 473, 'Calle2da # 3', 'San Juan', 'RECAUDADO', '2026-03-15', 181),
+('949fc7dd-fee1-42ba-b16c-a09443166cff', 'c9613e1c-7ea8-4403-bbe1-bb30e78cc7af', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 'entregado', '2026-03-15', '2026-03-15', 3490, FALSE, FALSE, 'COMPLETADO', 450, 'C/ Carlos Manuel pumarol km 4 frente al complejo deportivo Ray de Tampa bay', 'San Antonio de Guerra', 'RECAUDADO', '2026-03-15', 182),
+('efeb0294-90ee-4929-afaf-4cf94fa8946a', 'e88f8be4-e913-4ee9-8e3d-63c28ae15f66', NULL, 'cancelado', '2026-03-15', NULL, 3490, FALSE, FALSE, 'CANCELADO', 0, 'Manzana R24', 'Pedro Brand', 'PENDIENTE', NULL, 183),
+('c8024b59-c3b4-4b2a-a255-df08ab47ad43', '1e5f7b0e-deed-474a-8777-d76c13615219', NULL, 'cancelado', '2026-03-15', NULL, 2990, FALSE, FALSE, 'CANCELADO', 0, 'Sánchez', 'Azua (Azua de Compostela)', 'PENDIENTE', NULL, 184),
+('10eece19-0fd8-4188-b324-8ef1731fd53d', 'bf19735b-6d5a-45ff-ad67-dcfe1af701b3', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-03-16', '2026-03-16', 3490, FALSE, FALSE, 'COMPLETADO', 473, 'Avenida Fabio Herrera Residencial Don Marcelo #44 sector Bocacanasta', 'Baní', 'RECAUDADO', '2026-03-16', 185),
+('97355602-7a49-4d30-9af7-26a871a855a9', '281b1741-7a1c-41d0-90fe-ec1c970f36e3', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-03-16', '2026-03-16', 3490, FALSE, FALSE, 'COMPLETADO', 400, 'Calle flamboyanes', 'Villa Montellano', 'RECAUDADO', '2026-03-16', 186),
+('2e1681ee-2a6b-4141-ad8f-b09f7f978ed4', '281b1741-7a1c-41d0-90fe-ec1c970f36e3', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-03-16', '2026-03-16', 3490, FALSE, FALSE, 'COMPLETADO', 473, 'Calle flamboyanes montebravo', 'Villa Montellano', 'RECAUDADO', '2026-03-16', 187),
+('387604dd-223c-4506-8da1-7e475725bfc4', 'a47c0d71-bd4f-4ab7-b3ea-fd8d56a44155', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'cancelado', '2026-03-16', NULL, 3490, FALSE, FALSE, 'CANCELADO', 0, 'Calle Manuel de Jesús Silverio #62', 'Hato Mayor (Hato Mayor del Rey)', 'PENDIENTE', NULL, 188),
+('d68bfac8-9ba0-401e-8bba-b9510bc49498', 'a47c0d71-bd4f-4ab7-b3ea-fd8d56a44155', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'cancelado', '2026-03-16', NULL, 3490, FALSE, FALSE, 'CANCELADO', 0, 'Calle Manuel de Jesús Silverio #62', 'Hato Mayor (Hato Mayor del Rey)', 'PENDIENTE', NULL, 189),
+('4cc71809-b636-416b-89ea-f84ee629651f', 'f0d4c23f-aef1-4c4c-83aa-a5c6e3a62d71', NULL, 'cancelado', '2026-03-16', NULL, 3490, FALSE, FALSE, 'CANCELADO', 0, 'Piedra blanca del salto después del campo de golf', 'Jarabacoa', 'PENDIENTE', NULL, 190),
+('8f599c16-c1b4-476c-b7c5-f3d1a32d283d', '22aa714f-a3da-47d2-aac0-7e0630975028', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 'entregado', '2026-03-16', '2026-03-16', 2990, FALSE, FALSE, 'COMPLETADO', 450, 'Calles 20 casa #17', 'La Caleta', 'RECAUDADO', '2026-03-16', 191),
+('d3a0a665-a934-4372-b5c7-8f69b401de5d', '5a66c4ed-d66f-4e6b-b285-4eb78ff3505b', NULL, 'cancelado', '2026-03-16', NULL, 3490, FALSE, FALSE, 'CANCELADO', 0, 'La colonia', 'Piedra Blanca', 'PENDIENTE', NULL, 192),
+('cd81c15a-12b6-4e71-a2b0-0dc835657778', 'afe869a3-e656-4aad-9907-103fceec3d40', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 'entregado', '2026-03-17', '2026-03-17', 4290, FALSE, FALSE, 'COMPLETADO', 400, 'Aguas Buenas No. 18', 'Santo Domingo', 'RECAUDADO', '2026-03-17', 193),
+('6f903e67-3994-47fd-a58f-36f490addd0a', '85eafa3b-78e1-46e8-9d23-fa620560ef6c', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-03-17', '2026-03-17', 1495, FALSE, FALSE, 'COMPLETADO', 453, '19 de marzo #43', 'Las Matas de Farfán', 'RECAUDADO', '2026-03-17', 194),
+('a96612ed-8f0b-4d8b-83ed-b7d0aa4fd378', 'f441ba98-8cc8-44a0-ab17-9999ebea190a', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 'devuelto', '2026-03-17', NULL, 3490, FALSE, FALSE, 'DEVOLUCION', 0, 'C p no 52 bendaño atiyo', 'San Cristóbal', 'PENDIENTE', NULL, 195),
+('5e4b844d-6c34-4130-9a0f-da3887a18564', '4859a984-5d79-460a-913b-2be288c58c0f', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'devuelto', '2026-03-17', NULL, 4290, FALSE, FALSE, 'DEVOLUCION', 400, 'Vista cana paseo del cendero lake paradise villa 2', 'Bávaro', 'PENDIENTE', NULL, 196),
+('f40d8eb4-fc5b-4f6e-bda2-e87deb2ad02e', '1f59311a-e6f1-4222-a0f7-7e7fb6954b3e', NULL, 'cancelado', '2026-03-17', NULL, 3490, FALSE, FALSE, 'CANCELADO', 0, 'Calle 1ra #24 Isabelita. Casi frente a escuela primaria Escolástica Paez', 'Santo Domingo Este', 'PENDIENTE', NULL, 197),
+('07a87e65-64d2-4904-b7c8-32afc8559aaf', '6c346fbd-ec7e-40a8-90af-41b608f57341', NULL, 'cancelado', '2026-03-17', NULL, 2990, FALSE, FALSE, 'CANCELADO', 0, 'Av. Mauricio baez #57', 'San Pedro de Macorís', 'PENDIENTE', NULL, 198),
+('16a60fa0-d69e-4986-ac3f-5cd971fe2d3e', 'f3a64753-adf9-4e41-8855-f5702cc4d19d', NULL, 'cancelado', '2026-03-17', NULL, 3490, FALSE, FALSE, 'CANCELADO', 0, 'Carretera el morro presa de tabera', 'La Vega (Concepción de la Vega)', 'PENDIENTE', NULL, 199),
+('9546a35e-7038-48cc-b3d6-fe2bd136fdd4', '2db3e396-09ed-4d30-bf62-2a4cf1332290', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-03-17', '2026-03-17', 3490, FALSE, FALSE, 'COMPLETADO', 500, 'José Francisco Peña gomes', 'Las Charcas', 'RECAUDADO', '2026-03-17', 200);
+
+INSERT INTO pedidos (id, cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega,
+  precio_total, es_testeo, es_prueba_interna, estado_original, costo_envio,
+  ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num) VALUES
+('f1de33aa-d1f8-4452-aee8-d0ce88285697', 'd859826c-7640-492f-8c54-a1c414e981b6', NULL, 'cancelado', '2026-03-17', NULL, 3490, FALSE, FALSE, 'CANCELADO', 0, 'C/General Cabral #77', 'El Cercado', 'PENDIENTE', NULL, 201),
+('77b724d7-550b-418c-b065-3cde2f001bed', '9f0ad90e-56e9-40d0-9d67-3f64f939dbb0', NULL, 'cancelado', '2026-03-17', NULL, 3490, FALSE, FALSE, 'CANCELADO', 0, 'Carretera,José Duran', 'Constanza', 'PENDIENTE', NULL, 202),
+('f4b95845-f02d-4c9a-87b2-42fd5c8c3b5d', 'e3ed9922-fbdf-4286-ac85-6f95afa2da22', NULL, 'cancelado', '2026-03-18', NULL, 3490, FALSE, FALSE, 'CANCELADO', 0, 'la pared de jarna', 'Santo Domingo Este', 'PENDIENTE', NULL, 203),
+('8d3ed832-0f6d-4f46-bd26-d2eca49f303d', 'cf263223-5534-4a78-930f-86902eb6b9b5', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-03-18', '2026-03-18', 3490, FALSE, FALSE, 'COMPLETADO', 500, 'C/ Jesús Diplan #45', 'Licey al Medio', 'RECAUDADO', '2026-03-18', 204),
+('4f63112b-ef91-4ea9-a60a-51153c3f4ff7', '3870b6e1-cad0-475d-8aa7-5f0cfa73f107', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-03-18', '2026-03-18', 3490, FALSE, FALSE, 'COMPLETADO', 500, 'Calle 41 esq 2 del invi las colinas', 'Santiago de los Caballeros', 'RECAUDADO', '2026-03-18', 205),
+('a39cf56f-2d4a-4ad7-890e-25dc0360db5e', '41cca79e-90fc-4a1e-abb2-d42b52459d84', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 'entregado', '2026-03-18', '2026-03-18', 3490, FALSE, FALSE, 'COMPLETADO', 300, 'Calle la vaguada  9 colina de los rios', 'Santo Domingo', 'RECAUDADO', '2026-03-18', 206),
+('ae25a389-0267-4dd8-a794-84ee1e299fb1', 'c8828cd1-d07c-491a-80f8-1ef956dc22f6', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-03-18', '2026-03-18', 3490, FALSE, FALSE, 'COMPLETADO', 500, 'Calle colibrí casa ##2 residencial la herencia', 'Jarabacoa', 'RECAUDADO', '2026-03-18', 207),
+('f9221029-bc29-436d-bd8d-51e2eb51f044', '9d7f1227-c3c4-43c7-9cb0-776d63a87ab2', NULL, 'cancelado', '2026-03-18', NULL, 3490, FALSE, FALSE, 'CANCELADO', 0, 'Calle castillo 62', 'San Francisco de Macorís', 'PENDIENTE', NULL, 208),
+('3dd35d95-1617-4425-a053-19bcd93e1005', '9d7f1227-c3c4-43c7-9cb0-776d63a87ab2', NULL, 'cancelado', '2026-03-18', NULL, 3490, FALSE, FALSE, 'CANCELADO', 0, 'Calle castillo 62', 'San Francisco de Macorís', 'PENDIENTE', NULL, 209),
+('0c4c4cd3-3c01-4583-82b5-2a6169f29394', '3465567d-2ad4-4151-a0b5-caaaf372b972', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 'entregado', '2026-03-18', '2026-03-18', 3490, FALSE, FALSE, 'COMPLETADO', 400, 'La carrera #20 agua loca km15.5de las américas', 'Santo Domingo Este', 'RECAUDADO', '2026-03-18', 210),
+('42bf569b-ec22-4fc1-8f01-311075cd4f9d', '12a17d05-8734-4c0b-b52e-2388bbf51d5d', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-03-18', '2026-03-18', 3490, FALSE, FALSE, 'COMPLETADO', 473, 'C. Máximo Gómez #47 - Villa Verde', 'La Romana', 'RECAUDADO', '2026-03-18', 211),
+('3795a7b7-a3d5-4482-b494-8e5805214e71', '0be8c45f-fd4d-4703-ad03-955dc8e39771', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-03-18', '2026-03-18', 2990, FALSE, FALSE, 'COMPLETADO', 453, 'Barrio hoyo del cacao, sector la bujuquera, colmado Alvarez', 'Las Terrenas', 'RECAUDADO', '2026-03-18', 212),
+('ba37cdcf-f95f-4c50-ac44-cd565da8305a', 'b2e54bf5-bbae-447d-bcea-551ff3a5f280', NULL, 'cancelado', '2026-03-19', NULL, 3490, FALSE, FALSE, 'CANCELADO', 0, 'Pepe Santana', 'Higüey (Salvaleón de Higüey)', 'PENDIENTE', NULL, 213),
+('a8c2efb0-e2c5-4f35-85fe-c54a01b3e40c', 'f10b9d66-913a-493b-aeb2-4352b052d7cb', NULL, 'cancelado', '2026-03-19', NULL, 3490, FALSE, FALSE, 'CANCELADO', 0, 'Calle central #11 bellas colinas, San Miguel de manoguayabo. Santo Domingo oeste', 'Santo Domingo', 'PENDIENTE', NULL, 214),
+('ad1e9fb2-5bd6-4938-8558-edb9c5a83bc8', 'ea791c1b-dd2a-484d-a78c-9f03170f0ccc', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 'entregado', '2026-03-19', '2026-03-19', 3490, FALSE, FALSE, 'COMPLETADO', 400, 'Saturno 13A sol de luz villa mella', 'Santo Domingo', 'RECAUDADO', '2026-03-19', 215),
+('1cc1a979-1137-4ade-896c-06e1f21c6b8d', '897abd9a-356c-40cd-a984-42783f58a095', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-03-19', '2026-03-19', 3490, FALSE, FALSE, 'COMPLETADO', 473, 'Luz celeste Lara', 'Comendador', 'RECAUDADO', '2026-03-19', 216),
+('bcd610ba-7051-4d47-b003-f48f853e54b4', '0a7390ab-87f4-4852-bcfa-d3dde797df2c', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 'devuelto', '2026-03-19', NULL, 3490, FALSE, FALSE, 'DEVOLUCION', 0, 'Calle progreso número 9 brisas del este', 'Santo Domingo Este', 'PENDIENTE', NULL, 217),
+('4da2175f-718d-43f1-bbf1-f30f41edfff7', 'd34b8c5e-afed-4950-a151-ca20b8bc201a', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'cancelado', '2026-03-19', NULL, 3490, FALSE, FALSE, 'CANCELADO', 0, '21 de enero', 'Higüey (Salvaleón de Higüey)', 'PENDIENTE', NULL, 218),
+('e5154f67-77cf-40ca-bf29-7b9e7ee397a2', 'd34b8c5e-afed-4950-a151-ca20b8bc201a', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'cancelado', '2026-03-19', NULL, 8970, FALSE, FALSE, 'CANCELADO', 0, '21 de enero', 'Higüey (Salvaleón de Higüey)', 'PENDIENTE', NULL, 219),
+('95001098-5a87-410f-ac9b-9d0caeedd0ef', '441f7ab5-f9e2-4158-9749-10ed3986dbde', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-03-19', '2026-03-19', 4290, FALSE, FALSE, 'COMPLETADO', 505, 'Calle Enrriquillo #6 , centro ciudad  .', 'Neiba', 'RECAUDADO', '2026-03-19', 220),
+('5159449b-444e-4bcb-8f59-1da6b8bd5ba5', '37d08b12-58c5-42ed-b437-2171a359eca8', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-03-19', '2026-03-19', 4290, FALSE, FALSE, 'COMPLETADO', 505, 'Miguel de regla mota #1 urbanización blanquizales', 'Barahona (Santa Cruz de Barahona)', 'RECAUDADO', '2026-03-19', 221),
+('8f45dcf9-dd52-4abf-85df-457c286c3846', '4ddc557a-fed0-47d4-8733-5e76f8ef816b', NULL, 'cancelado', '2026-03-19', NULL, 3490, FALSE, FALSE, 'CANCELADO', 0, 'Pepe herr', 'Villa Tapia (La Jagua)', 'PENDIENTE', NULL, 222),
+('88b8b620-de2a-489b-b108-ca41b56fc414', 'd19d8906-929d-4842-9ba3-f3eb83064e0d', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-03-19', '2026-03-19', 2990, FALSE, FALSE, 'COMPLETADO', 480, 'La circunvalación', 'Verón', 'RECAUDADO', '2026-03-19', 223),
+('981140cf-c26b-476a-a812-86a3c915d1d2', '70ba3bec-7020-41e2-807d-35f24b18b007', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 'devuelto', '2026-03-19', NULL, 3490, FALSE, FALSE, 'DEVOLUCION', 0, 'Calle 12numero 2 ponce los giaricano', 'Santo Domingo', 'PENDIENTE', NULL, 224),
+('daaebdf4-45c4-4809-a4c6-b3eab3bb4e44', '9e737ea8-ca8d-446f-8b64-16d41fc5719f', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-03-19', '2026-03-19', 2990, FALSE, FALSE, 'COMPLETADO', 483, 'Calle Duarte esquina padre castellanos (segunda planta edificio circuito Musa)', 'Puerto Plata (San Felipe de Puerto Plata)', 'RECAUDADO', '2026-03-19', 225),
+('ebf884d8-9efe-425d-996c-10318229a7f3', '8640cfaa-9884-460c-a67a-df5626d761ae', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 'entregado', '2026-03-20', '2026-03-20', 3490, FALSE, FALSE, 'COMPLETADO', 500, 'Super Mercado Ole, La Caleta', 'La otra Banda (Higüey)', 'RECAUDADO', '2026-03-20', 226),
+('ba2f3b19-de55-4983-a750-732e430eef9b', '7dbf6f0d-47c4-4d88-95df-d6ec32ce9931', NULL, 'cancelado', '2026-03-20', NULL, 3490, FALSE, FALSE, 'CANCELADO', 0, 'Calle 37, número 6, barrio 24 de abrir, los alcarrizos', 'Los Alcarrizos', 'PENDIENTE', NULL, 227),
+('1d0c5976-5bd0-4f7f-bcde-eaf06070e4f5', '59fecbe3-3203-494f-b1e4-ff28c59dbcbc', NULL, 'pendiente', '2026-03-20', NULL, 3490, FALSE, FALSE, 'NOVEDAD', 0, 'Calle principal #30 cerro del castillo la trinitaria', 'Santiago de los Caballeros', 'PENDIENTE', NULL, 228),
+('d03cc54d-4919-4043-ad90-da3e9755056e', 'f9d59261-051d-4e6c-8c44-5e7e57619e15', NULL, 'cancelado', '2026-03-20', NULL, 3490, FALSE, FALSE, 'CANCELADO', 0, 'Kilómetros 10 de Cumayasa', 'La Romana', 'PENDIENTE', NULL, 229),
+('1d3c0085-0133-466b-a0d9-e680b13dbec3', '7499cee3-13ee-4018-9319-9c3a3c50aa66', NULL, 'cancelado', '2026-03-20', NULL, 3490, FALSE, FALSE, 'CANCELADO', 0, 'Calle el pley casa 26', 'Castañuelas', 'PENDIENTE', NULL, 230),
+('950ef1d9-6363-4605-b162-f6bc46b9308b', '68f5ebbe-ba32-4a5d-a431-deef4acfb9ff', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-03-20', '2026-03-20', 3490, FALSE, FALSE, 'COMPLETADO', 500, 'Distrito municipal de palo alto', 'Jaquimeyes', 'RECAUDADO', '2026-03-20', 231),
+('bc7c0ee5-da34-4bfb-930a-da0920eafea0', 'bbf75e3a-1864-4ee1-985d-f9f0ac4daa3a', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-03-20', '2026-03-20', 3490, FALSE, FALSE, 'COMPLETADO', 473, 'Ave Los Roboes #401, Buena Vista Norte', 'La Romana', 'RECAUDADO', '2026-03-20', 232),
+('c49a4a46-e6d4-4e75-86f9-23622606f052', 'dd9d2049-b997-45d4-a981-766d6dba0ffb', NULL, 'cancelado', '2026-03-21', NULL, 3490, FALSE, FALSE, 'CANCELADO', 0, 'Carretera Seibo km9', 'El Seibo (Santa Cruz del Seibo)', 'PENDIENTE', NULL, 233),
+('9df9eecb-4faf-490a-bf7c-2a91982e58ce', '7de39510-66fb-4464-b654-d85b913692f7', NULL, 'cancelado', '2026-03-21', NULL, 2990, FALSE, FALSE, 'CANCELADO', 0, 'Presidente Vásquez', 'Moca', 'PENDIENTE', NULL, 234),
+('d7343255-bb1f-4fec-9255-5ac24fc60d3c', 'abba526b-3b86-456b-92c8-b90490943ace', NULL, 'cancelado', '2026-03-21', NULL, 3490, FALSE, FALSE, 'CANCELADO', 0, 'Duarte esquina colon#53', 'Higüey (Salvaleón de Higüey)', 'PENDIENTE', NULL, 235),
+('25dfcf98-db11-461f-9741-179cb039aaf4', 'e1a41bda-a129-4b24-8104-573c159ae1f7', NULL, 'cancelado', '2026-03-21', NULL, 3490, FALSE, FALSE, 'CANCELADO', 0, 'Rincón de Veragua', 'Gaspar Hernández', 'PENDIENTE', NULL, 236),
+('d2058ecf-88c3-4e7e-9360-32a10b883250', 'ab168beb-4705-4471-932a-b03843d3ac38', NULL, 'cancelado', '2026-03-21', NULL, 2990, FALSE, FALSE, 'CANCELADO', 0, 'Carmen Celia Balaguer #3 el millón', 'Santo Domingo Norte', 'PENDIENTE', NULL, 237),
+('e44a479a-c4e7-4f03-90b3-0b132d900123', 'd8eccc26-4727-4e5c-b4a0-8bdf78c65c10', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-03-21', '2026-03-21', 3490, FALSE, FALSE, 'COMPLETADO', 473, 'Ingenio santafe barrio buenos aires, calle Lluis Felipe de aza . Casa número 6+', 'San Pedro de Macorís', 'RECAUDADO', '2026-03-21', 238),
+('041fafde-04e3-473a-a3f5-1e81594eef41', 'a857bf08-0547-4828-80d1-77ed92adc6e5', NULL, 'cancelado', '2026-03-21', NULL, 3490, FALSE, FALSE, 'CANCELADO', 0, 'La seiba del salado', 'La otra Banda (Higüey)', 'PENDIENTE', NULL, 239),
+('6b90273e-1f97-46fb-8fd8-695bb058c672', 'e5ffc6ee-38df-40f0-ab2b-6f9c65543979', NULL, 'cancelado', '2026-03-21', NULL, 3490, FALSE, FALSE, 'CANCELADO', 0, 'Canasta', 'San Cristóbal', 'PENDIENTE', NULL, 240),
+('60c43f66-4792-4da3-95a1-8ff0e946fb25', '6fc3479e-05fe-43f8-9058-ae41477af532', NULL, 'cancelado', '2026-03-21', NULL, 3490, FALSE, FALSE, 'CANCELADO', 0, 'ave abraham lincoln plaza francesa 331', 'Santo Domingo', 'PENDIENTE', NULL, 241),
+('2303cdff-7233-4fbb-940f-87a5edb31569', 'c3fdf1a8-fa35-4fda-9a89-e2298b70605f', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-03-21', '2026-03-21', 3490, FALSE, FALSE, 'COMPLETADO', 473, 'Calle sanche númer 4nunmercado nuevo frente a donde venden los plátanos en nuestro negocio', 'San Francisco de Macorís', 'RECAUDADO', '2026-03-21', 242),
+('5850df92-5126-44a8-b912-024198722bdf', '165c3508-4ab1-449b-bbeb-86a9d7cda143', NULL, 'cancelado', '2026-03-21', NULL, 3490, FALSE, FALSE, 'CANCELADO', 0, 'Calle 9, #24, residencial Santo Domingo', 'Santo Domingo', 'PENDIENTE', NULL, 243),
+('5f248dd1-b5d8-4ac1-ada4-398a4bed85de', 'bd769d76-96d0-49de-9158-7d9e590b84ec', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-03-21', '2026-03-21', 4290, FALSE, FALSE, 'COMPLETADO', 505, 'Calle López de Vega #34, proyecto 2c', 'Azua (Azua de Compostela)', 'RECAUDADO', '2026-03-21', 244),
+('59e1397b-bf6e-49d4-a67e-d033ade01c77', '375be660-3676-473f-895c-9a89af543c82', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-03-22', '2026-03-22', 3490, FALSE, FALSE, 'COMPLETADO', 473, 'Los Guallos', 'La Vega (Concepción de la Vega)', 'RECAUDADO', '2026-03-22', 245),
+('8325f1f2-4a77-48a0-9f73-9ec61e1f09b0', '362fe6c8-1a26-4c19-a353-5921c32a0910', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'devuelto', '2026-03-22', NULL, 2990, FALSE, FALSE, 'DEVOLUCION', 400, 'Los pomos tenares', 'Tenares', 'PENDIENTE', NULL, 246),
+('7405c677-6c76-4f02-944b-8ddcf7aaeec5', '972dd748-8b0a-4a9f-9b3d-9b04959d5cc3', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 'entregado', '2026-03-22', '2026-03-22', 3490, FALSE, FALSE, 'COMPLETADO', 300, 'Fantino falco 43 edificio naco real apto 1bn Frente al salón palacio de la belleza', 'Santo Domingo', 'RECAUDADO', '2026-03-22', 247),
+('e99ebdab-7d7f-47c0-bce3-1d0010ca7c28', 'dfef510b-dd16-4b30-912d-1a43ef38c84b', NULL, 'cancelado', '2026-03-22', NULL, 3490, FALSE, FALSE, 'CANCELADO', 0, 'La seiba del salado', 'Punta Cana', 'PENDIENTE', NULL, 248),
+('51132335-e4a3-4d21-bd33-e4976a6f762d', 'f5bb9dbd-1fec-44c9-8c9e-5c2e87cb4d2c', NULL, 'cancelado', '2026-03-22', NULL, 3490, FALSE, FALSE, 'CANCELADO', 0, 'acto de rafey sona franca etapa 5', 'Santiago de los Caballeros', 'PENDIENTE', NULL, 249),
+('2123d248-85fe-4742-bcba-a273dec533e1', 'f49ddc72-6eed-4dcb-bf6f-7173894b5376', NULL, 'cancelado', '2026-03-22', NULL, 3490, FALSE, FALSE, 'CANCELADO', 0, 'La Ciénaga, frente a la agroquímica La Fiera', 'El Naranjal', 'PENDIENTE', NULL, 250);
+
+INSERT INTO pedidos (id, cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega,
+  precio_total, es_testeo, es_prueba_interna, estado_original, costo_envio,
+  ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num) VALUES
+('48e6447c-61b8-4f94-9195-6b9421d21689', '39dcd9cb-66d7-452e-9df4-eb9c95bde234', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-03-22', '2026-03-22', 3490, FALSE, FALSE, 'COMPLETADO', 473, 'Calle 9 número 24 las Antillas', 'Santiago de los Caballeros', 'RECAUDADO', '2026-03-22', 251),
+('6aeb37e9-9784-4619-b494-8e02d15a7353', 'e236e718-7f45-4a00-8730-4f24d0f4e08c', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'devuelto', '2026-03-22', NULL, 3290, FALSE, FALSE, 'DEVOLUCION', 400, 'Benerito por el colmadon', 'Bayahíbe (San Rafael del Yuma)', 'PENDIENTE', NULL, 252),
+('940d4dd8-7ba5-4e14-8ceb-c60bbe5bf725', '70481ddd-682b-4b85-9571-2ddc2985c517', NULL, 'cancelado', '2026-03-22', NULL, 2990, FALSE, FALSE, 'CANCELADO', 0, 'Ciudad las palmas', 'Punta Cana', 'PENDIENTE', NULL, 253),
+('39bfea93-18e6-44a4-8f0e-a092e11d4d47', 'c8521892-a1e5-4c00-a5bc-edbb62ccbf92', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'devuelto', '2026-03-23', NULL, 2990, FALSE, FALSE, 'DEVOLUCION', 400, 'Torre Río, tercer nivel, suite 306', 'San Francisco de Macorís', 'PENDIENTE', NULL, 254),
+('73813e33-eb16-40fd-a68f-7a14e9c30954', '1f903c54-c4de-4d7d-89ac-1119892d7f24', NULL, 'cancelado', '2026-03-23', NULL, 3490, FALSE, FALSE, 'CANCELADO', 0, 'Esta es la ubicación:   C/ Dr. Nuñez y Dominguez #28 Torre Marevento , La Julia', 'Santo Domingo', 'PENDIENTE', NULL, 255),
+('1fe45546-b062-4091-9076-a3459e76901b', 'a49d3986-a99e-4c6d-9fa3-6f849e9daad3', NULL, 'cancelado', '2026-03-23', NULL, 3490, FALSE, FALSE, 'CANCELADO', 0, 'Padre Abreu 96', 'La Romana', 'PENDIENTE', NULL, 256),
+('974a5dc9-80fb-4adb-8ff4-e9ca2e32c518', '1cdb317b-f1e5-407e-8534-e73a327d5be8', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-03-23', '2026-03-23', 2990, FALSE, FALSE, 'COMPLETADO', 453, 'Urbanización maría cristina #3', 'Cotuí', 'RECAUDADO', '2026-03-23', 257),
+('05f16334-81da-41c3-9360-4d0e659bc15c', '27d96cd1-f44f-4d62-8e9b-7656512af457', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 'entregado', '2026-03-23', '2026-03-23', 3490, FALSE, FALSE, 'COMPLETADO', 350, 'Principe negro #20 sector El Rosal', 'Santo Domingo Este', 'RECAUDADO', '2026-03-23', 258),
+('b49f80d6-48f9-49b0-9403-99b481e1bc74', '49490ffc-d304-4843-b8fd-94a30611894e', NULL, 'cancelado', '2026-03-23', NULL, 3490, FALSE, FALSE, 'CANCELADO', 0, 'Doctor tejada florentino floristería yanil tenares', 'Tenares', 'PENDIENTE', NULL, 259),
+('88b622d1-9170-47d4-a423-f9baf7b210a7', 'd33c6cc0-79fb-41bf-af60-2f00da2852b7', NULL, 'cancelado', '2026-03-23', NULL, 2990, FALSE, FALSE, 'CANCELADO', 0, 'Calle Omar torrijo 4 ballona', 'Santo Domingo Oeste', 'PENDIENTE', NULL, 260),
+('8081dbef-c9c1-4cc6-9afd-6db133b5fc2c', '32f1cd2e-84d0-43b4-9282-10aa7133e977', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-03-23', '2026-03-23', 3490, FALSE, FALSE, 'COMPLETADO', 473, 'Santa Fe villa blanca en el parquesito', 'San Pedro de Macorís', 'RECAUDADO', '2026-03-23', 261),
+('8fd5e72f-bf53-4d72-82c6-abd2b6527e27', 'ff606dee-9b1d-449d-b503-82679d77d461', NULL, 'cancelado', '2026-03-23', NULL, 3490, FALSE, FALSE, 'CANCELADO', 0, 'Prinvipal', 'Cabrera (Tres Amarras)', 'PENDIENTE', NULL, 262),
+('7f5f743f-c4f6-43dc-8867-9e546c871399', '73f3d29e-6108-4960-8bda-ed010cde5f59', NULL, 'cancelado', '2026-03-23', NULL, 2990, FALSE, FALSE, 'CANCELADO', 0, 'Complejo Iberostar Bavaro', 'Bávaro', 'PENDIENTE', NULL, 263),
+('ded85938-753b-4497-904c-b8ef1fa632ac', '1ffc0d85-5abc-4684-9048-08b7f22fdaa3', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 'entregado', '2026-03-24', '2026-03-24', 3490, FALSE, FALSE, 'COMPLETADO', 300, 'Constanza', 'Constanza', 'RECAUDADO', '2026-03-24', 264),
+('1114fdb7-988d-4b07-8ab3-3868e850f9b0', 'df6b18b0-c37b-4fdb-a76b-33fa77e32fd9', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 'entregado', '2026-03-24', '2026-03-24', 3490, FALSE, FALSE, 'COMPLETADO', 300, 'Calle Las Marias 2 C, ALFIMAR', 'Santo Domingo', 'RECAUDADO', '2026-03-24', 265),
+('47efc2b4-e3e2-4aa6-819c-a6b387994ff6', '88c44168-55b2-4750-b046-e02483522e2f', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-03-24', '2026-03-24', 3490, FALSE, FALSE, 'COMPLETADO', 473, 'Abigail 10 Cristo rey dan juan', 'San Juan', 'RECAUDADO', '2026-03-24', 266),
+('f4018ce0-8b9e-455e-b102-f19820145707', 'f45fcd9a-259a-4dc0-8cf3-711916085e8b', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'devuelto', '2026-03-24', NULL, 3490, FALSE, FALSE, 'DEVOLUCION', 400, 'C/ Principal Anamuya #29', 'Higüey (Salvaleón de Higüey)', 'PENDIENTE', NULL, 267),
+('c637713d-aeed-4bf1-a9b2-a40d1459f32d', '94f380f4-2a1c-4ddd-a90e-69b18d739053', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 'entregado', '2026-03-24', '2026-03-24', 3490, FALSE, FALSE, 'COMPLETADO', 350, 'C/ interior B14, Alma Rosa Segunda', 'Santo Domingo Este', 'RECAUDADO', '2026-03-24', 268),
+('6bafdc63-bee2-4c63-b082-bfba241efc4d', '2c9cbba4-92b1-46bb-9bd4-426b4232a3fb', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-03-24', '2026-03-24', 3490, FALSE, FALSE, 'COMPLETADO', 473, 'C/ L #35, Villa Progreso / San Pedro de Macorís', 'San Pedro de Macorís', 'RECAUDADO', '2026-03-24', 269),
+('71e31a0c-86af-467f-8398-07c5c1900138', '36c5796e-19bb-4708-ae9d-edd871336339', NULL, 'cancelado', '2026-03-25', NULL, 2990, FALSE, FALSE, 'CANCELADO', 0, 'Calle ernesto chequevara 10 al lado de la gallera', 'Cevicos', 'PENDIENTE', NULL, 270),
+('9b54f4cd-d652-4bf9-8408-fd0acdab9bea', '20c77fef-808b-44cf-bd7d-bfe17e10dfd7', NULL, 'cancelado', '2026-03-25', NULL, 2990, FALSE, FALSE, 'CANCELADO', 0, 'Av francisco alberto caamoño barrio blanc los multis', 'San Pedro de Macorís', 'PENDIENTE', NULL, 271),
+('be0d28fa-8cb8-4ed4-9264-1cc58bc05510', '5107c8f2-d348-44bc-af01-ab1eb18bcf17', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-03-25', '2026-03-25', 3490, FALSE, FALSE, 'COMPLETADO', 473, 'Calle 4 de marzo  casa 7', 'La Vega (Concepción de la Vega)', 'RECAUDADO', '2026-03-25', 272),
+('30d926d1-f2f9-4420-a034-013b72e04a0c', '3a85a0ef-0b16-4f00-af49-3a3d7cdfd758', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-03-25', '2026-03-25', 4290, FALSE, FALSE, 'COMPLETADO', 505, 'Viya liberación manzana 19 casa 37 b', 'San Juan', 'RECAUDADO', '2026-03-25', 273),
+('fcf6747e-6c8e-4a9a-8b62-b3fe3258b9e5', 'c10fc2e5-d8e8-472b-bac6-89e946a74c18', NULL, 'cancelado', '2026-03-25', NULL, 3490, FALSE, FALSE, 'CANCELADO', 0, 'La victoria', 'Santo Domingo Norte', 'PENDIENTE', NULL, 274),
+('0ae2e4c8-0e65-4f43-83d3-059c60e63aa5', 'd16c83b6-c222-4d1f-94d4-d191e1a6206d', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 'devuelto', '2026-03-25', NULL, 3490, FALSE, FALSE, 'DEVOLUCION', 0, 'Calle c # 32  el perla antillana', 'Santo Domingo Este', 'PENDIENTE', NULL, 275),
+('22b490b7-674e-4686-9c41-af91a23ca161', '9829abde-9b7d-46ee-810a-729439824ca5', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-03-25', '2026-03-25', 3490, FALSE, FALSE, 'COMPLETADO', 473, 'Brisa del llano, próximo a la villa de Alondra', 'Higüey (Salvaleón de Higüey)', 'RECAUDADO', '2026-03-25', 276),
+('ff1778be-0c04-4a02-be07-0ac2e72cd1b0', '3e07efdc-c966-4248-8976-1ef10c9ca2f9', NULL, 'cancelado', '2026-03-25', NULL, 2990, FALSE, FALSE, 'CANCELADO', 0, '99 santa rosa', 'La Romana', 'PENDIENTE', NULL, 277),
+('61082e32-c6bf-41b7-9c2a-7becc5faba9c', '06105af0-f472-4f51-901e-d11f1ef44165', NULL, 'cancelado', '2026-03-25', NULL, 3490, FALSE, FALSE, 'CANCELADO', 0, 'El casique barahona', 'Barahona (Santa Cruz de Barahona)', 'PENDIENTE', NULL, 278),
+('2f6cb523-f738-4ed1-ba20-134e3d41216d', 'b1b12f17-cacf-43ff-ac6b-ab0902901170', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-03-25', '2026-03-25', 3490, FALSE, FALSE, 'COMPLETADO', 473, 'Calle principal #4/ Batey Olivares', 'San Pedro de Macorís', 'RECAUDADO', '2026-03-25', 279),
+('77418e48-c98d-4cdb-9b2e-f8e209900f18', '8fc52865-59b3-41e7-b527-235ee825931a', NULL, 'cancelado', '2026-03-26', NULL, 2990, FALSE, FALSE, 'CANCELADO', 0, 'Manolo Tavares justo', 'San Francisco de Macorís', 'PENDIENTE', NULL, 280),
+('fc9106af-291b-4eb5-b63c-fa0d7b8bb11b', '55e0e50c-9158-4786-9033-e95502244c34', NULL, 'cancelado', '2026-03-26', NULL, 3490, FALSE, FALSE, 'CANCELADO', 0, 'Carretera Don Pedro', 'Santiago de los Caballeros', 'PENDIENTE', NULL, 281),
+('9a0420ef-1c12-47fa-b3fb-7b1b4188112c', '6e4b6e21-2fef-4a65-a21d-6c2f669c3492', NULL, 'cancelado', '2026-03-26', NULL, 3490, FALSE, FALSE, 'CANCELADO', 0, 'Los tocones', 'Santiago de los Caballeros', 'PENDIENTE', NULL, 282),
+('339ceed4-71d1-41b9-97f0-d66716b37c51', '27bd952a-2259-4025-a088-c8ef0d2d9392', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 'entregado', '2026-03-26', '2026-03-26', 4290, FALSE, FALSE, 'COMPLETADO', 350, 'Constructora AMRZ', 'Santo Domingo Norte', 'RECAUDADO', '2026-03-26', 283),
+('0e97e2db-99d5-4fae-a61c-82017da402d2', '2a54d51e-a4fe-43a1-8045-303a2f002c6f', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-03-26', '2026-03-26', 4290, FALSE, FALSE, 'COMPLETADO', 505, 'Urbanización maría cristina #3', 'Cotuí', 'RECAUDADO', '2026-03-26', 284),
+('d9b00201-8f5c-4322-bdcf-84028e499de5', 'dc858505-0fff-4e72-8735-bac978183c73', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-03-26', '2026-03-26', 3490, FALSE, FALSE, 'COMPLETADO', 473, 'Carretera Don Pedro Residencial Las Mercedes', 'Santiago de los Caballeros', 'RECAUDADO', '2026-03-26', 285),
+('51bed254-f540-4e96-84ed-06d93587f8c7', '7119c52b-9143-4e7e-8b2d-765d3c647310', NULL, 'cancelado', '2026-03-26', NULL, 3490, FALSE, FALSE, 'CANCELADO', 0, 'Hotel Rancho Guacamayo', 'La Salvia - Los Quemados', 'PENDIENTE', NULL, 286),
+('b97a9aa6-d677-4c83-8472-7543513708cb', '95f44f72-9b67-4781-9e8d-07d9d83a243f', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-03-27', '2026-03-27', 3490, FALSE, FALSE, 'COMPLETADO', 473, 'Calles las sombrillas', 'Puerto Plata (San Felipe de Puerto Plata)', 'RECAUDADO', '2026-03-27', 287),
+('f8e283e8-f170-45f1-815b-8f48a6899296', '5cd82b2b-9318-4c13-a574-f92d1b32959a', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-03-27', '2026-03-27', 4290, FALSE, FALSE, 'COMPLETADO', 505, 'Av. República de Argentina, Resid. Argelin el embrujo 1 - Apt 2-A', 'Santiago de los Caballeros', 'RECAUDADO', '2026-03-27', 288),
+('4d451b1c-261c-4f35-bdb3-a9ca68c8e159', '4f1f76e0-d8be-458e-a132-38d3441f9553', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-03-27', '2026-03-27', 2990, FALSE, FALSE, 'COMPLETADO', 453, 'C/ Pablo néruda # 1', 'Bonao', 'RECAUDADO', '2026-03-27', 289),
+('ec73c4d3-ec27-4dd4-88a8-d62588c794cb', '1572b50a-1990-4e26-8172-20cb704e23f2', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'devuelto', '2026-03-27', NULL, 2990, FALSE, FALSE, 'DEVOLUCION', 400, 'Calle A  número 98 sector las callenas santiago entrando por tanu.', 'Santiago de los Caballeros', 'PENDIENTE', NULL, 290),
+('4746879b-818d-4eb3-81cb-fc4af496ec05', 'f4a6c8b0-076f-4d0e-bccb-2624ab834cf4', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-03-27', '2026-03-27', 3490, FALSE, FALSE, 'COMPLETADO', 473, 'Calle Pérez marque', 'San Pedro de Macorís', 'RECAUDADO', '2026-03-27', 291),
+('ff0f4558-99dc-4a12-9b43-2a21d146f357', 'e00885dc-c3a8-4895-91ea-7b188dd70572', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-03-27', '2026-03-27', 3490, FALSE, FALSE, 'COMPLETADO', 473, 'Principal villa visan', 'San Pedro de Macorís', 'RECAUDADO', '2026-03-27', 292),
+('739783bd-1de4-4a77-903e-4f2a8c335675', 'b372eb39-38d5-4061-84f3-427506be04e1', NULL, 'cancelado', '2026-03-27', NULL, 3490, FALSE, FALSE, 'CANCELADO', 0, 'Fantino frente al parque', 'Fantino', 'PENDIENTE', NULL, 293),
+('4abad2ab-6fb6-46b1-8620-ad81123f7ffd', '539bbf17-20a0-4193-af35-4dbc0bc2b6d7', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-03-27', '2026-03-27', 3490, FALSE, FALSE, 'COMPLETADO', 473, 'Los indios 48 barrio lindo', 'San Pedro de Macorís', 'RECAUDADO', '2026-03-27', 294),
+('c42ae2ae-d8e3-4208-9021-6de65fbee375', 'f1686120-f79e-45e7-87e3-4c753203fb29', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-03-28', '2026-03-28', 3490, FALSE, FALSE, 'COMPLETADO', 473, 'Detrás escuela en la Sánchez', 'Sabaneta (San Ignacio de Sabaneta)', 'RECAUDADO', '2026-03-28', 295),
+('881dc0c7-d2f3-48f2-b01d-4248e5fbb934', '9fa10049-3ba2-4ff9-b0f0-edfe71283434', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-03-28', '2026-03-28', 3490, FALSE, FALSE, 'COMPLETADO', 473, 'Calle 14, edeificio Mariela, número 15, cerro don Antonio, santiago', 'Santiago de los Caballeros', 'RECAUDADO', '2026-03-28', 296),
+('afe28838-d90d-4b30-a1aa-d9534c9e01a1', '1215ca30-5cf9-4a29-acd7-2fb698d7ccbb', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-03-28', '2026-03-28', 3490, FALSE, FALSE, 'COMPLETADO', 500, 'La colonia', 'Jarabacoa', 'RECAUDADO', '2026-03-28', 297),
+('8ed0ed37-eecd-4673-852c-e0219fe332c4', '2df294e9-05d2-46f1-b58d-3c61b7c6525b', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'devuelto', '2026-03-28', NULL, 3490, FALSE, FALSE, 'DEVOLUCION', 400, 'Barrio San Pedro', 'Higüey (Salvaleón de Higüey)', 'PENDIENTE', NULL, 298),
+('c8abfbc0-560e-4491-814b-6311e8879853', 'b4637e2d-4352-4c19-8528-bd8a95ed9aff', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-03-28', '2026-03-28', 3490, FALSE, FALSE, 'COMPLETADO', 473, 'Calle segunda, edificio H&S 2 apartamento 203, detrás de repuesto sandro', 'La Romana', 'RECAUDADO', '2026-03-28', 299),
+('5afb9e3b-531d-4f73-acb4-2e8d14cc336b', '079bf3df-3c84-4aca-a901-119ee32309e1', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 'entregado', '2026-03-28', '2026-03-28', 3490, FALSE, FALSE, 'COMPLETADO', 530, 'Darío franco', 'Nigua (San Gregorio de Nigua)', 'RECAUDADO', '2026-03-28', 300);
+
+INSERT INTO pedidos (id, cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega,
+  precio_total, es_testeo, es_prueba_interna, estado_original, costo_envio,
+  ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num) VALUES
+('3c2e15ef-2444-4f9d-b662-1ec1a5e9347b', '59ed10d9-378c-4520-8fe9-f8c011bff09a', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 'entregado', '2026-03-28', '2026-03-28', 3490, FALSE, FALSE, 'COMPLETADO', 450, 'Calle Juan Goico Alix #57, Ensanchez ozama', 'Santo Domingo Este', 'RECAUDADO', '2026-03-28', 301),
+('bf3f22ca-d398-456e-94d0-8ff63a39387c', '47d84e4f-4e02-4ff7-a1db-4d6d522c095a', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 'cancelado', '2026-03-28', NULL, 3490, FALSE, FALSE, 'CANCELADO', 0, 'Calle máximo Cabral #4 Gazcue', 'Santo Domingo', 'PENDIENTE', NULL, 302),
+('190adf35-c3a8-4875-9bcf-e74559faec3c', '47d84e4f-4e02-4ff7-a1db-4d6d522c095a', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 'cancelado', '2026-03-28', NULL, 3490, FALSE, FALSE, 'CANCELADO', 0, 'Calle máximo Cabral #4 Gazcue', 'Santo Domingo', 'PENDIENTE', NULL, 303),
+('a7b0ca3d-2b72-4709-aca0-5e14a6bc359e', '5d9555e3-c759-4385-bc0e-22faec453b7a', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-03-28', '2026-03-28', 2990, FALSE, FALSE, 'COMPLETADO', 453, 'Carretera Higüey , yuma km 1 , Auto Haus , a Higüey , la Altagracua', 'Higüey (Salvaleón de Higüey)', 'RECAUDADO', '2026-03-28', 304),
+('1e1fc602-d98b-4452-9df0-5e1d003da31b', '80e0008b-4b8c-4324-aeb1-bda21d75df56', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-03-28', '2026-03-28', 3490, FALSE, FALSE, 'COMPLETADO', 453, 'Calle principal #38 los parmarito', 'San José de Ocoa', 'RECAUDADO', '2026-03-28', 305),
+('57460c9b-2cf9-4d55-93e6-b734afcc244c', 'be363dff-22f5-40d9-9530-13d2506c297f', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'devuelto', '2026-03-29', NULL, 3490, FALSE, FALSE, 'DEVOLUCION', 400, 'Mella  número 106 frénateal banco de reservas', 'Cotuí', 'PENDIENTE', NULL, 306),
+('5624ae5c-b3c5-495d-ba40-c286b99e063b', '7b2815b6-a7e2-40af-8757-a833805c1023', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-03-29', '2026-03-29', 2990, FALSE, FALSE, 'COMPLETADO', 453, 'Bario puerto rico a 5 casa del colmado julio', 'Hato Mayor (Hato Mayor del Rey)', 'RECAUDADO', '2026-03-29', 307),
+('9e354fe0-6558-4dc3-a9b0-2cfa6f58ed75', 'f1e3561c-7787-4184-99c8-9fa20227829c', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-03-29', '2026-03-29', 4290, FALSE, FALSE, 'COMPLETADO', 532, 'Pinar quemado', 'Jarabacoa', 'RECAUDADO', '2026-03-29', 308),
+('147f5adb-e7ca-43d4-ab58-cc98447a63a5', '9d5b8172-26f0-4713-a4e2-01baa288a9c4', NULL, 'cancelado', '2026-03-29', NULL, 3490, FALSE, FALSE, 'CANCELADO', 0, 'callé circunvalación', 'Haina (Bajos de Haina)', 'PENDIENTE', NULL, 309),
+('b1244869-9c12-499a-ae1c-330a799133bd', '53b70f12-754b-4b1f-bb7e-28bb482622a5', NULL, 'cancelado', '2026-03-29', NULL, 3490, FALSE, FALSE, 'CANCELADO', 0, 'María Trinidad Sánchez k/17 las americas sector nuevos amanecer', 'Santo Domingo Este', 'PENDIENTE', NULL, 310),
+('4ca6412d-4932-432f-94f6-458ffa2e4dde', '5b27897b-07bc-4624-85c4-0c7b220ab3e7', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 'entregado', '2026-03-29', '2026-03-29', 3490, FALSE, FALSE, 'COMPLETADO', 400, 'Calle pupito peguero # 11', 'Santo Domingo Este', 'RECAUDADO', '2026-03-29', 311),
+('cb7e8201-450c-4d35-94ba-2551c2c4c803', 'd89e691e-dcf4-46e5-bf77-d31d8dc6e88f', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-04-05', '2026-04-05', 2990, FALSE, FALSE, 'COMPLETADO', 453, 'En los jardines metropolitanos calle 1.', 'Santiago de los Caballeros', 'RECAUDADO', '2026-04-05', 312),
+('6aef80f1-4377-4c01-af0a-f04954deb1c3', 'f847ac5a-caa9-40df-8a8e-480a08afafc9', NULL, 'cancelado', '2026-04-05', NULL, 3490, FALSE, FALSE, 'CANCELADO', 0, 'Don jaime', 'Santiago de los Caballeros', 'PENDIENTE', NULL, 313),
+('1ce8c25b-99eb-452c-849a-2a3f03ad2510', '20c492cc-d155-4153-9164-80829abef55f', NULL, 'cancelado', '2026-04-05', NULL, 2990, FALSE, FALSE, 'CANCELADO', 0, 'Los tocone', 'Cotuí', 'PENDIENTE', NULL, 314),
+('8f59ff55-0023-44bc-91b7-a8a2defe77d2', 'b72a205d-85de-41e8-b107-254cd8caaaa6', NULL, 'cancelado', '2026-04-05', NULL, 3490, FALSE, FALSE, 'CANCELADO', 0, 'Los callenes', 'Las Lagunas de Nisibón (Higüey)', 'PENDIENTE', NULL, 315),
+('f5d3aa20-0245-4757-ad0f-0711c79767b0', 'b0628b60-ed93-4fa6-aba6-fd3150d17ca2', NULL, 'cancelado', '2026-04-05', NULL, 3490, FALSE, FALSE, 'CANCELADO', 0, 'Poli', 'San Juan', 'PENDIENTE', NULL, 316),
+('5cc74c0f-6abf-4a66-89d2-2d85c42d6e59', '78af0da6-8858-4a68-b59a-e76ff6ee9125', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-04-05', '2026-04-05', 4290, FALSE, FALSE, 'COMPLETADO', 532, 'Avenida España, Lobato  de Friusa y yo', 'Bávaro', 'RECAUDADO', '2026-04-05', 317),
+('db9faf5d-adc8-4764-a97d-f35e3065962a', 'fc92ebc6-e8b1-4245-a0c0-6357afbbe3d2', NULL, 'cancelado', '2026-04-06', NULL, 3490, FALSE, FALSE, 'CANCELADO', 0, 'San Cristóbal', 'San Cristóbal', 'PENDIENTE', NULL, 318),
+('a8ef1498-bc64-4777-ab26-4cee6349d42e', '1e65a9fa-f9f8-434b-ace3-595a1ab79352', NULL, 'cancelado', '2026-04-06', NULL, 3490, FALSE, FALSE, 'CANCELADO', 0, 'Callejón Los Espinales, C. Parada Vieja 77', 'Licey al Medio', 'PENDIENTE', NULL, 319),
+('d4157316-052d-4300-9c42-d0f307637484', 'dcc81e53-35d8-42e9-a09e-15a737b832d6', NULL, 'cancelado', '2026-04-06', NULL, 3490, FALSE, FALSE, 'CANCELADO', 0, 'Residencial palmera oriental etapa 4 edificio k 103', 'Santo Domingo Este', 'PENDIENTE', NULL, 320),
+('4eef27cf-bdd8-4958-826c-577cee7f4a9b', 'dcc81e53-35d8-42e9-a09e-15a737b832d6', NULL, 'cancelado', '2026-04-06', NULL, 3490, FALSE, FALSE, 'CANCELADO', 0, 'Residencial palmera oriental etapa 4 edificio k 103 autopista de san Isidro', 'Santo Domingo Este', 'PENDIENTE', NULL, 321),
+('f48674b9-9e63-4dec-9a9e-3b518a72838c', 'f4fa3e7d-26ec-463b-a770-22b362531023', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-04-06', '2026-04-06', 3490, FALSE, FALSE, 'COMPLETADO', 473, 'Prolongación hostos sector Juan Pablo Duarte justo detrás de la fortaleza', 'Cotuí', 'RECAUDADO', '2026-04-06', 322),
+('a77151a1-e67c-4869-946e-2b6be9514f78', 'abd153ed-ecaa-4a86-b04c-c690ca75f9fc', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-04-06', '2026-04-06', 3490, FALSE, FALSE, 'COMPLETADO', 473, 'Edifico 5 apto D, manzana 4, Villa Liberación', 'San Juan', 'RECAUDADO', '2026-04-06', 323),
+('ad8dcb25-25eb-4f98-b39f-b03a12347028', '47740852-747c-4f36-9ab3-38dd50ac6e1e', NULL, 'pendiente', '2026-04-07', NULL, 3490, FALSE, FALSE, 'EN ESPERA', 0, 'Km 19 las Américas en el sector La Ureña', 'Santo Domingo Este', 'PENDIENTE', NULL, 324),
+('eb40f79f-5994-4147-9811-cbee793ffdf6', '0918f9d7-6011-4bef-8b5f-03997c51ce11', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 'entregado', '2026-04-07', '2026-04-07', 4290, FALSE, FALSE, 'COMPLETADO', 400, 'Sector km.12 de Haina, Autopista 30 de Mayo B/Guzman, C/ 1ra. #37', 'Santo Domingo Oeste', 'RECAUDADO', '2026-04-07', 325),
+('00f10bc7-a586-4e7e-a9ce-c451d3cd09ee', '2632b391-b556-42a7-aa7d-c7b0ab3a326b', NULL, 'confirmado', '2026-04-07', NULL, 3490, FALSE, FALSE, 'EN RUTA', 0, 'Ciudad del sol 318', 'Verón', 'PENDIENTE', NULL, 326),
+('116c3ef8-7da6-4588-9208-5b1dd5b05eeb', '93941c12-ece5-4172-bbd8-26e6036f7011', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 'entregado', '2026-04-07', '2026-04-07', 3490, FALSE, FALSE, 'COMPLETADO', 400, 'Calle 2da. NO. 8,URB.MRRBELLA 2DA.LOS FRAILES ll', 'Santo Domingo Este', 'RECAUDADO', '2026-04-07', 327),
+('990fb261-a3b5-41f5-ae7b-670a3ea43742', 'bee030e3-58b1-4076-b2fe-b4a2b852f1c5', NULL, 'cancelado', '2026-04-08', NULL, 3490, FALSE, FALSE, 'CANCELADO', 0, 'San Antonio, calle primera casa número 26', 'La Vega (Concepción de la Vega)', 'PENDIENTE', NULL, 328),
+('22476911-c1a8-4616-9e8c-60a3fd5f331c', 'ecc430c1-0f8f-4f10-8728-294f254e85dd', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-04-08', '2026-04-08', 3490, FALSE, FALSE, 'COMPLETADO', 473, 'Calle Antonio Guzmán', 'Monte Plata', 'RECAUDADO', '2026-04-08', 329),
+('28890775-fd88-422f-8f28-c9c4c8bd3a39', '4abeac91-4a28-4e53-ae98-c72a3a50efbe', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-04-08', '2026-04-08', 3490, FALSE, FALSE, 'COMPLETADO', 473, 'Matancitas, al lado de la escuela primaria clara brens', 'Nagua', 'RECAUDADO', '2026-04-08', 330),
+('e58b888f-91a1-4a96-a28c-89fdbb945622', '76bec5c1-22f4-4bd6-a6f7-e4fc91393a8e', NULL, 'pendiente', '2026-04-08', NULL, 3490, FALSE, FALSE, 'LLAMAR', 0, 'Sabana Larga', 'Mao (Santa Cruz de Mao)', 'PENDIENTE', NULL, 331),
+('cbd6b5d7-0acf-4ceb-b56b-888c8831cb32', '650e33e7-d5b7-4a62-a276-fad0ba65d4bd', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 'devuelto', '2026-04-08', NULL, 2990, FALSE, FALSE, 'DEVOLUCION', 0, 'Calle Puerto Rico número 44 de Sánchez Ozama', 'Santo Domingo Este', 'PENDIENTE', NULL, 332),
+('40cbab00-e44c-4ef9-8de5-111beff794e8', '0bbade16-3102-4b4b-b235-0d1cc2750592', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 'entregado', '2026-04-09', '2026-04-09', 4290, FALSE, FALSE, 'COMPLETADO', 350, 'C/6#25 resd. Brisas del Valle las charcas', 'Santiago de los Caballeros', 'RECAUDADO', '2026-04-09', 333),
+('b437f8ba-f397-41cf-9885-05a3b72957f5', 'bfea99b5-5b5d-4545-a96e-0e9de81bc521', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 'devuelto', '2026-04-09', NULL, 4290, FALSE, FALSE, 'DEVOLUCION', 0, 'Calle Plácida del Río 3', 'La otra Banda (Higüey)', 'PENDIENTE', NULL, 334),
+('c6bff29d-dc88-4f8c-b413-6d9110dc1f54', 'f2b47842-9f87-46cd-a511-4e9d7f9e91a7', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 'entregado', '2026-04-09', '2026-04-09', 4290, FALSE, FALSE, 'COMPLETADO', 350, 'Viya nabarro', 'Hato Mayor (Hato Mayor del Rey)', 'RECAUDADO', '2026-04-09', 335),
+('51bd79de-bba6-4ec7-90e2-9279ab986188', '76bec5c1-22f4-4bd6-a6f7-e4fc91393a8e', NULL, 'cancelado', '2026-04-09', NULL, 3490, FALSE, FALSE, 'CANCELADO', 0, 'Sabana Larga', 'Mao (Santa Cruz de Mao)', 'PENDIENTE', NULL, 336),
+('284f6d94-8431-45b0-8688-7c9065fff96f', 'b9ec323f-5f70-4da7-afa2-1840b5cd9028', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 'entregado', '2026-04-10', '2026-04-10', 3490, FALSE, FALSE, 'COMPLETADO', 350, 'Presidencial, La Palma, calle Palma, Real, esquina, licuada número uno', 'La Romana', 'RECAUDADO', '2026-04-10', 337),
+('e1b22d6b-03d1-410b-a139-3da627a9d11b', '0c002b9d-ff05-48a5-b877-f4403d62add6', NULL, 'cancelado', '2026-04-10', NULL, 3490, FALSE, FALSE, 'SIN COBERTURA', 0, 'Calle principal número 1', 'Yaguate (San Gregorio de Yaguate)', 'PENDIENTE', NULL, 338),
+('6e81a3b5-593a-4778-bdce-a8d87785c2a1', '70481ddd-682b-4b85-9571-2ddc2985c517', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 'cancelado', '2026-04-10', NULL, 2990, FALSE, FALSE, 'CANCELADO', 0, 'Ciudad las palmas', 'Punta Cana', 'PENDIENTE', NULL, 339),
+('9e33eaa6-e98d-432c-a113-3fb0f63644b2', '31b4b708-b0d9-4716-b292-fb1e7233cfde', NULL, 'cancelado', '2026-04-10', NULL, 4118.2, FALSE, FALSE, 'SIN COBERTURA', 0, 'cabarete, casa67 atras de electromueble mario', 'sosua', 'PENDIENTE', NULL, 340),
+('2fe769ac-5160-473d-86bf-56282188253c', 'd852dd5a-ca03-4eb3-a2e6-648b457113c5', NULL, 'cancelado', '2026-04-10', NULL, 3490, FALSE, TRUE, 'PRUEBA', 0, 'Prueba', 'Santo Domingo', 'PENDIENTE', NULL, 341),
+('14e4896a-80a6-43e7-9faa-2262110880ce', '282cc57b-2bfe-4663-aaa2-9a56c54a2aeb', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 'cancelado', '2026-04-10', NULL, 1950, FALSE, FALSE, 'CANCELADO', 0, 'Circunvalación veron', 'Punta Cana', 'PENDIENTE', NULL, 342),
+('65ed011d-df1c-4601-8c83-0b819db866ce', '1739e739-fa7d-41e6-bcb6-73b12e393b5f', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 'cancelado', '2026-04-11', NULL, 3490, FALSE, FALSE, 'CANCELADO', 0, 'C1era.31, San Antonio', 'Laguna Salada', 'PENDIENTE', NULL, 343),
+('b9dd6c86-10b4-4cf9-b85a-338d0b981353', '087f8094-f58b-484d-8da6-04dd891d2ff3', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 'entregado', '2026-04-11', '2026-04-11', 1950, FALSE, FALSE, 'COMPLETADO', 350, 'Calle Altagracia esquina luperon plaza empire local  #5', 'Nagua', 'RECAUDADO', '2026-04-11', 344),
+('a7267a4a-c09f-4fa8-a264-b67712475a2b', 'e19d2aef-e090-4195-837f-17334cfbf597', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 'cancelado', '2026-04-11', NULL, 1950, FALSE, FALSE, 'CANCELADO', 0, 'Hermano buenas', 'Azua (Azua de Compostela)', 'PENDIENTE', NULL, 345),
+('6a0e58ce-ee54-42ea-8a6e-778f78eb1b46', 'f4775fca-db11-494d-ac2b-d63dfaeb3235', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 'cancelado', '2026-04-12', NULL, 3490, FALSE, FALSE, 'CONFIRMADO  SIN STOCK', 0, 'ALTAGRACIA #69', 'Higüey (Salvaleón de Higüey)', 'PENDIENTE', NULL, 346),
+('cbf3a42b-afbd-463b-82fd-92af98b32ae1', '9db4bc5b-8d1b-48ac-bb3e-746c588a7c60', NULL, 'cancelado', '2026-04-13', NULL, 3390, FALSE, FALSE, 'CANCELADO', 0, '6omelia', 'La Vega (Concepción de la Vega)', 'PENDIENTE', NULL, 347),
+('d56e81f8-a650-4d65-ae0e-4662606ec6b6', '637bdcdb-25d1-4100-98a3-71ec65ba529d', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 'entregado', '2026-04-13', '2026-04-13', 4290, FALSE, FALSE, 'COMPLETADO', 350, 'Res. Don Julián #22. Sector La Villa; C/Los Santos.', 'Bonao', 'RECAUDADO', '2026-04-13', 348),
+('6b3c21f2-50b1-47be-b8ed-43950efc5f16', '3880bca2-1380-45b4-84e3-3804898dbebb', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 'entregado', '2026-04-14', '2026-04-14', 2490, FALSE, FALSE, 'COMPLETADO', 400, 'Av Romulo Betancourt No. 1149, Plaza Daviana, Mirador Norte', 'Santo Domingo', 'RECAUDADO', '2026-04-14', 349),
+('1560b1b9-6c5a-4cef-b5b1-05335442bf87', '06f73b93-0913-4fe7-a660-c46cf9510122', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 'devuelto', '2026-04-14', NULL, 1990, FALSE, FALSE, 'DEVOLUCIÓN', 0, 'San isidro', 'Santo Domingo Este', 'PENDIENTE', NULL, 350);
+
+INSERT INTO pedidos (id, cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega,
+  precio_total, es_testeo, es_prueba_interna, estado_original, costo_envio,
+  ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num) VALUES
+('fd6dfe73-c89e-4bfa-954d-20ef17280844', 'c2585958-b0cc-4a4a-8b7a-3612da3e557b', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 'cancelado', '2026-04-14', NULL, 2490, FALSE, FALSE, 'CANCELADO', 0, 'Avenida del Francisco Sanchez', 'Samaná (Santa Bárbara de Samaná)', 'PENDIENTE', NULL, 351),
+('f5feb001-8835-406d-821e-dedef0368073', 'd3c5c2c9-e3a6-4075-83f8-bf85818ab1b3', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 'devuelto', '2026-04-15', NULL, 2490, FALSE, FALSE, 'DEVOLUCIÓN', 0, 'La balsa', 'San Luis', 'PENDIENTE', NULL, 352),
+('9c84b109-9ea5-4762-86da-062edb45c1b9', '4083ccc8-6b4d-48ac-bb03-02be0f46e5d7', NULL, 'cancelado', '2026-04-15', NULL, 2490, FALSE, FALSE, 'CANCELADO', 0, 'Próximo al parque', 'Juan Santiago', 'PENDIENTE', NULL, 353),
+('0eab3019-d857-400f-93df-bea050534485', 'a9c25384-cb19-450a-acc2-bf4ee12857c5', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 'devuelto', '2026-04-15', NULL, 2490, FALSE, FALSE, 'DEVOLUCION', 370, 'Principal', 'Monte Plata', 'PENDIENTE', NULL, 354),
+('db918a01-352e-4cb3-8cc6-dd98442660d0', 'd513201e-bb12-40c4-871d-11df3bb100dd', NULL, 'cancelado', '2026-04-15', NULL, 2490, FALSE, FALSE, 'CANCELADO', 0, 'Domingo mais', 'Verón', 'PENDIENTE', NULL, 355),
+('cc3ed396-0754-4f25-a69c-cc9111fe6d66', 'f2273b1e-da85-424e-a9eb-272e851c595c', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 'devuelto', '2026-04-15', NULL, 2490, FALSE, FALSE, 'DEVOLUCIÓN', 0, 'Buena vista primera calle 36 8', 'Santo Domingo Norte', 'PENDIENTE', NULL, 356),
+('94f29182-7be6-45ae-bc23-acdd70631cab', 'cf908a6c-7f5d-4cee-9532-5223d0a89724', NULL, 'cancelado', '2026-04-15', NULL, 3190, FALSE, FALSE, 'CANCELADO', 0, 'Boulevard turístico del este friusa', 'Punta Cana', 'PENDIENTE', NULL, 357),
+('e872aa40-b656-4ee9-ab55-202eb85b2ecc', 'c96d6a51-88b0-4614-ad9c-da297d9f3d9d', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 'entregado', '2026-04-15', '2026-04-15', 2938.2, FALSE, FALSE, 'COMPLETADO', 350, 'barrio carlos daniel, calle Simon Bolivar 34', 'mao', 'RECAUDADO', '2026-04-15', 358),
+('85095238-a875-4cc2-b087-f91077e5d3c7', '13bc40a9-f243-492d-b9fa-49e46656a97e', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 'devuelto', '2026-04-16', NULL, 2490, FALSE, FALSE, 'DEVOLUCIÓN', 0, 'Cjon B, Av. México 50', 'Santo Domingo Oeste', 'PENDIENTE', NULL, 359),
+('0136f308-efca-4bd4-a8b0-6b47fd90a5e1', '77c87aea-c8ba-461e-bb9e-3ea04817ab32', NULL, 'cancelado', '2026-04-16', NULL, 1990, FALSE, FALSE, 'CANCELADO', 400, 'Calle higuera esquina carambola', 'Puerto Plata (San Felipe de Puerto Plata)', 'PENDIENTE', NULL, 360),
+('bf149688-e8d9-497e-a60b-e3aea109b81e', 'bb47a0af-c44d-4d7f-a710-1118f08551d4', NULL, 'pendiente', '2026-04-17', NULL, 2390, TRUE, FALSE, 'TESTEO EN ESPERA', 0, 'Nordesa 111 calle d 64', 'Santo Domingo Este', 'PENDIENTE', NULL, 361),
+('6310e6e0-6bb0-4066-b7b1-1a0440399647', '6e66725f-051c-42b0-8681-9cc273eabdf5', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 'confirmado', '2026-04-17', NULL, 2390, TRUE, FALSE, 'TESTEO CONFIRMADO', 0, 'Torre real II apt G5', 'Santiago de los Caballeros', 'PENDIENTE', NULL, 362),
+('aaa2a36f-5427-4dbf-98ce-d6168e6a3307', '07545efd-fc22-433a-85ac-bf29fc6bdb37', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 'devuelto', '2026-04-17', NULL, 2490, FALSE, FALSE, 'DEVOLUCIÓN', 0, 'Betty palave', 'Santo Domingo', 'PENDIENTE', NULL, 363),
+('cf5adb8b-e90f-40a0-a7e1-e090956f3d70', 'fb0bde35-ca78-4265-984f-5b899b55349b', NULL, 'cancelado', '2026-04-17', NULL, 2490, FALSE, FALSE, 'SIN COBERTURA', 0, 'C/ Duarte  34', 'Villa Isabela', 'PENDIENTE', NULL, 364),
+('17d27da4-3dc1-4f8c-9421-05ab0c485b05', 'f71f077d-dbd1-4050-9cff-7c44a20a9da1', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 'entregado', '2026-04-17', '2026-04-17', 2490, FALSE, FALSE, 'COMPLETADO', 400, 'Villa juana', 'Santo Domingo Norte', 'RECAUDADO', '2026-04-17', 365),
+('26fed113-9f89-4d20-93c0-619d596001e3', '75a11bac-c654-481a-96e9-eecdf7bccbca', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 'entregado', '2026-04-18', '2026-04-18', 2490, FALSE, FALSE, 'COMPLETADO', 350, 'Calle 9 esq niño rizek', 'San Francisco de Macorís', 'RECAUDADO', '2026-04-18', 366),
+('7eb3e1aa-2027-464a-adcb-014f8773035a', '752a06f5-b78e-4e40-b134-9ac37d12187b', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 'devuelto', '2026-04-18', NULL, 2490, FALSE, FALSE, 'DEVOLUCION', 0, 'Detra de los bombero', 'Salcedo (Juana Núñez)', 'PENDIENTE', NULL, 367),
+('881176c0-43df-4b98-adf0-9d91fb959a04', '7d7335a3-c825-451f-872e-e978554472b8', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 'entregado', '2026-04-18', '2026-04-18', 3190, FALSE, FALSE, 'COMPLETADO', 350, 'Las Palomas carretera sabaneta, Residencial Ciprés', 'Las Palomas', 'RECAUDADO', '2026-04-18', 368),
+('85018702-cb94-4be4-98f0-11acd637923c', '10031de9-eee1-4bd2-bd11-d296a9217464', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 'entregado', '2026-04-18', '2026-04-18', 2490, FALSE, FALSE, 'COMPLETADO', 350, 'Azucena 111 Apto E-401 El portal al lado de Pricesmart', 'Santiago de los Caballeros', 'RECAUDADO', '2026-04-18', 369),
+('e2fb32fc-64d5-4e95-bcda-763c38caa4b1', '36408cf1-86ed-4db8-a8f4-bec998b9aaf9', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 'devuelto', '2026-04-19', NULL, 2490, FALSE, FALSE, 'DEVOLUCIÓN', 0, 'Timoteo ogando numero 31 san geronimonimo', 'Santo Domingo', 'PENDIENTE', NULL, 370),
+('878ff6a0-f783-4057-949c-17544a34fdaf', '93587ef9-146c-45b1-a3ef-22b7d2377837', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 'devuelto', '2026-04-19', NULL, 1990, FALSE, FALSE, 'DEVOLUCION', 0, 'Juan Gomez', 'Santo Domingo Este', 'PENDIENTE', NULL, 371),
+('c9dd188e-c94e-4a13-845d-5ef6a54f0f19', 'e4a580fc-2360-4af1-a71a-69d98a9f3b11', NULL, 'pendiente', '2026-04-19', NULL, 3190, FALSE, FALSE, 'SIN WHATSAP', 0, 'Joaquín Balaguer / villa cerro #16', 'Higüey (Salvaleón de Higüey)', 'PENDIENTE', NULL, 372),
+('27672ad6-237b-4774-b54a-4daebc78af23', '8eae6f08-6da4-4ec5-b304-dc466050e913', NULL, 'cancelado', '2026-04-20', NULL, 2490, FALSE, FALSE, 'CANCELADO', 0, 'Hectáreas p.quezada #1', 'La Romana', 'PENDIENTE', NULL, 373),
+('9d9569df-eb62-451d-8e2e-81f25a42f835', 'bea32038-4c98-41fb-9f82-9d7fde0f26e6', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 'entregado', '2026-04-20', '2026-04-20', 2490, FALSE, FALSE, 'COMPLETADO', 350, 'Carretera Sánchez salida Azúa San Juan', 'Azua (Azua de Compostela)', 'RECAUDADO', '2026-04-20', 374),
+('6b1ba803-3c7a-4cc7-8df7-ad049c4733bc', 'bdd24c6e-22c7-4a0f-b30a-562deb753b16', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 'entregado', '2026-04-21', '2026-04-21', 1990, FALSE, FALSE, 'COMPLETADO', 350, 'Primera complejo deportivo', 'San Pedro de Macorís', 'RECAUDADO', '2026-04-21', 375),
+('c5e09b62-70a1-4e3a-a223-48d965e11277', '8b7b6933-c033-4923-96b5-4826d0287a78', NULL, 'cancelado', '2026-04-21', NULL, 2490, FALSE, FALSE, 'SIN COBERTURA', 0, '102 av francisco rosario', 'Juan Santiago', 'PENDIENTE', NULL, 376),
+('fe3dd53d-284d-43cf-a092-b8437ea053a6', 'd44bb0b8-214b-49bb-88c9-f6c719181320', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 'confirmado', '2026-04-22', NULL, 2500, TRUE, FALSE, 'TESTEO CONFIRMADO', 0, 'Coronel Rafael Thomas Fernandez Domínguez Cayenas 3 Edf G 304', 'Santo Domingo Este', 'PENDIENTE', NULL, 377),
+('5f63fafd-8a8a-4559-b627-fcb574437c31', 'f42f98a2-1df6-490d-ac59-840a27805272', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 'confirmado', '2026-04-22', NULL, 1950, TRUE, FALSE, 'TESTEO CONFIRMADO', 0, 'Miguel Ángel Monclus #72, Torre Kairos III, mirador norte (cerca de la Núñez de Cáceres)', 'Santo Domingo', 'PENDIENTE', NULL, 378),
+('f02308ef-4125-4c2e-8743-a27035ac5348', '0937d115-8285-4091-ad92-6dd02be610ee', NULL, 'pendiente', '2026-04-22', NULL, 2500, TRUE, FALSE, 'TESTEO', 0, 'Santiago', 'Santiago de los Caballeros', 'PENDIENTE', NULL, 379),
+('c238e37d-5c29-42f3-9b81-93d79f3eaa7a', 'eaef8b6a-4c90-406d-a8a0-1907ffb628ee', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 'confirmado', '2026-04-22', NULL, 1950, TRUE, FALSE, 'TESTEO CONFIRMADO', 0, 'Escribir Antes De Entregar', 'Puerto Plata (San Felipe de Puerto Plata)', 'PENDIENTE', NULL, 380),
+('8279a32d-dd59-45aa-9553-06123ade621a', 'a1625998-42cf-41fe-bb28-b2161fe1e27c', NULL, 'pendiente', '2026-04-22', NULL, 2500, TRUE, FALSE, 'TESTEO', 0, 'Cambelen', 'Higüey (Salvaleón de Higüey)', 'PENDIENTE', NULL, 381),
+('827f5212-a893-46b1-bfb7-23a1bb474442', 'f065bcc8-e847-4d32-a57b-40980a83abca', NULL, 'pendiente', '2026-04-23', NULL, 2500, TRUE, FALSE, 'TESTEO', 0, 'Ave. Caonabo #10 torre Taurus III, apartamento 3A', 'Santo Domingo', 'PENDIENTE', NULL, 382),
+('b8ccbfd0-32b5-4bd7-a727-e256c8087d5e', '08115de4-11de-414f-b34b-1b59b64e390b', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 'confirmado', '2026-04-23', NULL, 2500, TRUE, FALSE, 'TESTEO CONFIRMADO', 0, 'Calle Manuela diez edificio L apto 306', 'Santo Domingo', 'PENDIENTE', NULL, 383),
+('3e651eaa-fe33-4b91-a423-682c9028222b', '03196186-d35c-423b-9329-0c642db93640', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 'confirmado', '2026-04-23', NULL, 2900, TRUE, FALSE, 'TESTEO CONFIRMADO', 0, 'Charle de gol brisa los palmarés', 'Santo Domingo', 'PENDIENTE', NULL, 384),
+('e26956e4-b945-43ac-b171-7b703c5ceba2', '58600fa7-6463-4e83-aaf9-fd9a71fc3b98', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 'confirmado', '2026-04-23', NULL, 2500, TRUE, FALSE, 'TESTEO CONFIRMADO', 0, 'Pueblo bavaro las palma 21', 'Verón', 'PENDIENTE', NULL, 385),
+('914239b8-c062-491c-9ca5-287cb57ed486', '6cc77827-e8f2-4be2-902a-a16d173994e3', NULL, 'pendiente', '2026-04-23', NULL, 2500, TRUE, FALSE, 'TESTEO', 0, 'Calla Plutón no 9 Residencial Galaxia', 'Santo Domingo Oeste', 'PENDIENTE', NULL, 386),
+('8e037e4b-007e-40e4-806e-565653bbae87', '92cc2834-c67a-4446-92db-4f5d72afcaf0', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 'cancelado', '2026-04-23', NULL, 2490, FALSE, FALSE, 'CANCELADO', 0, 'Calle colonia 94', 'San Francisco de Macorís', 'PENDIENTE', NULL, 387),
+('99a4a2cc-5c25-4886-9257-03772d2ac1aa', '7d9bdce4-c60a-4e68-ae84-0418020a853f', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 'entregado', '2026-04-23', '2026-04-23', 2490, FALSE, FALSE, 'COMPLETADO', 350, 'Calle meran Villa Mercedes Madrevieja sur', 'San Cristóbal', 'RECAUDADO', '2026-04-23', 388),
+('d460fe78-49fd-4094-8d8c-21fd4339bfdf', '1acbd342-8f5b-4c6f-920c-bd3a1f24b1da', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 'entregado', '2026-04-23', '2026-04-23', 2490, FALSE, FALSE, 'COMPLETADO', 350, 'Carretera Jacagua No 65, Los ciruelitos Yadira Center Transmisión', 'Santiago de los Caballeros', 'RECAUDADO', '2026-04-23', 389),
+('f48e4865-66d5-4861-b19e-ddc863c5911d', '8d1e0766-6c87-4e71-b7b1-fefc17401316', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 'devuelto', '2026-04-23', NULL, 2490, FALSE, FALSE, 'DEVOLUCION', 0, 'Residencial Amarilys 3, Manzana F #3, Pista San Isidro', 'Santo Domingo Este', 'PENDIENTE', NULL, 390),
+('6cb74b75-7adf-45cd-a179-8325021a64a9', 'cc075260-51b0-494a-b41a-27ab6ea2a91b', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 'confirmado', '2026-04-23', NULL, 2500, TRUE, FALSE, 'TESTEO CONFIRMADO', 0, 'Cámara junior 6, barrio los maestros', 'San Pedro de Macorís', 'PENDIENTE', NULL, 391),
+('dd29a9bb-6082-43e2-9438-e7ed8c8ccf18', 'dfb7fe7a-0364-432d-845b-1defee19b2c2', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 'confirmado', '2026-04-24', NULL, 2900, TRUE, FALSE, 'TESTEO CONFIRMADO', 0, 'Próceres de la Restauración #168', 'Sabaneta (San Ignacio de Sabaneta)', 'PENDIENTE', NULL, 392),
+('d394cec8-1164-4fc4-8a60-2d154bc45708', '874a3411-9248-4723-bd4f-15d0f37c4a06', NULL, 'pendiente', '2026-04-24', NULL, 2500, TRUE, FALSE, 'TESTEO EN ESPERA', 0, 'Calle caracol #15 Andrés Boca Chica', 'Boca Chica', 'PENDIENTE', NULL, 393),
+('e51f099b-0b64-4b3e-8e9e-8978682b272a', 'c2db8098-6876-44b0-ac13-79c7aa4f4620', NULL, 'pendiente', '2026-04-24', NULL, 1950, TRUE, FALSE, 'TESTEO EN ESPERA', 0, 'María Mercedes calle D #23', 'Santo Domingo Este', 'PENDIENTE', NULL, 394),
+('0636218d-b0c4-4c80-a564-d6b258278082', 'ed5fb0b9-3c29-4e7f-8d77-0926895528f2', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 'entregado', '2026-04-24', '2026-04-24', 2490, FALSE, FALSE, 'COMPLETADO', 350, 'García Godoy 60 Suite 107', 'La Vega (Concepción de la Vega)', 'RECAUDADO', '2026-04-24', 395),
+('2840a811-2898-4dab-9908-c8a017de6387', '1e5f0e2b-ae76-4b3c-a6bd-ef2049d40288', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 'devuelto', '2026-04-24', NULL, 3190, FALSE, FALSE, 'DEVOLUCION', 0, 'Av Pedro Henriquez Ureña No 135 Torre Tellium II apto 1102', 'Santo Domingo', 'PENDIENTE', NULL, 396),
+('70098579-74da-4239-9369-04481e9371c9', 'a1625998-42cf-41fe-bb28-b2161fe1e27c', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 'confirmado', '2026-04-24', NULL, 2500, TRUE, FALSE, 'TESTEO CONFIRMADO', 0, 'Cambelen', 'Higüey (Salvaleón de Higüey)', 'PENDIENTE', NULL, 397),
+('ee3bd434-512e-4046-b95f-0ba6026ef3ff', '94bc0346-98e0-41c1-a08d-9c48c6537843', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 'entregado', '2026-04-24', '2026-04-24', 2490, FALSE, FALSE, 'COMPLETADO', 350, 'Yunbo', 'La Vega (Concepción de la Vega)', 'RECAUDADO', '2026-04-24', 398),
+('d345a290-10d9-4900-8f6f-e245da0384d1', 'db69cef0-9bd8-46dc-aa7b-6936a7c2e7c9', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 'entregado', '2026-04-24', '2026-04-24', 3190, FALSE, FALSE, 'COMPLETADO', 400, 'Calle puerto Rico edificio patricia apartamento 4c', 'Santo Domingo', 'RECAUDADO', '2026-04-24', 399),
+('e24607dd-2c17-4da3-b874-296be7ed766f', '1cbf6a27-7c1f-478c-a37e-b74b71ebaea3', NULL, 'cancelado', '2026-04-24', NULL, 2490, FALSE, FALSE, 'SIN COBERTURA', 0, 'Los 4 caminos de miches', 'Miches (El Jovero)', 'PENDIENTE', NULL, 400);
+
+INSERT INTO pedidos (id, cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega,
+  precio_total, es_testeo, es_prueba_interna, estado_original, costo_envio,
+  ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num) VALUES
+('e5c884d5-9a1c-40e7-b48b-42a33bff5c19', '1322bac5-203e-4939-b2bc-600533898dba', NULL, 'cancelado', '2026-04-24', NULL, 1990, FALSE, FALSE, 'SIN COBERTURA', 0, 'La unión', 'Sosúa', 'PENDIENTE', NULL, 401),
+('2b5e32d9-3ad4-4a8d-9f84-1ca0481f1db8', 'f42f98a2-1df6-490d-ac59-840a27805272', NULL, 'pendiente', '2026-04-24', NULL, 1950, TRUE, FALSE, 'TESTEO', 0, 'Miguel Ángel Monclus #72, Torre Kairos III, mirador norte (cerca Núñez de Cáceres)', 'Santo Domingo', 'PENDIENTE', NULL, 402),
+('7bf53d25-b9df-4390-8417-54baf9cc8e88', '3b585796-2caf-4af3-9ff1-5e130ac3929a', NULL, 'cancelado', '2026-04-24', NULL, 2490, FALSE, FALSE, 'CANCELADO', 0, 'Paraíso calle Ortiz #3', 'Barahona (Santa Cruz de Barahona)', 'PENDIENTE', NULL, 403),
+('8bb05e1a-e8e2-4ce9-8fde-1ce05b78824b', 'f8c0c493-41a9-4f0d-94ff-114f078039c8', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 'entregado', '2026-04-25', '2026-04-25', 2490, FALSE, FALSE, 'COMPLETADO', 350, 'Costambar calle gurabito condominio luperon edf#7 apto #1', 'Puerto Plata (San Felipe de Puerto Plata)', 'RECAUDADO', '2026-04-25', 404),
+('b93b6c8b-4142-46ad-a09a-dda50e40d276', 'f5d5d91c-c5a4-457d-82f9-bf2664a6b3c6', NULL, 'cancelado', '2026-04-25', NULL, 2490, FALSE, FALSE, 'SIN COBERTURA', 0, '18#44', 'Quisqueya', 'PENDIENTE', NULL, 405),
+('125b0902-9e0f-4934-89fa-cb2686143036', '4db79c37-c05a-485e-87ed-e18f452b0e5a', NULL, 'pendiente', '2026-04-25', NULL, 2490, FALSE, FALSE, 'LLAMAR', 0, 'Calle republica de colombia alto de arroyo  homdo', 'Santo Domingo', 'PENDIENTE', NULL, 406),
+('57055404-001b-4dfc-9590-3c26db92da30', '26447fab-d066-43ff-b0c2-72fea9c5056b', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 'entregado', '2026-04-25', '2026-04-25', 2490, FALSE, FALSE, 'COMPLETADO', 350, 'Mercado publico bonao', 'Bonao', 'RECAUDADO', '2026-04-25', 407),
+('b61f4c9d-73de-4cfe-8cc3-5a999b4893bb', '9dfc6b4e-73bd-494c-821a-bb7499eaf09e', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 'devuelto', '2026-04-26', NULL, 2490, FALSE, FALSE, 'DEVOLUCION', 0, 'Avenida Mario concepción edificio cornelio apto 4a los robles la 3', 'La Vega (Concepción de la Vega)', 'PENDIENTE', NULL, 408),
+('9aae4762-53ee-42eb-9002-f4ea9ab5745e', '08f51413-b2d8-4cc4-babd-f7e1d4b22ad9', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 'entregado', '2026-04-26', '2026-04-26', 2490, FALSE, FALSE, 'COMPLETADO', 350, 'Urbanización Hidalgo, entrando por el Dealer papi motor, edificio nirvana 4 apartamento 201', 'San Francisco de Macorís', 'RECAUDADO', '2026-04-26', 409),
+('2e13f553-a77a-4183-9d6a-8e8f8038e0c4', '02c8dd58-c234-4246-baca-aa76fe87611a', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 'devuelto', '2026-04-26', NULL, 2490, FALSE, FALSE, 'DEVOLUCION', 0, 'Calle Juan de la Cruz Alvarez no. 1 edificio Reynita Linda', 'Santo Domingo', 'PENDIENTE', NULL, 410),
+('17c6199e-aaac-4d54-836c-177423019833', 'b44803f9-27f4-4c93-96a5-7ba437d8651c', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 'devuelto', '2026-04-26', NULL, 2490, FALSE, FALSE, 'DEVOLUCION', 0, 'Independiente', 'Santo Domingo', 'PENDIENTE', NULL, 411),
+('eda7f0dd-be11-42f2-a6a4-aa5a032297b1', '33d4a53f-1ad6-4bd5-9ef3-59398b7eae4d', NULL, 'cancelado', '2026-04-26', NULL, 2490, FALSE, FALSE, 'SIN COBERTURA', 0, 'La barranquita', 'Santiago de los Caballeros', 'PENDIENTE', NULL, 412),
+('d7699466-08f5-44b5-a140-ea77e2c66d64', '0d1968ed-a9b6-4797-9044-7a4c0ba09175', NULL, 'cancelado', '2026-04-26', NULL, 3190, FALSE, FALSE, 'CANCELADO', 0, 'Avenida libertad #06', 'San Francisco de Macorís', 'PENDIENTE', NULL, 413),
+('7ab9758d-84c1-4064-9bf6-5368969048c1', 'fde9afc2-fd86-44db-a1d3-2129de4f5c4f', NULL, 'cancelado', '2026-04-26', NULL, 2490, FALSE, FALSE, 'SIN COBERTURA', 0, 'Calle mella #83nizao', 'Nizao', 'PENDIENTE', NULL, 414),
+('8716222e-6f6c-4030-9b68-ed594e8a09e0', '5d6baf60-1b71-4a30-a854-5387d454e15b', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'devuelto', '2026-04-26', NULL, 2490, FALSE, FALSE, 'DEVOLUCION', 400, 'calle los maestro 13', 'Villa Hermosa', 'PENDIENTE', NULL, 415),
+('96bf2b45-99ec-4d9b-ab49-ec0ab7e4a664', 'c0b9b13b-a4d6-48f5-85ae-d7f2eb7b0dce', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 'entregado', '2026-04-26', '2026-04-26', 2490, FALSE, FALSE, 'COMPLETADO', 350, 'Federico de Jesús garcia #85', 'Villa Vásquez (Santa Ana, Villa Isabel)', 'RECAUDADO', '2026-04-26', 416),
+('3e851c93-7a8f-4422-8d33-128e00dd93a9', '621d42ab-72d0-4f00-9685-b188fada7f6e', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 'devuelto', '2026-04-27', NULL, 2490, FALSE, FALSE, 'DEVOLUCION', 0, '6 de noviembre Sajuor', 'Higüey (Salvaleón de Higüey)', 'PENDIENTE', NULL, 417),
+('934fb1e6-32e3-4dd9-8c18-6e50fad25090', '9cdeca03-1c1c-4980-9640-d6e2c695882e', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 'devuelto', '2026-04-27', NULL, 2490, FALSE, FALSE, 'DEVOLUCION', 0, 'Av. Máximo Gomez ministerio de educación', 'Santo Domingo', 'PENDIENTE', NULL, 418),
+('385e1a5a-945b-40a6-8b40-cb8c7daea10b', 'aa76e9f9-469b-445a-99c1-fe731b6e6f0d', NULL, 'cancelado', '2026-04-27', NULL, 2490, FALSE, FALSE, 'SIN COBERTURA', 0, 'Calle Sanchez  #24', 'Miches (El Jovero)', 'PENDIENTE', NULL, 419),
+('a6f06640-0735-409d-b1c2-062cd609c50a', 'cf5ae537-a7f0-4018-a29d-618381c0c246', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 'entregado', '2026-04-27', '2026-04-27', 2490, FALSE, FALSE, 'COMPLETADO', 400, 'Av. Jacobo majluta #23', 'Santo Domingo Norte', 'RECAUDADO', '2026-04-27', 420),
+('51287443-0241-4bb7-879b-5da42d33106e', '15ab10d1-dc77-4870-b06a-be0f6f4a43a2', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 'devuelto', '2026-04-27', NULL, 2490, FALSE, FALSE, 'DEVOLUCION', 0, 'Calle de la cancha callejón aridio casa de dos niveles al lado de Elias y foco', 'Sosúa', 'PENDIENTE', NULL, 421),
+('2f36b125-de08-4702-9faa-2c360462ec3d', 'f036cc73-5d0f-4995-ac2b-31b9088e50f7', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 'entregado', '2026-04-27', '2026-04-27', 2490, FALSE, FALSE, 'COMPLETADO', 350, 'Manuel Emilio Perdomo #12. Naco', 'Santo Domingo', 'RECAUDADO', '2026-04-27', 422),
+('c7c7d5e1-2bda-4e59-ad5e-91fb4743d2c2', '0773b9c4-8ccf-4b67-ab6f-10727e3e24db', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 'entregado', '2026-04-27', '2026-04-27', 3190, FALSE, FALSE, 'COMPLETADO', 400, '27 de febrero 346 mirador norte', 'Santo Domingo', 'RECAUDADO', '2026-04-27', 423),
+('ee79ceb1-4f4d-4656-a9a7-376f17922e28', 'aa85b1b8-7319-4a5d-b969-8b49171f3727', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 'devuelto', '2026-04-27', NULL, 2490, FALSE, FALSE, 'DEVOLUCION', 0, 'Avenida aniana Vargas', 'Bonao', 'PENDIENTE', NULL, 424),
+('b3d6231a-c455-4bda-b79e-c23b2fdc3c3c', '98336279-e77d-49f7-997a-1777a52931e0', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 'entregado', '2026-04-27', '2026-04-27', 2490, FALSE, FALSE, 'COMPLETADO', 400, 'Ave. Independencia 608, Residencial Yaris', 'Santo Domingo', 'RECAUDADO', '2026-04-27', 425),
+('aae71527-4652-4337-9e87-d53e49697e2e', '752a06f5-b78e-4e40-b134-9ac37d12187b', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 'entregado', '2026-04-28', '2026-04-28', 2490, FALSE, FALSE, 'COMPLETADO', 350, 'Calle A detra de los bomberos en salcedo', 'Salcedo (Juana Núñez)', 'RECAUDADO', '2026-04-28', 426),
+('f27ae249-4660-4b6a-bfb1-d58c51ea8532', '286037cf-7f58-4f7f-a8ca-c08794a32136', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 'devuelto', '2026-04-23', NULL, 2938.2, FALSE, FALSE, 'DEVOLUCION', 0, '-', 'Licey al Medio', 'PENDIENTE', NULL, 427),
+('42fa0c26-c171-4efe-9354-b27104d578f6', '8b7f2dd6-f2e3-483e-acc0-a8ad82e452f9', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-04-28', '2026-04-28', 2490, FALSE, FALSE, 'COMPLETADO', 400, 'Orlando Martínez', 'Sabana Larga', 'RECAUDADO', '2026-04-28', 428),
+('df87e92d-e058-48f2-aae1-462da374edfb', '61d53d96-2468-4a53-b78b-8d9abc40d344', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-04-28', '2026-04-28', 2490, FALSE, FALSE, 'COMPLETADO', 460, 'Lo ciruelo montellano', 'Villa Montellano', 'RECAUDADO', '2026-04-28', 429),
+('f1880e41-2c06-41a2-9dc2-5f8dc50102fd', '0c90b64f-a73a-466b-9835-4f24b5d4723c', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 'devuelto', '2026-04-28', NULL, 2490, FALSE, FALSE, 'DEVOLUCION', 0, 'Amalia', 'Santo Domingo Este', 'PENDIENTE', NULL, 430),
+('fb97a368-7706-4b94-8c83-5d4509bd39fb', '15d7b13a-99ed-4d83-9394-a03f98775b07', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 'entregado', '2026-04-28', '2026-04-28', 2490, FALSE, FALSE, 'COMPLETADO', 400, 'Cul de sac 12 colina de los Ríos', 'Santo Domingo', 'RECAUDADO', '2026-04-28', 431),
+('6e8009ae-2e1f-444e-8aba-7f40460c0d64', '56e4a3b0-9312-49dd-afdb-71b9d5761fab', NULL, 'cancelado', '2026-04-28', NULL, 2490, FALSE, FALSE, 'SIN COBERTURA', 0, 'La Yautia, La Vega, Jarabacoa', 'Jarabacoa', 'PENDIENTE', NULL, 432),
+('4b9fcdf5-bc35-4b14-88a4-0f2abd9f8b5c', 'c55df7c1-ead4-45e9-b2ab-b0e5681aa679', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 'entregado', '2026-04-24', '2026-04-24', 2938.2, FALSE, FALSE, 'COMPLETADO', 350, 'carrer veron punta cana plaza coral hotel local#6', 'Punta Cana', 'RECAUDADO', '2026-04-24', 433),
+('bd0fc524-4efb-4317-a2e1-43d7b607919d', '82726b09-52e8-4562-890c-c77ce6bcfba3', NULL, 'cancelado', '2026-04-16', NULL, 2490, FALSE, FALSE, 'SIN COBERTURA', 0, 'Colmado', 'Sosúa', 'PENDIENTE', NULL, 436),
+('1f0bfea0-5de1-478f-8e2c-00214cb580eb', '5b7daaa8-b46a-47b5-882f-07ae7f9d8eec', NULL, 'cancelado', '2026-05-02', NULL, 2690, FALSE, FALSE, 'CANCELADO', 0, 'Los jardines Santiago plaza don pino', 'Santiago de los Caballeros', 'PENDIENTE', NULL, 437),
+('65f53a71-cacb-4d92-8eac-337a13581c2a', '29c6965a-25f7-4545-9edc-d0b62a6d3a4f', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 'devuelto', '2026-05-02', NULL, 2690, FALSE, FALSE, 'DEVOLUCION', 0, 'García Godoy 60 Suite 107', 'La Vega (Concepción de la Vega)', 'PENDIENTE', NULL, 439),
+('611fafaf-4245-46c0-a369-929aa2bbd99c', '766dbcf2-da4d-4dee-9109-1204c0f86064', NULL, 'cancelado', '2026-05-02', NULL, 3490, FALSE, FALSE, 'CANCELADO', 0, 'Calle #6', 'Santo Domingo Este', 'PENDIENTE', NULL, 440),
+('f84c30c7-1fa3-4654-8742-c874b99243a5', '794eb022-c938-400f-9616-21af1eab4aaa', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 'para_devolucion', '2026-04-28', NULL, 2938.2, FALSE, FALSE, 'PARA DEVOLUCION', 0, 'los cocos calle 7', 'Puerto Plata (San Felipe de Puerto Plata)', 'PENDIENTE', NULL, 441),
+('bca6c2c6-2139-40d0-be8c-6932f1c8c10a', '66cbded2-fe1d-446f-851f-e854d9b2a752', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 'entregado', '2026-05-02', '2026-05-02', 2690, FALSE, FALSE, 'COMPLETADO', 300, 'Banco bhd frente al parque independencia', 'Santo Domingo', 'RECAUDADO', '2026-05-02', 442),
+('e3362748-1982-4537-ae60-47835fb79831', '9341099c-7d8c-4bd4-ac8d-fd5115ed9821', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 'para_devolucion', '2026-05-02', NULL, 2690, FALSE, FALSE, 'PARA DEVOLUCION', 0, 'La Jolla', 'Jarabacoa', 'PENDIENTE', NULL, 443),
+('14bf55df-9a7d-49fe-a42c-261ecb6d742d', 'b1217df5-6b44-450e-bf3e-0887a5467f6c', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 'cancelado', '2026-05-03', NULL, 3174.2, FALSE, FALSE, 'CANCELADO', 0, '-', 'Santo Domingo', 'PENDIENTE', NULL, 444),
+('35017d86-5cd7-49e3-9a44-607d52638186', 'b1332aeb-bf65-455b-9fef-298c202f06b0', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 'cancelado', '2026-05-03', NULL, 3174.2, FALSE, FALSE, 'CANCELADO', 0, '-', 'Sosúa', 'PENDIENTE', NULL, 445),
+('676ecfd0-1ac2-427b-b8ee-3f1500a52195', 'fef10d96-a57c-4cad-b40e-07f6820690d4', NULL, 'cancelado', '2026-05-09', NULL, 3190, FALSE, FALSE, 'CANCELADO', 0, 'Interiol sol 20 el radiante Villa mella', 'Santo Domingo', 'PENDIENTE', NULL, 446),
+('5a4db739-2516-4b6a-9b05-c5f2b76936d1', 'cafb76da-3e15-41f2-a87c-05d14fd0b788', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 'confirmado', '2026-05-09', NULL, 3190, TRUE, FALSE, 'TESTEO CONFIRMADO', 0, 'Arenoso. La vega. Residencial Don Rafael', 'La Vega (Concepción de la Vega)', 'PENDIENTE', NULL, 447),
+('323b0074-da3c-4d6d-bb9e-4fac8e07c2b6', 'dfadffed-4c93-4c54-be58-00b0d9fd9adf', NULL, 'cancelado', '2026-05-09', NULL, 3190, FALSE, FALSE, 'SIN COBERTURA', 0, 'Calle Miguel mercado #17( calle de Santiago)', 'Villa Bisonó (Navarrete)', 'PENDIENTE', NULL, 448),
+('35122216-b6db-40f0-850c-c2794f88302f', 'b91ead83-f5c1-4b3f-a57c-574fb18a61cd', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 'confirmado', '2026-05-09', NULL, 2490, TRUE, FALSE, 'TESTEO CONFIRMADO', 0, 'Calle inviviendad proyecto', 'Santo Domingo Este', 'PENDIENTE', NULL, 449),
+('ec8bf307-e3a3-4139-b199-a95bfbadad6c', 'a42c9610-b67c-4ab5-8ad5-4a95744be552', NULL, 'cancelado', '2026-05-09', NULL, 3190, FALSE, FALSE, 'CANCELADO', 0, 'Santo Domingo', 'Distrito Nacional', 'PENDIENTE', NULL, 450),
+('2146a0aa-423a-470b-b4c8-4e6da6abbaba', 'e731848c-ecab-41dd-9140-57f32d7060fa', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 'cancelado', '2026-05-10', NULL, 3190, FALSE, FALSE, 'CANCELADO', 0, 'San Cristóbal', 'San Cristóbal', 'PENDIENTE', NULL, 451),
+('d39994b4-824f-43e0-87c9-fd4f889cd75c', '39a7b57b-6bab-4783-93c9-2df09d40e34c', NULL, 'pendiente', '2026-05-10', NULL, 2490, FALSE, FALSE, 'NUEVO', 0, 'Santo Domingo Este', 'Santo Domingo', 'PENDIENTE', NULL, 452),
+('d41efe01-5f39-4102-b469-3d48b34a8a23', 'c20b7e13-8d3b-49e2-8801-ff0a1a4c0bc6', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 'cancelado', '2026-05-10', NULL, 3190, FALSE, FALSE, 'CANCELADO', 0, 'San Pedro de Macorís', 'San Pedro de Macorís', 'PENDIENTE', NULL, 453);
+
+INSERT INTO pedidos (id, cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega,
+  precio_total, es_testeo, es_prueba_interna, estado_original, costo_envio,
+  ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num) VALUES
+('7201068d-d503-445f-ac70-c9b5fa415856', '91cc67c6-1d9a-491a-aae3-6091b01c9211', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 'confirmado', '2026-05-10', NULL, 3890, TRUE, FALSE, 'TESTEO CONFIRMADO', 0, 'Jarabacoa', 'La Vega', 'PENDIENTE', NULL, 454),
+('e68f70b3-9afe-4c9e-9e5c-969feb168584', 'd91a2e28-d531-4f1f-81b6-8e878f7ecfaf', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 'confirmado', '2026-05-10', NULL, 2490, TRUE, FALSE, 'TESTEO CONFIRMADO', 0, 'Higüey (Salvaleón de Higüey)', 'La Altagracia', 'PENDIENTE', NULL, 455),
+('1c736202-731c-477a-bbe3-5b8b79125527', '0219ee67-143c-47c8-bfbd-cfe059104755', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 'cancelado', '2026-05-10', NULL, 2490, FALSE, FALSE, 'CANCELADO', 0, 'Santo Domingo Este', 'Santo Domingo', 'PENDIENTE', NULL, 456),
+('a3998d88-b64e-4c1a-9ea0-62b09447eb86', '2335f4a1-4407-4097-b8eb-fe927ed933f2', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 'confirmado', '2026-05-10', NULL, 2490, TRUE, FALSE, 'TESTEO CONFIRMADO', 0, 'Barahona (Santa Cruz de Barahona)', 'Barahona', 'PENDIENTE', NULL, 457),
+('c0571a86-9ddb-4997-b889-d27e55844deb', 'a3fa20ff-dd05-423f-af8e-e1f5e26633ea', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 'confirmado', '2026-05-10', NULL, 3890, TRUE, FALSE, 'TESTEO CONFIRMADO', 0, 'Santiago de los Caballeros', 'Santiago', 'PENDIENTE', NULL, 458),
+('d77e456e-7860-4f97-b660-f0135ad295d9', '2129a8ed-ff8d-401c-83e8-d84910b4e6b9', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 'confirmado', '2026-05-11', NULL, 2490, TRUE, FALSE, 'TESTEO CONFIRMADO', 0, 'Santo Domingo', 'Distrito Nacional', 'PENDIENTE', NULL, 459),
+('f254114e-4553-4af0-806d-64c27ba8d464', 'c1f6abbb-004d-4f61-8790-50075ac93eb6', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 'confirmado', '2026-05-11', NULL, 2490, TRUE, FALSE, 'TESTEO CONFIRMADO', 0, 'Puerto Plata (San Felipe de Puerto Plata)', 'Puerto Plata', 'PENDIENTE', NULL, 460),
+('2733b31f-99c5-4236-aea9-86c426f81332', '0138ce45-6570-49ad-85c4-5c40dec30484', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 'confirmado', '2026-05-11', NULL, 2490, TRUE, FALSE, 'TESTEO CONFIRMADO', 0, 'Santiago de los Caballeros', 'Santiago', 'PENDIENTE', NULL, 461),
+('163acf2f-5967-4487-9dff-60f93f983112', '37d65d12-1fea-4d29-b73b-e58ed908ab93', NULL, 'cancelado', '2026-05-11', NULL, 2490, FALSE, FALSE, 'CANCELADO', 0, 'Santo Domingo', 'Distrito Nacional', 'PENDIENTE', NULL, 462),
+('d452a32f-e3b0-4f9b-81fa-8a4e14c6a68f', '0daa1048-c571-47e1-baa7-7424a0832cf8', NULL, 'pendiente', '2026-05-11', NULL, 3890, FALSE, FALSE, 'DUPLICADO SIN WHATSAP', 0, 'El Pino', 'Dajabón', 'PENDIENTE', NULL, 463),
+('d9b432bc-3f69-4bd0-825d-c7922feede0c', '0daa1048-c571-47e1-baa7-7424a0832cf8', NULL, 'pendiente', '2026-05-11', NULL, 2490, FALSE, FALSE, 'DUPLICADO SIN WHATSAP', 0, 'Cañongo', 'Dajabón', 'PENDIENTE', NULL, 464),
+('52ab7fda-0e58-481c-bdaa-74d2ca9f6168', '0daa1048-c571-47e1-baa7-7424a0832cf8', NULL, 'pendiente', '2026-05-11', NULL, 2490, FALSE, FALSE, 'DUPLICADO SIN WHATSAP', 0, 'Dajabón', 'Dajabón', 'PENDIENTE', NULL, 465),
+('ab291289-93c8-42d8-89e9-c031170587fb', '35e37254-79ed-4fa8-9c3f-964a5334fa2f', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 'confirmado', '2026-05-11', NULL, 3190, TRUE, FALSE, 'TESTEO CONFIRMADO', 0, 'Santo Domingo', 'Distrito Nacional', 'PENDIENTE', NULL, 466),
+('e3fa7bf0-caaf-46cc-8d94-ae6171ac5598', '251496e7-c54b-486e-b560-4e4a3a4fe327', NULL, 'cancelado', '2026-05-11', NULL, 3190, FALSE, FALSE, 'CANCELADO', 0, 'Santo Domingo Norte', 'Santo Domingo', 'PENDIENTE', NULL, 467),
+('345f6435-be06-447a-9c8b-d5b4317bfc1a', '699d45f8-825b-40f2-bdd4-254797791818', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 'confirmado', '2026-05-11', NULL, 3190, TRUE, FALSE, 'TESTEO CONFIRMADO', 0, 'La Vega (Concepción de la Vega)', 'La Vega', 'PENDIENTE', NULL, 468),
+('4d0cd787-77c0-4549-9667-daaadb4df8c8', '74ff5bb7-4e52-41e8-9990-8b597886a8bd', NULL, 'cancelado', '2026-05-11', NULL, 2490, FALSE, FALSE, 'SIN COBERTURA', 0, 'Peralvillo', 'Monte Plata', 'PENDIENTE', NULL, 469),
+('449dea78-7e92-41b5-83bb-edef5c4f9a9f', '054b3391-f0b9-4c4a-aff0-38e0bd05046e', NULL, 'pendiente', '2026-05-11', NULL, 3190, TRUE, FALSE, 'TESTEO', 0, 'San Pedro de Macorís', 'San Pedro de Macorís', 'PENDIENTE', NULL, 470),
+('c9d964a4-e8d2-404d-a35d-db186bb7e19f', 'ab4e4a72-5550-4e92-85ff-8ebae5e158b7', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 'confirmado', '2026-06-05', NULL, 2199, TRUE, FALSE, 'TESTEO CONFIRMADO', 0, 'Santo Domingo', 'Distrito Nacional', 'PENDIENTE', NULL, 471),
+('aa04618a-1245-48e7-97a9-455e731f6158', 'ab4e4a72-5550-4e92-85ff-8ebae5e158b7', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 'confirmado', '2026-06-11', NULL, 2199, TRUE, FALSE, 'TESTEO CONFIRMADO', 0, 'Santo Domingo', 'Distrito Nacional', 'PENDIENTE', NULL, 472),
+('3ceda4fe-4336-4491-91cb-434fc91ddf5c', '2129a8ed-ff8d-401c-83e8-d84910b4e6b9', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 'devuelto', '2026-06-11', NULL, 2490, FALSE, FALSE, 'DEVOLUCION', 400, 'Santo Domingo', 'Distrito Nacional', 'PENDIENTE', NULL, 473),
+('60c9f140-2a8a-4526-95f3-fd7159f2c37a', 'e4f70be9-a1f6-47ed-aa2b-e678873b90ad', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 'entregado', '2026-06-11', '2026-06-13', 2490, FALSE, FALSE, 'COMPLETADO', 300, 'Santo Domingo', 'Distrito Nacional', 'RECAUDADO', '2026-06-13', 474),
+('c0bfc710-9ace-415d-b8c5-8a4f4bbf913a', '39a7b57b-6bab-4783-93c9-2df09d40e34c', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 'devuelto', '2026-06-11', NULL, 2490, FALSE, FALSE, 'DEVOLUCION', 400, 'Santo Domingo Este', 'Santo Domingo', 'PENDIENTE', NULL, 475),
+('5afec5dd-e443-4d09-b4e8-28f3375cf057', '91cc67c6-1d9a-491a-aae3-6091b01c9211', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 'entregado', '2026-06-11', '2026-06-16', 3890, FALSE, FALSE, 'COMPLETADO', 350, 'Jarabacoa', 'La Vega', 'RECAUDADO', '2026-06-16', 476),
+('e59ca547-ab0c-4e6f-98b1-682a42403da8', '2335f4a1-4407-4097-b8eb-fe927ed933f2', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-06-11', '2026-06-22', 2490, FALSE, FALSE, 'COMPLETADO', 435, 'Barahona (Santa Cruz de Barahona)', 'Barahona', 'RECAUDADO', '2026-06-22', 477),
+('2bd35fea-3bce-478b-a6c6-27f87d7ff3b8', 'a3fa20ff-dd05-423f-af8e-e1f5e26633ea', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 'entregado', '2026-06-11', '2026-06-23', 3890, FALSE, FALSE, 'COMPLETADO', 350, 'Santiago de los Caballeros', 'Santiago', 'RECAUDADO', '2026-06-23', 478),
+('582f91bd-daa6-402f-8e7f-c4b59e4d7f84', '43767ae8-a213-43fe-921c-16e059bebe37', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 'confirmado', '2026-06-13', NULL, 1950, FALSE, FALSE, 'EN RUTA', 0, 'Higüey (Salvaleón de Higüey)', 'La Altagracia', 'PENDIENTE', NULL, 479),
+('fc8c17ba-0460-40da-9d53-5e7310a6f332', 'c677233a-38a3-4336-98e7-05bfb260812d', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 'cancelado', '2026-06-13', NULL, 2650, FALSE, FALSE, 'SIN COBERTURA', 0, 'Sosúa', 'Puerto Plata', 'PENDIENTE', NULL, 480),
+('0a39e418-e6fc-4321-acb7-fa699bf71adc', '31b6ebfb-8840-4996-b2f1-2565e07852dd', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 'entregado', '2026-06-13', '2026-06-23', 2650, FALSE, FALSE, 'COMPLETADO', 350, 'Moca', 'Espaillat', 'RECAUDADO', '2026-06-23', 481),
+('2190ec58-a824-4247-b729-147d0de92d1a', 'b917f10e-82a5-4753-b40f-2dcc04af119a', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 'confirmado', '2026-06-13', NULL, 1950, FALSE, FALSE, 'EN RUTA', 0, 'Las Terrenas', 'Samaná', 'PENDIENTE', NULL, 482),
+('ebc9ada7-4989-4794-b2df-1e4b5bedf281', '3694d342-18c3-400f-a965-87307a018790', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 'entregado', '2026-06-13', '2026-06-16', 2650, FALSE, FALSE, 'COMPLETADO', 300, 'Santo Domingo Oeste', 'Santo Domingo', 'RECAUDADO', '2026-06-16', 483),
+('e4be3c0b-b75f-407b-837d-0a2a21c417d7', '21655801-0358-4e38-865d-5c20bd2ef776', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 'confirmado', '2026-06-13', NULL, 1950, FALSE, FALSE, 'EN RUTA', 0, 'Moca', 'Espaillat', 'PENDIENTE', NULL, 484),
+('aeb48aa1-fd87-43ed-8bec-362462ee7811', 'b3c7750b-a63b-4ed4-b560-aac1ae3943a0', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 'entregado', '2026-06-13', '2026-06-17', 2650, FALSE, FALSE, 'COMPLETADO', 300, 'Santo Domingo', 'Distrito Nacional', 'RECAUDADO', '2026-06-17', 485),
+('14411821-1a1f-46cd-a563-6721b197c894', '300993c6-6247-49ff-9c5a-b4939d6300ea', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 'entregado', '2026-06-14', '2026-06-20', 1950, FALSE, FALSE, 'COMPLETADO', 350, 'Moca', 'Espaillat', 'RECAUDADO', '2026-06-20', 486),
+('8518f3fa-0927-4db5-8101-fa413319d06e', '55d341e7-59ad-454d-90d3-14e9444f23a9', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 'confirmado', '2026-06-14', NULL, 1950, FALSE, FALSE, 'EN RUTA', 0, 'Bávaro', 'La Altagracia', 'PENDIENTE', NULL, 487),
+('8cc64052-86f8-4fd0-be5c-9b9faae4ee1e', 'd549146c-02e4-4ad7-9872-d3b11d24fc6f', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 'confirmado', '2026-06-14', NULL, 1950, FALSE, FALSE, 'EN RUTA', 0, 'Bávaro', 'La Altagracia', 'PENDIENTE', NULL, 488),
+('3a3cc2a1-15bf-47ce-bac9-3ebcc468f9ba', '44d2c686-da34-48fb-8693-0f137891a044', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 'entregado', '2026-06-14', '2026-06-17', 1950, FALSE, FALSE, 'COMPLETADO', 300, 'Santo Domingo', 'Distrito Nacional', 'RECAUDADO', '2026-06-17', 489),
+('8f519bb0-8f25-49b9-8cb7-89731a59e0c5', 'b0f4126a-0be1-48c7-a30f-283ab225296e', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'para_devolucion', '2026-06-14', NULL, 1950, FALSE, FALSE, 'PARA DEVOLUCION', 400, 'Villa Los Almácigos', 'Santiago Rodríguez', 'PENDIENTE', NULL, 490),
+('7b51c915-634e-4ad9-a44a-c747a0d1b81b', '039d23b8-a284-469e-a134-aff67742294d', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 'confirmado', '2026-06-14', NULL, 2650, FALSE, FALSE, 'EN RUTA', 0, 'Las Terrenas', 'Samaná', 'PENDIENTE', NULL, 491),
+('92053562-dd7a-46f6-9c6c-485b407141d0', '1b697057-78e2-4cc8-bd09-3ce7e48a3a50', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 'entregado', '2026-06-14', '2026-06-23', 1950, FALSE, FALSE, 'COMPLETADO', 350, 'Bávaro', 'La Altagracia', 'RECAUDADO', '2026-06-23', 492),
+('d6d3359b-26ac-4e63-a63b-fa0f10f07ed1', 'c1a083b4-f86b-4ae2-b22e-df80387faf1a', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'confirmado', '2026-06-15', NULL, 2650, FALSE, FALSE, 'EN RUTA', 400, 'Neiba', 'Bahoruco', 'PENDIENTE', NULL, 493),
+('202e5956-be50-4577-8f53-d6020925bab8', '8b4efd6f-d5ac-452a-aad7-106d88fffdb3', NULL, 'cancelado', '2026-06-15', NULL, 1950, FALSE, FALSE, 'CANCELADO', 0, 'Bávaro', 'La Altagracia', 'PENDIENTE', NULL, 494),
+('ecb62faf-aff5-4694-9bc0-663ba3715c15', 'fefb56e3-342f-45b5-a0e7-064255da5533', NULL, 'cancelado', '2026-06-16', NULL, 1950, FALSE, FALSE, 'SIN COBERTURA', 0, 'Mao (Santa Cruz de Mao)', 'Valverde', 'PENDIENTE', NULL, 495),
+('ed3e934e-6c08-46b9-9b6a-7e3fbccad338', 'bed81dc9-c37d-46a2-ba38-69e9cd36ce8f', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 'entregado', '2026-06-16', '2026-06-23', 2990, FALSE, FALSE, 'COMPLETADO', 350, 'La Vega (Concepción de la Vega)', 'La Vega', 'RECAUDADO', '2026-06-23', 496),
+('757a426b-41e2-40e9-bb62-767121c9b0be', 'dd9371f6-5a07-4e08-8ecf-ab7cfedda840', NULL, 'cancelado', '2026-06-16', NULL, 2990, FALSE, FALSE, 'CANCELADO', 0, 'Bayaguana', 'Monte Plata', 'PENDIENTE', NULL, 497),
+('96485bed-d722-4575-a2be-04d0387d959a', 'a00c7897-d2b5-4666-9a32-5b0f6eef473c', NULL, 'confirmado', '2026-06-16', NULL, 2390, FALSE, FALSE, 'CONFIRMADO', 0, 'San Pedro de Macorís', 'San Pedro de Macorís', 'PENDIENTE', NULL, 498),
+('d0df91dc-f4dd-49c2-9634-bccb48af7c9a', '3dc2befa-0d9c-4518-9a07-8bc8b5352985', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 'entregado', '2026-06-16', '2026-06-22', 2650, FALSE, FALSE, 'COMPLETADO', 466, 'Villa Montellano', 'Puerto Plata', 'RECAUDADO', '2026-06-22', 499),
+('825a9f64-9d64-4d01-b4c9-61d4304b19bb', 'ad30bb62-084d-43b2-9a13-9baa16957bbd', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 'entregado', '2026-06-16', '2026-06-23', 1950, FALSE, FALSE, 'COMPLETADO', 350, 'Villa Hermosa', 'La Romana', 'RECAUDADO', '2026-06-23', 500),
+('008be167-0b55-4b5d-ac43-df9d6fb2fb2b', '59d1ad9d-a285-4750-964f-76b74bbc7005', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 'para_devolucion', '2026-06-16', NULL, 1950, FALSE, FALSE, 'PARA DEVOLUCION', 0, 'San Cristóbal', 'San Cristóbal', 'PENDIENTE', NULL, 501),
+('b4671951-6897-428d-8c1f-c0a7d5c16375', '45c7e1eb-da53-48bd-a940-301e5981c95e', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 'confirmado', '2026-06-16', NULL, 1950, FALSE, FALSE, 'EN RUTA', 0, 'Bávaro', 'La Altagracia', 'PENDIENTE', NULL, 502),
+('4ee68bd5-65b2-4943-8644-83bab29b3792', 'e5a9d0ba-ee79-41b2-8f16-5f818356efb8', NULL, 'cancelado', '2026-06-17', NULL, 1950, FALSE, FALSE, 'CANCELADO', 0, 'Santo Domingo Este', 'Santo Domingo', 'PENDIENTE', NULL, 503);
+
+INSERT INTO pedidos (id, cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega,
+  precio_total, es_testeo, es_prueba_interna, estado_original, costo_envio,
+  ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num) VALUES
+('880a9d83-d3fa-4e73-b9fb-5f0a21552592', 'c5c50bb8-0f40-4145-a555-ce47d6885aa3', NULL, 'cancelado', '2026-06-17', NULL, 2650, FALSE, FALSE, 'SIN COBERTURA', 0, 'Castillo', 'Duarte', 'PENDIENTE', NULL, 504),
+('55a54d65-c257-424d-932b-f5f3a9ed0a48', '64bebe14-e6ac-4c7c-82f5-2f0c04511e93', NULL, 'confirmado', '2026-06-17', NULL, 2990, FALSE, FALSE, 'EN RUTA', 0, 'Maimón', 'Monseñor Nouel', 'PENDIENTE', NULL, 505),
+('e43cb8ee-953b-47ca-b719-2e21ffe9ec35', '5db1bc2d-a92a-484b-bac4-c8e836f6bfd3', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 'entregado', '2026-06-17', '2026-06-25', 2650, FALSE, FALSE, 'COMPLETADO', 350, 'Moca', 'Espaillat', 'RECAUDADO', '2026-06-25', 506),
+('2604bf6c-7d1b-4e7a-bd96-299f8e695b72', 'eec6ffa8-81c8-42c6-823e-96d051ddef95', NULL, 'confirmado', '2026-06-17', NULL, 2650, FALSE, FALSE, 'EN RUTA', 0, 'Canca La Reina', 'Espaillat', 'PENDIENTE', NULL, 507),
+('305e21b1-9aed-49f8-9519-056a63a90987', '43657471-68d6-4327-951d-20c1ec6f7b3f', NULL, 'cancelado', '2026-06-17', NULL, 2990, FALSE, FALSE, 'CANCELADO', 0, 'Santo Domingo', 'Distrito Nacional', 'PENDIENTE', NULL, 508),
+('8f20e096-9c83-48b4-9459-be13a24411f4', '449c28a3-1606-479a-a069-6c51a36d6319', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 'entregado', '2026-06-18', '2026-06-25', 1950, FALSE, FALSE, 'COMPLETADO', 350, 'Moca', 'Espaillat', 'RECAUDADO', '2026-06-25', 509),
+('9e83970a-74c6-4467-bb43-9c362c089209', '2f79875c-b904-407e-8353-7288258c208c', NULL, 'confirmado', '2026-06-18', NULL, 3490, FALSE, FALSE, 'EN RUTA', 0, 'Cabral', 'Barahona', 'PENDIENTE', NULL, 510),
+('a7e07e68-4bfa-4597-bcf1-d0ff07a60e3c', '43657471-68d6-4327-951d-20c1ec6f7b3f', NULL, 'cancelado', '2026-06-17', NULL, 2990, FALSE, FALSE, 'CANCELADO', 0, 'Santo Domingo', 'Distrito Nacional', 'PENDIENTE', NULL, 511),
+('7770c496-0ddd-489e-ae3b-c8ce0a5d8a05', '40d9b2d4-414e-4b35-a703-6b27f4efa62a', NULL, 'cancelado', '2026-06-18', NULL, 1950, FALSE, FALSE, 'CANCELADO', 0, 'Cotuí', 'Sánchez Ramírez', 'PENDIENTE', NULL, 513),
+('6745e68d-535d-4d55-9948-98f6e00562ce', '2f79875c-b904-407e-8353-7288258c208c', NULL, 'confirmado', '2026-06-18', NULL, 3490, FALSE, FALSE, 'EN RUTA', 0, 'Cabral', 'Barahona', 'PENDIENTE', NULL, 514),
+('c259e17c-6e35-414b-b2e2-7e0c5d0873d2', '40d9b2d4-414e-4b35-a703-6b27f4efa62a', NULL, 'cancelado', '2026-06-18', NULL, 1950, FALSE, FALSE, 'CANCELADO', 0, 'Cotuí', 'Sánchez Ramírez', 'PENDIENTE', NULL, 515),
+('e093b7fc-66eb-40b7-8603-46049bf03604', 'ce2a8448-e5f0-467d-9fb8-c95a563f72fe', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 'entregado', '2026-06-18', '2026-06-25', 2650, FALSE, FALSE, 'COMPLETADO', 350, 'Santiago de los Caballeros', 'Santiago', 'RECAUDADO', '2026-06-25', 516),
+('d582e764-c2f1-468b-b7fe-5381b36f7243', '4d196af9-1386-43d8-81c8-e4f9c80274ff', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 'entregado', '2026-06-18', '2026-06-23', 1950, FALSE, FALSE, 'COMPLETADO', 350, 'San Juan', 'San Juan', 'RECAUDADO', '2026-06-23', 517),
+('64a0fae5-7824-4383-96d4-4ddee6fca117', 'a1f84860-d867-4b4d-ad52-33797041aeb2', NULL, 'confirmado', '2026-06-18', NULL, 2990, FALSE, FALSE, 'EN RUTA', 0, 'Jimaní', 'Independencia', 'PENDIENTE', NULL, 518),
+('f47aeb82-8432-40df-a865-1aaafea260d2', 'e8465408-bbf8-43ea-921b-2f169c0be2d6', NULL, 'devuelto', '2026-06-18', NULL, 1950, FALSE, FALSE, 'DEVOLUCION', 0, 'Santo Domingo Oeste', 'Santo Domingo', 'PENDIENTE', NULL, 519),
+('4143dc1b-5db8-4743-b3f1-326c26e33e5b', '8455b93e-5404-4fed-9b4f-70d4c90691f6', NULL, 'cancelado', '2026-06-18', NULL, 1950, FALSE, FALSE, 'CANCELADO', 0, 'San Francisco de Macorís', 'Duarte', 'PENDIENTE', NULL, 520),
+('37362f84-1dc8-45af-9cb0-f27bfa38b86e', '5c29c3b8-38a1-4c00-9c68-280796872d34', NULL, 'entregado', '2026-06-18', NULL, 2650, FALSE, FALSE, 'COMPLETADO', 0, 'Santo Domingo Este', 'Santo Domingo', 'PENDIENTE', NULL, 521),
+('64bee176-3272-4ec0-a2af-0b0720bbd071', '8ab95905-32b3-4ad6-85ae-20314c9e98e8', NULL, 'confirmado', '2026-06-18', NULL, 2650, FALSE, FALSE, 'EN RUTA', 0, 'Bávaro', 'La Altagracia', 'PENDIENTE', NULL, 522),
+('61d0668d-d04d-4808-ab20-8c2bb9be19e6', '7c51b553-455a-47ff-ab5c-702e9b32d226', NULL, 'entregado', '2026-06-18', NULL, 2650, FALSE, FALSE, 'COMPLETADO', 0, 'San Francisco de Macorís', 'Duarte', 'PENDIENTE', NULL, 523),
+('e2ba9f8b-2b50-46db-a8f2-bc1191110d57', 'c6162bdf-0d7b-4bf9-997d-495827f39304', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 'entregado', '2026-06-18', '2026-06-23', 1950, FALSE, FALSE, 'COMPLETADO', 350, 'Puerto Plata (San Felipe de Puerto Plata)', 'Puerto Plata', 'RECAUDADO', '2026-06-23', 524),
+('6e232198-7789-407c-8beb-2d4df964acf5', '99ae88ff-7e70-46e0-8eb1-7fb35ee5fc6d', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 'entregado', '2026-06-18', '2026-06-25', 3490, FALSE, FALSE, 'COMPLETADO', 350, 'Santo Domingo Este', 'Santo Domingo', 'RECAUDADO', '2026-06-25', 525),
+('1a6f4c16-982e-4883-a853-559c1811d428', '97429de6-5011-44cd-8fcc-40e059081c81', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 'entregado', '2026-06-18', '2026-06-26', 2990, FALSE, FALSE, 'COMPLETADO', 350, 'Gaspar Hernández', 'Espaillat', 'RECAUDADO', '2026-06-26', 526),
+('d3f38af8-1ac7-455b-a0a1-dc4ebc5626cb', '74b68c4c-160f-48cb-be74-d90adc8b3479', NULL, 'entregado', '2026-06-18', NULL, 2990, FALSE, FALSE, 'COMPLETADO', 0, 'Bayaguana', 'Monte Plata', 'PENDIENTE', NULL, 527),
+('fc91ba77-92d2-4ef1-857d-9276bffb0a48', '0a7c7bb0-9e86-44dc-acf1-196478e8c302', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 'entregado', '2026-06-18', '2026-06-23', 2650, FALSE, FALSE, 'COMPLETADO', 350, 'La Romana', 'La Romana', 'RECAUDADO', '2026-06-23', 528),
+('ae767e53-4546-425a-998b-8905573d0f6c', '9eb44b36-00d1-47ca-92e0-f07729abf41a', NULL, 'cancelado', '2026-06-18', NULL, 2390, FALSE, FALSE, 'SIN COBERTURA', 0, 'Los Ríos', 'Bahoruco', 'PENDIENTE', NULL, 529),
+('c614b75b-08e5-44d6-99a5-c6f658fe6898', 'e628ae52-d214-4f0e-8959-4c3889093c1e', NULL, 'cancelado', '2026-06-18', NULL, 2650, FALSE, FALSE, 'SIN COBERTURA', 0, 'Cabrera (Tres Amarras)', 'Maria Trinidad Sanchez', 'PENDIENTE', NULL, 530),
+('1d7882ab-6d2d-4e26-b2a3-900a638125f1', '77d96e3b-3b9a-4c73-8a47-d311e0f25610', NULL, 'confirmado', '2026-06-18', NULL, 2990, FALSE, FALSE, 'EN RUTA', 0, 'Santo Domingo Oeste', 'Santo Domingo', 'PENDIENTE', NULL, 531),
+('38b00ffe-dd34-4823-a5ed-b24c2a7c60ed', '9dfce7c1-4a85-425a-9ab1-99fbd31de4ed', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 'entregado', '2026-06-18', '2026-06-26', 2990, FALSE, FALSE, 'COMPLETADO', 350, 'Las Terrenas', 'Samaná', 'RECAUDADO', '2026-06-26', 532),
+('02dc9bbf-25df-46bb-8a7f-c439372d106a', '9014c368-e079-416a-9fb0-0b1381604093', NULL, 'para_devolucion', '2026-06-19', NULL, 2650, FALSE, FALSE, 'PARA DEVOLUCION', 0, 'Santiago de los Caballeros', 'Santiago', 'PENDIENTE', NULL, 533),
+('97104cc7-3b77-4aaa-aa88-bb60e83c7dd3', 'e81834b3-5e06-4426-8b27-efd0abf0e247', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 'entregado', '2026-06-19', '2026-06-26', 1950, FALSE, FALSE, 'COMPLETADO', 350, 'La Vega (Concepción de la Vega)', 'La Vega', 'RECAUDADO', '2026-06-26', 534),
+('1a51be7a-814d-4bd3-be39-35a1ae38ceca', 'd44a32c3-1fd4-4316-bae4-5e469d28299a', NULL, 'cancelado', '2026-06-19', NULL, 1950, FALSE, FALSE, 'CANCELADO', 0, 'Santiago de los Caballeros', 'Santiago', 'PENDIENTE', NULL, 535),
+('5c3469f2-6cdd-4540-8161-704bac4008df', '95e13c2e-b08f-4fa0-baa9-792e199474f1', NULL, 'confirmado', '2026-06-19', NULL, 2650, FALSE, FALSE, 'EN RUTA', 0, 'Constanza', 'La Vega', 'PENDIENTE', NULL, 536),
+('cf04c675-500c-4450-aa50-39d807fb6eb4', '55ebbde9-8797-46d1-856a-2095eb58061a', NULL, 'cancelado', '2026-06-19', NULL, 2650, FALSE, FALSE, 'SIN COBERTURA', 0, 'San José de las Matas', 'Santiago', 'PENDIENTE', NULL, 537),
+('f0749708-e7c2-43f4-9b7d-266c824f846e', '6a797887-10c0-4cd3-9e7b-7f5bb20d7282', NULL, 'cancelado', '2026-06-19', NULL, 3490, FALSE, FALSE, 'CANCELADO', 0, 'Comendador', 'Elías Piña', 'PENDIENTE', NULL, 538),
+('6b067809-1cc9-4a02-a7cf-8877444e3a06', 'bf1e02fb-1195-4cbd-acb1-2643600c4ddb', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 'entregado', '2026-06-19', '2026-06-26', 1950, FALSE, FALSE, 'COMPLETADO', 350, 'Las Terrenas', 'Samaná', 'RECAUDADO', '2026-06-26', 539),
+('b51b9215-9ec8-4f94-bf53-58f3917657a3', '5b74b623-1382-41db-93fe-d6272c0ded2d', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 'entregado', '2026-06-19', '2026-06-20', 2650, FALSE, FALSE, 'COMPLETADO', 300, 'Santo Domingo', 'Distrito Nacional', 'RECAUDADO', '2026-06-20', 540),
+('72f82272-a1cd-4e72-ac8b-2b9b9a1c8355', '73362ec0-2948-4f82-9332-490dd3431b1c', NULL, 'confirmado', '2026-06-20', NULL, 1950, FALSE, FALSE, 'EN RUTA', 0, 'Bávaro', 'La Altagracia', 'PENDIENTE', NULL, 541),
+('8dccfb85-0cf3-49c5-9eee-0ecca903a252', '303c64c7-65c5-40b3-963f-8a1f4085b2f6', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 'entregado', '2026-06-20', '2026-06-20', 2650, FALSE, FALSE, 'COMPLETADO', 350, 'Santo Domingo Este', 'Santo Domingo', 'RECAUDADO', '2026-06-20', 542),
+('8be826c5-18f0-4b77-a7c3-37241784f0fd', 'df7aa0a5-7394-44dc-b992-0083672a0d2c', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 'entregado', '2026-06-20', '2026-06-20', 1950, FALSE, FALSE, 'COMPLETADO', 300, 'Santo Domingo', 'Distrito Nacional', 'RECAUDADO', '2026-06-20', 543),
+('95d0676b-305e-4670-b897-d12e8c8d2532', 'c2ba0f39-4394-4ac2-b14d-fd2ff7506128', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 'entregado', '2026-06-20', '2026-06-23', 1950, FALSE, FALSE, 'COMPLETADO', 300, 'Santo Domingo', 'Distrito Nacional', 'RECAUDADO', '2026-06-23', 544),
+('e68847a2-c4f4-46c8-aafa-d60531bcbb1f', '1ac830c0-03b9-483e-8396-3e761daa443d', NULL, 'cancelado', '2026-06-20', NULL, 1950, FALSE, FALSE, 'CANCELADO', 0, 'Santo Domingo Este', 'Santo Domingo', 'PENDIENTE', NULL, 545),
+('d4c6c9b0-e8c3-40e8-bbac-0e7c0a5365e5', '14b92b7c-d378-4673-98a7-7199a51ca2c2', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 'entregado', '2026-06-20', '2026-06-23', 2650, FALSE, FALSE, 'COMPLETADO', 300, 'Santo Domingo', 'Distrito Nacional', 'RECAUDADO', '2026-06-23', 546),
+('0d108321-7121-4d47-8b98-ee2080b98ff9', 'c3e43e1e-d342-488f-8722-66d7beb38f73', NULL, 'cancelado', '2026-06-20', NULL, 2650, FALSE, FALSE, 'CANCELADO', 0, 'San Pedro de Macorís', 'San Pedro de Macorís', 'PENDIENTE', NULL, 547),
+('b291e7a9-b911-4dbb-885f-743256a24787', 'c1d9f093-598a-43c2-9a32-3055137ced47', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 'entregado', '2026-06-20', '2026-06-23', 2190, FALSE, FALSE, 'COMPLETADO', 300, 'Santo Domingo', 'Distrito Nacional', 'RECAUDADO', '2026-06-23', 548),
+('1db9820c-1f37-45ce-acb2-13d19bdb2260', '367c5d77-ab0f-49f0-9266-14abf63bfb0a', NULL, 'confirmado', '2026-06-20', NULL, 3690, FALSE, FALSE, 'EN RUTA', 0, 'Santo Domingo Este', 'Santo Domingo', 'PENDIENTE', NULL, 549),
+('6f7d0760-6819-4275-a75b-648fead7b7ae', '23593f77-6a9c-464b-a2ee-4535ffcf121f', NULL, 'entregado', '2026-06-20', NULL, 1950, FALSE, FALSE, 'COMPLETADO', 0, 'Santiago de los Caballeros', 'Santiago', 'PENDIENTE', NULL, 550),
+('a31ee57d-c3c4-4341-86dd-9463459f4b6e', '52c91f64-ebcb-4565-b8d7-26ff06e2fc25', NULL, 'cancelado', '2026-06-20', NULL, 1950, FALSE, FALSE, 'CANCELADO', 0, 'Bonao', 'Monseñor Nouel', 'PENDIENTE', NULL, 551),
+('79936673-82a4-42ac-932b-95d88ec9ba5a', 'd82b4e48-9183-4781-95e1-b1bdc7dd4126', NULL, 'cancelado', '2026-06-21', NULL, 2650, FALSE, FALSE, 'SIN COBERTURA', 0, 'Guayubín', 'Monte Cristi', 'PENDIENTE', NULL, 552),
+('0ed6e5eb-7160-4f79-b382-01213ac2df25', '0332aeb8-64da-4b9e-b70a-937d5b4c6e1f', NULL, 'confirmado', '2026-06-21', NULL, 2650, FALSE, FALSE, 'EN RUTA', 0, 'San Juan', 'San Juan', 'PENDIENTE', NULL, 553),
+('41dc1591-89c3-4a72-8c48-4a451e19d425', 'e0c9309d-b92c-4f5e-aa74-675f3febd701', NULL, 'confirmado', '2026-06-21', NULL, 1950, FALSE, FALSE, 'EN RUTA', 0, 'San Pedro de Macorís', 'San Pedro de Macorís', 'PENDIENTE', NULL, 554);
+
+INSERT INTO pedidos (id, cliente_id, canal_cobro_id, estado, fecha_pedido, fecha_entrega,
+  precio_total, es_testeo, es_prueba_interna, estado_original, costo_envio,
+  ciudad, provincia, recaudo_estado, recaudo_fecha, pedido_num) VALUES
+('21f1e3d6-c791-4a1b-b2db-1a62e1527908', 'e9e0b4c3-4e90-40e1-9b28-4f9301453b52', NULL, 'confirmado', '2026-06-21', NULL, 2650, FALSE, FALSE, 'EN RUTA', 0, 'Bávaro', 'La Altagracia', 'PENDIENTE', NULL, 555),
+('56db5c1e-7e96-4f8d-97a1-596fe96af9dd', '06fa4397-711d-49c1-90cd-895b62310900', NULL, 'cancelado', '2026-06-21', NULL, 2650, FALSE, FALSE, 'SIN COBERTURA', 0, 'Las Matas de Farfán', 'San Juan', 'PENDIENTE', NULL, 556),
+('09040462-383c-4743-9c29-2c3f0600cc61', '5c6ae825-32f2-40f0-91b5-5aec9ea911fa', NULL, 'cancelado', '2026-06-21', NULL, 2990, FALSE, FALSE, 'CANCELADO', 0, 'San Francisco de Macorís', 'Duarte', 'PENDIENTE', NULL, 557),
+('1170f69f-0f27-4952-9857-2e14474025f1', '7f54f866-9745-4d43-a8ee-70370dd02d29', NULL, 'entregado', '2026-06-21', NULL, 2650, FALSE, FALSE, 'COMPLETADO', 0, 'Santiago de los Caballeros', 'Santiago', 'PENDIENTE', NULL, 558),
+('7c73b875-aded-43ed-a720-9891bb257d90', '2d6feabe-a9cf-418f-b8b1-ce03174ed1db', NULL, 'cancelado', '2026-06-22', NULL, 2990, FALSE, FALSE, 'CANCELADO', 0, 'Azua (Azua de Compostela)', 'Azua', 'PENDIENTE', NULL, 559),
+('0900660e-b4a9-45ad-b54e-a3638a352da0', 'a40cb135-12dc-4814-89b9-d387db5491f3', NULL, 'cancelado', '2026-06-22', NULL, 1950, FALSE, FALSE, 'SIN COBERTURA', 0, 'Sabana Iglesia', 'Santiago', 'PENDIENTE', NULL, 560),
+('21ce857a-9e37-482a-877b-7cc42f9026fe', '2a591882-f644-42fe-a1cc-f300040ebbc9', NULL, 'cancelado', '2026-06-22', NULL, 1950, FALSE, FALSE, 'CANCELADO', 0, 'Guayabal', 'Santiago', 'PENDIENTE', NULL, 561),
+('6005ff6f-e2fc-499d-8afd-f717cd953b92', 'ca5f0332-b1d0-406f-9165-3f80717812e3', NULL, 'cancelado', '2026-06-22', NULL, 2990, FALSE, FALSE, 'CANCELADO', 0, 'Santo Domingo', 'Distrito Nacional', 'PENDIENTE', NULL, 562),
+('8ea10b11-71ba-4781-ab82-fea34aca9645', '249604de-5baf-494a-b39d-55921cc60531', NULL, 'cancelado', '2026-06-23', NULL, 1950, FALSE, FALSE, 'CANCELADO', 0, 'Santo Domingo Este', 'Santo Domingo', 'PENDIENTE', NULL, 563),
+('3a379d73-3cfe-48d5-86e0-9296c29bb50a', '4334c259-f99e-4b98-9aa5-64546f412ea7', NULL, 'confirmado', '2026-06-23', NULL, 2650, FALSE, FALSE, 'EN RUTA', 0, 'Santiago de los Caballeros', 'Santiago', 'PENDIENTE', NULL, 564),
+('94fc7293-9a3b-485e-979e-ce97b8693c52', '174211b4-5dec-45bc-8f91-f12f3318e07a', NULL, 'entregado', '2026-06-23', NULL, 2650, FALSE, FALSE, 'COMPLETADO', 0, 'Santo Domingo', 'Distrito Nacional', 'PENDIENTE', NULL, 565),
+('e3c3242f-1ce5-473c-9b39-459266d75932', '7471a2af-1ba5-480b-9ae6-ac0a9f7524ea', NULL, 'cancelado', '2026-06-23', NULL, 1950, FALSE, FALSE, 'CANCELADO', 0, 'Santo Domingo Oeste', 'Santo Domingo', 'PENDIENTE', NULL, 566),
+('006f873c-612f-465a-87ac-31dbcb48420b', 'cdba35b6-e0b4-4cd2-85b0-e9c0b70dbc5f', NULL, 'cancelado', '2026-06-23', NULL, 2650, FALSE, FALSE, 'CANCELADO', 0, 'Santo Domingo', 'Distrito Nacional', 'PENDIENTE', NULL, 567),
+('829a3680-18cb-4e02-a732-d4880b93cabc', 'fc4055fd-2fb6-473b-8f75-8629c311170c', NULL, 'cancelado', '2026-06-23', NULL, 2650, FALSE, FALSE, 'CANCELADO', 0, 'Santo Domingo Norte', 'Santo Domingo', 'PENDIENTE', NULL, 568),
+('af4faf60-77dd-4286-86ec-2320ad582ee3', '90d0e174-4c5f-445e-8467-730c196366cf', NULL, 'confirmado', '2026-06-23', NULL, 1950, FALSE, FALSE, 'EN RUTA', 0, 'Jarabacoa', 'La Vega', 'PENDIENTE', NULL, 569),
+('0baac28f-b96b-424d-a6a1-4015215019f8', '322022b4-488b-4ce0-8918-510fd2b6b515', NULL, 'confirmado', '2026-06-23', NULL, 1950, FALSE, FALSE, 'EN RUTA', 0, 'Santiago de los Caballeros', 'Santiago', 'PENDIENTE', NULL, 570),
+('97216d55-42dd-441e-876c-e9956b96af48', '4f213bac-a560-4f4d-9738-19af6179ca64', NULL, 'confirmado', '2026-06-23', NULL, 1950, FALSE, FALSE, 'EN RUTA', 0, 'Azua (Azua de Compostela)', 'Azua', 'PENDIENTE', NULL, 571),
+('fe187ba7-0df8-4493-971e-ecbd63e5333e', 'ac85ee3a-eee1-4433-a581-7b1641a12b05', NULL, 'confirmado', '2026-06-24', NULL, 1950, FALSE, FALSE, 'EN RUTA', 0, 'Bávaro', 'La Altagracia', 'PENDIENTE', NULL, 572),
+('32b6f2d2-1c77-4139-b990-81299774ec86', '51dcdd74-1b1a-4a02-a577-1ced340fa40f', NULL, 'confirmado', '2026-06-24', NULL, 1950, FALSE, FALSE, 'CONFIRMADO EXPRESS', 0, 'Santo Domingo Oeste', 'Santo Domingo', 'PENDIENTE', NULL, 573),
+('83ce7c3d-7295-4689-a855-218bbb9f0730', '4054efe7-07c6-41a5-bd4f-ecbfaa3cbd54', NULL, 'confirmado', '2026-06-24', NULL, 2490, TRUE, FALSE, 'TESTEO CONFIRMADO', 0, 'San Francisco de Macorís', 'Duarte', 'PENDIENTE', NULL, 574),
+('06662bb5-a916-462a-815b-16430b439d8e', '0049b9e8-a758-4c90-8ed5-ae6f5eebb7c3', NULL, 'confirmado', '2026-06-24', NULL, 2490, TRUE, FALSE, 'TESTEO CONFIRMADO', 0, 'Santo Domingo Este', 'Santo Domingo', 'PENDIENTE', NULL, 575),
+('49ceccd9-1231-4d7b-a829-c4351ecf1747', '864c2127-be09-48db-b972-e36c3b6748be', NULL, 'cancelado', '2026-06-24', NULL, 2650, FALSE, FALSE, 'CANCELADO', 0, 'Villa Bisonó (Navarrete)', 'Santiago', 'PENDIENTE', NULL, 576),
+('064d8080-9a17-4299-9c76-838512a92aae', '9b01b613-c590-46a6-b6b7-0f5ceb4b74f2', NULL, 'confirmado', '2026-06-24', NULL, 2650, FALSE, FALSE, 'EN RUTA', 0, 'Santo Domingo', 'Distrito Nacional', 'PENDIENTE', NULL, 577),
+('30572613-1a3a-4773-a6bc-bfeae40d62d6', '39a30209-d90b-424c-830e-a1b448d74faa', NULL, 'confirmado', '2026-06-24', NULL, 1950, FALSE, FALSE, 'EN RUTA', 0, 'Tenares', 'Hermanas Mirabal (Salcedo)', 'PENDIENTE', NULL, 578),
+('ddf5c15b-5e36-47f2-aec2-f32ee95398ae', '296c6dab-2411-4f52-95a4-ad8707d2229f', NULL, 'entregado', '2026-06-24', NULL, 2650, FALSE, FALSE, 'COMPLETADO', 0, 'La Vega (Concepción de la Vega)', 'La Vega', 'PENDIENTE', NULL, 579),
+('43659bf0-9e03-4430-ab0e-046a95582efd', '6877650c-fb0c-4468-b9df-f8fdc028c7f3', NULL, 'cancelado', '2026-06-24', NULL, 1950, FALSE, FALSE, 'CONFIRMADO SIN STOCK', 0, 'Verón', 'La Altagracia', 'PENDIENTE', NULL, 580),
+('55059610-2fac-49b5-8931-2a3cdcefee8b', 'fff41adc-1ad7-4f95-8643-d40de3fd32e4', NULL, 'confirmado', '2026-06-24', NULL, 1950, FALSE, FALSE, 'EN RUTA', 0, 'Santo Domingo Oeste', 'Santo Domingo', 'PENDIENTE', NULL, 581),
+('2a98936d-f059-460e-ac5a-c86400b43144', '0d2078a0-c40c-4624-a8f0-548af2e0b586', NULL, 'confirmado', '2026-06-24', NULL, 1950, FALSE, FALSE, 'EN RUTA', 0, 'Cotuí', 'Sánchez Ramírez', 'PENDIENTE', NULL, 582),
+('f25c97b1-fb04-4fc0-b4f2-15f7a9ed0dd9', '6e12085f-669c-489d-ab88-0ba63d1c46bb', NULL, 'cancelado', '2026-06-24', NULL, 1950, FALSE, FALSE, 'CANCELADO', 0, 'Santo Domingo Este', 'Santo Domingo', 'PENDIENTE', NULL, 583),
+('2399e934-ca39-4f0c-839a-5460a0bac7d3', 'ef412c05-f5ca-4fd3-a88c-a1d667090bf4', NULL, 'confirmado', '2026-06-24', NULL, 1990, FALSE, FALSE, 'EN RUTA', 0, 'Santiago de los Caballeros', 'Santiago', 'PENDIENTE', NULL, 584),
+('ff75743c-bd3e-47de-b3a1-8c810f4a0458', '319bec2d-d1b4-4a60-9aba-99e6388a5678', NULL, 'entregado', '2026-06-25', NULL, 2690, FALSE, FALSE, 'COMPLETADO', 0, 'Santo Domingo', 'Distrito Nacional', 'PENDIENTE', NULL, 585),
+('faa6aa5b-6c36-4c66-811f-3acff0c5cf4b', 'd313643d-b637-4f15-a95a-1a274a3ae1f4', NULL, 'confirmado', '2026-06-25', NULL, 1990, FALSE, FALSE, 'CONFIRMADO', 0, 'Jarabacoa', 'La Vega', 'PENDIENTE', NULL, 586),
+('e9bec713-9c96-45d1-9374-7f383ea4ee6b', '9cc377d0-b71d-4478-8411-dbcc6e2e8a84', NULL, 'entregado', '2026-06-25', NULL, 2690, FALSE, FALSE, 'COMPLETADO', 0, 'Santo Domingo Este', 'Santo Domingo', 'PENDIENTE', NULL, 587),
+('4744f481-788a-4eeb-a69d-6a454203e02d', '0a344aad-d678-429d-b495-9af0b7da9060', NULL, 'confirmado', '2026-06-25', NULL, 3840, FALSE, FALSE, 'EN RUTA', 0, 'La Romana', 'La Romana', 'PENDIENTE', NULL, 588),
+('2dbe39e6-efa7-4603-89b1-129712809401', 'd5dbeab1-274e-4142-addf-36187586b2cc', NULL, 'cancelado', '2026-06-25', NULL, 2690, FALSE, FALSE, 'CONFIRMADO SIN STOCK', 0, 'Cotuí', 'Sánchez Ramírez', 'PENDIENTE', NULL, 589),
+('68e67ddf-dba9-4572-a5f8-97068c373277', 'dd2248e4-3c29-4e83-8377-78dcc87cac03', NULL, 'confirmado', '2026-06-25', NULL, 2690, FALSE, FALSE, 'EN RUTA', 0, 'Los Alcarrizos', 'Santo Domingo', 'PENDIENTE', NULL, 590),
+('9a1fbb6e-17b6-4633-aa2b-e12f89e7b228', '3589ad62-e2a0-4478-beb4-4bf06e347e90', NULL, 'confirmado', '2026-06-25', NULL, 3690, FALSE, FALSE, 'EN RUTA', 0, 'La Romana', 'La Romana', 'PENDIENTE', NULL, 591),
+('695706ef-097f-4dcb-9b40-5df2a2666932', 'b3cc7e01-d3f8-4850-a4eb-c5c59a3eabeb', NULL, 'confirmado', '2026-06-25', NULL, 2490, FALSE, FALSE, 'EN RUTA', 0, 'Santo Domingo Este', 'Santo Domingo', 'PENDIENTE', NULL, 592),
+('9ba4f722-3467-4aee-ae1e-bd99e98dfb4d', 'f42c38c9-924c-4f85-a09d-1454043cafde', NULL, 'confirmado', '2026-06-25', NULL, 2490, FALSE, FALSE, 'EN RUTA', 0, 'Santiago de los Caballeros', 'Santiago', 'PENDIENTE', NULL, 593),
+('4d34bff2-d097-4d2b-9aad-100c869fa7fd', 'b815b18f-f522-4d2a-b438-1c32b41e8c49', NULL, 'confirmado', '2026-06-25', NULL, 2490, FALSE, FALSE, 'EN RUTA', 0, 'Esperanza', 'Valverde', 'PENDIENTE', NULL, 594),
+('56daf3fa-d40a-43b4-a885-dba7080121b9', 'b9edf549-6b42-42b2-9468-2192a85cf206', NULL, 'entregado', '2026-06-25', NULL, 2490, FALSE, FALSE, 'COMPLETADO', 0, 'Santo Domingo', 'Distrito Nacional', 'PENDIENTE', NULL, 595),
+('ef1c3905-2574-4c1a-a95a-17a332fe6647', 'ea395bef-378b-432f-abc9-e872cb7f8bb9', NULL, 'cancelado', '2026-06-25', NULL, 3690, FALSE, FALSE, 'CANCELADO', 0, 'Santiago de los Caballeros', 'Santiago', 'PENDIENTE', NULL, 596),
+('69973c9f-a014-461f-9fe0-248ea8d9acc3', '07811a52-d8a3-4e7c-b94d-a966d2b4450a', NULL, 'cancelado', '2026-06-25', NULL, 2490, FALSE, FALSE, 'CANCELADO', 0, 'Higüey (Salvaleón de Higüey)', 'La Altagracia', 'PENDIENTE', NULL, 597),
+('22d34181-a650-4f64-90ad-02421e87802c', 'ee38de78-fde6-4cb9-b4fd-3bd18b88b0ed', NULL, 'cancelado', '2026-06-26', NULL, 2490, FALSE, FALSE, 'CANCELADO', 0, 'Santiago de los Caballeros', 'Santiago', 'PENDIENTE', NULL, 598);
+
+-- Pedido items
+INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario) VALUES
+('02a29be7-b9bd-4326-b7ab-10ab228fc5fd', '2cedc02f-83a2-40eb-84ab-69796df32d9f', 1, 2000),
+('cc74810d-370a-426b-b26a-30690f7b6721', '2cedc02f-83a2-40eb-84ab-69796df32d9f', 1, 2000),
+('e98dc9aa-39c7-491b-9e8b-50eabe651b30', '2cedc02f-83a2-40eb-84ab-69796df32d9f', 1, 2000),
+('8673cff9-b3a9-48c7-8756-7d27309d1d10', 'e3235f4b-25ed-4f4c-90d3-69f3f0c23eef', 1, 2300),
+('812e0b5a-17b9-4fce-be46-ae1edb41b0dd', 'e3235f4b-25ed-4f4c-90d3-69f3f0c23eef', 1, 1950),
+('b1228870-a5c1-43ea-80c7-245fe6106918', 'e3235f4b-25ed-4f4c-90d3-69f3f0c23eef', 1, 1950),
+('5d156241-2326-4a46-8eea-a57d4d3458a8', 'e3235f4b-25ed-4f4c-90d3-69f3f0c23eef', 1, 1950),
+('664241ca-60ca-40be-aa25-44b09bc11ba6', 'e3235f4b-25ed-4f4c-90d3-69f3f0c23eef', 1, 1950),
+('cdaaaf41-d6e3-4e76-8e94-a3bd18a9e4f6', 'e3235f4b-25ed-4f4c-90d3-69f3f0c23eef', 1, 1950),
+('4141641f-375c-42f0-9a75-38755ff27e76', 'e3235f4b-25ed-4f4c-90d3-69f3f0c23eef', 1, 1950),
+('34895893-f9bb-4c07-b52a-ce5a6b513982', 'e3235f4b-25ed-4f4c-90d3-69f3f0c23eef', 1, 1950),
+('fb568149-abf2-4b94-ad6a-89fb391727b9', 'e3235f4b-25ed-4f4c-90d3-69f3f0c23eef', 1, 1950),
+('b7d53b28-a8a7-496f-b2cf-2e27e4b1d1ed', 'e3235f4b-25ed-4f4c-90d3-69f3f0c23eef', 1, 1950),
+('866a9eac-f6c1-42b6-b4db-82f4862d3e3a', 'e3235f4b-25ed-4f4c-90d3-69f3f0c23eef', 1, 1950),
+('6d09d3cc-27a8-44e5-9f46-3e8de8132ed3', 'e3235f4b-25ed-4f4c-90d3-69f3f0c23eef', 1, 1950),
+('b05964d0-784f-4a70-92de-b0b23ce8622a', 'e3235f4b-25ed-4f4c-90d3-69f3f0c23eef', 1, 1950),
+('2de496f6-675c-42ab-8671-ef208ff40f9c', 'e3235f4b-25ed-4f4c-90d3-69f3f0c23eef', 1, 1950),
+('dd53a02a-0549-441e-b894-0e02e5e15f97', 'e3235f4b-25ed-4f4c-90d3-69f3f0c23eef', 1, 1950),
+('ec6dac25-4952-485b-947b-de6c169764c6', 'e3235f4b-25ed-4f4c-90d3-69f3f0c23eef', 1, 1950),
+('89daf47d-5958-4eca-92c4-e8581ef0ece8', 'e3235f4b-25ed-4f4c-90d3-69f3f0c23eef', 1, 1950),
+('6041a683-e6ae-4201-90ee-f95e722fa548', 'e3235f4b-25ed-4f4c-90d3-69f3f0c23eef', 1, 1950),
+('13a976f8-f476-45d1-95ab-9a33239cb89f', 'e3235f4b-25ed-4f4c-90d3-69f3f0c23eef', 1, 1950),
+('a6946b05-d5e0-4c3f-999e-7748c4beb3ea', 'e3235f4b-25ed-4f4c-90d3-69f3f0c23eef', 1, 1950),
+('8f291d95-aeb7-4fab-945f-f2d3e2fa2f3e', 'e3235f4b-25ed-4f4c-90d3-69f3f0c23eef', 2, 3900),
+('0ab42d52-2bf4-470b-be66-4a90b032845e', '38ec764c-7785-4cae-b158-27b9d7eb18f6', 2, 4200),
+('30ba0a84-f448-4a4f-a92a-e0d9534e84ac', '38ec764c-7785-4cae-b158-27b9d7eb18f6', 2, 4200),
+('13089e52-fa34-428f-ac34-dccf660e94d8', '38ec764c-7785-4cae-b158-27b9d7eb18f6', 3, 6300),
+('30264ad0-a1d2-41c4-a803-ae19ccd6ee8e', '38ec764c-7785-4cae-b158-27b9d7eb18f6', 2, 4200),
+('b0102827-ce6b-49dc-a18d-f98d079e83aa', '38ec764c-7785-4cae-b158-27b9d7eb18f6', 3, 6300),
+('5da9a4f9-7243-4a0d-8b16-cfb174f1ee37', '38ec764c-7785-4cae-b158-27b9d7eb18f6', 3, 6300),
+('5aa07b01-1767-4fde-ad90-74ba1c8d9e4b', '38ec764c-7785-4cae-b158-27b9d7eb18f6', 3, 6300),
+('8dd37952-dfd9-4585-a2ef-b259f030d0ce', '38ec764c-7785-4cae-b158-27b9d7eb18f6', 3, 6300),
+('1bfb343f-b57c-474c-928d-ffd846ac5142', '38ec764c-7785-4cae-b158-27b9d7eb18f6', 3, 6300),
+('358f9323-8edb-4e77-be04-8728f8690bda', '38ec764c-7785-4cae-b158-27b9d7eb18f6', 1, 2100),
+('9baa7693-8be6-44a6-bc29-d8efcde419ce', '0b0084be-14d2-44a7-8059-f23baa004720', 2, 3900),
+('3def2d66-ace8-43be-8c9a-374b8569037f', '0b0084be-14d2-44a7-8059-f23baa004720', 1, 1950),
+('aaf2e5cf-6509-4fe2-8515-65db2f0a0fec', '0b0084be-14d2-44a7-8059-f23baa004720', 1, 1950),
+('06984ab8-c44e-4d02-be06-7fce25a0c6b3', '4026919c-e302-4233-8095-4d1a7393daf0', 2, 3900),
+('8fb881aa-2a6c-4b0f-a8bd-20872d333d25', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 1, 1950),
+('00a58d4a-670b-4385-b3f3-3e651810285f', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 1, 1950),
+('458e4c25-c64d-4c5a-bfbf-c169848d46bc', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 1, 1950),
+('92d0f0a0-430f-4089-add8-7f1e16d699d4', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 5850),
+('b3e61370-13d1-4323-a698-a1b43d6a2ee0', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 5850),
+('0e4b2f0d-a77d-46cd-931e-945a382c70a6', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 5850),
+('6f2f202c-4ddf-430d-945c-88f10a6f3a8a', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 5850),
+('774ecde3-16bb-4fc6-bed7-19418434f7f2', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 5850),
+('b57d7143-cd0d-4b3d-9b8b-90d333c8c266', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 5850),
+('84d57cbc-9b12-4658-a103-1f6d2630ce20', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 1, 1950),
+('c03a6741-f63d-4d1d-a4eb-19312b798fb4', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7350),
+('25392a63-0f23-49cd-bd36-f8005115a0c0', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7350),
+('5bbae189-18b4-435e-8b8d-cd92b63148c6', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7350),
+('833f47e7-ae5e-4990-ac8b-62ae4a7ada22', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7350),
+('f08d2d7a-aefa-426d-a52f-85eb28011e16', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7350),
+('4c17d798-8a05-45f4-87ca-4a5fcb54f908', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7350),
+('aac00cd7-65a4-4e6d-9c51-c7cf63aa0881', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 1, 2450),
+('ebf87291-ee72-4c44-86f7-70f09ce51d6a', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 1, 2450),
+('0a876da5-69a9-44b0-95e0-12f0f82ddf8d', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7350),
+('16a17375-c3fd-4047-ad80-8c03133bae96', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7350),
+('f21d04d9-853d-4350-b909-25188d68d0c0', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 1, 2450),
+('204b228c-cbe5-4973-8451-3a801ce0b0fb', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 1, 2450),
+('98219211-33d0-4ef7-87ce-920a2b3416d3', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7350),
+('7b807261-bc74-4c46-9a2d-887a86c6c616', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7350),
+('c8eb7abe-7cde-43b8-a393-07bbe78b2216', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7350),
+('98c5565b-d866-461d-94c5-17ffbcffeb1d', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7350),
+('534fc1c6-cfac-4f37-bcec-545e5f6aa8a3', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7350),
+('cf7169f3-2cb8-4c48-811e-203e3984387f', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7350),
+('7d737112-5967-4c9f-a849-a0ae0c4e2652', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7350),
+('e5cf7213-9f8c-4142-b6bb-03b71ceb568d', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7350),
+('910ae770-96bb-4d26-a3b6-0e3052b3046c', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7350),
+('d84ac02f-5d81-4c97-8eb5-b077b347c62b', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7350),
+('ec606539-cfc3-48b4-971d-6dec3f90740f', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7350),
+('e3f0f166-7b57-4494-8635-7b60b1c75171', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7350),
+('30cf7201-9bf5-473f-9e1a-8151cf2a4342', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7350),
+('3edf971e-d3d4-44a1-9b6e-09f54351e079', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7350),
+('eb3a3ef2-d50c-4e0c-83d5-6a5b627bf646', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 2, 4900),
+('ee475876-4251-40b9-8053-204e59309670', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7350),
+('fc53d7f5-4b75-4ac1-be16-f1d21da12e2d', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 2, 4900),
+('e91b40a6-e130-4891-a1e5-bca664c8a84a', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7350),
+('1bc6bae1-0c48-4fe1-83f0-e99c914e452f', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7350),
+('c930239a-d59c-49e3-a19f-c00efd3ac6d3', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7350),
+('d7597988-720f-4928-909e-5ea7065dc998', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7350),
+('f31ae009-5e80-452e-845c-b4889334d9a6', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 1, 2450),
+('16572192-c7e4-4837-a91f-11f6233b1300', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7350),
+('898c36e0-edf6-4000-90d3-5d24ef476e22', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7350),
+('62355f15-4db1-419f-9418-4231c608f8dc', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7350),
+('f57a17a3-63fc-4b85-a359-f84fe5fd7f02', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7350),
+('5f9882fb-7fc3-443c-bd1b-b4eca0437fba', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 2, 4900),
+('d286e613-aa08-42ef-ad5b-5592b4a92595', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7350),
+('760c2330-739a-416e-ba8e-5d669aed1caf', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 1, 2450),
+('7eee5528-e993-4937-9a95-4f6fff8530db', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7350),
+('4be69585-c7ea-4c46-aa95-9473acd01902', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7350),
+('6401cd21-8575-43ce-ac6a-c8d6a2884d03', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7350),
+('39f3645d-613e-43f3-b84f-4990334db853', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 2, 4900),
+('b1ecbd4a-45c4-4335-9a56-fea856002453', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7350),
+('0ce60ec4-4407-4487-a87a-4ca5e542abcb', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7350),
+('8de7f002-0cbd-4bd3-8dc7-b43228527eb6', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7350),
+('b77b9d87-0d84-403a-8433-298e356d3949', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7350),
+('3bce8a4f-6b19-4bb3-a58a-50f47d045f52', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7350),
+('3c3606f4-f5a0-4d9c-8da7-24fe66c8ab02', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7350),
+('57711a35-8e0d-4df6-b2ce-8b28f3cc4b2a', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 2, 4900);
+
+INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario) VALUES
+('c6397dfb-8b65-4777-acd0-16c86d291cd4', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7350),
+('3ee2be8d-1684-404a-bb34-614ee7714c95', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7350),
+('ac6d062f-ed78-4573-9f1b-7c64871378f7', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7350),
+('6a1c69a6-6973-47e3-a2f8-7e8aa7ae19b0', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7350),
+('a9571fc6-9ead-42b4-885f-3f63c61c8dcd', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7350),
+('5078fa04-0cc4-4abf-8ebe-7f8e1f1bd1ac', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7350),
+('841f949a-5069-4792-b362-b50e011f11f7', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7350),
+('75f6116c-48b5-44c9-8f07-84643b1704aa', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7350),
+('ab9feb6f-e70e-4668-a272-8431419db373', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 1, 2595),
+('cb47fad5-28fe-41bf-9513-99c35e87394f', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7785),
+('d29a2d7f-2019-4991-90de-a9213429f0b2', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7170),
+('b2d67118-bf6c-4cf7-8d73-cb702170bbdb', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7170),
+('05d2a402-c3c6-4657-87cb-43ce532ed2e5', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7170),
+('7a98a6b5-22b5-4f8a-b2b8-41019a9a3ae9', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 1, 2390),
+('fb29430c-df70-40c3-9624-2999d35fa31a', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7170),
+('f6170ef8-d0e9-4a9d-9bf9-7176befbf493', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7170),
+('d11819ac-e240-46ec-9b3c-9a5efb8446ff', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7170),
+('0a7eab10-a5ec-4d39-ba45-f93b0921a015', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7170),
+('2ed94ad0-f66c-4d27-855f-4771dc727b84', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 4, 9560),
+('df0c9645-bb6e-4121-bbce-a5fcce92c00c', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 4, 7170),
+('f5cb97e8-e75c-4d30-af78-1b3606e4554b', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7170),
+('cfcce71f-581f-4134-803b-c7a00bb12a30', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7170),
+('5aa75818-0681-43b8-bb3f-2ce542caf5e1', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7170),
+('561e39bc-1516-42f9-ad60-de1e5951e9e2', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7170),
+('435ed2b3-2bc1-436b-9d4e-d0ac86ed31bd', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 4, 9560),
+('8606e8ae-abe2-40c7-9e03-199da70d289a', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7170),
+('718233f9-9750-4789-8a61-1524dfa0fd48', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7170),
+('364381e5-5400-4730-95d1-ba1b6ed3bd67', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7170),
+('40d9f905-c4b8-43d8-a63e-e69c1ff4fcee', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7170),
+('3ea8cfc8-4cd1-486a-9198-58e663721859', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7170),
+('4629ddfb-2abe-4248-b0ea-fd005aa55cde', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7170),
+('1b1a0099-a733-4961-9e98-61a23fd479b9', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 2, 4780),
+('169df1f6-8fea-4959-8b59-1fde30f1d3ac', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7170),
+('eb627eae-5b68-46ca-9715-36469df859e2', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7170),
+('7aa378e6-bb74-4a1b-9929-9548417c3028', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7170),
+('fb904b89-01cf-4387-af5c-66485e7de819', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7170),
+('68e75902-c4d7-458d-9759-c8376733f6ed', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7170),
+('ee07c008-619f-4084-8297-ddb21f41ea99', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 2, 4780),
+('9d15d3d6-ac98-4240-8ba8-47f211d33f75', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7170),
+('1268ebc0-b8c8-452d-96f3-e7f085854aeb', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 4, 9560),
+('8c9ea46f-d367-4b50-af13-8a2b133b11dc', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7170),
+('df16de93-7452-40e6-b28f-8780a5884b03', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7170),
+('2f677143-7682-44e7-836a-ed024ad258e5', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7170),
+('4a7d3f37-8307-4948-b962-5a2818547d89', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 4, 9560),
+('01f2d979-1967-49a6-9e20-8714c9c98648', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7170),
+('51c5d39e-c92c-4458-be4e-3fd6c21087b5', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7170),
+('4188439d-1100-49a0-8c34-2b13767380e4', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7170),
+('22a1c1a3-5fbd-4f29-ad09-553bc54392cf', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7170),
+('05ec0a16-db25-42e7-86ae-637d3ac7bea3', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7170),
+('5464f9cb-b647-4083-ba18-f23fb1f6a30a', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7170),
+('94a93424-413c-42ce-a05a-d3ee92d23d4f', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7170),
+('9c87b87b-5461-4a36-9560-64e03487f200', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7170),
+('10878b29-cce6-4350-abee-6988036bc58d', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7170),
+('2d364b10-1f32-43b2-a435-8ddd726f75ff', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 2, 4780),
+('ff5817ff-1d17-4fe0-88be-cc16e8f57219', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7170),
+('f0a3ad0c-ba32-4392-862d-86d5fb661648', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7170),
+('9581f6b0-0d39-4907-825f-d1acafc67d02', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 4, 9560),
+('4e5d9729-6245-49b7-8791-e45808a2b74a', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7170),
+('1cce7a46-b07a-48b1-af5f-f4154c6c5784', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7170),
+('5ae75431-7210-4ad3-8981-0ae9ddfa933b', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7170),
+('cc38f20d-85db-416b-8439-f18b1054853a', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7170),
+('673c7a25-47ee-4ec1-a86c-25e6856141a0', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 2, 4780),
+('133c53a3-35a5-4fa8-bc3f-a04629b16896', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7170),
+('64ecd4c0-274f-4c03-a813-e25ca9056df0', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7170),
+('0178b492-2b2c-4171-9251-581af65fec41', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7170),
+('a652e199-8e3c-44fc-89fd-8be7a7a6e1ae', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7170),
+('d0909868-3ed3-456d-9638-45f8d6f3030a', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7170),
+('1a45ee05-0f40-4e65-a7c8-3cf8735020ee', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 4, 9560),
+('9d1fa462-34d2-4650-bc95-3fe579d32bdf', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 2, 4780),
+('577175fc-0c74-40b0-bb75-3f50786859fe', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7170),
+('aef125d0-a7fa-4b68-b8bd-11b00de97f9b', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7170),
+('d815b074-823b-43c2-bc25-91e6d5412a14', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7170),
+('7537fb96-df19-4782-b3f3-b0502fcead4b', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7170),
+('d0bb7e66-7eb6-4ec7-9223-2e0fcbb4292e', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7170),
+('06a1b187-dc63-485c-9bd9-0e3d20c49baa', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 8, 7170),
+('dd6b5503-9f2f-4272-9407-57db47e3f050', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7170),
+('297608aa-4d7a-40f6-b98d-ff3bf31d45bc', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 2, 4780),
+('89d48d9f-be7f-43f7-ac37-cb03872f40e0', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7170),
+('62aeeb42-0840-4c1c-a60b-0063fa3dcba3', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7170),
+('135244a9-cff0-4480-9054-911e987c87f0', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7170),
+('0da162ad-9115-4636-abcc-b89f876fc1a3', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7170),
+('949fc7dd-fee1-42ba-b16c-a09443166cff', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7170),
+('efeb0294-90ee-4929-afaf-4cf94fa8946a', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7170),
+('c8024b59-c3b4-4b2a-a255-df08ab47ad43', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 2, 4780),
+('10eece19-0fd8-4188-b324-8ef1731fd53d', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7170),
+('97355602-7a49-4d30-9af7-26a871a855a9', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7170),
+('2e1681ee-2a6b-4141-ad8f-b09f7f978ed4', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7170),
+('387604dd-223c-4506-8da1-7e475725bfc4', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7170),
+('d68bfac8-9ba0-401e-8bba-b9510bc49498', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7170),
+('4cc71809-b636-416b-89ea-f84ee629651f', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7170),
+('8f599c16-c1b4-476c-b7c5-f3d1a32d283d', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 2, 4780),
+('d3a0a665-a934-4372-b5c7-8f69b401de5d', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7170),
+('cd81c15a-12b6-4e71-a2b0-0dc835657778', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 4, 9560),
+('6f903e67-3994-47fd-a58f-36f490addd0a', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 2, 4780),
+('a96612ed-8f0b-4d8b-83ed-b7d0aa4fd378', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7170),
+('5e4b844d-6c34-4130-9a0f-da3887a18564', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 4, 9560),
+('f40d8eb4-fc5b-4f6e-bda2-e87deb2ad02e', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7170),
+('07a87e65-64d2-4904-b7c8-32afc8559aaf', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 2, 4780),
+('16a60fa0-d69e-4986-ac3f-5cd971fe2d3e', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7170),
+('9546a35e-7038-48cc-b3d6-fe2bd136fdd4', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7170);
+
+INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario) VALUES
+('f1de33aa-d1f8-4452-aee8-d0ce88285697', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7170),
+('77b724d7-550b-418c-b065-3cde2f001bed', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7170),
+('f4b95845-f02d-4c9a-87b2-42fd5c8c3b5d', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7170),
+('8d3ed832-0f6d-4f46-bd26-d2eca49f303d', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7170),
+('4f63112b-ef91-4ea9-a60a-51153c3f4ff7', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7170),
+('a39cf56f-2d4a-4ad7-890e-25dc0360db5e', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7170),
+('ae25a389-0267-4dd8-a794-84ee1e299fb1', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7170),
+('f9221029-bc29-436d-bd8d-51e2eb51f044', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7170),
+('3dd35d95-1617-4425-a053-19bcd93e1005', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7170),
+('0c4c4cd3-3c01-4583-82b5-2a6169f29394', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7170),
+('42bf569b-ec22-4fc1-8f01-311075cd4f9d', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 7170),
+('3795a7b7-a3d5-4482-b494-8e5805214e71', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 2, 5980),
+('ba37cdcf-f95f-4c50-ac44-cd565da8305a', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970),
+('a8c2efb0-e2c5-4f35-85fe-c54a01b3e40c', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970),
+('ad1e9fb2-5bd6-4938-8558-edb9c5a83bc8', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970),
+('1cc1a979-1137-4ade-896c-06e1f21c6b8d', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970),
+('bcd610ba-7051-4d47-b003-f48f853e54b4', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970),
+('4da2175f-718d-43f1-bbf1-f30f41edfff7', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970),
+('e5154f67-77cf-40ca-bf29-7b9e7ee397a2', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970),
+('95001098-5a87-410f-ac9b-9d0caeedd0ef', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 4, 8970),
+('5159449b-444e-4bcb-8f59-1da6b8bd5ba5', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 4, 11960),
+('8f45dcf9-dd52-4abf-85df-457c286c3846', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970),
+('88b8b620-de2a-489b-b108-ca41b56fc414', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 2, 5980),
+('981140cf-c26b-476a-a812-86a3c915d1d2', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970),
+('daaebdf4-45c4-4809-a4c6-b3eab3bb4e44', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 2, 5980),
+('ebf884d8-9efe-425d-996c-10318229a7f3', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970),
+('ba2f3b19-de55-4983-a750-732e430eef9b', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970),
+('1d0c5976-5bd0-4f7f-bcde-eaf06070e4f5', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970),
+('d03cc54d-4919-4043-ad90-da3e9755056e', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970),
+('1d3c0085-0133-466b-a0d9-e680b13dbec3', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970),
+('950ef1d9-6363-4605-b162-f6bc46b9308b', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970),
+('bc7c0ee5-da34-4bfb-930a-da0920eafea0', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970),
+('c49a4a46-e6d4-4e75-86f9-23622606f052', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970),
+('9df9eecb-4faf-490a-bf7c-2a91982e58ce', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 2, 5980),
+('d7343255-bb1f-4fec-9255-5ac24fc60d3c', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970),
+('25dfcf98-db11-461f-9741-179cb039aaf4', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970),
+('d2058ecf-88c3-4e7e-9360-32a10b883250', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 2, 5980),
+('e44a479a-c4e7-4f03-90b3-0b132d900123', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970),
+('041fafde-04e3-473a-a3f5-1e81594eef41', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970),
+('6b90273e-1f97-46fb-8fd8-695bb058c672', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970),
+('60c43f66-4792-4da3-95a1-8ff0e946fb25', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970),
+('2303cdff-7233-4fbb-940f-87a5edb31569', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970),
+('5850df92-5126-44a8-b912-024198722bdf', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970),
+('5f248dd1-b5d8-4ac1-ada4-398a4bed85de', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 4, 11960),
+('59e1397b-bf6e-49d4-a67e-d033ade01c77', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970),
+('8325f1f2-4a77-48a0-9f73-9ec61e1f09b0', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 2, 5980),
+('7405c677-6c76-4f02-944b-8ddcf7aaeec5', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970),
+('e99ebdab-7d7f-47c0-bce3-1d0010ca7c28', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970),
+('51132335-e4a3-4d21-bd33-e4976a6f762d', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970),
+('2123d248-85fe-4742-bcba-a273dec533e1', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970),
+('48e6447c-61b8-4f94-9195-6b9421d21689', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970),
+('6aeb37e9-9784-4619-b494-8e02d15a7353', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970),
+('940d4dd8-7ba5-4e14-8ceb-c60bbe5bf725', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 2, 5980),
+('39bfea93-18e6-44a4-8f0e-a092e11d4d47', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 2, 5980),
+('73813e33-eb16-40fd-a68f-7a14e9c30954', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970),
+('1fe45546-b062-4091-9076-a3459e76901b', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970),
+('974a5dc9-80fb-4adb-8ff4-e9ca2e32c518', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 2, 5980),
+('05f16334-81da-41c3-9360-4d0e659bc15c', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970),
+('b49f80d6-48f9-49b0-9403-99b481e1bc74', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970),
+('88b622d1-9170-47d4-a423-f9baf7b210a7', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 2, 5980),
+('8081dbef-c9c1-4cc6-9afd-6db133b5fc2c', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970),
+('8fd5e72f-bf53-4d72-82c6-abd2b6527e27', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970),
+('7f5f743f-c4f6-43dc-8867-9e546c871399', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 2, 5980),
+('ded85938-753b-4497-904c-b8ef1fa632ac', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970),
+('1114fdb7-988d-4b07-8ab3-3868e850f9b0', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970),
+('47efc2b4-e3e2-4aa6-819c-a6b387994ff6', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970),
+('f4018ce0-8b9e-455e-b102-f19820145707', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970),
+('c637713d-aeed-4bf1-a9b2-a40d1459f32d', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970),
+('6bafdc63-bee2-4c63-b082-bfba241efc4d', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970),
+('71e31a0c-86af-467f-8398-07c5c1900138', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 2, 5980),
+('9b54f4cd-d652-4bf9-8408-fd0acdab9bea', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 2, 5980),
+('be0d28fa-8cb8-4ed4-9264-1cc58bc05510', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970),
+('30d926d1-f2f9-4420-a034-013b72e04a0c', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 4, 11960),
+('fcf6747e-6c8e-4a9a-8b62-b3fe3258b9e5', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970),
+('0ae2e4c8-0e65-4f43-83d3-059c60e63aa5', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970),
+('22b490b7-674e-4686-9c41-af91a23ca161', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970),
+('ff1778be-0c04-4a02-be07-0ac2e72cd1b0', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 2, 5980),
+('61082e32-c6bf-41b7-9c2a-7becc5faba9c', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970),
+('2f6cb523-f738-4ed1-ba20-134e3d41216d', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970),
+('77418e48-c98d-4cdb-9b2e-f8e209900f18', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 2, 5980),
+('fc9106af-291b-4eb5-b63c-fa0d7b8bb11b', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970),
+('9a0420ef-1c12-47fa-b3fb-7b1b4188112c', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970),
+('339ceed4-71d1-41b9-97f0-d66716b37c51', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 4, 11960),
+('0e97e2db-99d5-4fae-a61c-82017da402d2', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 4, 11960),
+('d9b00201-8f5c-4322-bdcf-84028e499de5', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970),
+('51bed254-f540-4e96-84ed-06d93587f8c7', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970),
+('b97a9aa6-d677-4c83-8472-7543513708cb', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970),
+('f8e283e8-f170-45f1-815b-8f48a6899296', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 4, 11960),
+('4d451b1c-261c-4f35-bdb3-a9ca68c8e159', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 2, 5980),
+('ec73c4d3-ec27-4dd4-88a8-d62588c794cb', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 2, 5980),
+('4746879b-818d-4eb3-81cb-fc4af496ec05', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970),
+('ff0f4558-99dc-4a12-9b43-2a21d146f357', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970),
+('739783bd-1de4-4a77-903e-4f2a8c335675', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970),
+('4abad2ab-6fb6-46b1-8620-ad81123f7ffd', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970),
+('c42ae2ae-d8e3-4208-9021-6de65fbee375', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970),
+('881dc0c7-d2f3-48f2-b01d-4248e5fbb934', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970),
+('afe28838-d90d-4b30-a1aa-d9534c9e01a1', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970),
+('8ed0ed37-eecd-4673-852c-e0219fe332c4', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970),
+('c8abfbc0-560e-4491-814b-6311e8879853', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970),
+('5afb9e3b-531d-4f73-acb4-2e8d14cc336b', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970);
+
+INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario) VALUES
+('3c2e15ef-2444-4f9d-b662-1ec1a5e9347b', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970),
+('bf3f22ca-d398-456e-94d0-8ff63a39387c', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970),
+('190adf35-c3a8-4875-9bcf-e74559faec3c', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970),
+('a7b0ca3d-2b72-4709-aca0-5e14a6bc359e', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 2, 5980),
+('1e1fc602-d98b-4452-9df0-5e1d003da31b', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970),
+('57460c9b-2cf9-4d55-93e6-b734afcc244c', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970),
+('5624ae5c-b3c5-495d-ba40-c286b99e063b', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 2, 5980),
+('9e354fe0-6558-4dc3-a9b0-2cfa6f58ed75', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 4, 11960),
+('147f5adb-e7ca-43d4-ab58-cc98447a63a5', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970),
+('b1244869-9c12-499a-ae1c-330a799133bd', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970),
+('4ca6412d-4932-432f-94f6-458ffa2e4dde', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970),
+('cb7e8201-450c-4d35-94ba-2551c2c4c803', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 2, 5980),
+('6aef80f1-4377-4c01-af0a-f04954deb1c3', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970),
+('1ce8c25b-99eb-452c-849a-2a3f03ad2510', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 2, 5980),
+('8f59ff55-0023-44bc-91b7-a8a2defe77d2', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970),
+('f5d3aa20-0245-4757-ad0f-0711c79767b0', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970),
+('5cc74c0f-6abf-4a66-89d2-2d85c42d6e59', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 4, 11960),
+('db9faf5d-adc8-4764-a97d-f35e3065962a', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970),
+('a8ef1498-bc64-4777-ab26-4cee6349d42e', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970),
+('d4157316-052d-4300-9c42-d0f307637484', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970),
+('4eef27cf-bdd8-4958-826c-577cee7f4a9b', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970),
+('f48674b9-9e63-4dec-9a9e-3b518a72838c', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970),
+('a77151a1-e67c-4869-946e-2b6be9514f78', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970),
+('ad8dcb25-25eb-4f98-b39f-b03a12347028', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970),
+('eb40f79f-5994-4147-9811-cbee793ffdf6', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 4, 11960),
+('00f10bc7-a586-4e7e-a9ce-c451d3cd09ee', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970),
+('116c3ef8-7da6-4588-9208-5b1dd5b05eeb', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970),
+('990fb261-a3b5-41f5-ae7b-670a3ea43742', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970),
+('22476911-c1a8-4616-9e8c-60a3fd5f331c', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970),
+('28890775-fd88-422f-8f28-c9c4c8bd3a39', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970),
+('e58b888f-91a1-4a96-a28c-89fdbb945622', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970),
+('cbd6b5d7-0acf-4ceb-b56b-888c8831cb32', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 2, 5980),
+('40cbab00-e44c-4ef9-8de5-111beff794e8', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 4, 11960),
+('b437f8ba-f397-41cf-9885-05a3b72957f5', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 4, 11960),
+('c6bff29d-dc88-4f8c-b413-6d9110dc1f54', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 4, 11960),
+('51bd79de-bba6-4ec7-90e2-9279ab986188', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970),
+('284f6d94-8431-45b0-8688-7c9065fff96f', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970),
+('e1b22d6b-03d1-410b-a139-3da627a9d11b', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970),
+('6e81a3b5-593a-4778-bdce-a8d87785c2a1', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 2, 5980),
+('9e33eaa6-e98d-432c-a113-3fb0f63644b2', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970),
+('2fe769ac-5160-473d-86bf-56282188253c', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970),
+('14e4896a-80a6-43e7-9faa-2262110880ce', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 1, 2990),
+('65ed011d-df1c-4601-8c83-0b819db866ce', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970),
+('b9dd6c86-10b4-4cf9-b85a-338d0b981353', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 1, 2990),
+('a7267a4a-c09f-4fa8-a264-b67712475a2b', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 1, 2990),
+('6a0e58ce-ee54-42ea-8a6e-778f78eb1b46', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 8970),
+('cbf3a42b-afbd-463b-82fd-92af98b32ae1', '3c2755ef-df46-4515-9756-be554b0f2323', 4, 7800),
+('d56e81f8-a650-4d65-ae0e-4662606ec6b6', '3c2755ef-df46-4515-9756-be554b0f2323', 6, 11700),
+('6b3c21f2-50b1-47be-b8ed-43950efc5f16', '3c2755ef-df46-4515-9756-be554b0f2323', 2, 3900),
+('1560b1b9-6c5a-4cef-b5b1-05335442bf87', '3c2755ef-df46-4515-9756-be554b0f2323', 2, 3900),
+('fd6dfe73-c89e-4bfa-954d-20ef17280844', '3c2755ef-df46-4515-9756-be554b0f2323', 4, 7800),
+('f5feb001-8835-406d-821e-dedef0368073', '3c2755ef-df46-4515-9756-be554b0f2323', 4, 7800),
+('9c84b109-9ea5-4762-86da-062edb45c1b9', '3c2755ef-df46-4515-9756-be554b0f2323', 4, 7800),
+('0eab3019-d857-400f-93df-bea050534485', '3c2755ef-df46-4515-9756-be554b0f2323', 4, 7800),
+('db918a01-352e-4cb3-8cc6-dd98442660d0', '3c2755ef-df46-4515-9756-be554b0f2323', 4, 7800),
+('cc3ed396-0754-4f25-a69c-cc9111fe6d66', '3c2755ef-df46-4515-9756-be554b0f2323', 4, 7800),
+('94f29182-7be6-45ae-bc23-acdd70631cab', '3c2755ef-df46-4515-9756-be554b0f2323', 6, 11700),
+('e872aa40-b656-4ee9-ab55-202eb85b2ecc', '3c2755ef-df46-4515-9756-be554b0f2323', 4, 7800),
+('85095238-a875-4cc2-b087-f91077e5d3c7', '3c2755ef-df46-4515-9756-be554b0f2323', 4, 7800),
+('0136f308-efca-4bd4-a8b0-6b47fd90a5e1', '3c2755ef-df46-4515-9756-be554b0f2323', 2, 3900),
+('bf149688-e8d9-497e-a60b-e3aea109b81e', '864ee632-1011-4b09-ac55-5762d6761368', 1, 2390),
+('6310e6e0-6bb0-4066-b7b1-1a0440399647', '864ee632-1011-4b09-ac55-5762d6761368', 1, 2390),
+('aaa2a36f-5427-4dbf-98ce-d6168e6a3307', '3c2755ef-df46-4515-9756-be554b0f2323', 4, 7800),
+('cf5adb8b-e90f-40a0-a7e1-e090956f3d70', '3c2755ef-df46-4515-9756-be554b0f2323', 4, 7800),
+('17d27da4-3dc1-4f8c-9421-05ab0c485b05', '3c2755ef-df46-4515-9756-be554b0f2323', 4, 7800),
+('26fed113-9f89-4d20-93c0-619d596001e3', '3c2755ef-df46-4515-9756-be554b0f2323', 4, 7800),
+('7eb3e1aa-2027-464a-adcb-014f8773035a', '3c2755ef-df46-4515-9756-be554b0f2323', 4, 7800),
+('881176c0-43df-4b98-adf0-9d91fb959a04', '3c2755ef-df46-4515-9756-be554b0f2323', 6, 11700),
+('85018702-cb94-4be4-98f0-11acd637923c', '3c2755ef-df46-4515-9756-be554b0f2323', 4, 7800),
+('e2fb32fc-64d5-4e95-bcda-763c38caa4b1', '3c2755ef-df46-4515-9756-be554b0f2323', 4, 7800),
+('878ff6a0-f783-4057-949c-17544a34fdaf', '3c2755ef-df46-4515-9756-be554b0f2323', 2, 3900),
+('c9dd188e-c94e-4a13-845d-5ef6a54f0f19', '3c2755ef-df46-4515-9756-be554b0f2323', 6, 11700),
+('27672ad6-237b-4774-b54a-4daebc78af23', '3c2755ef-df46-4515-9756-be554b0f2323', 4, 7800),
+('9d9569df-eb62-451d-8e2e-81f25a42f835', '3c2755ef-df46-4515-9756-be554b0f2323', 4, 7800),
+('6b1ba803-3c7a-4cc7-8df7-ad049c4733bc', '3c2755ef-df46-4515-9756-be554b0f2323', 2, 3900),
+('c5e09b62-70a1-4e3a-a223-48d965e11277', '3c2755ef-df46-4515-9756-be554b0f2323', 4, 7800),
+('fe3dd53d-284d-43cf-a092-b8437ea053a6', '15d614b1-6bb4-461a-9c2a-c28edfc24f28', 2, 3900),
+('5f63fafd-8a8a-4559-b627-fcb574437c31', '15d614b1-6bb4-461a-9c2a-c28edfc24f28', 1, 1950),
+('f02308ef-4125-4c2e-8743-a27035ac5348', '15d614b1-6bb4-461a-9c2a-c28edfc24f28', 2, 3900),
+('c238e37d-5c29-42f3-9b81-93d79f3eaa7a', '15d614b1-6bb4-461a-9c2a-c28edfc24f28', 1, 1950),
+('8279a32d-dd59-45aa-9553-06123ade621a', '15d614b1-6bb4-461a-9c2a-c28edfc24f28', 2, 3900),
+('827f5212-a893-46b1-bfb7-23a1bb474442', '15d614b1-6bb4-461a-9c2a-c28edfc24f28', 2, 3900),
+('b8ccbfd0-32b5-4bd7-a727-e256c8087d5e', '15d614b1-6bb4-461a-9c2a-c28edfc24f28', 2, 3900),
+('3e651eaa-fe33-4b91-a423-682c9028222b', '15d614b1-6bb4-461a-9c2a-c28edfc24f28', 3, 5850),
+('e26956e4-b945-43ac-b171-7b703c5ceba2', '15d614b1-6bb4-461a-9c2a-c28edfc24f28', 2, 3900),
+('914239b8-c062-491c-9ca5-287cb57ed486', '15d614b1-6bb4-461a-9c2a-c28edfc24f28', 2, 3900),
+('8e037e4b-007e-40e4-806e-565653bbae87', '3c2755ef-df46-4515-9756-be554b0f2323', 4, 7800),
+('99a4a2cc-5c25-4886-9257-03772d2ac1aa', '3c2755ef-df46-4515-9756-be554b0f2323', 4, 7800),
+('d460fe78-49fd-4094-8d8c-21fd4339bfdf', '3c2755ef-df46-4515-9756-be554b0f2323', 4, 7800),
+('f48e4865-66d5-4861-b19e-ddc863c5911d', '3c2755ef-df46-4515-9756-be554b0f2323', 4, 7800),
+('6cb74b75-7adf-45cd-a179-8325021a64a9', '15d614b1-6bb4-461a-9c2a-c28edfc24f28', 2, 3900),
+('dd29a9bb-6082-43e2-9438-e7ed8c8ccf18', '15d614b1-6bb4-461a-9c2a-c28edfc24f28', 3, 5850),
+('d394cec8-1164-4fc4-8a60-2d154bc45708', '15d614b1-6bb4-461a-9c2a-c28edfc24f28', 2, 3900),
+('e51f099b-0b64-4b3e-8e9e-8978682b272a', '15d614b1-6bb4-461a-9c2a-c28edfc24f28', 1, 1950),
+('0636218d-b0c4-4c80-a564-d6b258278082', '3c2755ef-df46-4515-9756-be554b0f2323', 4, 7800),
+('2840a811-2898-4dab-9908-c8a017de6387', '3c2755ef-df46-4515-9756-be554b0f2323', 6, 11700),
+('70098579-74da-4239-9369-04481e9371c9', '15d614b1-6bb4-461a-9c2a-c28edfc24f28', 2, 3900),
+('ee3bd434-512e-4046-b95f-0ba6026ef3ff', '3c2755ef-df46-4515-9756-be554b0f2323', 4, 7800),
+('d345a290-10d9-4900-8f6f-e245da0384d1', '3c2755ef-df46-4515-9756-be554b0f2323', 6, 11700),
+('e24607dd-2c17-4da3-b874-296be7ed766f', '3c2755ef-df46-4515-9756-be554b0f2323', 4, 7800);
+
+INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario) VALUES
+('e5c884d5-9a1c-40e7-b48b-42a33bff5c19', '3c2755ef-df46-4515-9756-be554b0f2323', 2, 3900),
+('2b5e32d9-3ad4-4a8d-9f84-1ca0481f1db8', '15d614b1-6bb4-461a-9c2a-c28edfc24f28', 1, 1950),
+('7bf53d25-b9df-4390-8417-54baf9cc8e88', '3c2755ef-df46-4515-9756-be554b0f2323', 4, 7800),
+('8bb05e1a-e8e2-4ce9-8fde-1ce05b78824b', '3c2755ef-df46-4515-9756-be554b0f2323', 4, 7800),
+('b93b6c8b-4142-46ad-a09a-dda50e40d276', '3c2755ef-df46-4515-9756-be554b0f2323', 4, 7800),
+('125b0902-9e0f-4934-89fa-cb2686143036', '3c2755ef-df46-4515-9756-be554b0f2323', 4, 7800),
+('57055404-001b-4dfc-9590-3c26db92da30', '3c2755ef-df46-4515-9756-be554b0f2323', 4, 7800),
+('b61f4c9d-73de-4cfe-8cc3-5a999b4893bb', '3c2755ef-df46-4515-9756-be554b0f2323', 4, 7800),
+('9aae4762-53ee-42eb-9002-f4ea9ab5745e', '3c2755ef-df46-4515-9756-be554b0f2323', 4, 7800),
+('2e13f553-a77a-4183-9d6a-8e8f8038e0c4', '3c2755ef-df46-4515-9756-be554b0f2323', 4, 7800),
+('17c6199e-aaac-4d54-836c-177423019833', '3c2755ef-df46-4515-9756-be554b0f2323', 4, 7800),
+('eda7f0dd-be11-42f2-a6a4-aa5a032297b1', '3c2755ef-df46-4515-9756-be554b0f2323', 4, 7800),
+('d7699466-08f5-44b5-a140-ea77e2c66d64', '3c2755ef-df46-4515-9756-be554b0f2323', 6, 11700),
+('7ab9758d-84c1-4064-9bf6-5368969048c1', '3c2755ef-df46-4515-9756-be554b0f2323', 4, 7800),
+('8716222e-6f6c-4030-9b68-ed594e8a09e0', '3c2755ef-df46-4515-9756-be554b0f2323', 4, 7800),
+('96bf2b45-99ec-4d9b-ab49-ec0ab7e4a664', '3c2755ef-df46-4515-9756-be554b0f2323', 4, 7800),
+('3e851c93-7a8f-4422-8d33-128e00dd93a9', '3c2755ef-df46-4515-9756-be554b0f2323', 4, 7800),
+('934fb1e6-32e3-4dd9-8c18-6e50fad25090', '3c2755ef-df46-4515-9756-be554b0f2323', 4, 7800),
+('385e1a5a-945b-40a6-8b40-cb8c7daea10b', '3c2755ef-df46-4515-9756-be554b0f2323', 4, 7800),
+('a6f06640-0735-409d-b1c2-062cd609c50a', '3c2755ef-df46-4515-9756-be554b0f2323', 4, 7800),
+('51287443-0241-4bb7-879b-5da42d33106e', '3c2755ef-df46-4515-9756-be554b0f2323', 4, 7800),
+('2f36b125-de08-4702-9faa-2c360462ec3d', '3c2755ef-df46-4515-9756-be554b0f2323', 4, 7800),
+('c7c7d5e1-2bda-4e59-ad5e-91fb4743d2c2', '3c2755ef-df46-4515-9756-be554b0f2323', 6, 11700),
+('ee79ceb1-4f4d-4656-a9a7-376f17922e28', '3c2755ef-df46-4515-9756-be554b0f2323', 4, 7800),
+('b3d6231a-c455-4bda-b79e-c23b2fdc3c3c', '3c2755ef-df46-4515-9756-be554b0f2323', 4, 7800),
+('aae71527-4652-4337-9e87-d53e49697e2e', '3c2755ef-df46-4515-9756-be554b0f2323', 4, 7800),
+('f27ae249-4660-4b6a-bfb1-d58c51ea8532', '3c2755ef-df46-4515-9756-be554b0f2323', 4, 7800),
+('42fa0c26-c171-4efe-9354-b27104d578f6', '3c2755ef-df46-4515-9756-be554b0f2323', 4, 7800),
+('df87e92d-e058-48f2-aae1-462da374edfb', '3c2755ef-df46-4515-9756-be554b0f2323', 4, 7800),
+('f1880e41-2c06-41a2-9dc2-5f8dc50102fd', '3c2755ef-df46-4515-9756-be554b0f2323', 4, 7800),
+('fb97a368-7706-4b94-8c83-5d4509bd39fb', '3c2755ef-df46-4515-9756-be554b0f2323', 4, 7800),
+('6e8009ae-2e1f-444e-8aba-7f40460c0d64', '3c2755ef-df46-4515-9756-be554b0f2323', 4, 7800),
+('4b9fcdf5-bc35-4b14-88a4-0f2abd9f8b5c', '3c2755ef-df46-4515-9756-be554b0f2323', 4, 7800),
+('bd0fc524-4efb-4317-a2e1-43d7b607919d', '3c2755ef-df46-4515-9756-be554b0f2323', 4, 7800),
+('1f0bfea0-5de1-478f-8e2c-00214cb580eb', '3c2755ef-df46-4515-9756-be554b0f2323', 4, 7800),
+('65f53a71-cacb-4d92-8eac-337a13581c2a', '3c2755ef-df46-4515-9756-be554b0f2323', 4, 7800),
+('611fafaf-4245-46c0-a369-929aa2bbd99c', '3c2755ef-df46-4515-9756-be554b0f2323', 6, 11700),
+('f84c30c7-1fa3-4654-8742-c874b99243a5', '3c2755ef-df46-4515-9756-be554b0f2323', 4, 7800),
+('bca6c2c6-2139-40d0-be8c-6932f1c8c10a', '3c2755ef-df46-4515-9756-be554b0f2323', 4, 7800),
+('e3362748-1982-4537-ae60-47835fb79831', '3c2755ef-df46-4515-9756-be554b0f2323', 4, 7800),
+('14bf55df-9a7d-49fe-a42c-261ecb6d742d', '3c2755ef-df46-4515-9756-be554b0f2323', 4, 7800),
+('35017d86-5cd7-49e3-9a44-607d52638186', '3c2755ef-df46-4515-9756-be554b0f2323', 4, 7800),
+('676ecfd0-1ac2-427b-b8ee-3f1500a52195', '0f710b5e-23a3-402b-842f-81ec16b46d20', 2, 4980),
+('5a4db739-2516-4b6a-9b05-c5f2b76936d1', '0f710b5e-23a3-402b-842f-81ec16b46d20', 2, 4980),
+('323b0074-da3c-4d6d-bb9e-4fac8e07c2b6', '0f710b5e-23a3-402b-842f-81ec16b46d20', 2, 4980),
+('35122216-b6db-40f0-850c-c2794f88302f', '0f710b5e-23a3-402b-842f-81ec16b46d20', 1, 2490),
+('ec8bf307-e3a3-4139-b199-a95bfbadad6c', '0f710b5e-23a3-402b-842f-81ec16b46d20', 2, 3190),
+('2146a0aa-423a-470b-b4c8-4e6da6abbaba', '0f710b5e-23a3-402b-842f-81ec16b46d20', 2, 3190),
+('d39994b4-824f-43e0-87c9-fd4f889cd75c', '0f710b5e-23a3-402b-842f-81ec16b46d20', 1, 2490),
+('d41efe01-5f39-4102-b469-3d48b34a8a23', '0f710b5e-23a3-402b-842f-81ec16b46d20', 2, 3190),
+('7201068d-d503-445f-ac70-c9b5fa415856', '0f710b5e-23a3-402b-842f-81ec16b46d20', 3, 3890),
+('e68f70b3-9afe-4c9e-9e5c-969feb168584', '0f710b5e-23a3-402b-842f-81ec16b46d20', 1, 2490),
+('1c736202-731c-477a-bbe3-5b8b79125527', '0f710b5e-23a3-402b-842f-81ec16b46d20', 1, 2490),
+('a3998d88-b64e-4c1a-9ea0-62b09447eb86', '0f710b5e-23a3-402b-842f-81ec16b46d20', 1, 2490),
+('c0571a86-9ddb-4997-b889-d27e55844deb', '0f710b5e-23a3-402b-842f-81ec16b46d20', 3, 3890),
+('d77e456e-7860-4f97-b660-f0135ad295d9', '0f710b5e-23a3-402b-842f-81ec16b46d20', 1, 2490),
+('f254114e-4553-4af0-806d-64c27ba8d464', '0f710b5e-23a3-402b-842f-81ec16b46d20', 1, 2490),
+('2733b31f-99c5-4236-aea9-86c426f81332', '0f710b5e-23a3-402b-842f-81ec16b46d20', 1, 2490),
+('163acf2f-5967-4487-9dff-60f93f983112', '0f710b5e-23a3-402b-842f-81ec16b46d20', 1, 2490),
+('d452a32f-e3b0-4f9b-81fa-8a4e14c6a68f', '0f710b5e-23a3-402b-842f-81ec16b46d20', 3, 3890),
+('d9b432bc-3f69-4bd0-825d-c7922feede0c', '0f710b5e-23a3-402b-842f-81ec16b46d20', 1, 2490),
+('52ab7fda-0e58-481c-bdaa-74d2ca9f6168', '0f710b5e-23a3-402b-842f-81ec16b46d20', 1, 2490),
+('ab291289-93c8-42d8-89e9-c031170587fb', '0f710b5e-23a3-402b-842f-81ec16b46d20', 2, 3190),
+('e3fa7bf0-caaf-46cc-8d94-ae6171ac5598', '0f710b5e-23a3-402b-842f-81ec16b46d20', 2, 3190),
+('345f6435-be06-447a-9c8b-d5b4317bfc1a', '0f710b5e-23a3-402b-842f-81ec16b46d20', 2, 3190),
+('4d0cd787-77c0-4549-9667-daaadb4df8c8', '0f710b5e-23a3-402b-842f-81ec16b46d20', 1, 2490),
+('449dea78-7e92-41b5-83bb-edef5c4f9a9f', '0f710b5e-23a3-402b-842f-81ec16b46d20', 2, 3190),
+('c9d964a4-e8d2-404d-a35d-db186bb7e19f', '1142531d-2f6c-4799-a7e8-f106930dc373', 2, 2199),
+('aa04618a-1245-48e7-97a9-455e731f6158', '1142531d-2f6c-4799-a7e8-f106930dc373', 2, 2199),
+('3ceda4fe-4336-4491-91cb-434fc91ddf5c', '0f710b5e-23a3-402b-842f-81ec16b46d20', 1, 2490),
+('60c9f140-2a8a-4526-95f3-fd7159f2c37a', '0f710b5e-23a3-402b-842f-81ec16b46d20', 1, 2490),
+('c0bfc710-9ace-415d-b8c5-8a4f4bbf913a', '0f710b5e-23a3-402b-842f-81ec16b46d20', 1, 2490),
+('5afec5dd-e443-4d09-b4e8-28f3375cf057', '0f710b5e-23a3-402b-842f-81ec16b46d20', 3, 3890),
+('e59ca547-ab0c-4e6f-98b1-682a42403da8', '0f710b5e-23a3-402b-842f-81ec16b46d20', 1, 2490),
+('2bd35fea-3bce-478b-a6c6-27f87d7ff3b8', '0f710b5e-23a3-402b-842f-81ec16b46d20', 3, 3890),
+('582f91bd-daa6-402f-8e7f-c4b59e4d7f84', '0f710b5e-23a3-402b-842f-81ec16b46d20', 1, 1950),
+('fc8c17ba-0460-40da-9d53-5e7310a6f332', '0f710b5e-23a3-402b-842f-81ec16b46d20', 2, 2650),
+('0a39e418-e6fc-4321-acb7-fa699bf71adc', '0f710b5e-23a3-402b-842f-81ec16b46d20', 2, 2650),
+('2190ec58-a824-4247-b729-147d0de92d1a', '0f710b5e-23a3-402b-842f-81ec16b46d20', 1, 1950),
+('ebc9ada7-4989-4794-b2df-1e4b5bedf281', '0f710b5e-23a3-402b-842f-81ec16b46d20', 2, 2650),
+('e4be3c0b-b75f-407b-837d-0a2a21c417d7', '0f710b5e-23a3-402b-842f-81ec16b46d20', 1, 1950),
+('aeb48aa1-fd87-43ed-8bec-362462ee7811', '0f710b5e-23a3-402b-842f-81ec16b46d20', 2, 2650),
+('14411821-1a1f-46cd-a563-6721b197c894', '0f710b5e-23a3-402b-842f-81ec16b46d20', 1, 1950),
+('8518f3fa-0927-4db5-8101-fa413319d06e', '0f710b5e-23a3-402b-842f-81ec16b46d20', 1, 1950),
+('8cc64052-86f8-4fd0-be5c-9b9faae4ee1e', '0f710b5e-23a3-402b-842f-81ec16b46d20', 1, 1950),
+('3a3cc2a1-15bf-47ce-bac9-3ebcc468f9ba', '0f710b5e-23a3-402b-842f-81ec16b46d20', 1, 1950),
+('8f519bb0-8f25-49b9-8cb7-89731a59e0c5', '0f710b5e-23a3-402b-842f-81ec16b46d20', 1, 1950),
+('7b51c915-634e-4ad9-a44a-c747a0d1b81b', '0f710b5e-23a3-402b-842f-81ec16b46d20', 2, 2650),
+('92053562-dd7a-46f6-9c6c-485b407141d0', '0f710b5e-23a3-402b-842f-81ec16b46d20', 1, 1950),
+('d6d3359b-26ac-4e63-a63b-fa0f10f07ed1', '0f710b5e-23a3-402b-842f-81ec16b46d20', 2, 2650),
+('202e5956-be50-4577-8f53-d6020925bab8', '0f710b5e-23a3-402b-842f-81ec16b46d20', 1, 1950),
+('ecb62faf-aff5-4694-9bc0-663ba3715c15', '0f710b5e-23a3-402b-842f-81ec16b46d20', 1, 1950),
+('ed3e934e-6c08-46b9-9b6a-7e3fbccad338', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 2990),
+('757a426b-41e2-40e9-bb62-767121c9b0be', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 2990),
+('96485bed-d722-4575-a2be-04d0387d959a', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 2, 2390),
+('d0df91dc-f4dd-49c2-9634-bccb48af7c9a', '0f710b5e-23a3-402b-842f-81ec16b46d20', 2, 2650),
+('825a9f64-9d64-4d01-b4c9-61d4304b19bb', '0f710b5e-23a3-402b-842f-81ec16b46d20', 1, 1950),
+('008be167-0b55-4b5d-ac43-df9d6fb2fb2b', '0f710b5e-23a3-402b-842f-81ec16b46d20', 1, 1950),
+('b4671951-6897-428d-8c1f-c0a7d5c16375', '0f710b5e-23a3-402b-842f-81ec16b46d20', 1, 1950),
+('4ee68bd5-65b2-4943-8644-83bab29b3792', '0f710b5e-23a3-402b-842f-81ec16b46d20', 1, 1950);
+
+INSERT INTO pedido_items (pedido_id, producto_id, cantidad, precio_unitario) VALUES
+('880a9d83-d3fa-4e73-b9fb-5f0a21552592', '0f710b5e-23a3-402b-842f-81ec16b46d20', 2, 2650),
+('55a54d65-c257-424d-932b-f5f3a9ed0a48', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 2990),
+('e43cb8ee-953b-47ca-b719-2e21ffe9ec35', '0f710b5e-23a3-402b-842f-81ec16b46d20', 2, 2650),
+('2604bf6c-7d1b-4e7a-bd96-299f8e695b72', '0f710b5e-23a3-402b-842f-81ec16b46d20', 2, 2650),
+('305e21b1-9aed-49f8-9519-056a63a90987', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 2990),
+('8f20e096-9c83-48b4-9459-be13a24411f4', '0f710b5e-23a3-402b-842f-81ec16b46d20', 1, 1950),
+('9e83970a-74c6-4467-bb43-9c362c089209', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 4, 3490),
+('a7e07e68-4bfa-4597-bcf1-d0ff07a60e3c', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 2990),
+('7770c496-0ddd-489e-ae3b-c8ce0a5d8a05', '0f710b5e-23a3-402b-842f-81ec16b46d20', 1, 1950),
+('6745e68d-535d-4d55-9948-98f6e00562ce', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 4, 3490),
+('c259e17c-6e35-414b-b2e2-7e0c5d0873d2', '0f710b5e-23a3-402b-842f-81ec16b46d20', 1, 1950),
+('e093b7fc-66eb-40b7-8603-46049bf03604', '0f710b5e-23a3-402b-842f-81ec16b46d20', 2, 2650),
+('d582e764-c2f1-468b-b7fe-5381b36f7243', '0f710b5e-23a3-402b-842f-81ec16b46d20', 1, 1950),
+('64a0fae5-7824-4383-96d4-4ddee6fca117', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 2990),
+('f47aeb82-8432-40df-a865-1aaafea260d2', '0f710b5e-23a3-402b-842f-81ec16b46d20', 1, 1950),
+('4143dc1b-5db8-4743-b3f1-326c26e33e5b', '0f710b5e-23a3-402b-842f-81ec16b46d20', 1, 1950),
+('37362f84-1dc8-45af-9cb0-f27bfa38b86e', '0f710b5e-23a3-402b-842f-81ec16b46d20', 2, 2650),
+('64bee176-3272-4ec0-a2af-0b0720bbd071', '0f710b5e-23a3-402b-842f-81ec16b46d20', 2, 2650),
+('61d0668d-d04d-4808-ab20-8c2bb9be19e6', '0f710b5e-23a3-402b-842f-81ec16b46d20', 2, 2650),
+('e2ba9f8b-2b50-46db-a8f2-bc1191110d57', '0f710b5e-23a3-402b-842f-81ec16b46d20', 1, 1950),
+('6e232198-7789-407c-8beb-2d4df964acf5', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 4, 3490),
+('1a6f4c16-982e-4883-a853-559c1811d428', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 2990),
+('d3f38af8-1ac7-455b-a0a1-dc4ebc5626cb', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 2990),
+('fc91ba77-92d2-4ef1-857d-9276bffb0a48', '0f710b5e-23a3-402b-842f-81ec16b46d20', 2, 2650),
+('ae767e53-4546-425a-998b-8905573d0f6c', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 2, 2390),
+('c614b75b-08e5-44d6-99a5-c6f658fe6898', '0f710b5e-23a3-402b-842f-81ec16b46d20', 2, 2650),
+('1d7882ab-6d2d-4e26-b2a3-900a638125f1', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 2990),
+('38b00ffe-dd34-4823-a5ed-b24c2a7c60ed', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 3, 2990),
+('02dc9bbf-25df-46bb-8a7f-c439372d106a', '0f710b5e-23a3-402b-842f-81ec16b46d20', 2, 2650),
+('97104cc7-3b77-4aaa-aa88-bb60e83c7dd3', '0f710b5e-23a3-402b-842f-81ec16b46d20', 1, 1950),
+('1a51be7a-814d-4bd3-be39-35a1ae38ceca', '0f710b5e-23a3-402b-842f-81ec16b46d20', 1, 1950),
+('5c3469f2-6cdd-4540-8161-704bac4008df', '0f710b5e-23a3-402b-842f-81ec16b46d20', 2, 2650),
+('cf04c675-500c-4450-aa50-39d807fb6eb4', '0f710b5e-23a3-402b-842f-81ec16b46d20', 2, 2650),
+('f0749708-e7c2-43f4-9b7d-266c824f846e', 'f4f52cc3-1555-41f5-9c7a-5ff8df44dfce', 4, 3490),
+('6b067809-1cc9-4a02-a7cf-8877444e3a06', '0f710b5e-23a3-402b-842f-81ec16b46d20', 1, 1950),
+('b51b9215-9ec8-4f94-bf53-58f3917657a3', '0f710b5e-23a3-402b-842f-81ec16b46d20', 2, 2650),
+('72f82272-a1cd-4e72-ac8b-2b9b9a1c8355', '0f710b5e-23a3-402b-842f-81ec16b46d20', 1, 1950),
+('8dccfb85-0cf3-49c5-9eee-0ecca903a252', '0f710b5e-23a3-402b-842f-81ec16b46d20', 2, 2650),
+('8be826c5-18f0-4b77-a7c3-37241784f0fd', '0f710b5e-23a3-402b-842f-81ec16b46d20', 1, 1950),
+('95d0676b-305e-4670-b897-d12e8c8d2532', '0f710b5e-23a3-402b-842f-81ec16b46d20', 1, 1950),
+('e68847a2-c4f4-46c8-aafa-d60531bcbb1f', '0f710b5e-23a3-402b-842f-81ec16b46d20', 1, 1950),
+('d4c6c9b0-e8c3-40e8-bbac-0e7c0a5365e5', '0f710b5e-23a3-402b-842f-81ec16b46d20', 2, 2650),
+('0d108321-7121-4d47-8b98-ee2080b98ff9', '0f710b5e-23a3-402b-842f-81ec16b46d20', 2, 2650),
+('b291e7a9-b911-4dbb-885f-743256a24787', '3c2755ef-df46-4515-9756-be554b0f2323', 2, 2190),
+('1db9820c-1f37-45ce-acb2-13d19bdb2260', '3c2755ef-df46-4515-9756-be554b0f2323', 6, 3690),
+('6f7d0760-6819-4275-a75b-648fead7b7ae', '0f710b5e-23a3-402b-842f-81ec16b46d20', 1, 1950),
+('a31ee57d-c3c4-4341-86dd-9463459f4b6e', '0f710b5e-23a3-402b-842f-81ec16b46d20', 1, 1950),
+('79936673-82a4-42ac-932b-95d88ec9ba5a', '0f710b5e-23a3-402b-842f-81ec16b46d20', 2, 2650),
+('0ed6e5eb-7160-4f79-b382-01213ac2df25', '0f710b5e-23a3-402b-842f-81ec16b46d20', 2, 2650),
+('41dc1591-89c3-4a72-8c48-4a451e19d425', '0f710b5e-23a3-402b-842f-81ec16b46d20', 1, 1950),
+('21f1e3d6-c791-4a1b-b2db-1a62e1527908', '0f710b5e-23a3-402b-842f-81ec16b46d20', 2, 2650),
+('56db5c1e-7e96-4f8d-97a1-596fe96af9dd', '0f710b5e-23a3-402b-842f-81ec16b46d20', 2, 2650),
+('09040462-383c-4743-9c29-2c3f0600cc61', '3c2755ef-df46-4515-9756-be554b0f2323', 3, 2990),
+('1170f69f-0f27-4952-9857-2e14474025f1', '0f710b5e-23a3-402b-842f-81ec16b46d20', 2, 2650),
+('7c73b875-aded-43ed-a720-9891bb257d90', '3c2755ef-df46-4515-9756-be554b0f2323', 3, 2990),
+('0900660e-b4a9-45ad-b54e-a3638a352da0', '0f710b5e-23a3-402b-842f-81ec16b46d20', 1, 1950),
+('21ce857a-9e37-482a-877b-7cc42f9026fe', '0f710b5e-23a3-402b-842f-81ec16b46d20', 1, 1950),
+('6005ff6f-e2fc-499d-8afd-f717cd953b92', '3c2755ef-df46-4515-9756-be554b0f2323', 3, 2990),
+('8ea10b11-71ba-4781-ab82-fea34aca9645', '0f710b5e-23a3-402b-842f-81ec16b46d20', 1, 1950),
+('3a379d73-3cfe-48d5-86e0-9296c29bb50a', '0f710b5e-23a3-402b-842f-81ec16b46d20', 2, 2650),
+('94fc7293-9a3b-485e-979e-ce97b8693c52', '0f710b5e-23a3-402b-842f-81ec16b46d20', 2, 2650),
+('e3c3242f-1ce5-473c-9b39-459266d75932', '0f710b5e-23a3-402b-842f-81ec16b46d20', 1, 1950),
+('006f873c-612f-465a-87ac-31dbcb48420b', '0f710b5e-23a3-402b-842f-81ec16b46d20', 2, 2650),
+('829a3680-18cb-4e02-a732-d4880b93cabc', '0f710b5e-23a3-402b-842f-81ec16b46d20', 2, 2650),
+('af4faf60-77dd-4286-86ec-2320ad582ee3', '0f710b5e-23a3-402b-842f-81ec16b46d20', 1, 1950),
+('0baac28f-b96b-424d-a6a1-4015215019f8', '0f710b5e-23a3-402b-842f-81ec16b46d20', 1, 1950),
+('97216d55-42dd-441e-876c-e9956b96af48', '0f710b5e-23a3-402b-842f-81ec16b46d20', 1, 1950),
+('fe187ba7-0df8-4493-971e-ecbd63e5333e', '0f710b5e-23a3-402b-842f-81ec16b46d20', 1, 1950),
+('32b6f2d2-1c77-4139-b990-81299774ec86', '0f710b5e-23a3-402b-842f-81ec16b46d20', 1, 1950),
+('83ce7c3d-7295-4689-a855-218bbb9f0730', 'fec10e47-b902-4940-bac7-bff6ffb29430', 2, 2490),
+('06662bb5-a916-462a-815b-16430b439d8e', 'fec10e47-b902-4940-bac7-bff6ffb29430', 2, 2490),
+('49ceccd9-1231-4d7b-a829-c4351ecf1747', '0f710b5e-23a3-402b-842f-81ec16b46d20', 2, 2650),
+('064d8080-9a17-4299-9c76-838512a92aae', '0f710b5e-23a3-402b-842f-81ec16b46d20', 2, 2650),
+('30572613-1a3a-4773-a6bc-bfeae40d62d6', '0f710b5e-23a3-402b-842f-81ec16b46d20', 1, 1950),
+('ddf5c15b-5e36-47f2-aec2-f32ee95398ae', '0f710b5e-23a3-402b-842f-81ec16b46d20', 2, 2650),
+('43659bf0-9e03-4430-ab0e-046a95582efd', '0f710b5e-23a3-402b-842f-81ec16b46d20', 1, 1950),
+('55059610-2fac-49b5-8931-2a3cdcefee8b', '0f710b5e-23a3-402b-842f-81ec16b46d20', 1, 1950),
+('2a98936d-f059-460e-ac5a-c86400b43144', '0f710b5e-23a3-402b-842f-81ec16b46d20', 1, 1950),
+('f25c97b1-fb04-4fc0-b4f2-15f7a9ed0dd9', '0f710b5e-23a3-402b-842f-81ec16b46d20', 1, 1950),
+('2399e934-ca39-4f0c-839a-5460a0bac7d3', '0f710b5e-23a3-402b-842f-81ec16b46d20', 1, 1990),
+('ff75743c-bd3e-47de-b3a1-8c810f4a0458', '0f710b5e-23a3-402b-842f-81ec16b46d20', 2, 2690),
+('faa6aa5b-6c36-4c66-811f-3acff0c5cf4b', '0f710b5e-23a3-402b-842f-81ec16b46d20', 1, 1990),
+('e9bec713-9c96-45d1-9374-7f383ea4ee6b', '0f710b5e-23a3-402b-842f-81ec16b46d20', 2, 2690),
+('4744f481-788a-4eeb-a69d-6a454203e02d', '3c2755ef-df46-4515-9756-be554b0f2323', 6, 3840),
+('2dbe39e6-efa7-4603-89b1-129712809401', '0f710b5e-23a3-402b-842f-81ec16b46d20', 2, 2690),
+('68e67ddf-dba9-4572-a5f8-97068c373277', '0f710b5e-23a3-402b-842f-81ec16b46d20', 2, 2690),
+('9a1fbb6e-17b6-4633-aa2b-e12f89e7b228', '3c2755ef-df46-4515-9756-be554b0f2323', 6, 3690),
+('695706ef-097f-4dcb-9b40-5df2a2666932', '3c2755ef-df46-4515-9756-be554b0f2323', 3, 2490),
+('9ba4f722-3467-4aee-ae1e-bd99e98dfb4d', '3c2755ef-df46-4515-9756-be554b0f2323', 3, 2490),
+('4d34bff2-d097-4d2b-9aad-100c869fa7fd', '3c2755ef-df46-4515-9756-be554b0f2323', 3, 2490),
+('56daf3fa-d40a-43b4-a885-dba7080121b9', '3c2755ef-df46-4515-9756-be554b0f2323', 3, 2490),
+('ef1c3905-2574-4c1a-a95a-17a332fe6647', '3c2755ef-df46-4515-9756-be554b0f2323', 6, 3690),
+('69973c9f-a014-461f-9fe0-248ea8d9acc3', '3c2755ef-df46-4515-9756-be554b0f2323', 3, 2490),
+('22d34181-a650-4f64-90ad-02421e87802c', '3c2755ef-df46-4515-9756-be554b0f2323', 3, 2490);
+
+-- Cuentas por cobrar
+INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado) VALUES
+('8673cff9-b3a9-48c7-8756-7d27309d1d10', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 2300, 'liquidado'),
+('812e0b5a-17b9-4fce-be46-ae1edb41b0dd', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 1950, 'liquidado'),
+('b1228870-a5c1-43ea-80c7-245fe6106918', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 1950, 'liquidado'),
+('866a9eac-f6c1-42b6-b4db-82f4862d3e3a', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 1950, 'liquidado'),
+('b05964d0-784f-4a70-92de-b0b23ce8622a', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 1950, 'liquidado'),
+('dd53a02a-0549-441e-b894-0e02e5e15f97', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 1950, 'liquidado'),
+('ec6dac25-4952-485b-947b-de6c169764c6', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 1950, 'liquidado'),
+('13a976f8-f476-45d1-95ab-9a33239cb89f', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 1950, 'liquidado'),
+('8fb881aa-2a6c-4b0f-a8bd-20872d333d25', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 1950, 'liquidado'),
+('6f2f202c-4ddf-430d-945c-88f10a6f3a8a', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 3450, 'liquidado'),
+('774ecde3-16bb-4fc6-bed7-19418434f7f2', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 3450, 'liquidado'),
+('b57d7143-cd0d-4b3d-9b8b-90d333c8c266', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 3450, 'liquidado'),
+('c03a6741-f63d-4d1d-a4eb-19312b798fb4', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 3950, 'liquidado'),
+('25392a63-0f23-49cd-bd36-f8005115a0c0', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 3950, 'liquidado'),
+('5bbae189-18b4-435e-8b8d-cd92b63148c6', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 3950, 'liquidado'),
+('833f47e7-ae5e-4990-ac8b-62ae4a7ada22', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 3950, 'liquidado'),
+('4c17d798-8a05-45f4-87ca-4a5fcb54f908', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 3950, 'liquidado'),
+('7b807261-bc74-4c46-9a2d-887a86c6c616', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 3950, 'liquidado'),
+('c8eb7abe-7cde-43b8-a393-07bbe78b2216', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 3950, 'liquidado'),
+('98c5565b-d866-461d-94c5-17ffbcffeb1d', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 3950, 'liquidado'),
+('cf7169f3-2cb8-4c48-811e-203e3984387f', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 3950, 'liquidado'),
+('e5cf7213-9f8c-4142-b6bb-03b71ceb568d', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 3950, 'liquidado'),
+('d84ac02f-5d81-4c97-8eb5-b077b347c62b', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 3950, 'liquidado'),
+('ec606539-cfc3-48b4-971d-6dec3f90740f', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 3950, 'liquidado'),
+('e3f0f166-7b57-4494-8635-7b60b1c75171', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 3950, 'liquidado'),
+('3edf971e-d3d4-44a1-9b6e-09f54351e079', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 3950, 'liquidado'),
+('fc53d7f5-4b75-4ac1-be16-f1d21da12e2d', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 0, 'liquidado'),
+('e91b40a6-e130-4891-a1e5-bca664c8a84a', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 3950, 'liquidado'),
+('1bc6bae1-0c48-4fe1-83f0-e99c914e452f', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 3950, 'liquidado'),
+('c930239a-d59c-49e3-a19f-c00efd3ac6d3', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 3950, 'liquidado'),
+('d7597988-720f-4928-909e-5ea7065dc998', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 3950, 'liquidado'),
+('16572192-c7e4-4837-a91f-11f6233b1300', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 3950, 'liquidado'),
+('d286e613-aa08-42ef-ad5b-5592b4a92595', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 3950, 'liquidado'),
+('7eee5528-e993-4937-9a95-4f6fff8530db', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 3950, 'liquidado'),
+('4be69585-c7ea-4c46-aa95-9473acd01902', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 3950, 'liquidado'),
+('0ce60ec4-4407-4487-a87a-4ca5e542abcb', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 3950, 'liquidado'),
+('8de7f002-0cbd-4bd3-8dc7-b43228527eb6', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 3950, 'liquidado'),
+('3ee2be8d-1684-404a-bb34-614ee7714c95', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 3950, 'liquidado'),
+('a9571fc6-9ead-42b4-885f-3f63c61c8dcd', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 3950, 'liquidado'),
+('5078fa04-0cc4-4abf-8ebe-7f8e1f1bd1ac', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 3950, 'liquidado'),
+('841f949a-5069-4792-b362-b50e011f11f7', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 3950, 'liquidado'),
+('fb29430c-df70-40c3-9624-2999d35fa31a', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 3490, 'liquidado'),
+('f6170ef8-d0e9-4a9d-9bf9-7176befbf493', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 3490, 'liquidado'),
+('d11819ac-e240-46ec-9b3c-9a5efb8446ff', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 3490, 'liquidado'),
+('0a7eab10-a5ec-4d39-ba45-f93b0921a015', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 3490, 'liquidado'),
+('df0c9645-bb6e-4121-bbce-a5fcce92c00c', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 4290, 'liquidado'),
+('5aa75818-0681-43b8-bb3f-2ce542caf5e1', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 3490, 'liquidado'),
+('561e39bc-1516-42f9-ad60-de1e5951e9e2', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 3490, 'liquidado'),
+('435ed2b3-2bc1-436b-9d4e-d0ac86ed31bd', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 4290, 'liquidado'),
+('364381e5-5400-4730-95d1-ba1b6ed3bd67', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 3490, 'liquidado'),
+('7aa378e6-bb74-4a1b-9929-9548417c3028', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 3490, 'liquidado'),
+('ee07c008-619f-4084-8297-ddb21f41ea99', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 2990, 'liquidado'),
+('8c9ea46f-d367-4b50-af13-8a2b133b11dc', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 3490, 'liquidado'),
+('df16de93-7452-40e6-b28f-8780a5884b03', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 3490, 'liquidado'),
+('2f677143-7682-44e7-836a-ed024ad258e5', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 3490, 'liquidado'),
+('4a7d3f37-8307-4948-b962-5a2818547d89', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 4290, 'liquidado'),
+('01f2d979-1967-49a6-9e20-8714c9c98648', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 3490, 'liquidado'),
+('22a1c1a3-5fbd-4f29-ad09-553bc54392cf', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 3490, 'liquidado'),
+('94a93424-413c-42ce-a05a-d3ee92d23d4f', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 3490, 'liquidado'),
+('10878b29-cce6-4350-abee-6988036bc58d', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 3490, 'liquidado'),
+('1cce7a46-b07a-48b1-af5f-f4154c6c5784', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 3490, 'liquidado'),
+('673c7a25-47ee-4ec1-a86c-25e6856141a0', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 2990, 'liquidado'),
+('0178b492-2b2c-4171-9251-581af65fec41', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 0, 'liquidado'),
+('a652e199-8e3c-44fc-89fd-8be7a7a6e1ae', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 3490, 'liquidado'),
+('d0909868-3ed3-456d-9638-45f8d6f3030a', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 3490, 'liquidado'),
+('d815b074-823b-43c2-bc25-91e6d5412a14', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 3490, 'liquidado'),
+('06a1b187-dc63-485c-9bd9-0e3d20c49baa', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 5500, 'liquidado'),
+('dd6b5503-9f2f-4272-9407-57db47e3f050', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 3490, 'liquidado'),
+('0da162ad-9115-4636-abcc-b89f876fc1a3', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 1163, 'liquidado'),
+('949fc7dd-fee1-42ba-b16c-a09443166cff', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 3490, 'liquidado'),
+('10eece19-0fd8-4188-b324-8ef1731fd53d', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 3490, 'liquidado'),
+('97355602-7a49-4d30-9af7-26a871a855a9', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 3490, 'liquidado'),
+('2e1681ee-2a6b-4141-ad8f-b09f7f978ed4', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 3490, 'liquidado'),
+('8f599c16-c1b4-476c-b7c5-f3d1a32d283d', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 2990, 'liquidado'),
+('cd81c15a-12b6-4e71-a2b0-0dc835657778', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 4290, 'liquidado'),
+('6f903e67-3994-47fd-a58f-36f490addd0a', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 1495, 'liquidado'),
+('9546a35e-7038-48cc-b3d6-fe2bd136fdd4', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 3490, 'liquidado'),
+('8d3ed832-0f6d-4f46-bd26-d2eca49f303d', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 3490, 'liquidado'),
+('4f63112b-ef91-4ea9-a60a-51153c3f4ff7', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 3490, 'liquidado'),
+('a39cf56f-2d4a-4ad7-890e-25dc0360db5e', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 3490, 'liquidado'),
+('ae25a389-0267-4dd8-a794-84ee1e299fb1', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 3490, 'liquidado'),
+('0c4c4cd3-3c01-4583-82b5-2a6169f29394', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 3490, 'liquidado'),
+('42bf569b-ec22-4fc1-8f01-311075cd4f9d', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 3490, 'liquidado'),
+('3795a7b7-a3d5-4482-b494-8e5805214e71', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 2990, 'liquidado'),
+('ad1e9fb2-5bd6-4938-8558-edb9c5a83bc8', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 3490, 'liquidado'),
+('1cc1a979-1137-4ade-896c-06e1f21c6b8d', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 3490, 'liquidado'),
+('95001098-5a87-410f-ac9b-9d0caeedd0ef', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 4290, 'liquidado'),
+('5159449b-444e-4bcb-8f59-1da6b8bd5ba5', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 4290, 'liquidado'),
+('88b8b620-de2a-489b-b108-ca41b56fc414', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 2990, 'liquidado'),
+('daaebdf4-45c4-4809-a4c6-b3eab3bb4e44', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 2990, 'liquidado'),
+('ebf884d8-9efe-425d-996c-10318229a7f3', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 3490, 'liquidado'),
+('950ef1d9-6363-4605-b162-f6bc46b9308b', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 3490, 'liquidado'),
+('bc7c0ee5-da34-4bfb-930a-da0920eafea0', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 3490, 'liquidado'),
+('e44a479a-c4e7-4f03-90b3-0b132d900123', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 3490, 'liquidado'),
+('2303cdff-7233-4fbb-940f-87a5edb31569', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 3490, 'liquidado'),
+('5f248dd1-b5d8-4ac1-ada4-398a4bed85de', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 4290, 'liquidado'),
+('59e1397b-bf6e-49d4-a67e-d033ade01c77', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 3490, 'liquidado'),
+('7405c677-6c76-4f02-944b-8ddcf7aaeec5', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 3490, 'liquidado'),
+('48e6447c-61b8-4f94-9195-6b9421d21689', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 3490, 'liquidado'),
+('974a5dc9-80fb-4adb-8ff4-e9ca2e32c518', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 2990, 'liquidado');
+
+INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado) VALUES
+('05f16334-81da-41c3-9360-4d0e659bc15c', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 3490, 'liquidado'),
+('8081dbef-c9c1-4cc6-9afd-6db133b5fc2c', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 3490, 'liquidado'),
+('ded85938-753b-4497-904c-b8ef1fa632ac', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 3490, 'liquidado'),
+('1114fdb7-988d-4b07-8ab3-3868e850f9b0', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 3490, 'liquidado'),
+('47efc2b4-e3e2-4aa6-819c-a6b387994ff6', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 3490, 'liquidado'),
+('c637713d-aeed-4bf1-a9b2-a40d1459f32d', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 3490, 'liquidado'),
+('6bafdc63-bee2-4c63-b082-bfba241efc4d', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 3490, 'liquidado'),
+('be0d28fa-8cb8-4ed4-9264-1cc58bc05510', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 3490, 'liquidado'),
+('30d926d1-f2f9-4420-a034-013b72e04a0c', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 4290, 'liquidado'),
+('22b490b7-674e-4686-9c41-af91a23ca161', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 3490, 'liquidado'),
+('2f6cb523-f738-4ed1-ba20-134e3d41216d', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 3490, 'liquidado'),
+('339ceed4-71d1-41b9-97f0-d66716b37c51', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 4290, 'liquidado'),
+('0e97e2db-99d5-4fae-a61c-82017da402d2', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 4290, 'liquidado'),
+('d9b00201-8f5c-4322-bdcf-84028e499de5', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 3490, 'liquidado'),
+('b97a9aa6-d677-4c83-8472-7543513708cb', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 3490, 'liquidado'),
+('f8e283e8-f170-45f1-815b-8f48a6899296', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 4290, 'liquidado'),
+('4d451b1c-261c-4f35-bdb3-a9ca68c8e159', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 2990, 'liquidado'),
+('4746879b-818d-4eb3-81cb-fc4af496ec05', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 3490, 'liquidado'),
+('ff0f4558-99dc-4a12-9b43-2a21d146f357', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 3490, 'liquidado'),
+('4abad2ab-6fb6-46b1-8620-ad81123f7ffd', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 3490, 'liquidado'),
+('c42ae2ae-d8e3-4208-9021-6de65fbee375', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 3490, 'liquidado'),
+('881dc0c7-d2f3-48f2-b01d-4248e5fbb934', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 3490, 'liquidado'),
+('afe28838-d90d-4b30-a1aa-d9534c9e01a1', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 3490, 'liquidado'),
+('c8abfbc0-560e-4491-814b-6311e8879853', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 3490, 'liquidado'),
+('5afb9e3b-531d-4f73-acb4-2e8d14cc336b', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 3490, 'liquidado'),
+('3c2e15ef-2444-4f9d-b662-1ec1a5e9347b', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 3490, 'liquidado'),
+('a7b0ca3d-2b72-4709-aca0-5e14a6bc359e', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 2990, 'liquidado'),
+('1e1fc602-d98b-4452-9df0-5e1d003da31b', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 3490, 'liquidado'),
+('5624ae5c-b3c5-495d-ba40-c286b99e063b', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 2990, 'liquidado'),
+('9e354fe0-6558-4dc3-a9b0-2cfa6f58ed75', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 4290, 'liquidado'),
+('4ca6412d-4932-432f-94f6-458ffa2e4dde', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 3490, 'liquidado'),
+('cb7e8201-450c-4d35-94ba-2551c2c4c803', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 2990, 'liquidado'),
+('5cc74c0f-6abf-4a66-89d2-2d85c42d6e59', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 4290, 'liquidado'),
+('f48674b9-9e63-4dec-9a9e-3b518a72838c', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 3490, 'liquidado'),
+('a77151a1-e67c-4869-946e-2b6be9514f78', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 3490, 'liquidado'),
+('eb40f79f-5994-4147-9811-cbee793ffdf6', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 4290, 'liquidado'),
+('116c3ef8-7da6-4588-9208-5b1dd5b05eeb', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 3490, 'liquidado'),
+('22476911-c1a8-4616-9e8c-60a3fd5f331c', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 3490, 'liquidado'),
+('28890775-fd88-422f-8f28-c9c4c8bd3a39', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 3490, 'liquidado'),
+('40cbab00-e44c-4ef9-8de5-111beff794e8', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 4290, 'liquidado'),
+('c6bff29d-dc88-4f8c-b413-6d9110dc1f54', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 4290, 'liquidado'),
+('284f6d94-8431-45b0-8688-7c9065fff96f', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 3490, 'liquidado'),
+('b9dd6c86-10b4-4cf9-b85a-338d0b981353', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 1950, 'liquidado'),
+('d56e81f8-a650-4d65-ae0e-4662606ec6b6', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 4290, 'liquidado'),
+('6b3c21f2-50b1-47be-b8ed-43950efc5f16', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 2490, 'liquidado'),
+('e872aa40-b656-4ee9-ab55-202eb85b2ecc', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 2938.2, 'liquidado'),
+('17d27da4-3dc1-4f8c-9421-05ab0c485b05', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 2490, 'liquidado'),
+('26fed113-9f89-4d20-93c0-619d596001e3', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 2490, 'liquidado'),
+('881176c0-43df-4b98-adf0-9d91fb959a04', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 3190, 'liquidado'),
+('85018702-cb94-4be4-98f0-11acd637923c', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 2490, 'liquidado'),
+('9d9569df-eb62-451d-8e2e-81f25a42f835', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 2490, 'liquidado'),
+('6b1ba803-3c7a-4cc7-8df7-ad049c4733bc', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 1990, 'liquidado'),
+('99a4a2cc-5c25-4886-9257-03772d2ac1aa', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 2490, 'liquidado'),
+('d460fe78-49fd-4094-8d8c-21fd4339bfdf', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 2490, 'liquidado'),
+('0636218d-b0c4-4c80-a564-d6b258278082', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 2490, 'liquidado'),
+('ee3bd434-512e-4046-b95f-0ba6026ef3ff', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 2490, 'liquidado'),
+('d345a290-10d9-4900-8f6f-e245da0384d1', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 3190, 'liquidado'),
+('8bb05e1a-e8e2-4ce9-8fde-1ce05b78824b', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 2490, 'liquidado'),
+('57055404-001b-4dfc-9590-3c26db92da30', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 2490, 'liquidado'),
+('9aae4762-53ee-42eb-9002-f4ea9ab5745e', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 2490, 'liquidado'),
+('96bf2b45-99ec-4d9b-ab49-ec0ab7e4a664', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 2490, 'liquidado'),
+('a6f06640-0735-409d-b1c2-062cd609c50a', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 2490, 'liquidado'),
+('2f36b125-de08-4702-9faa-2c360462ec3d', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 2490, 'liquidado'),
+('c7c7d5e1-2bda-4e59-ad5e-91fb4743d2c2', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 3190, 'liquidado'),
+('b3d6231a-c455-4bda-b79e-c23b2fdc3c3c', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 2490, 'liquidado'),
+('aae71527-4652-4337-9e87-d53e49697e2e', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 2490, 'liquidado'),
+('42fa0c26-c171-4efe-9354-b27104d578f6', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 2490, 'liquidado'),
+('df87e92d-e058-48f2-aae1-462da374edfb', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 2490, 'liquidado'),
+('fb97a368-7706-4b94-8c83-5d4509bd39fb', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 2490, 'liquidado'),
+('4b9fcdf5-bc35-4b14-88a4-0f2abd9f8b5c', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 2938.2, 'liquidado'),
+('bca6c2c6-2139-40d0-be8c-6932f1c8c10a', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 2690, 'liquidado'),
+('60c9f140-2a8a-4526-95f3-fd7159f2c37a', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 2490, 'liquidado'),
+('5afec5dd-e443-4d09-b4e8-28f3375cf057', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 3890, 'liquidado'),
+('e59ca547-ab0c-4e6f-98b1-682a42403da8', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 2490, 'liquidado'),
+('2bd35fea-3bce-478b-a6c6-27f87d7ff3b8', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 3890, 'liquidado'),
+('0a39e418-e6fc-4321-acb7-fa699bf71adc', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 2650, 'liquidado'),
+('ebc9ada7-4989-4794-b2df-1e4b5bedf281', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 2650, 'liquidado'),
+('aeb48aa1-fd87-43ed-8bec-362462ee7811', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 2650, 'liquidado'),
+('14411821-1a1f-46cd-a563-6721b197c894', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 1950, 'liquidado'),
+('3a3cc2a1-15bf-47ce-bac9-3ebcc468f9ba', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 1950, 'liquidado'),
+('92053562-dd7a-46f6-9c6c-485b407141d0', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 1950, 'liquidado'),
+('ed3e934e-6c08-46b9-9b6a-7e3fbccad338', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 2990, 'liquidado'),
+('d0df91dc-f4dd-49c2-9634-bccb48af7c9a', 'cd1b1e7d-2a2f-4d59-9983-aa1d4533c4aa', 2650, 'liquidado'),
+('825a9f64-9d64-4d01-b4c9-61d4304b19bb', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 1950, 'liquidado'),
+('e43cb8ee-953b-47ca-b719-2e21ffe9ec35', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 2650, 'liquidado'),
+('8f20e096-9c83-48b4-9459-be13a24411f4', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 1950, 'liquidado'),
+('e093b7fc-66eb-40b7-8603-46049bf03604', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 2650, 'liquidado'),
+('d582e764-c2f1-468b-b7fe-5381b36f7243', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 1950, 'liquidado'),
+('e2ba9f8b-2b50-46db-a8f2-bc1191110d57', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 1950, 'liquidado'),
+('6e232198-7789-407c-8beb-2d4df964acf5', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 3490, 'liquidado'),
+('1a6f4c16-982e-4883-a853-559c1811d428', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 2990, 'liquidado'),
+('fc91ba77-92d2-4ef1-857d-9276bffb0a48', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 2650, 'liquidado'),
+('38b00ffe-dd34-4823-a5ed-b24c2a7c60ed', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 2990, 'liquidado'),
+('97104cc7-3b77-4aaa-aa88-bb60e83c7dd3', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 1950, 'liquidado'),
+('6b067809-1cc9-4a02-a7cf-8877444e3a06', 'd85957e0-8ae7-451a-beb3-7ee4eb34f5fe', 1950, 'liquidado'),
+('b51b9215-9ec8-4f94-bf53-58f3917657a3', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 2650, 'liquidado'),
+('8dccfb85-0cf3-49c5-9eee-0ecca903a252', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 2650, 'liquidado'),
+('8be826c5-18f0-4b77-a7c3-37241784f0fd', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 1950, 'liquidado'),
+('95d0676b-305e-4670-b897-d12e8c8d2532', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 1950, 'liquidado'),
+('d4c6c9b0-e8c3-40e8-bbac-0e7c0a5365e5', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 2650, 'liquidado');
+
+INSERT INTO cuentas_por_cobrar_pedido (pedido_id, courier_id, monto, estado) VALUES
+('b291e7a9-b911-4dbb-885f-743256a24787', 'd155330f-a71d-4dbc-bd5f-be36cfa9c1c2', 2190, 'liquidado');
 
 COMMIT;
 
--- ── Verificación ─────────────────────────────────────
+-- Verificación
 SELECT 'pedidos' AS tabla, COUNT(*) FROM pedidos
 UNION ALL SELECT 'clientes', COUNT(*) FROM clientes
 UNION ALL SELECT 'productos', COUNT(*) FROM productos
