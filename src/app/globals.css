@@ -3,20 +3,39 @@
 @tailwind utilities;
 
 @layer base {
-  body { @apply bg-gray-50 text-gray-900 text-sm; }
+  body { @apply bg-gray-50 text-gray-900 text-sm dark:bg-gray-950 dark:text-gray-100; }
 }
 
 @layer components {
-  .card        { @apply bg-white rounded-xl border border-gray-200 p-5 shadow-sm; }
-  .btn         { @apply inline-flex items-center gap-2 rounded-lg px-4 py-2 font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-offset-1; }
-  .btn-primary { @apply btn bg-indigo-600 text-white hover:bg-indigo-700 focus:ring-indigo-500; }
-  .btn-ghost   { @apply btn text-gray-600 hover:bg-gray-100 focus:ring-gray-300; }
-  .input       { @apply block w-full rounded-lg border border-gray-300 px-3 py-2 text-sm placeholder-gray-400 focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500; }
-  .label       { @apply block text-xs font-medium text-gray-500 mb-1; }
-  .badge-ok    { @apply inline-flex items-center rounded-full bg-green-50 px-2 py-0.5 text-xs font-medium text-green-700 ring-1 ring-green-600/20; }
-  .badge-warn  { @apply inline-flex items-center rounded-full bg-amber-50 px-2 py-0.5 text-xs font-medium text-amber-700 ring-1 ring-amber-600/20; }
-  .badge-err   { @apply inline-flex items-center rounded-full bg-red-50 px-2 py-0.5 text-xs font-medium text-red-700 ring-1 ring-red-600/20; }
-  .th          { @apply px-4 py-3 text-left text-xs font-semibold text-gray-500 uppercase tracking-wide; }
-  .td          { @apply px-4 py-3 text-sm text-gray-700; }
-  .tr-hover    { @apply hover:bg-gray-50 transition-colors; }
+  /* Cards */
+  .card        { @apply bg-white rounded-xl border border-gray-200 p-5 shadow-sm
+                        dark:bg-gray-900 dark:border-gray-800; }
+
+  /* Buttons */
+  .btn         { @apply inline-flex items-center gap-2 rounded-lg px-4 py-2 font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-offset-1 dark:ring-offset-gray-950; }
+  .btn-primary { @apply btn bg-indigo-600 text-white hover:bg-indigo-500 focus:ring-indigo-500; }
+  .btn-ghost   { @apply btn text-gray-600 hover:bg-gray-100 focus:ring-gray-300
+                        dark:text-gray-300 dark:hover:bg-gray-800 dark:focus:ring-gray-700; }
+
+  /* Form */
+  .input  { @apply block w-full rounded-lg border border-gray-300 px-3 py-2 text-sm placeholder-gray-400
+                   focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500
+                   bg-white text-gray-900
+                   dark:bg-gray-800 dark:border-gray-700 dark:text-gray-100 dark:placeholder-gray-500
+                   dark:focus:border-indigo-400 dark:focus:ring-indigo-400; }
+  .label  { @apply block text-xs font-medium text-gray-500 mb-1 dark:text-gray-400; }
+
+  /* Badges */
+  .badge-ok   { @apply inline-flex items-center rounded-full bg-green-50 px-2 py-0.5 text-xs font-medium text-green-700 ring-1 ring-green-600/20
+                       dark:bg-green-900/30 dark:text-green-400 dark:ring-green-500/30; }
+  .badge-warn { @apply inline-flex items-center rounded-full bg-amber-50 px-2 py-0.5 text-xs font-medium text-amber-700 ring-1 ring-amber-600/20
+                       dark:bg-amber-900/30 dark:text-amber-400 dark:ring-amber-500/30; }
+  .badge-err  { @apply inline-flex items-center rounded-full bg-red-50 px-2 py-0.5 text-xs font-medium text-red-700 ring-1 ring-red-600/20
+                       dark:bg-red-900/30 dark:text-red-400 dark:ring-red-500/30; }
+
+  /* Tables */
+  .th       { @apply px-4 py-3 text-left text-xs font-semibold text-gray-500 uppercase tracking-wide
+                     dark:text-gray-400; }
+  .td       { @apply px-4 py-3 text-sm text-gray-700 dark:text-gray-300; }
+  .tr-hover { @apply hover:bg-gray-50 transition-colors dark:hover:bg-gray-800/60; }
 }
