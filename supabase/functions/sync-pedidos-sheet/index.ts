@@ -74,8 +74,8 @@ function safeDate(s: string | null | undefined): string | null {
 
 // ── Leer Google Sheet con API Key (sheet público con link) ───────────────────
 
-async function fetchSheetRows(apiKey: string): Promise<{ headers: string[]; rows: string[][] }> {
-  const url = `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/A:AZ?key=${apiKey}`
+async function fetchSheetRows(apiKey: string, sheetId: string): Promise<{ headers: string[]; rows: string[][] }> {
+  const url = `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/A:AZ?key=${apiKey}`
   const res = await fetch(url)
 
   if (!res.ok) {
@@ -474,17 +474,18 @@ Deno.serve(async () => {
   const syncLogId = logRow?.id as string
 
   try {
-    const { headers, rows } = await fetchSheetRows(apiKey)
+    const sheetId = syncState?.sheet_id ?? SHEET_ID
+    const { headers, rows } = await fetchSheetRows(apiKey, sheetId)
 
     if (!headers.length) {
       await supabase.from('sync_log').update({ detalle: { error: 'Sheet vacío o sin encabezados' } }).eq('id', syncLogId)
       return new Response(JSON.stringify({ ok: false, error: 'Sheet vacío' }), { status: 200 })
     }
 
-    // Obtener punto de corte y verificar si el sync está activo
+    // Obtener configuración y verificar si el sync está activo
     const { data: syncState } = await supabase
       .from('sync_state')
-      .select('ultimo_num_sincronizado, fecha_inicio_sync, sync_activo')
+      .select('ultimo_num_sincronizado, fecha_inicio_sync, sync_activo, sheet_id')
       .eq('id', 1)
       .single()
 
