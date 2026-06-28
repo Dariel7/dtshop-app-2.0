@@ -78,11 +78,11 @@ export default async function Liquidaciones() {
             {(liq ?? []).map((l: {
               id: string; fecha: string; monto_recaudado_total: number;
               monto_entregado_neto: number; comision_total: number;
-              canales_cobro: { nombre: string } | null;
+              canales_cobro: { nombre: string }[] | null;
             }) => (
               <tr key={l.id} className="tr-hover">
                 <td className="td">{l.fecha}</td>
-                <td className="td font-medium">{l.canales_cobro?.nombre ?? '—'}</td>
+                <td className="td font-medium">{(Array.isArray(l.canales_cobro) ? l.canales_cobro[0]?.nombre : (l.canales_cobro as { nombre: string } | null)?.nombre) ?? '—'}</td>
                 <td className="td text-right">RD$ {fmt(l.monto_recaudado_total)}</td>
                 <td className="td text-right text-red-500">RD$ {fmt(l.comision_total)}</td>
                 <td className="td text-right font-semibold text-green-700">RD$ {fmt(l.monto_entregado_neto)}</td>

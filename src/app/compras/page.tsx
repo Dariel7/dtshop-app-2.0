@@ -32,11 +32,11 @@ export default async function Compras() {
             {(movs ?? []).map((m: {
               id: string; tipo: string; origen_evento: string; cantidad: number;
               costo_unitario: number; costo_es_estimado: boolean; estado: string;
-              created_at: string; productos: { nombre: string } | null;
+              created_at: string; productos: { nombre: string }[] | null;
             }) => (
               <tr key={m.id} className="tr-hover">
                 <td className="td">{m.created_at.slice(0,10)}</td>
-                <td className="td font-medium">{m.productos?.nombre ?? '—'}</td>
+                <td className="td font-medium">{Array.isArray(m.productos) ? m.productos[0]?.nombre : (m.productos as { nombre: string } | null)?.nombre ?? '—'}</td>
                 <td className="td">
                   <span className={m.tipo === 'IMPORTACION' ? 'badge-warn' : 'badge-ok'}>
                     {m.tipo === 'IMPORTACION' ? 'Importación' : m.tipo === 'COMPRA' ? 'Local' : 'Ajuste'}

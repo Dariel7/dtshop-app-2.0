@@ -6,7 +6,7 @@ import { supabase, fmt } from '@/lib/supabase'
 type Courier = { id: string; nombre: string }
 type CxC = {
   pedido_id: string; monto: number; estado: string;
-  pedidos: { fecha_entrega: string; clientes: { nombre: string } | null }
+  pedidos: { fecha_entrega: string; clientes: { nombre: string }[] | null } | null
 }
 
 export default function NuevaLiquidacion() {
@@ -34,7 +34,7 @@ export default function NuevaLiquidacion() {
       .select('pedido_id,monto,estado,pedidos(fecha_entrega,clientes(nombre))')
       .eq('courier_id', form.courier_id)
       .eq('estado', 'pendiente')
-      .then(({ data }) => { setCxc((data as CxC[]) ?? []); setSel([]) })
+      .then(({ data }) => { setCxc((data as unknown as CxC[]) ?? []); setSel([]) })
   }, [form.courier_id])
 
   const totalSel = cxcAbiertas
@@ -124,7 +124,7 @@ export default function NuevaLiquidacion() {
                             className="rounded border-gray-300" />
                         </td>
                         <td className="td font-mono text-xs">{c.pedido_id.slice(0,8)}</td>
-                        <td className="td">{c.pedidos?.clientes?.nombre ?? '—'}</td>
+                        <td className="td">{(Array.isArray(c.pedidos?.clientes) ? c.pedidos!.clientes![0]?.nombre : (c.pedidos?.clientes as { nombre: string } | null)?.nombre) ?? '—'}</td>
                         <td className="td">{c.pedidos?.fecha_entrega ?? '—'}</td>
                         <td className="td text-right font-medium">RD$ {fmt(c.monto)}</td>
                       </tr>

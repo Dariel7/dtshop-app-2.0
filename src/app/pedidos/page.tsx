@@ -45,16 +45,19 @@ export default async function Pedidos() {
             {(pedidos ?? []).map((p: {
               id: string; estado: string; fecha_pedido: string; fecha_entrega: string;
               precio_total: number; metodo_pago_confirmado: string | null;
-              clientes: { nombre: string; telefono: string } | null;
-              canales_cobro: { nombre: string } | null;
-            }) => (
+              clientes: { nombre: string; telefono: string }[] | null;
+              canales_cobro: { nombre: string }[] | null;
+            }) => {
+              const cliente = Array.isArray(p.clientes) ? p.clientes[0] : p.clientes as { nombre: string; telefono: string } | null
+              const courier = Array.isArray(p.canales_cobro) ? p.canales_cobro[0] : p.canales_cobro as { nombre: string } | null
+              return (
               <tr key={p.id} className="tr-hover">
                 <td className="td font-mono text-xs text-gray-400">{p.id.slice(0, 8)}</td>
                 <td className="td">
-                  <p className="font-medium">{p.clientes?.nombre ?? '—'}</p>
-                  <p className="text-xs text-gray-400">{p.clientes?.telefono ?? ''}</p>
+                  <p className="font-medium">{cliente?.nombre ?? '—'}</p>
+                  <p className="text-xs text-gray-400">{cliente?.telefono ?? ''}</p>
                 </td>
-                <td className="td">{p.canales_cobro?.nombre ?? '—'}</td>
+                <td className="td">{courier?.nombre ?? '—'}</td>
                 <td className="td">{p.fecha_pedido}</td>
                 <td className="td">
                   <span className={ESTADO_BADGE[p.estado] ?? 'badge-warn'}>{p.estado}</span>
@@ -62,7 +65,7 @@ export default async function Pedidos() {
                 <td className="td text-right font-medium">RD$ {fmt(p.precio_total)}</td>
                 <td className="td capitalize">{p.metodo_pago_confirmado ?? '—'}</td>
               </tr>
-            ))}
+            )})}
           </tbody>
         </table>
       </div>
