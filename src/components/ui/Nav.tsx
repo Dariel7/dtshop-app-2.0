@@ -9,6 +9,7 @@ const links = [
   { href: '/compras',       label: 'Compras' },
   { href: '/liquidaciones', label: 'Liquidaciones' },
   { href: '/reportes',      label: 'Reportes' },
+  { href: '/admin',         label: 'Admin' },
 ]
 
 export default function Nav() {

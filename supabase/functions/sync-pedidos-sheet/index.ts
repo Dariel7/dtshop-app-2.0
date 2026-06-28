@@ -481,12 +481,21 @@ Deno.serve(async () => {
       return new Response(JSON.stringify({ ok: false, error: 'Sheet vacío' }), { status: 200 })
     }
 
-    // Obtener punto de corte
+    // Obtener punto de corte y verificar si el sync está activo
     const { data: syncState } = await supabase
       .from('sync_state')
-      .select('ultimo_num_sincronizado, fecha_inicio_sync')
+      .select('ultimo_num_sincronizado, fecha_inicio_sync, sync_activo')
       .eq('id', 1)
       .single()
+
+    if (syncState?.sync_activo === false) {
+      await supabase.from('sync_log').update({
+        filas_leidas: 0, pedidos_nuevos: 0, estados_cambiados: 0, errores: 0,
+        duracion_ms: Date.now() - startMs,
+        detalle: { info: 'sync desactivado manualmente' },
+      }).eq('id', syncLogId)
+      return new Response(JSON.stringify({ ok: true, info: 'sync desactivado' }), { status: 200 })
+    }
 
     // Si es la primera ejecución, detectar el punto de corte automáticamente
     let ultimoNum = syncState?.ultimo_num_sincronizado as number | null
