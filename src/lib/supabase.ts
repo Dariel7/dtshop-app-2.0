@@ -1,5 +1,21 @@
 import { createClient, SupabaseClient } from '@supabase/supabase-js'
 
+// ── Cliente servidor (service_role — solo para Server Components) ────────────
+let _server: SupabaseClient | null = null
+
+export function getSupabaseServer(): SupabaseClient {
+  if (!_server) {
+    const url = process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://placeholder.supabase.co'
+    // Usa service_role si está disponible (server-side), si no cae a anon
+    const key = process.env.SUPABASE_SERVICE_ROLE_KEY
+           || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+           || 'placeholder-key'
+    _server = createClient(url, key, { auth: { persistSession: false } })
+  }
+  return _server
+}
+
+// ── Cliente browser (anon — para 'use client' components) ───────────────────
 let _client: SupabaseClient | null = null
 
 export function getSupabase(): SupabaseClient {
@@ -11,10 +27,10 @@ export function getSupabase(): SupabaseClient {
   return _client
 }
 
-// Alias para compatibilidad con el código existente
+// supabase proxy — Server Components usan getSupabaseServer() directamente
 export const supabase = new Proxy({} as SupabaseClient, {
   get(_, prop) {
-    return (getSupabase() as unknown as Record<string | symbol, unknown>)[prop]
+    return (getSupabaseServer() as unknown as Record<string | symbol, unknown>)[prop]
   },
 })
 
