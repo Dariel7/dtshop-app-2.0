@@ -1,7 +1,7 @@
 'use client'
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
-import { supabase } from '@/lib/supabase'
+import { getSupabase } from '@/lib/supabase'
 
 type Producto = { id: string; nombre: string; precio_venta: number; stock_disponible: number }
 type Courier  = { id: string; nombre: string }
@@ -9,29 +9,30 @@ type Cliente  = { id: string; nombre: string; telefono: string }
 
 export default function NuevoPedido() {
   const router = useRouter()
-  const [productos,  setProductos]  = useState<Producto[]>([])
-  const [couriers,   setCouriers]   = useState<Courier[]>([])
-  const [clientes,   setClientes]   = useState<Cliente[]>([])
-  const [loading,    setLoading]    = useState(false)
-  const [error,      setError]      = useState('')
+  const [productos, setProductos] = useState<Producto[]>([])
+  const [couriers,  setCouriers]  = useState<Courier[]>([])
+  const [clientes,  setClientes]  = useState<Cliente[]>([])
+  const [loading,   setLoading]   = useState(false)
+  const [error,     setError]     = useState('')
 
   const [form, setForm] = useState({
-    cliente_id:    '',
+    cliente_id:             '',
     nuevo_cliente_nombre:   '',
     nuevo_cliente_telefono: '',
-    courier_id:    '',
-    producto_id:   '',
-    cantidad:      '1',
-    precio_unit:   '',
-    fecha_pedido:  new Date().toISOString().slice(0, 10),
-    notas:         '',
+    courier_id:             '',
+    producto_id:            '',
+    cantidad:               '1',
+    precio_unit:            '',
+    fecha_pedido:           new Date().toISOString().slice(0, 10),
+    notas:                  '',
   })
 
   useEffect(() => {
+    const sb = getSupabase()
     Promise.all([
-      supabase.from('productos').select('id,nombre,precio_venta,stock_disponible').eq('activo', true).order('nombre'),
-      supabase.from('canales_cobro').select('id,nombre').eq('activo', true).order('nombre'),
-      supabase.from('clientes').select('id,nombre,telefono').order('nombre').limit(200),
+      sb.from('productos').select('id,nombre,precio_venta,stock_disponible').eq('activo', true).order('nombre'),
+      sb.from('canales_cobro').select('id,nombre').eq('activo', true).order('nombre'),
+      sb.from('clientes').select('id,nombre,telefono').order('nombre').limit(200),
     ]).then(([p, c, cl]) => {
       setProductos(p.data ?? [])
       setCouriers(c.data ?? [])
@@ -40,17 +41,18 @@ export default function NuevoPedido() {
   }, [])
 
   const productoSel = productos.find(p => p.id === form.producto_id)
+  const set = (k: string, v: string) => setForm(f => ({ ...f, [k]: v }))
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
     setLoading(true)
     setError('')
+    const sb = getSupabase()
 
     try {
-      // 1. Crear o reusar cliente
       let clienteId = form.cliente_id
       if (!clienteId && form.nuevo_cliente_nombre) {
-        const { data, error } = await supabase
+        const { data, error } = await sb
           .from('clientes')
           .insert({ nombre: form.nuevo_cliente_nombre, telefono: form.nuevo_cliente_telefono || null })
           .select('id').single()
@@ -62,29 +64,22 @@ export default function NuevoPedido() {
       const cantidad = parseInt(form.cantidad)
       const precio   = parseFloat(form.precio_unit || String(productoSel?.precio_venta ?? 0))
 
-      // 2. Crear pedido
-      const { data: pedido, error: ep } = await supabase
+      const { data: pedido, error: ep } = await sb
         .from('pedidos')
         .insert({
-          cliente_id:    clienteId,
+          cliente_id:     clienteId,
           canal_cobro_id: form.courier_id || null,
-          estado:        'pendiente',
-          fecha_pedido:  form.fecha_pedido,
-          precio_total:  cantidad * precio,
-          notas:         form.notas || null,
+          estado:         'pendiente',
+          fecha_pedido:   form.fecha_pedido,
+          precio_total:   cantidad * precio,
+          notas:          form.notas || null,
         })
         .select('id').single()
       if (ep) throw ep
 
-      // 3. Crear pedido_item
-      const { error: ei } = await supabase
+      const { error: ei } = await sb
         .from('pedido_items')
-        .insert({
-          pedido_id:      pedido.id,
-          producto_id:    form.producto_id,
-          cantidad,
-          precio_unitario: precio,
-        })
+        .insert({ pedido_id: pedido.id, producto_id: form.producto_id, cantidad, precio_unitario: precio })
       if (ei) throw ei
 
       router.push('/pedidos')
@@ -94,8 +89,6 @@ export default function NuevoPedido() {
       setLoading(false)
     }
   }
-
-  const set = (k: string, v: string) => setForm(f => ({ ...f, [k]: v }))
 
   return (
     <div className="max-w-lg space-y-4">
@@ -107,16 +100,19 @@ export default function NuevoPedido() {
           <label className="label">Cliente existente</label>
           <select className="input" value={form.cliente_id} onChange={e => set('cliente_id', e.target.value)}>
             <option value="">— Nuevo cliente —</option>
-            {clientes.map(c => <option key={c.id} value={c.id}>{c.nombre} {c.telefono ? `(${c.telefono})` : ''}</option>)}
+            {clientes.map(c => (
+              <option key={c.id} value={c.id}>{c.nombre}{c.telefono ? ` (${c.telefono})` : ''}</option>
+            ))}
           </select>
         </div>
 
         {!form.cliente_id && (
-          <div className="grid grid-cols-2 gap-3 p-3 bg-gray-50 rounded-lg">
+          <div className="grid grid-cols-2 gap-3 p-3 rounded-lg" style={{background:'var(--bg-subtle)', border:'1px solid var(--border)'}}>
             <div>
               <label className="label">Nombre *</label>
               <input className="input" placeholder="Nombre del cliente"
-                value={form.nuevo_cliente_nombre} onChange={e => set('nuevo_cliente_nombre', e.target.value)} required={!form.cliente_id} />
+                value={form.nuevo_cliente_nombre} onChange={e => set('nuevo_cliente_nombre', e.target.value)}
+                required={!form.cliente_id} />
             </div>
             <div>
               <label className="label">Teléfono</label>
@@ -159,12 +155,11 @@ export default function NuevoPedido() {
         </div>
 
         {form.producto_id && form.cantidad && form.precio_unit && (
-          <p className="text-sm font-semibold text-indigo-700 text-right">
+          <p className="text-sm font-semibold text-right" style={{color:'var(--indigo-hover)'}}>
             Total: RD$ {(parseInt(form.cantidad) * parseFloat(form.precio_unit)).toFixed(2)}
           </p>
         )}
 
-        {/* Courier y fecha */}
         <div className="grid grid-cols-2 gap-3">
           <div>
             <label className="label">Courier</label>
@@ -186,7 +181,11 @@ export default function NuevoPedido() {
             value={form.notas} onChange={e => set('notas', e.target.value)} />
         </div>
 
-        {error && <p className="text-sm text-red-600 bg-red-50 p-2 rounded">{error}</p>}
+        {error && (
+          <p className="text-sm rounded-lg px-3 py-2" style={{color:'var(--red)', background:'#1f0a0a', border:'1px solid #6b0a0a'}}>
+            {error}
+          </p>
+        )}
 
         <div className="flex gap-3 pt-1">
           <button type="submit" className="btn-primary" disabled={loading}>

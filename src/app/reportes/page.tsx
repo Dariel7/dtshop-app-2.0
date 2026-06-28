@@ -1,24 +1,27 @@
 'use client'
 import { useState } from 'react'
-import { supabase, fmt, fmtMes, mesActual } from '@/lib/supabase'
+import { getSupabase } from '@/lib/supabase'
+import { fmt, fmtMes, mesActual } from '@/lib/supabase'
 
 type Fila = { linea?: string; seccion?: string; actividad?: string; cuenta?: string; descripcion?: string; monto: number; es_subtotal: boolean }
 
 function TablaReporte({ filas }: { filas: Fila[] }) {
   return (
     <table className="w-full">
-      <tbody>
+      <tbody className="table-divider">
         {filas.map((f, i) => {
           const label = f.linea ?? f.seccion ?? f.actividad ?? f.descripcion ?? '—'
           const cuenta = 'cuenta' in f ? f.cuenta : ('descripcion' in f ? f.descripcion : label)
           return (
-            <tr key={i} className={f.es_subtotal ? 'bg-gray-50 font-semibold border-t border-gray-200' : ''}>
-              <td className="px-4 py-2 text-sm">{cuenta ?? label}</td>
-              <td className={`px-4 py-2 text-sm text-right ${
-                f.es_subtotal
-                  ? (f.monto >= 0 ? 'text-green-700' : 'text-red-600')
-                  : 'text-gray-700'
-              }`}>
+            <tr key={i} style={f.es_subtotal ? { background: 'var(--bg-subtle)' } : {}}>
+              <td className="px-4 py-2 text-sm" style={{color: f.es_subtotal ? 'var(--text-1)' : 'var(--text-2)', fontWeight: f.es_subtotal ? 600 : 400}}>
+                {cuenta ?? label}
+              </td>
+              <td className="px-4 py-2 text-sm text-right font-medium" style={{
+                color: f.es_subtotal
+                  ? (f.monto >= 0 ? 'var(--green)' : 'var(--red)')
+                  : 'var(--text-2)'
+              }}>
                 {f.monto == null ? '' : `RD$ ${fmt(f.monto)}`}
               </td>
             </tr>
@@ -29,50 +32,53 @@ function TablaReporte({ filas }: { filas: Fila[] }) {
   )
 }
 
+const TABS = [
+  { key: 'resultados', label: 'Estado de Resultados' },
+  { key: 'balance',    label: 'Balance General' },
+  { key: 'flujo',      label: 'Flujo de Caja' },
+  { key: 'capital',    label: 'Capital de Trabajo' },
+] as const
+
 export default function Reportes() {
-  const [tab,   setTab]   = useState<'resultados'|'balance'|'flujo'|'capital'>('resultados')
-  const [mes,   setMes]   = useState(mesActual())
-  const [filas, setFilas] = useState<Fila[]>([])
+  const [tab,      setTab]      = useState<typeof TABS[number]['key']>('resultados')
+  const [mes,      setMes]      = useState(mesActual())
+  const [filas,    setFilas]    = useState<Fila[]>([])
   const [cargando, setCargando] = useState(false)
 
   async function cargar() {
     setCargando(true)
+    const sb = getSupabase()
     let data: Fila[] = []
     if (tab === 'resultados') {
-      const { data: d } = await supabase.rpc('reporte_estado_resultados', { p_periodo_inicio: mes })
+      const { data: d } = await sb.rpc('reporte_estado_resultados', { p_periodo_inicio: mes })
       data = d ?? []
     } else if (tab === 'balance') {
-      const { data: d } = await supabase.rpc('reporte_balance_general', { p_hasta_periodo: mes })
+      const { data: d } = await sb.rpc('reporte_balance_general', { p_hasta_periodo: mes })
       data = d ?? []
     } else if (tab === 'flujo') {
-      const { data: d } = await supabase.rpc('reporte_flujo_caja', { p_periodo_inicio: mes })
+      const { data: d } = await sb.rpc('reporte_flujo_caja', { p_periodo_inicio: mes })
       data = d ?? []
     } else {
-      const { data: d } = await supabase.rpc('reporte_capital_trabajo', { p_hasta_periodo: mes })
+      const { data: d } = await sb.rpc('reporte_capital_trabajo', { p_hasta_periodo: mes })
       data = d ?? []
     }
     setFilas(data)
     setCargando(false)
   }
 
-  const TABS = [
-    { key: 'resultados', label: 'Estado de Resultados' },
-    { key: 'balance',    label: 'Balance General' },
-    { key: 'flujo',      label: 'Flujo de Caja' },
-    { key: 'capital',    label: 'Capital de Trabajo' },
-  ] as const
-
   return (
     <div className="space-y-4 max-w-2xl">
       <h1 className="text-xl font-bold">Reportes</h1>
 
       {/* Tabs */}
-      <div className="flex gap-1 bg-gray-100 p-1 rounded-lg">
+      <div className="flex gap-1 p-1 rounded-lg" style={{background:'var(--bg-subtle)'}}>
         {TABS.map(t => (
           <button key={t.key} type="button"
             onClick={() => { setTab(t.key); setFilas([]) }}
             className={`flex-1 py-1.5 text-xs font-medium rounded-md transition-colors ${
-              tab === t.key ? 'bg-white shadow text-indigo-700' : 'text-gray-500 hover:text-gray-700'
+              tab === t.key
+                ? 'bg-indigo-600 text-white shadow'
+                : 'text-muted hover:text-white'
             }`}>
             {t.label}
           </button>
@@ -93,13 +99,15 @@ export default function Reportes() {
       {/* Resultado */}
       {filas.length > 0 && (
         <div className="card p-0 overflow-hidden">
-          <div className="px-4 py-3 bg-gray-50 border-b border-gray-200">
-            <h2 className="font-semibold">
-              {TABS.find(t => t.key === tab)?.label} — {fmtMes(mes)}
-            </h2>
+          <div className="card-header">
+            {TABS.find(t => t.key === tab)?.label} — {fmtMes(mes)}
           </div>
           <TablaReporte filas={filas} />
         </div>
+      )}
+
+      {!cargando && filas.length === 0 && (
+        <p className="text-sm text-faint text-center py-8">Selecciona un periodo y presiona Generar.</p>
       )}
     </div>
   )

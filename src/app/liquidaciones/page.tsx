@@ -1,5 +1,6 @@
 export const dynamic = 'force-dynamic'
 import { supabase, fmt } from '@/lib/supabase'
+import { fmtFecha } from '@/lib/utils'
 import Link from 'next/link'
 
 export default async function Liquidaciones() {
@@ -24,11 +25,11 @@ export default async function Liquidaciones() {
       {/* CxC pendientes */}
       {(cxc ?? []).length > 0 && (
         <div className="card p-0 overflow-hidden">
-          <div className="px-4 py-3 bg-amber-50 border-b border-amber-200">
-            <h2 className="font-semibold text-amber-800">Pendientes de cobro</h2>
+          <div className="card-header-warn">
+            Pendientes de cobro — {(cxc ?? []).length} pedidos
           </div>
           <table className="w-full">
-            <thead className="bg-gray-50 border-b border-gray-200">
+            <thead className="table-head">
               <tr>
                 <th className="th">Courier</th>
                 <th className="th">Pedido</th>
@@ -37,15 +38,15 @@ export default async function Liquidaciones() {
                 <th className="th text-right">Monto</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-gray-100">
+            <tbody className="table-divider">
               {(cxc ?? []).map((c: {
                 courier: string; pedido_id: string; fecha_entrega: string;
                 dias_pendientes: number; monto: number; tramo_antigüedad: string;
               }) => (
                 <tr key={c.pedido_id} className="tr-hover">
                   <td className="td font-medium">{c.courier}</td>
-                  <td className="td font-mono text-xs">{c.pedido_id.slice(0,8)}</td>
-                  <td className="td">{c.fecha_entrega}</td>
+                  <td className="td font-mono text-xs text-faint">{c.pedido_id.slice(0, 8)}</td>
+                  <td className="td text-muted">{fmtFecha(c.fecha_entrega)}</td>
                   <td className="td">
                     <span className={
                       c.dias_pendientes > 15 ? 'badge-err' :
@@ -62,35 +63,39 @@ export default async function Liquidaciones() {
 
       {/* Historial */}
       <div className="card p-0 overflow-hidden">
-        <div className="px-4 py-3 bg-gray-50 border-b border-gray-200">
-          <h2 className="font-semibold">Historial de liquidaciones</h2>
-        </div>
-        <table className="w-full">
-          <thead className="bg-gray-50 border-b border-gray-200">
-            <tr>
-              <th className="th">Fecha</th>
-              <th className="th">Courier</th>
-              <th className="th text-right">Recaudado</th>
-              <th className="th text-right">Comisión</th>
-              <th className="th text-right">Neto recibido</th>
-            </tr>
-          </thead>
-          <tbody className="divide-y divide-gray-100">
-            {(liq ?? []).map((l: {
-              id: string; fecha: string; monto_recaudado_total: number;
-              monto_entregado_neto: number; comision_total: number;
-              canales_cobro: { nombre: string }[] | null;
-            }) => (
-              <tr key={l.id} className="tr-hover">
-                <td className="td">{l.fecha}</td>
-                <td className="td font-medium">{(Array.isArray(l.canales_cobro) ? l.canales_cobro[0]?.nombre : (l.canales_cobro as { nombre: string } | null)?.nombre) ?? '—'}</td>
-                <td className="td text-right">RD$ {fmt(l.monto_recaudado_total)}</td>
-                <td className="td text-right text-red-500">RD$ {fmt(l.comision_total)}</td>
-                <td className="td text-right font-semibold text-green-700">RD$ {fmt(l.monto_entregado_neto)}</td>
+        <div className="card-header">Historial de liquidaciones</div>
+        {(liq ?? []).length === 0 ? (
+          <p className="empty-state">Sin liquidaciones registradas.</p>
+        ) : (
+          <table className="w-full">
+            <thead className="table-head">
+              <tr>
+                <th className="th">Fecha</th>
+                <th className="th">Courier</th>
+                <th className="th text-right">Recaudado</th>
+                <th className="th text-right">Comisión</th>
+                <th className="th text-right">Neto recibido</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody className="table-divider">
+              {(liq ?? []).map((l: {
+                id: string; fecha: string; monto_recaudado_total: number;
+                monto_entregado_neto: number; comision_total: number;
+                canales_cobro: { nombre: string }[] | null;
+              }) => (
+                <tr key={l.id} className="tr-hover">
+                  <td className="td text-muted">{fmtFecha(l.fecha)}</td>
+                  <td className="td font-medium">
+                    {(Array.isArray(l.canales_cobro) ? l.canales_cobro[0]?.nombre : (l.canales_cobro as { nombre: string } | null)?.nombre) ?? '—'}
+                  </td>
+                  <td className="td text-right text-muted">RD$ {fmt(l.monto_recaudado_total)}</td>
+                  <td className="td text-right" style={{color:'var(--red)'}}>− RD$ {fmt(l.comision_total)}</td>
+                  <td className="td text-right font-semibold" style={{color:'var(--green)'}}>RD$ {fmt(l.monto_entregado_neto)}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        )}
       </div>
     </div>
   )
