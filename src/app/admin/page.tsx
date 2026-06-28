@@ -2,73 +2,113 @@ export const dynamic = 'force-dynamic'
 import { getSyncStatus } from './actions'
 import SyncToggle from './SyncToggle'
 import { supabase, fmt } from '@/lib/supabase'
+import { fmtFecha } from '@/lib/utils'
 
 async function getSyncStats() {
-  const [state, lastLogs] = await Promise.all([
+  const [state, lastLogs, errores] = await Promise.all([
     supabase.from('sync_state').select('*').eq('id', 1).single(),
     supabase
       .from('sync_log')
-      .select('ejecutado_en, filas_leidas, pedidos_nuevos, estados_cambiados, errores, duracion_ms')
+      .select('ejecutado_en,filas_leidas,pedidos_nuevos,estados_cambiados,errores,duracion_ms')
       .order('ejecutado_en', { ascending: false })
-      .limit(10),
+      .limit(15),
+    supabase
+      .from('sync_errors')
+      .select('pedido_num,columna,mensaje,created_at')
+      .eq('resuelto', false)
+      .order('created_at', { ascending: false })
+      .limit(20),
   ])
-  return {
-    state: state.data,
-    logs: lastLogs.data ?? [],
-  }
+  return { state: state.data, logs: lastLogs.data ?? [], errores: errores.data ?? [] }
 }
 
 export default async function AdminPage() {
-  const [syncActive, { state, logs }] = await Promise.all([
+  const [syncActive, { state, logs, errores }] = await Promise.all([
     getSyncStatus(),
     getSyncStats(),
   ])
 
+  const lastLog = logs[0]
+
   return (
-    <div className="space-y-6">
-      <h1 className="text-xl font-bold text-gray-900">Administración</h1>
+    <div className="space-y-6 max-w-4xl">
+      <h1 className="text-xl font-bold">Administración</h1>
 
       {/* Sync control */}
-      <div className="card space-y-4">
-        <h2 className="font-semibold text-gray-800">Sincronización con Google Sheets</h2>
+      <div className="card space-y-5">
+        <div className="flex items-start justify-between gap-4">
+          <div>
+            <h2 className="font-semibold">Sincronización con Google Sheets</h2>
+            <p className="text-xs text-faint mt-0.5">Lee el Sheet cada 1 minuto y actualiza pedidos automáticamente</p>
+          </div>
+          <SyncToggle initialActive={syncActive} />
+        </div>
 
-        <SyncToggle initialActive={syncActive} />
-
+        {/* Stats rápidas */}
         {state && (
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2 border-t border-gray-100 text-sm">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-3" style={{borderTop:'1px solid var(--border)'}}>
             <div>
-              <p className="text-xs text-gray-400 uppercase tracking-wide">Último # sincronizado</p>
-              <p className="font-medium text-gray-800">{state.ultimo_num_sincronizado ?? '—'}</p>
+              <p className="text-xs text-faint uppercase tracking-wide">Último # sync</p>
+              <p className="font-semibold mt-0.5">{state.ultimo_num_sincronizado ?? '—'}</p>
             </div>
             <div>
-              <p className="text-xs text-gray-400 uppercase tracking-wide">Última ejecución</p>
-              <p className="font-medium text-gray-800">
-                {state.ultima_ejecucion
-                  ? new Date(state.ultima_ejecucion).toLocaleString('es-DO')
-                  : '—'}
+              <p className="text-xs text-faint uppercase tracking-wide">Última ejecución</p>
+              <p className="font-semibold mt-0.5">
+                {state.ultima_ejecucion ? new Date(state.ultima_ejecucion).toLocaleTimeString('es-DO', {hour:'2-digit', minute:'2-digit'}) : '—'}
               </p>
             </div>
             <div>
-              <p className="text-xs text-gray-400 uppercase tracking-wide">Inicio del sync</p>
-              <p className="font-medium text-gray-800">
-                {state.fecha_inicio_sync
-                  ? new Date(state.fecha_inicio_sync).toLocaleString('es-DO')
-                  : '—'}
+              <p className="text-xs text-faint uppercase tracking-wide">Nuevos hoy</p>
+              <p className="font-semibold mt-0.5" style={{color:'var(--indigo-hover)'}}>
+                {lastLog?.pedidos_nuevos ?? 0}
+              </p>
+            </div>
+            <div>
+              <p className="text-xs text-faint uppercase tracking-wide">Errores pendientes</p>
+              <p className="font-semibold mt-0.5" style={{color: errores.length > 0 ? 'var(--red)' : 'var(--green)'}}>
+                {errores.length}
               </p>
             </div>
           </div>
         )}
       </div>
 
-      {/* Últimas ejecuciones */}
-      <div className="card">
-        <h2 className="font-semibold text-gray-800 mb-3">Últimas ejecuciones</h2>
+      {/* Errores pendientes */}
+      {errores.length > 0 && (
+        <div className="card p-0 overflow-hidden">
+          <div className="card-header-warn">
+            Errores sin resolver — {errores.length}
+          </div>
+          <table className="w-full">
+            <thead className="table-head">
+              <tr>
+                <th className="th">Pedido #</th>
+                <th className="th">Mensaje</th>
+                <th className="th">Fecha</th>
+              </tr>
+            </thead>
+            <tbody className="table-divider">
+              {errores.map((e: { pedido_num: number | null; columna: string | null; mensaje: string; created_at: string }, i) => (
+                <tr key={i} className="tr-hover">
+                  <td className="td font-mono text-xs">{e.pedido_num ?? '—'}</td>
+                  <td className="td text-muted">{e.mensaje}</td>
+                  <td className="td text-faint text-xs">{fmtFecha(e.created_at)}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
+
+      {/* Historial de ejecuciones */}
+      <div className="card p-0 overflow-hidden">
+        <div className="card-header">Últimas ejecuciones</div>
         {logs.length === 0 ? (
-          <p className="text-sm text-gray-400">Sin registros aún.</p>
+          <p className="empty-state">Sin registros aún.</p>
         ) : (
-          <table className="w-full text-sm">
-            <thead>
-              <tr className="border-b border-gray-100">
+          <table className="w-full">
+            <thead className="table-head">
+              <tr>
                 <th className="th">Hora</th>
                 <th className="th text-right">Filas</th>
                 <th className="th text-right">Nuevos</th>
@@ -77,26 +117,35 @@ export default async function AdminPage() {
                 <th className="th text-right">Duración</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody className="table-divider">
               {logs.map((l: {
-                ejecutado_en: string
-                filas_leidas: number
-                pedidos_nuevos: number
-                estados_cambiados: number
-                errores: number
-                duracion_ms: number
+                ejecutado_en: string; filas_leidas: number; pedidos_nuevos: number
+                estados_cambiados: number; errores: number; duracion_ms: number
               }) => (
-                <tr key={l.ejecutado_en} className="border-b border-gray-50 tr-hover">
-                  <td className="td">{new Date(l.ejecutado_en).toLocaleString('es-DO')}</td>
-                  <td className="td text-right">{l.filas_leidas}</td>
-                  <td className="td text-right">{l.pedidos_nuevos}</td>
-                  <td className="td text-right">{l.estados_cambiados}</td>
+                <tr key={l.ejecutado_en} className="tr-hover">
+                  <td className="td text-muted">
+                    {new Date(l.ejecutado_en).toLocaleString('es-DO', {
+                      month: 'short', day: '2-digit',
+                      hour: '2-digit', minute: '2-digit'
+                    })}
+                  </td>
+                  <td className="td text-right text-muted">{l.filas_leidas}</td>
+                  <td className="td text-right">
+                    {l.pedidos_nuevos > 0
+                      ? <span style={{color:'var(--indigo-hover)'}} className="font-medium">+{l.pedidos_nuevos}</span>
+                      : <span className="text-faint">0</span>}
+                  </td>
+                  <td className="td text-right">
+                    {l.estados_cambiados > 0
+                      ? <span style={{color:'var(--amber)'}} className="font-medium">{l.estados_cambiados}</span>
+                      : <span className="text-faint">0</span>}
+                  </td>
                   <td className="td text-right">
                     {l.errores > 0
                       ? <span className="badge-err">{l.errores}</span>
-                      : <span className="badge-ok">0</span>}
+                      : <span className="text-faint">0</span>}
                   </td>
-                  <td className="td text-right text-gray-400">{fmt(l.duracion_ms / 1000, 1)}s</td>
+                  <td className="td text-right text-faint text-xs">{fmt(l.duracion_ms / 1000, 1)}s</td>
                 </tr>
               ))}
             </tbody>
