@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic'
 import { supabase, fmt } from '@/lib/supabase'
 import Link from 'next/link'
 

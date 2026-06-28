@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic'
 import { supabase, fmt, mesActual } from '@/lib/supabase'
 
 async function getDashboard() {
