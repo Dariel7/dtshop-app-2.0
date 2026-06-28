@@ -2,6 +2,8 @@ import { createClient } from 'https://esm.sh/@supabase/supabase-js@2'
 
 const SHEET_ID = '1YvquHHGQuBifmtG0Dfut_TW54HYinvFU7ywW_E0s-HM'
 
+// ── Leer Google Sheet con API Key (sheet público con link) ───────────────────
+
 // Estados terminales: ya no cambian después de llegar aquí
 const TERMINAL_SYSTEM_STATES = new Set(['entregado', 'devuelto', 'cancelado'])
 
@@ -26,11 +28,6 @@ const SHEET_STATE_MAP: Record<string, string> = {
 }
 
 // ── Tipos ────────────────────────────────────────────────────────────────────
-
-interface ServiceAccount {
-  client_email: string
-  private_key: string
-}
 
 interface ParsedSheetState {
   systemState: string | null
@@ -58,71 +55,11 @@ interface ParsedRow {
   rawCourier: string | null
 }
 
-// ── Google Sheets Auth via JWT ────────────────────────────────────────────────
+// ── Leer Google Sheet con API Key (sheet público con link) ───────────────────
 
-function base64url(buf: ArrayBuffer): string {
-  return btoa(String.fromCharCode(...new Uint8Array(buf)))
-    .replace(/=/g, '').replace(/\+/g, '-').replace(/\//g, '_')
-}
-
-async function getGoogleAccessToken(sa: ServiceAccount): Promise<string> {
-  const now = Math.floor(Date.now() / 1000)
-
-  const header  = base64url(new TextEncoder().encode(JSON.stringify({ alg: 'RS256', typ: 'JWT' })))
-  const payload = base64url(new TextEncoder().encode(JSON.stringify({
-    iss:   sa.client_email,
-    scope: 'https://www.googleapis.com/auth/spreadsheets.readonly',
-    aud:   'https://oauth2.googleapis.com/token',
-    exp:   now + 3600,
-    iat:   now,
-  })))
-
-  const message = `${header}.${payload}`
-
-  const pemBody = sa.private_key
-    .replace(/-----BEGIN PRIVATE KEY-----/g, '')
-    .replace(/-----END PRIVATE KEY-----/g, '')
-    .replace(/\n/g, '')
-
-  const binaryKey = Uint8Array.from(atob(pemBody), c => c.charCodeAt(0))
-
-  const cryptoKey = await crypto.subtle.importKey(
-    'pkcs8', binaryKey,
-    { name: 'RSASSA-PKCS1-v1_5', hash: 'SHA-256' },
-    false, ['sign'],
-  )
-
-  const sig = await crypto.subtle.sign(
-    'RSASSA-PKCS1-v1_5', cryptoKey, new TextEncoder().encode(message),
-  )
-
-  const jwt = `${message}.${base64url(sig)}`
-
-  const res  = await fetch('https://oauth2.googleapis.com/token', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-    body: new URLSearchParams({
-      grant_type: 'urn:ietf:params:oauth:grant-type:jwt-bearer',
-      assertion:  jwt,
-    }),
-  })
-
-  if (!res.ok) {
-    const err = await res.text()
-    throw new Error(`Google token error: ${err}`)
-  }
-
-  const data = await res.json()
-  return data.access_token as string
-}
-
-// ── Leer Google Sheet ─────────────────────────────────────────────────────────
-
-async function fetchSheetRows(token: string): Promise<{ headers: string[]; rows: string[][] }> {
-  const url = `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/A:AZ`
-  const res = await fetch(url, {
-    headers: { Authorization: `Bearer ${token}` },
-  })
+async function fetchSheetRows(apiKey: string): Promise<{ headers: string[]; rows: string[][] }> {
+  const url = `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/A:AZ?key=${apiKey}`
+  const res = await fetch(url)
 
   if (!res.ok) {
     const err = await res.text()
@@ -498,7 +435,7 @@ Deno.serve(async () => {
 
   const supabaseUrl = Deno.env.get('SUPABASE_URL')!
   const serviceKey  = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!
-  const saJson      = Deno.env.get('GOOGLE_SERVICE_ACCOUNT_JSON')!
+  const apiKey      = Deno.env.get('GOOGLE_API_KEY')!
 
   const supabase = createClient(supabaseUrl, serviceKey, {
     auth: { persistSession: false },
@@ -514,9 +451,7 @@ Deno.serve(async () => {
   const syncLogId = logRow?.id as string
 
   try {
-    const sa: ServiceAccount = JSON.parse(saJson)
-    const token = await getGoogleAccessToken(sa)
-    const { headers, rows } = await fetchSheetRows(token)
+    const { headers, rows } = await fetchSheetRows(apiKey)
 
     if (!headers.length) {
       await supabase.from('sync_log').update({ detalle: { error: 'Sheet vacío o sin encabezados' } }).eq('id', syncLogId)
