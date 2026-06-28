@@ -6,1698 +6,2262 @@ BEGIN;
 -- ── Clientes ─────────────────────────────────────────
 CREATE TEMP TABLE _clientes_map (key text PRIMARY KEY, id uuid);
 
-INSERT INTO _clientes_map VALUES ('Dariel Tejada||+18496300294', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Dariel Tejada', '+18496300294') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Félix larrion||+18494591102', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Félix larrion', '+18494591102') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Yowanda -||+18094959187', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Yowanda -', '+18094959187') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Joel villaman||+14807575513', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Joel villaman', '+14807575513') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Edward -||+18495838302', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Edward -', '+18495838302') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Josué Jimenez||+18294953501', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Josué Jimenez', '+18294953501') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Reymond Ledesma||+18298384097', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Reymond Ledesma', '+18298384097') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Francisco -||+18298897861', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Francisco -', '+18298897861') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Adriana -||+18093527277', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Adriana -', '+18093527277') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Maria Esther||+18497512516', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Maria Esther', '+18497512516') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Yasmiri -||+18299845843', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Yasmiri -', '+18299845843') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Stalyn -||+18293122530', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Stalyn -', '+18293122530') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Wascar -||+18092199482', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Wascar -', '+18092199482') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Luceliz -||+18295567059', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Luceliz -', '+18295567059') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Jose R||+18098541232', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Jose R', '+18098541232') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Melkys M. Novas F.||+18492512909', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Melkys M. Novas F.', '+18492512909') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Yadara gonzalez||+18094743296', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Yadara gonzalez', '+18094743296') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Eriana -||+18097587606', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Eriana -', '+18097587606') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Kilsis Gonzalez||+18092248867', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Kilsis Gonzalez', '+18092248867') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Vinicio gonzalez||+18099182254', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Vinicio gonzalez', '+18099182254') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Jose Reyes||+18098528659', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Jose Reyes', '+18098528659') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Alberto aquino||+18294234620', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Alberto aquino', '+18294234620') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Cristal -||+18297306640', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Cristal -', '+18297306640') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Martha Santana||+18097560758', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Martha Santana', '+18097560758') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Noemí Fani Ladoo FÍGARO de Devers||+18296328144', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Noemí Fani Ladoo FÍGARO de Devers', '+18296328144') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Noemí Ladoo||+18296328144', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Noemí Ladoo', '+18296328144') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Yasmín reyes||+18094952270', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Yasmín reyes', '+18094952270') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Fidias Mateo||+18296195465', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Fidias Mateo', '+18296195465') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Támara Rome||+18097699414', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Támara Rome', '+18097699414') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Manuel E Sánchez Díaz||+18299083824', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Manuel E Sánchez Díaz', '+18299083824') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Dolores Luna||+18293528523', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Dolores Luna', '+18293528523') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Anyelani franco||+18297761142', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Anyelani franco', '+18297761142') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Kailis inoska||+18094986812', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Kailis inoska', '+18094986812') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Ramón -||+18096938564', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Ramón -', '+18096938564') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Rafael Cuello||+18295709806', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Rafael Cuello', '+18295709806') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Hirquin -||+18098821680', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Hirquin -', '+18098821680') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Alexis Ramírez||+18296806097', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Alexis Ramírez', '+18296806097') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Danilo de los santos||+18298414298', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Danilo de los santos', '+18298414298') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Kelvin -||+18292801375', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Kelvin -', '+18292801375') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Roberto -||+18493501547', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Roberto -', '+18493501547') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Antonio Melican||+18495350922', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Antonio Melican', '+18495350922') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Jose Farias||+18298701111', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Jose Farias', '+18298701111') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Cheferson -||+18297618450', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Cheferson -', '+18297618450') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Luis -||+18098178550', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Luis -', '+18098178550') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Rolando Calderon||+18095336510', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Rolando Calderon', '+18095336510') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Alfredo mariot||+18492203518', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Alfredo mariot', '+18492203518') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('eduard taveras||+18296390416', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('eduard taveras', '+18296390416') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Dindo -||+18097655438', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Dindo -', '+18097655438') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Noelia -||+18296553562', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Noelia -', '+18296553562') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Daniel reyes||+18495764163', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Daniel reyes', '+18495764163') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Dafi Guzmán HerediaelE||+18097591177', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Dafi Guzmán HerediaelE', '+18097591177') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Phito -||+18493882716', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Phito -', '+18493882716') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Isidora abreu ventura||+14233135467', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Isidora abreu ventura', '+14233135467') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Yeremy Perez||+18093236866', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Yeremy Perez', '+18093236866') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Carlos -||+18094381241', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Carlos -', '+18094381241') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Joel santos||+18294281465', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Joel santos', '+18294281465') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Elizabeth -||+18298771983', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Elizabeth -', '+18298771983') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Uilton Rodríguez||+18099076173', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Uilton Rodríguez', '+18099076173') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Juan Alberto Muñoz Duarte||+18297564151', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Juan Alberto Muñoz Duarte', '+18297564151') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Diego Henríquez||18294290249', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Diego Henríquez', '18294290249') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Summer -||18094327705', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Summer -', '18094327705') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Wilfredo rafael||18493519486', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Wilfredo rafael', '18493519486') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Moreno -||18299252292', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Moreno -', '18299252292') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Félix Santana||18096690797', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Félix Santana', '18096690797') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Roberto -||18093506933', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Roberto -', '18093506933') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('caridad gutierrez||18099620097', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('caridad gutierrez', '18099620097') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Jose -||18097864429', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Jose -', '18097864429') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Juan Antonio De La Cruz Rosario||18293945204', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Juan Antonio De La Cruz Rosario', '18293945204') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Marcet -||18096605900', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Marcet -', '18096605900') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Mike lombardini||18296784731', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Mike lombardini', '18296784731') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Antonio -||18298391017', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Antonio -', '18298391017') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Toni -||18093527370', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Toni -', '18093527370') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Aury Moralez de la rosa||18292280113', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Aury Moralez de la rosa', '18292280113') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Kelvin Santana||18493305609', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Kelvin Santana', '18493305609') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Andy de Jesús peña||18096547027', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Andy de Jesús peña', '18096547027') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Rosa Mateo||18099234020', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Rosa Mateo', '18099234020') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Osvaldo Cross||18293436439', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Osvaldo Cross', '18293436439') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Victor -||18294133206', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Victor -', '18294133206') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Diefet Yambati||18294793809', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Diefet Yambati', '18294793809') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Lidia Pacheco||18292130808', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Lidia Pacheco', '18292130808') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Manuel -||18099147713', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Manuel -', '18099147713') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Mirtha Crisóstomo||18098633132', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Mirtha Crisóstomo', '18098633132') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Yoryi jose||18295516193', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Yoryi jose', '18295516193') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Cesar peña Z||18098432424', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Cesar peña Z', '18098432424') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Danilo Monegro||18494531910', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Danilo Monegro', '18494531910') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Domingo Melenciano De La Cruz||18092600999', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Domingo Melenciano De La Cruz', '18092600999') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Estefany -||18099622392', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Estefany -', '18099622392') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Doohan -||18298374740', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Doohan -', '18298374740') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Pedro Romero||18097492127', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Pedro Romero', '18097492127') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Robinson mata||18099627510', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Robinson mata', '18099627510') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Carmen Balbuena||18296754307', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Carmen Balbuena', '18296754307') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Luis Manuel||18494275022', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Luis Manuel', '18494275022') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Jose n||18096692780', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Jose n', '18096692780') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Carolin -||18293341414', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Carolin -', '18293341414') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Alejandro -||18492468802', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Alejandro -', '18492468802') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Cocina -||18495270722', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Cocina -', '18495270722') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Ronald Tejeda||18298989177', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Ronald Tejeda', '18298989177') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('VALENTINA  MERCEDES b -||18496550734', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('VALENTINA  MERCEDES b -', '18496550734') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Manuela -||18098416286', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Manuela -', '18098416286') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Andrés Contreras||18096276877', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Andrés Contreras', '18096276877') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Mirna ortiz||18092238154', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Mirna ortiz', '18092238154') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Teresa Sánchez||18096677745', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Teresa Sánchez', '18096677745') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Clásico flow||18094882949', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Clásico flow', '18094882949') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Tomas -||18092566799', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Tomas -', '18092566799') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Emil Liriano||18494781147', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Emil Liriano', '18494781147') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('raphael castillo||18094616236', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('raphael castillo', '18094616236') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Raphael castillo||18094616236', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Raphael castillo', '18094616236') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('joseph  prophil -||18092078178', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('joseph  prophil -', '18092078178') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Pacifico ayres||18493520211', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Pacifico ayres', '18493520211') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Aquilina.alcequiez. -||18098564714', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Aquilina.alcequiez. -', '18098564714') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Aquilina Alcequiez||18098564714', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Aquilina Alcequiez', '18098564714') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Rolando rosado||18093908874', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Rolando rosado', '18093908874') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Wilbert Geffrard||18093767066', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Wilbert Geffrard', '18093767066') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Dolores acosta s||18094903973', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Dolores acosta s', '18094903973') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Johairis -||18297991120', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Johairis -', '18297991120') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Julio -||18292735426', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Julio -', '18292735426') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Hugo Badia||18092232991', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Hugo Badia', '18092232991') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('ANA TINEO||17188261828', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('ANA TINEO', '17188261828') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Wascarnicolaspolancogarcia -||18296750278', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Wascarnicolaspolancogarcia -', '18296750278') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Nicola de la cruz||18092823749', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Nicola de la cruz', '18092823749') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Yvrose gedeus gedeusyvrose21@gmail.com||18494409968', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Yvrose gedeus gedeusyvrose21@gmail.com', '18494409968') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Francisco -||18093605881', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Francisco -', '18093605881') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Daniel duversaint||18297921946', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Daniel duversaint', '18297921946') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Alfredo Belén||18096500077', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Alfredo Belén', '18096500077') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Jeisson Gabriel||18296909898', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Jeisson Gabriel', '18296909898') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Ejemplo -||18496450115', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Ejemplo -', '18496450115') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Bernardo Calletano||18299121199', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Bernardo Calletano', '18299121199') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Leonor -||18295091551', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Leonor -', '18295091551') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Luis Enrique Sanchez Suarez||18297685662', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Luis Enrique Sanchez Suarez', '18297685662') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Eladio Díaz||12155326857', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Eladio Díaz', '12155326857') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Ederson frias de los santos||18299227490', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Ederson frias de los santos', '18299227490') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Leonela peña||18096690450', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Leonela peña', '18096690450') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Enrique -||18299581947', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Enrique -', '18299581947') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('jose -||18099861297', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('jose -', '18099861297') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Luís manual Santana||18297079922', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Luís manual Santana', '18297079922') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Josué -||18493522166', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Josué -', '18493522166') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Juan lantigua||18297228373', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Juan lantigua', '18297228373') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Francis soler||18093714992', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Francis soler', '18093714992') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Isis bautista||18092247111', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Isis bautista', '18092247111') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Doneisy Bertre||18097579949', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Doneisy Bertre', '18097579949') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Wilson Luciano adames||18294390905', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Wilson Luciano adames', '18294390905') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('JUANCARLOS -||18292748863', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('JUANCARLOS -', '18292748863') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Guadalupe Cruz Mota||18296766477', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Guadalupe Cruz Mota', '18296766477') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Jose -||18293280170', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Jose -', '18293280170') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Nancy santana||18293383837', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Nancy santana', '18293383837') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Ángel Polanco||18293691378', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Ángel Polanco', '18293691378') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Rafael nova||18297098079', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Rafael nova', '18297098079') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Wander García Santana||18293885300', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Wander García Santana', '18293885300') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Aracelis Altagracia||18299079203', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Aracelis Altagracia', '18299079203') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Yudy silverio||18297073361', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Yudy silverio', '18297073361') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Ania Sugey||18097741525', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Ania Sugey', '18097741525') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Nancy Santana||18293383837', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Nancy Santana', '18293383837') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Jose cruz809 223 1455||18092231455', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Jose cruz809 223 1455', '18092231455') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Angela Del Rosario Florian Trinidad||18298627648', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Angela Del Rosario Florian Trinidad', '18298627648') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('David vialet||18295268109', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('David vialet', '18295268109') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Octavio meran||18099163968', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Octavio meran', '18099163968') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Mirian de leon||18098053532', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Mirian de leon', '18098053532') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Carlos Jose||18296241810', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Carlos Jose', '18296241810') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Amable frías||18492710145', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Amable frías', '18492710145') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Wenceslao de la cruz de León||18299019693', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Wenceslao de la cruz de León', '18299019693') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Joel villaman||14807575513', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Joel villaman', '14807575513') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Francisco Dominguez||18099090997', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Francisco Dominguez', '18099090997') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Josefina -||18296296484', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Josefina -', '18296296484') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Ronald -||18096097448', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Ronald -', '18096097448') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Elizabeth -||18298771983', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Elizabeth -', '18298771983') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Sujey pina nuñez||17063068358', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Sujey pina nuñez', '17063068358') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Alan Checo.||18298682748', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Alan Checo.', '18298682748') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Juan Ramírez||18498168953', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Juan Ramírez', '18498168953') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Rafael Díaz Filpo||18094898149', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Rafael Díaz Filpo', '18094898149') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Elvio -||18096271100', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Elvio -', '18096271100') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Gerardo -||18293406323', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Gerardo -', '18293406323') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Maria -||18098051046', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Maria -', '18098051046') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('audy -||18096502079', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('audy -', '18096502079') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Ezequiel soriano||18494565656', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Ezequiel soriano', '18494565656') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Francisco Mora Valenzuela||18097106150', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Francisco Mora Valenzuela', '18097106150') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Natanael javier||18094497262', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Natanael javier', '18094497262') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Daniel Nuñez||18097121629', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Daniel Nuñez', '18097121629') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('José Pérez||18492590729', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('José Pérez', '18492590729') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Michael Aybar||18095075448', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Michael Aybar', '18095075448') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Ingrid Ramírez||18494760789', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Ingrid Ramírez', '18494760789') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Pedro Reyes||18095193436', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Pedro Reyes', '18095193436') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Kirsy  de la cruz -||18092039189', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Kirsy  de la cruz -', '18092039189') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Franck melvin||18294686298', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Franck melvin', '18294686298') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Maria -||18092325330', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Maria -', '18092325330') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Juan Antonio||18093947668', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Juan Antonio', '18093947668') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Estarlin Rodríguez bido||18296476163', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Estarlin Rodríguez bido', '18296476163') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Andrés encarnación Soriano||18298495030', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Andrés encarnación Soriano', '18298495030') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Damari uben zapata||18096943823', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Damari uben zapata', '18096943823') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Caren de Jesús||18292625101', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Caren de Jesús', '18292625101') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Lucy -||18299887033', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Lucy -', '18299887033') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Mario mena||18494495098', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Mario mena', '18494495098') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Wilton -||18293755678', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Wilton -', '18293755678') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Edward Montero||18296060289', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Edward Montero', '18296060289') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Paulina perez||18292189286', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Paulina perez', '18292189286') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Carmen Elizabeth Peña Santos||18099957037', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Carmen Elizabeth Peña Santos', '18099957037') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Adelso -||18093525711', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Adelso -', '18093525711') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Ana Francisco||18095072372', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Ana Francisco', '18095072372') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('María Alvarez||18298867131', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('María Alvarez', '18298867131') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Sonia santos||18297595637', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Sonia santos', '18297595637') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Aracelis Rosario||18296988062', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Aracelis Rosario', '18296988062') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Esteban Vasquez||18293368714', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Esteban Vasquez', '18293368714') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Elías -||18298478661', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Elías -', '18298478661') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Alexandra de los Santos||18094543293', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Alexandra de los Santos', '18094543293') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Diogenes del rosario||18092090735', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Diogenes del rosario', '18092090735') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Richard Freites||18296339784', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Richard Freites', '18296339784') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Estela acevedo||18296515268', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Estela acevedo', '18296515268') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Yrene Beaubrun||18097754364', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Yrene Beaubrun', '18097754364') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Wilson Rodríguez||18296050915', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Wilson Rodríguez', '18296050915') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Victor sanchez||18093913962', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Victor sanchez', '18093913962') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Guarionex Acosta||18292650497', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Guarionex Acosta', '18292650497') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Hilario -||18096134815', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Hilario -', '18096134815') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Jose -||18495819167', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Jose -', '18495819167') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Ramona -||18297668764', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Ramona -', '18297668764') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Aracelis gonzales de perez||18298877337', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Aracelis gonzales de perez', '18298877337') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Jesús Lantigua||18092242915', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Jesús Lantigua', '18092242915') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Julio perez||18292123367', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Julio perez', '18292123367') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Yoeli de la rosa||18498039854', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Yoeli de la rosa', '18498039854') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Feliciano peralta||18294216705', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Feliciano peralta', '18294216705') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Socrates Morel||18299148855', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Socrates Morel', '18299148855') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Benancia santos||18298908451', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Benancia santos', '18298908451') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Gerson Escanio matos||18093925008', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Gerson Escanio matos', '18093925008') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Patricia Inoa||18097141717', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Patricia Inoa', '18097141717') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Yanirys francois||18292124186', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Yanirys francois', '18292124186') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Dilcia -||18294527349', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Dilcia -', '18294527349') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Yokasta carrion||18299824907', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Yokasta carrion', '18299824907') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Yessica Eridania||18297569280', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Yessica Eridania', '18297569280') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Yannely -||18297300620', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Yannely -', '18297300620') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Zuleika altagracia Santana casado||18295085429', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Zuleika altagracia Santana casado', '18295085429') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Joel Joseph||18293514660', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Joel Joseph', '18293514660') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Onasi -||18097477468', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Onasi -', '18097477468') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('José frias||18096670441', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('José frias', '18096670441') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Jesus -||18496589066', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Jesus -', '18496589066') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Yomery -||18493962388', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Yomery -', '18493962388') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Martin López||18099243141', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Martin López', '18099243141') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Altagracia Hidalgo||18293421937', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Altagracia Hidalgo', '18293421937') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Ana -||18093033786', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Ana -', '18093033786') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('La gorda rd||18298167300', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('La gorda rd', '18298167300') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Daniel perdomo||18295567809', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Daniel perdomo', '18295567809') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Yenli Blue||18097199920', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Yenli Blue', '18097199920') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Alejandro Fermín||18295631206', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Alejandro Fermín', '18295631206') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Nelson Martínez||18295505583', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Nelson Martínez', '18295505583') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Ysabel  Contreras -||18095197969', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Ysabel  Contreras -', '18095197969') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Junior Valentín||18092090404', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Junior Valentín', '18092090404') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Ana -||18099908003', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Ana -', '18099908003') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Yoel Mejía||18097071794', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Yoel Mejía', '18097071794') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Ada almanzar||14074337209', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Ada almanzar', '14074337209') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Estela Mendez||393318230557', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Estela Mendez', '393318230557') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Yudelky paulino||18097717191', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Yudelky paulino', '18097717191') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Carolina -||18295546408', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Carolina -', '18295546408') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Domingo Alexander vanterpool||18098767442', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Domingo Alexander vanterpool', '18098767442') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Gustavo cid||18093507553', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Gustavo cid', '18093507553') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Francis -||18096727400', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Francis -', '18096727400') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Andres Capellan||18297907362', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Andres Capellan', '18297907362') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Martha Santana||18097560758', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Martha Santana', '18097560758') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Freddy baez||18096186841', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Freddy baez', '18096186841') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Nector Rosario||18297061552', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Nector Rosario', '18297061552') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('José Alberto Santos||18092507891', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('José Alberto Santos', '18092507891') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Olga Lidia||18097869410', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Olga Lidia', '18097869410') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Claudia rosario diaz||18493801028', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Claudia rosario diaz', '18493801028') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Junior reyes||18494696562', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Junior reyes', '18494696562') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Yajaira Robles||18492489978', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Yajaira Robles', '18492489978') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Yesenia  pinales -||18297147901', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Yesenia  pinales -', '18297147901') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Juan -||18092081135', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Juan -', '18092081135') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Odanel Zabala||18295363411', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Odanel Zabala', '18295363411') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Jesús castillo||18094866174', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Jesús castillo', '18094866174') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Jaice ruiz||18494016385', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Jaice ruiz', '18494016385') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Manuela cespedes||18293250923', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Manuela cespedes', '18293250923') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Wilfrido -||18292919115', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Wilfrido -', '18292919115') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Cristian cuevas||18493415786', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Cristian cuevas', '18493415786') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Yuby Ureña||18296164753', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Yuby Ureña', '18296164753') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Jon -||18295850251', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Jon -', '18295850251') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Leonardo Rojas||18099432899', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Leonardo Rojas', '18099432899') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Ada Almánzar||14074337209', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Ada Almánzar', '14074337209') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Julio M Bonnelly T||18299865999', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Julio M Bonnelly T', '18299865999') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Fausto -||18094492880', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Fausto -', '18094492880') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Yasmin genao||18299326650', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Yasmin genao', '18299326650') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Wilkin Pujols Mendez||18297972567', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Wilkin Pujols Mendez', '18297972567') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Adalberto polanco||18299783859', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Adalberto polanco', '18299783859') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Carlos Agramonte||18494480704', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Carlos Agramonte', '18494480704') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Francisco Alberto paredes||18496578337', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Francisco Alberto paredes', '18496578337') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Deybi Ramirez||18296367726', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Deybi Ramirez', '18296367726') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Yamilex concepcion||18097208730', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Yamilex concepcion', '18097208730') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Rudy de la cruz||18092817202', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Rudy de la cruz', '18092817202') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Faustin François||18098904886', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Faustin François', '18098904886') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('José Vargas||18096641095', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('José Vargas', '18096641095') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Argenis Rosado||18293488010', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Argenis Rosado', '18293488010') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Johana -||18293580236', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Johana -', '18293580236') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Alphi Ruiz||18098189221', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Alphi Ruiz', '18098189221') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Mauricio de jesus||18095193725', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Mauricio de jesus', '18095193725') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('José Manuel Bichara||18098851213', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('José Manuel Bichara', '18098851213') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Claudia Soto||18298015429', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Claudia Soto', '18298015429') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Helen -||18093999327', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Helen -', '18093999327') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Victor Alcantara||18298288801', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Victor Alcantara', '18298288801') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Carlos -||18097055896', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Carlos -', '18097055896') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Jimena foxan||18293599082', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Jimena foxan', '18293599082') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Edinson Ureña||18297890139', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Edinson Ureña', '18297890139') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('cesar martinez||18092129434', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('cesar martinez', '18092129434') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Franklin de lima||18299318456', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Franklin de lima', '18299318456') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Miguel Angel garcias||18097585780', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Miguel Angel garcias', '18097585780') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Nicolino Loche||18493608700', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Nicolino Loche', '18493608700') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Selenia -||18297985334', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Selenia -', '18297985334') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Juan marte||18295083273', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Juan marte', '18295083273') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Jorge -||18494705098', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Jorge -', '18494705098') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Poli -||18494593629', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Poli -', '18494593629') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Miguel angel frías Cruz||18094155830', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Miguel angel frías Cruz', '18094155830') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('La Para De La||18297731495', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('La Para De La', '18297731495') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Rafael pajero Beato||18493900746', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Rafael pajero Beato', '18493900746') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Kelvin Alcántara||18296509070', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Kelvin Alcántara', '18296509070') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('José Antonio Acosta Jiménez||18296412997', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('José Antonio Acosta Jiménez', '18296412997') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('HECTOR MONTERO||18099868600', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('HECTOR MONTERO', '18099868600') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Dominica Rosario||18093359154', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Dominica Rosario', '18093359154') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Dione Cubilete Díaz||18498848295', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Dione Cubilete Díaz', '18498848295') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Joan pilier||18292848411', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Joan pilier', '18292848411') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Juan Antonio Mejia Ruiz||18094478537', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Juan Antonio Mejia Ruiz', '18094478537') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('George Rivas||18293200303', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('George Rivas', '18293200303') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Uver -||18099563946', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Uver -', '18099563946') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Cecilin maria||18493709428', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Cecilin maria', '18493709428') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Dariel Tejada||18496300294', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Dariel Tejada', '18496300294') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Robert -||13479610412', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Robert -', '13479610412') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Yoly Reyes||18099210560', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Yoly Reyes', '18099210560') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Joanna Martínez||18097131380', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Joanna Martínez', '18097131380') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Leonel de la cruz||18295538987', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Leonel de la cruz', '18295538987') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('ARISMENDY López||18092995266', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('ARISMENDY López', '18092995266') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Wislet Carismene||18296373315', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Wislet Carismene', '18296373315') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Marina cueva||18294100274', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Marina cueva', '18294100274') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Prueba -||18496300294', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Prueba -', '18496300294') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Osiris sanchez||18298774824', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Osiris sanchez', '18298774824') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Ambiorys -||18099811378', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Ambiorys -', '18099811378') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Jorge Luis Jorge cabrera||18093573814', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Jorge Luis Jorge cabrera', '18093573814') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Nelson Fernández||18298699028', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Nelson Fernández', '18298699028') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Ana g Duluc||18092563750', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Ana g Duluc', '18092563750') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Sócrates  ramirez -||18296311389', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Sócrates  ramirez -', '18296311389') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Juan Carlos Zamora||18092640135', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Juan Carlos Zamora', '18092640135') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Blas Abreu||18097058923', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Blas Abreu', '18097058923') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Kelele Ninja||12155432043', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Kelele Ninja', '12155432043') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Enyel Diaz||18492677744', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Enyel Diaz', '18492677744') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Wilkin Sanche||18294616029', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Wilkin Sanche', '18294616029') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Amer -||18293187523', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Amer -', '18293187523') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Robert De paula||18098353450', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Robert De paula', '18098353450') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Jefferson Baptiste||18295179182', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Jefferson Baptiste', '18295179182') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Faury -||18294570284', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Faury -', '18294570284') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Massiel Mercedes||18494260991', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Massiel Mercedes', '18494260991') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Daniel tejada||18296618503', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Daniel tejada', '18296618503') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Daneivis Lissett||18095162284', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Daneivis Lissett', '18095162284') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Orlando -||18495859023', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Orlando -', '18495859023') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Suleny Cabrera||18493547090', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Suleny Cabrera', '18493547090') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Lisane -||18099198355', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Lisane -', '18099198355') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Mafeo12 -||18293328024', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Mafeo12 -', '18293328024') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Francisco -||18097621908', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Francisco -', '18097621908') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Yunior -||18493931822', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Yunior -', '18493931822') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Dahiana Reyes||18294375038', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Dahiana Reyes', '18294375038') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Papito almanzar||18293121305', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Papito almanzar', '18293121305') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Madeline Etienne||18292963172', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Madeline Etienne', '18292963172') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Rita -||18293425814', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Rita -', '18293425814') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Ado -||18299218283', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Ado -', '18299218283') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Luis reyes||18097088918', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Luis reyes', '18097088918') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Briank -||18095132845', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Briank -', '18095132845') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Juleisi piña moreno||18493934011', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Juleisi piña moreno', '18493934011') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Edwin ambiori||18298274138', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Edwin ambiori', '18298274138') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Nelvi Felix||18492753234', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Nelvi Felix', '18492753234') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Bronw -||18299933261', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Bronw -', '18299933261') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Banesa Vargas||18293011999', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Banesa Vargas', '18293011999') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Sarah Gonzalez||18293421155', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Sarah Gonzalez', '18293421155') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Anne rose||18099176522', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Anne rose', '18099176522') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Arawak Gonzalez||18098415781', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Arawak Gonzalez', '18098415781') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Rose belon||18099094172', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Rose belon', '18099094172') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Felicia Reyes||18099235058', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Felicia Reyes', '18099235058') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Felícita -||18295862696', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Felícita -', '18295862696') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Ana -||18298028521', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Ana -', '18298028521') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Aney Diaz rojas||18292977552', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Aney Diaz rojas', '18292977552') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Yvelisse Almanzar||18093109330', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Yvelisse Almanzar', '18093109330') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Carmen de la cruz||18097579441', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Carmen de la cruz', '18097579441') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Yajaira -||18493825212', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Yajaira -', '18493825212') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Nerys Martinez||18097060121', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Nerys Martinez', '18097060121') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Miguelina Fernández||18298637370', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Miguelina Fernández', '18298637370') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Lissette Ubiera Rivera||18098766087', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Lissette Ubiera Rivera', '18098766087') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Leidy -||18292137363', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Leidy -', '18292137363') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Carmen de los santos||18498896129', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Carmen de los santos', '18498896129') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Bladimir -||18497974636', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Bladimir -', '18497974636') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Miguel de peña||18098018929', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Miguel de peña', '18098018929') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Támara Rome||18097699414', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Támara Rome', '18097699414') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Yoselyn -||18093509463', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Yoselyn -', '18093509463') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Luis Rosario||18096971722', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Luis Rosario', '18096971722') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Ana belkys berroa payano||18498796478', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Ana belkys berroa payano', '18498796478') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Noelia suero||18099831423', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Noelia suero', '18099831423') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Morena Stephan||18297236177', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Morena Stephan', '18297236177') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Jhonny peralta santos||18098274553', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Jhonny peralta santos', '18098274553') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Deivi -||18292801583', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Deivi -', '18292801583') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Francisco Méndez||18299227346', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Francisco Méndez', '18299227346') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Massiel -||18099160837', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Massiel -', '18099160837') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Yenny -||18492098954', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Yenny -', '18492098954') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Mary Laura||18494641949', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Mary Laura', '18494641949') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Daysi Medina||18292579997', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Daysi Medina', '18292579997') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Dayana -||18299898171', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Dayana -', '18299898171') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Hugo paula||18095430732', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Hugo paula', '18095430732') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Sujey Martínez||18092999286', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Sujey Martínez', '18092999286') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Manolo Divalon||18093967246', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Manolo Divalon', '18093967246') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Yaquelin  salcedo -||18292627281', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Yaquelin  salcedo -', '18292627281') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Nilda  Calderon -||18293955778', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Nilda  Calderon -', '18293955778') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Héctor Lebron||18094445203', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Héctor Lebron', '18094445203') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Rosa moris||18099733321', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Rosa moris', '18099733321') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Rafael -||18293879062', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Rafael -', '18293879062') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Ana Sarita||18295681486', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Ana Sarita', '18295681486') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Ruth Suero||18498769480', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Ruth Suero', '18498769480') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('José esteves||18292229192', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('José esteves', '18292229192') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Lisbeth -||18295897092', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Lisbeth -', '18295897092') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Celia Morales||18297417289', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Celia Morales', '18297417289') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Mayi -||18092659212', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Mayi -', '18092659212') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Ana medina||18494464960', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Ana medina', '18494464960') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('José augusto nuñez||18095139156', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('José augusto nuñez', '18095139156') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Luisana -||18492804533', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Luisana -', '18492804533') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Ana Contreras||18098475258', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Ana Contreras', '18098475258') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('David Corniel||18298629661', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('David Corniel', '18298629661') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Carlos jimenez||8098474966', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Carlos jimenez', '8098474966') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Michel Jeff||8492437530', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Michel Jeff', '8492437530') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Ana rosario||8294561625', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Ana rosario', '8294561625') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Miguel De Peña Antonio||8098018929', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Miguel De Peña Antonio', '8098018929') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Woolendele -||8097752138', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Woolendele -', '8097752138') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Yajaira -||8299738278', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Yajaira -', '8299738278') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Yulys marquez||8299873084', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Yulys marquez', '8299873084') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Angélica María frias||8293904586', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Angélica María frias', '8293904586') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Jose lopez||8297647180', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Jose lopez', '8297647180') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Maribel Tejeda||8493762434', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Maribel Tejeda', '8493762434') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Estefany rosario||8299371166', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Estefany rosario', '8299371166') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Magdelyn  Sánchez -||8493300335', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Magdelyn  Sánchez -', '8493300335') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Katherine -||8495771314', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Katherine -', '8495771314') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Grey -||8299329761', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Grey -', '8299329761') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Maryest Nuñez||8496525163', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Maryest Nuñez', '8496525163') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Solanyi díaz||8096675356', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Solanyi díaz', '8096675356') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Evelyn -||8099522126', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Evelyn -', '8099522126') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Ambar Castro||8096761626', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Ambar Castro', '8096761626') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Natalie Bonifacio||8296602823', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Natalie Bonifacio', '8296602823') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Danerlly Encarnacion||8294623584', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Danerlly Encarnacion', '8294623584') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Steisy Pimentel||8097744652', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Steisy Pimentel', '8097744652') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Yasury Picon feliz||8292337202', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Yasury Picon feliz', '8292337202') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Solange santana||8298851510', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Solange santana', '8298851510') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Lívida -||8097044919', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Lívida -', '8097044919') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Gisselle -||8494381109', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Gisselle -', '8494381109') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Elina sánchez||8097828894', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Elina sánchez', '8097828894') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Carolina -||8298205364', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Carolina -', '8298205364') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Fernando Tiquitik||8095562341', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Fernando Tiquitik', '8095562341') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Alexandra Rodriguez||8292590343', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Alexandra Rodriguez', '8292590343') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Susan Robert||8493535301', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Susan Robert', '8493535301') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Biannely -||8492640096', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Biannely -', '8492640096') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Maria Paulina Rodriguez||8297946895', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Maria Paulina Rodriguez', '8297946895') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Rosa Morales||8099780805', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Rosa Morales', '8099780805') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Gomez -||8097092008', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Gomez -', '8097092008') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Yandelson -||8296503796', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Yandelson -', '8296503796') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Wanda -||8297564439', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Wanda -', '8297564439') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Roberta Almonte Rodriguez||8295709600', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Roberta Almonte Rodriguez', '8295709600') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Osmeldi -||8097084334', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Osmeldi -', '8097084334') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Dasca Joseph||8296183104', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Dasca Joseph', '8296183104') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Maria -||8295989358', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Maria -', '8295989358') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Katherine Romero||8294828815', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Katherine Romero', '8294828815') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Lisseth -||8097654627', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Lisseth -', '8097654627') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Dilenia -||8295487779', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Dilenia -', '8295487779') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Ashlyt vanessa||8096975969', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Ashlyt vanessa', '8096975969') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Yeleini Pujols||8099319691', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Yeleini Pujols', '8099319691') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Claudia Rodríguez||8098277992', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Claudia Rodríguez', '8098277992') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Katerin Gomez||8494652204', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Katerin Gomez', '8494652204') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Noemi -||8292332100', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Noemi -', '8292332100') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Jessica -||8492074977', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Jessica -', '8492074977') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('María Teresa Perez||8493773063', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('María Teresa Perez', '8493773063') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Prieba -||8496300294', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Prieba -', '8496300294') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Luisa Sterling||8295347586', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Luisa Sterling', '8295347586') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Magdelyn Sánchez||8493300335', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Magdelyn Sánchez', '8493300335') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Winton -||8296198086', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Winton -', '8296198086') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Rubens Sanchez||8498822785', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Rubens Sanchez', '8498822785') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Ingrid Ramírez||8494760789', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Ingrid Ramírez', '8494760789') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Yaritza Gomez||8099621266', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Yaritza Gomez', '8099621266') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Isa -||8098630590', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Isa -', '8098630590') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Wendely Díaz||8093438667', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Wendely Díaz', '8093438667') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Nayi torres||8483651595', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Nayi torres', '8483651595') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Wanda ESMERLIN||8098270453', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Wanda ESMERLIN', '8098270453') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Luis Martinez||8294481626', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Luis Martinez', '8294481626') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Magaly guzman||8493586508', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Magaly guzman', '8493586508') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Kenia Berenice||8294652349', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Kenia Berenice', '8294652349') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Efrain Díaz||7874108976', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Efrain Díaz', '7874108976') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Zuleyky Guzmán||8492495911', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Zuleyky Guzmán', '8492495911') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Erick Pérez||8296935857', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Erick Pérez', '8296935857') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Valentina castro||8297120871', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Valentina castro', '8297120871') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('María Santana||8096775094', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('María Santana', '8096775094') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Liliana viola||8099946210', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Liliana viola', '8099946210') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Angela Del Rosario||8298627648', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Angela Del Rosario', '8298627648') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Anna -||8297874975', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Anna -', '8297874975') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Massiel -||8493606212', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Massiel -', '8493606212') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Kenia -||8495425353', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Kenia -', '8495425353') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Deyanira -||2039421948', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Deyanira -', '2039421948') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Marvelin Ovalle Guzmán||8297514060', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Marvelin Ovalle Guzmán', '8297514060') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Janice Vasquez||8492030626', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Janice Vasquez', '8492030626') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Julio Vallejo||8092324975', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Julio Vallejo', '8092324975') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Nelson Mercedes||8098415123', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Nelson Mercedes', '8098415123') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Isaac Ogando Rojas||8092308451', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Isaac Ogando Rojas', '8092308451') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Deyani Santana||8099099352', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Deyani Santana', '8099099352') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Carlos Ferreras||8092702369', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Carlos Ferreras', '8092702369') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Jennifer Jean Louis||8293549511', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Jennifer Jean Louis', '8293549511') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Julio Gómez||8297626778', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Julio Gómez', '8297626778') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Luis moises vanderhorst García||8098674587', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Luis moises vanderhorst García', '8098674587') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Manuela Gómez||8297880131', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Manuela Gómez', '8297880131') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Ignaqui Estevez||8092237592', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Ignaqui Estevez', '8092237592') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Nayeli Mora||8496523069', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Nayeli Mora', '8496523069') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Genesis Mejía||8295809754', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Genesis Mejía', '8295809754') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Yesenia Hernández||8297561981', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Yesenia Hernández', '8297561981') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Sires y encarnacion jaquez||8092080883', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Sires y encarnacion jaquez', '8092080883') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Robeli morel||8296374877', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Robeli morel', '8296374877') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Maria del pilar hernandez||8493527346', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Maria del pilar hernandez', '8493527346') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Sheila Maria Ciscal Almaguer||8495818159', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Sheila Maria Ciscal Almaguer', '8495818159') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('francis rosario||8093033305', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('francis rosario', '8093033305') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Arlene Faneyte||8092584145', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Arlene Faneyte', '8092584145') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Altagracia De Pimentel||8298755544', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Altagracia De Pimentel', '8298755544') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Wismehylin geronimo||8495297930', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Wismehylin geronimo', '8495297930') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Samira santana||8096091142', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Samira santana', '8096091142') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('𝑀𝒶𝓇𝓎 -||8296642030', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('𝑀𝒶𝓇𝓎 -', '8296642030') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Miguel Angel Domínguez||8298852219', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Miguel Angel Domínguez', '8298852219') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Anabel -||8098734510', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Anabel -', '8098734510') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Adilca -||8293034232', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Adilca -', '8293034232') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Rosa miguelina||8292082581', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Rosa miguelina', '8292082581') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('AzLIM MAICA||8292974315', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('AzLIM MAICA', '8292974315') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Manuela -||8292603526', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Manuela -', '8292603526') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Rachel -||8094601929', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Rachel -', '8094601929') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Katherine Sánchez||8096379236', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Katherine Sánchez', '8096379236') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Dinelys -||8295639307', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Dinelys -', '8295639307') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Dessire Taveras||8492624904', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Dessire Taveras', '8492624904') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Maricela cruz||8299801716', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Maricela cruz', '8299801716') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Prueba -||8496300294', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Prueba -', '8496300294') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Maria orquidea franco||8293362430', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Maria orquidea franco', '8293362430') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Madelyn carela||8292203816', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Madelyn carela', '8292203816') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('JoséFrancisco -||8299227346', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('JoséFrancisco -', '8299227346') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Ebony Rivera severino||8492453912', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Ebony Rivera severino', '8492453912') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Yuniffer Viloria||8296525265', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Yuniffer Viloria', '8296525265') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Xiomara -||8299322055', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Xiomara -', '8299322055') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Yelixfer -||4802384270', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Yelixfer -', '4802384270') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Yesenia García||8296497684', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Yesenia García', '8296497684') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Ruhaiddy -||8494545779', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Ruhaiddy -', '8494545779') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Danna yibelis||8295742430', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Danna yibelis', '8295742430') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Raquel -||8293273843', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Raquel -', '8293273843') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Tomairy Ramirez Delgadillo||8495262164', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Tomairy Ramirez Delgadillo', '8495262164') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Mileidys segura||8097814639', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Mileidys segura', '8097814639') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Estefany Paulino||8498597684', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Estefany Paulino', '8498597684') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('sagrario isabel||8098350530', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('sagrario isabel', '8098350530') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Anabell -||8093862130', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Anabell -', '8093862130') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('María Pimentel||8098932150', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('María Pimentel', '8098932150') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Luzbiliana -||8297551124', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Luzbiliana -', '8297551124') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Aracelis -||8298530501', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Aracelis -', '8298530501') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Janna Delgado||8292525114', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Janna Delgado', '8292525114') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Miliangela Veliz||8494497873', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Miliangela Veliz', '8494497873') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Daniela espallat||8094609908', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Daniela espallat', '8094609908') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Cristal veloz||8296616755', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Cristal veloz', '8296616755') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Paulina -||8292083525', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Paulina -', '8292083525') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Anyela María||8293758025', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Anyela María', '8293758025') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Lissette Vásquez||8298650850', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Lissette Vásquez', '8298650850') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Laysha aracena||8296025625', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Laysha aracena', '8296025625') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Eliusy garcia||8296462717', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Eliusy garcia', '8296462717') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Elgin Alberto Richiez||8093505632', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Elgin Alberto Richiez', '8093505632') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Ysmeli Mendoza||8098531287', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Ysmeli Mendoza', '8098531287') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Yulisa de oleo||8492018121', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Yulisa de oleo', '8492018121') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Virgey Mateo Tavarez||8494561968', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Virgey Mateo Tavarez', '8494561968') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Juan Carlos||8495761702', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Juan Carlos', '8495761702') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Julia Hernandez||8098992101', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Julia Hernandez', '8098992101') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Juana -||8295271780', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Juana -', '8295271780') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Evangeline Janice||8299124056', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Evangeline Janice', '8299124056') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Sugeiry magdalin||8295508009', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Sugeiry magdalin', '8295508009') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Anabelis -||8293844745', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Anabelis -', '8293844745') RETURNING id
-));
-INSERT INTO _clientes_map VALUES ('Julieta jiemenez Martinez||8296348505', (
-  INSERT INTO clientes (nombre, telefono) VALUES ('Julieta jiemenez Martinez', '8296348505') RETURNING id
-));
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Dariel Tejada', '+18496300294') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Dariel Tejada||+18496300294', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Félix larrion', '+18494591102') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Félix larrion||+18494591102', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Yowanda -', '+18094959187') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Yowanda -||+18094959187', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Joel villaman', '+14807575513') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Joel villaman||+14807575513', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Edward -', '+18495838302') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Edward -||+18495838302', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Josué Jimenez', '+18294953501') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Josué Jimenez||+18294953501', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Reymond Ledesma', '+18298384097') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Reymond Ledesma||+18298384097', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Francisco -', '+18298897861') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Francisco -||+18298897861', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Adriana -', '+18093527277') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Adriana -||+18093527277', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Maria Esther', '+18497512516') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Maria Esther||+18497512516', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Yasmiri -', '+18299845843') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Yasmiri -||+18299845843', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Stalyn -', '+18293122530') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Stalyn -||+18293122530', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Wascar -', '+18092199482') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Wascar -||+18092199482', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Luceliz -', '+18295567059') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Luceliz -||+18295567059', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Jose R', '+18098541232') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Jose R||+18098541232', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Melkys M. Novas F.', '+18492512909') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Melkys M. Novas F.||+18492512909', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Yadara gonzalez', '+18094743296') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Yadara gonzalez||+18094743296', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Eriana -', '+18097587606') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Eriana -||+18097587606', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Kilsis Gonzalez', '+18092248867') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Kilsis Gonzalez||+18092248867', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Vinicio gonzalez', '+18099182254') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Vinicio gonzalez||+18099182254', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Jose Reyes', '+18098528659') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Jose Reyes||+18098528659', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Alberto aquino', '+18294234620') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Alberto aquino||+18294234620', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Cristal -', '+18297306640') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Cristal -||+18297306640', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Martha Santana', '+18097560758') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Martha Santana||+18097560758', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Noemí Fani Ladoo FÍGARO de Devers', '+18296328144') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Noemí Fani Ladoo FÍGARO de Devers||+18296328144', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Noemí Ladoo', '+18296328144') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Noemí Ladoo||+18296328144', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Yasmín reyes', '+18094952270') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Yasmín reyes||+18094952270', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Fidias Mateo', '+18296195465') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Fidias Mateo||+18296195465', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Támara Rome', '+18097699414') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Támara Rome||+18097699414', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Manuel E Sánchez Díaz', '+18299083824') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Manuel E Sánchez Díaz||+18299083824', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Dolores Luna', '+18293528523') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Dolores Luna||+18293528523', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Anyelani franco', '+18297761142') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Anyelani franco||+18297761142', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Kailis inoska', '+18094986812') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Kailis inoska||+18094986812', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Ramón -', '+18096938564') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Ramón -||+18096938564', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Rafael Cuello', '+18295709806') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Rafael Cuello||+18295709806', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Hirquin -', '+18098821680') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Hirquin -||+18098821680', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Alexis Ramírez', '+18296806097') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Alexis Ramírez||+18296806097', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Danilo de los santos', '+18298414298') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Danilo de los santos||+18298414298', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Kelvin -', '+18292801375') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Kelvin -||+18292801375', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Roberto -', '+18493501547') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Roberto -||+18493501547', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Antonio Melican', '+18495350922') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Antonio Melican||+18495350922', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Jose Farias', '+18298701111') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Jose Farias||+18298701111', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Cheferson -', '+18297618450') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Cheferson -||+18297618450', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Luis -', '+18098178550') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Luis -||+18098178550', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Rolando Calderon', '+18095336510') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Rolando Calderon||+18095336510', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Alfredo mariot', '+18492203518') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Alfredo mariot||+18492203518', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('eduard taveras', '+18296390416') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('eduard taveras||+18296390416', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Dindo -', '+18097655438') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Dindo -||+18097655438', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Noelia -', '+18296553562') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Noelia -||+18296553562', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Daniel reyes', '+18495764163') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Daniel reyes||+18495764163', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Dafi Guzmán HerediaelE', '+18097591177') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Dafi Guzmán HerediaelE||+18097591177', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Phito -', '+18493882716') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Phito -||+18493882716', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Isidora abreu ventura', '+14233135467') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Isidora abreu ventura||+14233135467', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Yeremy Perez', '+18093236866') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Yeremy Perez||+18093236866', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Carlos -', '+18094381241') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Carlos -||+18094381241', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Joel santos', '+18294281465') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Joel santos||+18294281465', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Elizabeth -', '+18298771983') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Elizabeth -||+18298771983', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Uilton Rodríguez', '+18099076173') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Uilton Rodríguez||+18099076173', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Juan Alberto Muñoz Duarte', '+18297564151') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Juan Alberto Muñoz Duarte||+18297564151', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Diego Henríquez', '18294290249') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Diego Henríquez||18294290249', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Summer -', '18094327705') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Summer -||18094327705', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Wilfredo rafael', '18493519486') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Wilfredo rafael||18493519486', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Moreno -', '18299252292') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Moreno -||18299252292', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Félix Santana', '18096690797') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Félix Santana||18096690797', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Roberto -', '18093506933') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Roberto -||18093506933', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('caridad gutierrez', '18099620097') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('caridad gutierrez||18099620097', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Jose -', '18097864429') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Jose -||18097864429', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Juan Antonio De La Cruz Rosario', '18293945204') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Juan Antonio De La Cruz Rosario||18293945204', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Marcet -', '18096605900') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Marcet -||18096605900', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Mike lombardini', '18296784731') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Mike lombardini||18296784731', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Antonio -', '18298391017') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Antonio -||18298391017', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Toni -', '18093527370') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Toni -||18093527370', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Aury Moralez de la rosa', '18292280113') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Aury Moralez de la rosa||18292280113', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Kelvin Santana', '18493305609') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Kelvin Santana||18493305609', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Andy de Jesús peña', '18096547027') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Andy de Jesús peña||18096547027', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Rosa Mateo', '18099234020') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Rosa Mateo||18099234020', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Osvaldo Cross', '18293436439') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Osvaldo Cross||18293436439', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Victor -', '18294133206') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Victor -||18294133206', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Diefet Yambati', '18294793809') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Diefet Yambati||18294793809', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Lidia Pacheco', '18292130808') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Lidia Pacheco||18292130808', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Manuel -', '18099147713') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Manuel -||18099147713', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Mirtha Crisóstomo', '18098633132') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Mirtha Crisóstomo||18098633132', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Yoryi jose', '18295516193') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Yoryi jose||18295516193', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Cesar peña Z', '18098432424') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Cesar peña Z||18098432424', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Danilo Monegro', '18494531910') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Danilo Monegro||18494531910', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Domingo Melenciano De La Cruz', '18092600999') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Domingo Melenciano De La Cruz||18092600999', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Estefany -', '18099622392') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Estefany -||18099622392', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Doohan -', '18298374740') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Doohan -||18298374740', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Pedro Romero', '18097492127') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Pedro Romero||18097492127', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Robinson mata', '18099627510') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Robinson mata||18099627510', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Carmen Balbuena', '18296754307') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Carmen Balbuena||18296754307', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Luis Manuel', '18494275022') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Luis Manuel||18494275022', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Jose n', '18096692780') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Jose n||18096692780', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Carolin -', '18293341414') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Carolin -||18293341414', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Alejandro -', '18492468802') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Alejandro -||18492468802', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Cocina -', '18495270722') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Cocina -||18495270722', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Ronald Tejeda', '18298989177') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Ronald Tejeda||18298989177', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('VALENTINA  MERCEDES b -', '18496550734') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('VALENTINA  MERCEDES b -||18496550734', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Manuela -', '18098416286') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Manuela -||18098416286', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Andrés Contreras', '18096276877') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Andrés Contreras||18096276877', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Mirna ortiz', '18092238154') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Mirna ortiz||18092238154', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Teresa Sánchez', '18096677745') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Teresa Sánchez||18096677745', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Clásico flow', '18094882949') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Clásico flow||18094882949', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Tomas -', '18092566799') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Tomas -||18092566799', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Emil Liriano', '18494781147') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Emil Liriano||18494781147', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('raphael castillo', '18094616236') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('raphael castillo||18094616236', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Raphael castillo', '18094616236') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Raphael castillo||18094616236', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('joseph  prophil -', '18092078178') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('joseph  prophil -||18092078178', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Pacifico ayres', '18493520211') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Pacifico ayres||18493520211', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Aquilina.alcequiez. -', '18098564714') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Aquilina.alcequiez. -||18098564714', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Aquilina Alcequiez', '18098564714') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Aquilina Alcequiez||18098564714', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Rolando rosado', '18093908874') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Rolando rosado||18093908874', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Wilbert Geffrard', '18093767066') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Wilbert Geffrard||18093767066', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Dolores acosta s', '18094903973') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Dolores acosta s||18094903973', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Johairis -', '18297991120') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Johairis -||18297991120', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Julio -', '18292735426') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Julio -||18292735426', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Hugo Badia', '18092232991') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Hugo Badia||18092232991', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('ANA TINEO', '17188261828') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('ANA TINEO||17188261828', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Wascarnicolaspolancogarcia -', '18296750278') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Wascarnicolaspolancogarcia -||18296750278', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Nicola de la cruz', '18092823749') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Nicola de la cruz||18092823749', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Yvrose gedeus gedeusyvrose21@gmail.com', '18494409968') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Yvrose gedeus gedeusyvrose21@gmail.com||18494409968', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Francisco -', '18093605881') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Francisco -||18093605881', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Daniel duversaint', '18297921946') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Daniel duversaint||18297921946', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Alfredo Belén', '18096500077') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Alfredo Belén||18096500077', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Jeisson Gabriel', '18296909898') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Jeisson Gabriel||18296909898', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Ejemplo -', '18496450115') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Ejemplo -||18496450115', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Bernardo Calletano', '18299121199') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Bernardo Calletano||18299121199', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Leonor -', '18295091551') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Leonor -||18295091551', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Luis Enrique Sanchez Suarez', '18297685662') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Luis Enrique Sanchez Suarez||18297685662', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Eladio Díaz', '12155326857') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Eladio Díaz||12155326857', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Ederson frias de los santos', '18299227490') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Ederson frias de los santos||18299227490', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Leonela peña', '18096690450') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Leonela peña||18096690450', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Enrique -', '18299581947') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Enrique -||18299581947', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('jose -', '18099861297') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('jose -||18099861297', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Luís manual Santana', '18297079922') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Luís manual Santana||18297079922', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Josué -', '18493522166') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Josué -||18493522166', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Juan lantigua', '18297228373') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Juan lantigua||18297228373', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Francis soler', '18093714992') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Francis soler||18093714992', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Isis bautista', '18092247111') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Isis bautista||18092247111', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Doneisy Bertre', '18097579949') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Doneisy Bertre||18097579949', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Wilson Luciano adames', '18294390905') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Wilson Luciano adames||18294390905', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('JUANCARLOS -', '18292748863') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('JUANCARLOS -||18292748863', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Guadalupe Cruz Mota', '18296766477') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Guadalupe Cruz Mota||18296766477', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Jose -', '18293280170') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Jose -||18293280170', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Nancy santana', '18293383837') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Nancy santana||18293383837', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Ángel Polanco', '18293691378') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Ángel Polanco||18293691378', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Rafael nova', '18297098079') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Rafael nova||18297098079', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Wander García Santana', '18293885300') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Wander García Santana||18293885300', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Aracelis Altagracia', '18299079203') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Aracelis Altagracia||18299079203', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Yudy silverio', '18297073361') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Yudy silverio||18297073361', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Ania Sugey', '18097741525') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Ania Sugey||18097741525', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Nancy Santana', '18293383837') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Nancy Santana||18293383837', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Jose cruz809 223 1455', '18092231455') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Jose cruz809 223 1455||18092231455', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Angela Del Rosario Florian Trinidad', '18298627648') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Angela Del Rosario Florian Trinidad||18298627648', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('David vialet', '18295268109') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('David vialet||18295268109', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Octavio meran', '18099163968') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Octavio meran||18099163968', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Mirian de leon', '18098053532') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Mirian de leon||18098053532', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Carlos Jose', '18296241810') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Carlos Jose||18296241810', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Amable frías', '18492710145') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Amable frías||18492710145', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Wenceslao de la cruz de León', '18299019693') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Wenceslao de la cruz de León||18299019693', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Joel villaman', '14807575513') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Joel villaman||14807575513', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Francisco Dominguez', '18099090997') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Francisco Dominguez||18099090997', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Josefina -', '18296296484') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Josefina -||18296296484', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Ronald -', '18096097448') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Ronald -||18096097448', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Elizabeth -', '18298771983') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Elizabeth -||18298771983', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Sujey pina nuñez', '17063068358') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Sujey pina nuñez||17063068358', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Alan Checo.', '18298682748') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Alan Checo.||18298682748', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Juan Ramírez', '18498168953') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Juan Ramírez||18498168953', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Rafael Díaz Filpo', '18094898149') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Rafael Díaz Filpo||18094898149', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Elvio -', '18096271100') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Elvio -||18096271100', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Gerardo -', '18293406323') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Gerardo -||18293406323', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Maria -', '18098051046') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Maria -||18098051046', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('audy -', '18096502079') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('audy -||18096502079', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Ezequiel soriano', '18494565656') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Ezequiel soriano||18494565656', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Francisco Mora Valenzuela', '18097106150') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Francisco Mora Valenzuela||18097106150', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Natanael javier', '18094497262') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Natanael javier||18094497262', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Daniel Nuñez', '18097121629') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Daniel Nuñez||18097121629', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('José Pérez', '18492590729') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('José Pérez||18492590729', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Michael Aybar', '18095075448') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Michael Aybar||18095075448', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Ingrid Ramírez', '18494760789') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Ingrid Ramírez||18494760789', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Pedro Reyes', '18095193436') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Pedro Reyes||18095193436', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Kirsy  de la cruz -', '18092039189') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Kirsy  de la cruz -||18092039189', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Franck melvin', '18294686298') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Franck melvin||18294686298', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Maria -', '18092325330') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Maria -||18092325330', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Juan Antonio', '18093947668') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Juan Antonio||18093947668', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Estarlin Rodríguez bido', '18296476163') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Estarlin Rodríguez bido||18296476163', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Andrés encarnación Soriano', '18298495030') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Andrés encarnación Soriano||18298495030', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Damari uben zapata', '18096943823') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Damari uben zapata||18096943823', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Caren de Jesús', '18292625101') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Caren de Jesús||18292625101', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Lucy -', '18299887033') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Lucy -||18299887033', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Mario mena', '18494495098') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Mario mena||18494495098', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Wilton -', '18293755678') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Wilton -||18293755678', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Edward Montero', '18296060289') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Edward Montero||18296060289', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Paulina perez', '18292189286') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Paulina perez||18292189286', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Carmen Elizabeth Peña Santos', '18099957037') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Carmen Elizabeth Peña Santos||18099957037', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Adelso -', '18093525711') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Adelso -||18093525711', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Ana Francisco', '18095072372') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Ana Francisco||18095072372', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('María Alvarez', '18298867131') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('María Alvarez||18298867131', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Sonia santos', '18297595637') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Sonia santos||18297595637', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Aracelis Rosario', '18296988062') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Aracelis Rosario||18296988062', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Esteban Vasquez', '18293368714') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Esteban Vasquez||18293368714', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Elías -', '18298478661') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Elías -||18298478661', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Alexandra de los Santos', '18094543293') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Alexandra de los Santos||18094543293', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Diogenes del rosario', '18092090735') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Diogenes del rosario||18092090735', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Richard Freites', '18296339784') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Richard Freites||18296339784', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Estela acevedo', '18296515268') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Estela acevedo||18296515268', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Yrene Beaubrun', '18097754364') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Yrene Beaubrun||18097754364', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Wilson Rodríguez', '18296050915') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Wilson Rodríguez||18296050915', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Victor sanchez', '18093913962') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Victor sanchez||18093913962', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Guarionex Acosta', '18292650497') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Guarionex Acosta||18292650497', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Hilario -', '18096134815') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Hilario -||18096134815', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Jose -', '18495819167') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Jose -||18495819167', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Ramona -', '18297668764') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Ramona -||18297668764', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Aracelis gonzales de perez', '18298877337') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Aracelis gonzales de perez||18298877337', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Jesús Lantigua', '18092242915') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Jesús Lantigua||18092242915', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Julio perez', '18292123367') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Julio perez||18292123367', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Yoeli de la rosa', '18498039854') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Yoeli de la rosa||18498039854', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Feliciano peralta', '18294216705') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Feliciano peralta||18294216705', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Socrates Morel', '18299148855') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Socrates Morel||18299148855', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Benancia santos', '18298908451') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Benancia santos||18298908451', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Gerson Escanio matos', '18093925008') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Gerson Escanio matos||18093925008', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Patricia Inoa', '18097141717') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Patricia Inoa||18097141717', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Yanirys francois', '18292124186') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Yanirys francois||18292124186', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Dilcia -', '18294527349') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Dilcia -||18294527349', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Yokasta carrion', '18299824907') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Yokasta carrion||18299824907', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Yessica Eridania', '18297569280') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Yessica Eridania||18297569280', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Yannely -', '18297300620') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Yannely -||18297300620', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Zuleika altagracia Santana casado', '18295085429') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Zuleika altagracia Santana casado||18295085429', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Joel Joseph', '18293514660') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Joel Joseph||18293514660', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Onasi -', '18097477468') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Onasi -||18097477468', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('José frias', '18096670441') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('José frias||18096670441', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Jesus -', '18496589066') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Jesus -||18496589066', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Yomery -', '18493962388') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Yomery -||18493962388', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Martin López', '18099243141') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Martin López||18099243141', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Altagracia Hidalgo', '18293421937') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Altagracia Hidalgo||18293421937', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Ana -', '18093033786') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Ana -||18093033786', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('La gorda rd', '18298167300') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('La gorda rd||18298167300', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Daniel perdomo', '18295567809') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Daniel perdomo||18295567809', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Yenli Blue', '18097199920') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Yenli Blue||18097199920', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Alejandro Fermín', '18295631206') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Alejandro Fermín||18295631206', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Nelson Martínez', '18295505583') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Nelson Martínez||18295505583', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Ysabel  Contreras -', '18095197969') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Ysabel  Contreras -||18095197969', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Junior Valentín', '18092090404') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Junior Valentín||18092090404', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Ana -', '18099908003') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Ana -||18099908003', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Yoel Mejía', '18097071794') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Yoel Mejía||18097071794', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Ada almanzar', '14074337209') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Ada almanzar||14074337209', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Estela Mendez', '393318230557') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Estela Mendez||393318230557', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Yudelky paulino', '18097717191') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Yudelky paulino||18097717191', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Carolina -', '18295546408') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Carolina -||18295546408', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Domingo Alexander vanterpool', '18098767442') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Domingo Alexander vanterpool||18098767442', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Gustavo cid', '18093507553') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Gustavo cid||18093507553', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Francis -', '18096727400') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Francis -||18096727400', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Andres Capellan', '18297907362') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Andres Capellan||18297907362', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Martha Santana', '18097560758') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Martha Santana||18097560758', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Freddy baez', '18096186841') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Freddy baez||18096186841', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Nector Rosario', '18297061552') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Nector Rosario||18297061552', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('José Alberto Santos', '18092507891') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('José Alberto Santos||18092507891', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Olga Lidia', '18097869410') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Olga Lidia||18097869410', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Claudia rosario diaz', '18493801028') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Claudia rosario diaz||18493801028', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Junior reyes', '18494696562') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Junior reyes||18494696562', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Yajaira Robles', '18492489978') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Yajaira Robles||18492489978', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Yesenia  pinales -', '18297147901') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Yesenia  pinales -||18297147901', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Juan -', '18092081135') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Juan -||18092081135', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Odanel Zabala', '18295363411') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Odanel Zabala||18295363411', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Jesús castillo', '18094866174') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Jesús castillo||18094866174', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Jaice ruiz', '18494016385') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Jaice ruiz||18494016385', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Manuela cespedes', '18293250923') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Manuela cespedes||18293250923', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Wilfrido -', '18292919115') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Wilfrido -||18292919115', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Cristian cuevas', '18493415786') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Cristian cuevas||18493415786', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Yuby Ureña', '18296164753') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Yuby Ureña||18296164753', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Jon -', '18295850251') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Jon -||18295850251', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Leonardo Rojas', '18099432899') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Leonardo Rojas||18099432899', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Ada Almánzar', '14074337209') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Ada Almánzar||14074337209', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Julio M Bonnelly T', '18299865999') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Julio M Bonnelly T||18299865999', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Fausto -', '18094492880') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Fausto -||18094492880', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Yasmin genao', '18299326650') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Yasmin genao||18299326650', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Wilkin Pujols Mendez', '18297972567') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Wilkin Pujols Mendez||18297972567', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Adalberto polanco', '18299783859') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Adalberto polanco||18299783859', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Carlos Agramonte', '18494480704') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Carlos Agramonte||18494480704', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Francisco Alberto paredes', '18496578337') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Francisco Alberto paredes||18496578337', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Deybi Ramirez', '18296367726') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Deybi Ramirez||18296367726', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Yamilex concepcion', '18097208730') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Yamilex concepcion||18097208730', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Rudy de la cruz', '18092817202') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Rudy de la cruz||18092817202', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Faustin François', '18098904886') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Faustin François||18098904886', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('José Vargas', '18096641095') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('José Vargas||18096641095', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Argenis Rosado', '18293488010') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Argenis Rosado||18293488010', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Johana -', '18293580236') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Johana -||18293580236', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Alphi Ruiz', '18098189221') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Alphi Ruiz||18098189221', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Mauricio de jesus', '18095193725') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Mauricio de jesus||18095193725', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('José Manuel Bichara', '18098851213') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('José Manuel Bichara||18098851213', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Claudia Soto', '18298015429') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Claudia Soto||18298015429', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Helen -', '18093999327') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Helen -||18093999327', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Victor Alcantara', '18298288801') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Victor Alcantara||18298288801', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Carlos -', '18097055896') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Carlos -||18097055896', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Jimena foxan', '18293599082') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Jimena foxan||18293599082', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Edinson Ureña', '18297890139') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Edinson Ureña||18297890139', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('cesar martinez', '18092129434') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('cesar martinez||18092129434', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Franklin de lima', '18299318456') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Franklin de lima||18299318456', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Miguel Angel garcias', '18097585780') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Miguel Angel garcias||18097585780', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Nicolino Loche', '18493608700') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Nicolino Loche||18493608700', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Selenia -', '18297985334') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Selenia -||18297985334', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Juan marte', '18295083273') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Juan marte||18295083273', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Jorge -', '18494705098') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Jorge -||18494705098', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Poli -', '18494593629') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Poli -||18494593629', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Miguel angel frías Cruz', '18094155830') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Miguel angel frías Cruz||18094155830', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('La Para De La', '18297731495') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('La Para De La||18297731495', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Rafael pajero Beato', '18493900746') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Rafael pajero Beato||18493900746', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Kelvin Alcántara', '18296509070') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Kelvin Alcántara||18296509070', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('José Antonio Acosta Jiménez', '18296412997') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('José Antonio Acosta Jiménez||18296412997', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('HECTOR MONTERO', '18099868600') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('HECTOR MONTERO||18099868600', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Dominica Rosario', '18093359154') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Dominica Rosario||18093359154', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Dione Cubilete Díaz', '18498848295') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Dione Cubilete Díaz||18498848295', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Joan pilier', '18292848411') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Joan pilier||18292848411', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Juan Antonio Mejia Ruiz', '18094478537') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Juan Antonio Mejia Ruiz||18094478537', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('George Rivas', '18293200303') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('George Rivas||18293200303', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Uver -', '18099563946') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Uver -||18099563946', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Cecilin maria', '18493709428') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Cecilin maria||18493709428', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Dariel Tejada', '18496300294') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Dariel Tejada||18496300294', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Robert -', '13479610412') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Robert -||13479610412', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Yoly Reyes', '18099210560') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Yoly Reyes||18099210560', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Joanna Martínez', '18097131380') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Joanna Martínez||18097131380', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Leonel de la cruz', '18295538987') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Leonel de la cruz||18295538987', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('ARISMENDY López', '18092995266') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('ARISMENDY López||18092995266', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Wislet Carismene', '18296373315') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Wislet Carismene||18296373315', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Marina cueva', '18294100274') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Marina cueva||18294100274', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Prueba -', '18496300294') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Prueba -||18496300294', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Osiris sanchez', '18298774824') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Osiris sanchez||18298774824', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Ambiorys -', '18099811378') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Ambiorys -||18099811378', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Jorge Luis Jorge cabrera', '18093573814') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Jorge Luis Jorge cabrera||18093573814', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Nelson Fernández', '18298699028') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Nelson Fernández||18298699028', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Ana g Duluc', '18092563750') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Ana g Duluc||18092563750', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Sócrates  ramirez -', '18296311389') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Sócrates  ramirez -||18296311389', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Juan Carlos Zamora', '18092640135') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Juan Carlos Zamora||18092640135', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Blas Abreu', '18097058923') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Blas Abreu||18097058923', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Kelele Ninja', '12155432043') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Kelele Ninja||12155432043', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Enyel Diaz', '18492677744') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Enyel Diaz||18492677744', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Wilkin Sanche', '18294616029') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Wilkin Sanche||18294616029', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Amer -', '18293187523') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Amer -||18293187523', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Robert De paula', '18098353450') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Robert De paula||18098353450', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Jefferson Baptiste', '18295179182') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Jefferson Baptiste||18295179182', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Faury -', '18294570284') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Faury -||18294570284', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Massiel Mercedes', '18494260991') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Massiel Mercedes||18494260991', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Daniel tejada', '18296618503') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Daniel tejada||18296618503', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Daneivis Lissett', '18095162284') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Daneivis Lissett||18095162284', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Orlando -', '18495859023') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Orlando -||18495859023', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Suleny Cabrera', '18493547090') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Suleny Cabrera||18493547090', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Lisane -', '18099198355') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Lisane -||18099198355', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Mafeo12 -', '18293328024') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Mafeo12 -||18293328024', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Francisco -', '18097621908') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Francisco -||18097621908', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Yunior -', '18493931822') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Yunior -||18493931822', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Dahiana Reyes', '18294375038') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Dahiana Reyes||18294375038', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Papito almanzar', '18293121305') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Papito almanzar||18293121305', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Madeline Etienne', '18292963172') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Madeline Etienne||18292963172', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Rita -', '18293425814') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Rita -||18293425814', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Ado -', '18299218283') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Ado -||18299218283', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Luis reyes', '18097088918') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Luis reyes||18097088918', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Briank -', '18095132845') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Briank -||18095132845', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Juleisi piña moreno', '18493934011') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Juleisi piña moreno||18493934011', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Edwin ambiori', '18298274138') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Edwin ambiori||18298274138', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Nelvi Felix', '18492753234') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Nelvi Felix||18492753234', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Bronw -', '18299933261') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Bronw -||18299933261', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Banesa Vargas', '18293011999') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Banesa Vargas||18293011999', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Sarah Gonzalez', '18293421155') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Sarah Gonzalez||18293421155', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Anne rose', '18099176522') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Anne rose||18099176522', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Arawak Gonzalez', '18098415781') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Arawak Gonzalez||18098415781', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Rose belon', '18099094172') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Rose belon||18099094172', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Felicia Reyes', '18099235058') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Felicia Reyes||18099235058', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Felícita -', '18295862696') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Felícita -||18295862696', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Ana -', '18298028521') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Ana -||18298028521', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Aney Diaz rojas', '18292977552') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Aney Diaz rojas||18292977552', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Yvelisse Almanzar', '18093109330') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Yvelisse Almanzar||18093109330', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Carmen de la cruz', '18097579441') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Carmen de la cruz||18097579441', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Yajaira -', '18493825212') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Yajaira -||18493825212', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Nerys Martinez', '18097060121') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Nerys Martinez||18097060121', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Miguelina Fernández', '18298637370') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Miguelina Fernández||18298637370', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Lissette Ubiera Rivera', '18098766087') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Lissette Ubiera Rivera||18098766087', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Leidy -', '18292137363') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Leidy -||18292137363', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Carmen de los santos', '18498896129') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Carmen de los santos||18498896129', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Bladimir -', '18497974636') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Bladimir -||18497974636', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Miguel de peña', '18098018929') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Miguel de peña||18098018929', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Támara Rome', '18097699414') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Támara Rome||18097699414', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Yoselyn -', '18093509463') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Yoselyn -||18093509463', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Luis Rosario', '18096971722') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Luis Rosario||18096971722', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Ana belkys berroa payano', '18498796478') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Ana belkys berroa payano||18498796478', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Noelia suero', '18099831423') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Noelia suero||18099831423', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Morena Stephan', '18297236177') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Morena Stephan||18297236177', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Jhonny peralta santos', '18098274553') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Jhonny peralta santos||18098274553', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Deivi -', '18292801583') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Deivi -||18292801583', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Francisco Méndez', '18299227346') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Francisco Méndez||18299227346', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Massiel -', '18099160837') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Massiel -||18099160837', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Yenny -', '18492098954') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Yenny -||18492098954', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Mary Laura', '18494641949') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Mary Laura||18494641949', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Daysi Medina', '18292579997') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Daysi Medina||18292579997', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Dayana -', '18299898171') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Dayana -||18299898171', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Hugo paula', '18095430732') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Hugo paula||18095430732', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Sujey Martínez', '18092999286') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Sujey Martínez||18092999286', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Manolo Divalon', '18093967246') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Manolo Divalon||18093967246', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Yaquelin  salcedo -', '18292627281') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Yaquelin  salcedo -||18292627281', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Nilda  Calderon -', '18293955778') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Nilda  Calderon -||18293955778', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Héctor Lebron', '18094445203') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Héctor Lebron||18094445203', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Rosa moris', '18099733321') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Rosa moris||18099733321', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Rafael -', '18293879062') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Rafael -||18293879062', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Ana Sarita', '18295681486') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Ana Sarita||18295681486', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Ruth Suero', '18498769480') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Ruth Suero||18498769480', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('José esteves', '18292229192') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('José esteves||18292229192', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Lisbeth -', '18295897092') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Lisbeth -||18295897092', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Celia Morales', '18297417289') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Celia Morales||18297417289', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Mayi -', '18092659212') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Mayi -||18092659212', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Ana medina', '18494464960') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Ana medina||18494464960', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('José augusto nuñez', '18095139156') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('José augusto nuñez||18095139156', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Luisana -', '18492804533') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Luisana -||18492804533', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Ana Contreras', '18098475258') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Ana Contreras||18098475258', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('David Corniel', '18298629661') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('David Corniel||18298629661', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Carlos jimenez', '8098474966') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Carlos jimenez||8098474966', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Michel Jeff', '8492437530') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Michel Jeff||8492437530', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Ana rosario', '8294561625') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Ana rosario||8294561625', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Miguel De Peña Antonio', '8098018929') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Miguel De Peña Antonio||8098018929', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Woolendele -', '8097752138') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Woolendele -||8097752138', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Yajaira -', '8299738278') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Yajaira -||8299738278', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Yulys marquez', '8299873084') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Yulys marquez||8299873084', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Angélica María frias', '8293904586') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Angélica María frias||8293904586', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Jose lopez', '8297647180') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Jose lopez||8297647180', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Maribel Tejeda', '8493762434') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Maribel Tejeda||8493762434', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Estefany rosario', '8299371166') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Estefany rosario||8299371166', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Magdelyn  Sánchez -', '8493300335') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Magdelyn  Sánchez -||8493300335', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Katherine -', '8495771314') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Katherine -||8495771314', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Grey -', '8299329761') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Grey -||8299329761', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Maryest Nuñez', '8496525163') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Maryest Nuñez||8496525163', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Solanyi díaz', '8096675356') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Solanyi díaz||8096675356', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Evelyn -', '8099522126') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Evelyn -||8099522126', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Ambar Castro', '8096761626') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Ambar Castro||8096761626', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Natalie Bonifacio', '8296602823') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Natalie Bonifacio||8296602823', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Danerlly Encarnacion', '8294623584') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Danerlly Encarnacion||8294623584', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Steisy Pimentel', '8097744652') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Steisy Pimentel||8097744652', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Yasury Picon feliz', '8292337202') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Yasury Picon feliz||8292337202', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Solange santana', '8298851510') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Solange santana||8298851510', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Lívida -', '8097044919') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Lívida -||8097044919', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Gisselle -', '8494381109') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Gisselle -||8494381109', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Elina sánchez', '8097828894') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Elina sánchez||8097828894', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Carolina -', '8298205364') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Carolina -||8298205364', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Fernando Tiquitik', '8095562341') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Fernando Tiquitik||8095562341', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Alexandra Rodriguez', '8292590343') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Alexandra Rodriguez||8292590343', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Susan Robert', '8493535301') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Susan Robert||8493535301', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Biannely -', '8492640096') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Biannely -||8492640096', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Maria Paulina Rodriguez', '8297946895') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Maria Paulina Rodriguez||8297946895', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Rosa Morales', '8099780805') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Rosa Morales||8099780805', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Gomez -', '8097092008') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Gomez -||8097092008', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Yandelson -', '8296503796') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Yandelson -||8296503796', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Wanda -', '8297564439') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Wanda -||8297564439', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Roberta Almonte Rodriguez', '8295709600') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Roberta Almonte Rodriguez||8295709600', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Osmeldi -', '8097084334') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Osmeldi -||8097084334', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Dasca Joseph', '8296183104') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Dasca Joseph||8296183104', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Maria -', '8295989358') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Maria -||8295989358', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Katherine Romero', '8294828815') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Katherine Romero||8294828815', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Lisseth -', '8097654627') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Lisseth -||8097654627', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Dilenia -', '8295487779') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Dilenia -||8295487779', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Ashlyt vanessa', '8096975969') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Ashlyt vanessa||8096975969', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Yeleini Pujols', '8099319691') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Yeleini Pujols||8099319691', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Claudia Rodríguez', '8098277992') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Claudia Rodríguez||8098277992', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Katerin Gomez', '8494652204') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Katerin Gomez||8494652204', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Noemi -', '8292332100') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Noemi -||8292332100', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Jessica -', '8492074977') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Jessica -||8492074977', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('María Teresa Perez', '8493773063') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('María Teresa Perez||8493773063', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Prieba -', '8496300294') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Prieba -||8496300294', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Luisa Sterling', '8295347586') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Luisa Sterling||8295347586', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Magdelyn Sánchez', '8493300335') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Magdelyn Sánchez||8493300335', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Winton -', '8296198086') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Winton -||8296198086', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Rubens Sanchez', '8498822785') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Rubens Sanchez||8498822785', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Ingrid Ramírez', '8494760789') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Ingrid Ramírez||8494760789', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Yaritza Gomez', '8099621266') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Yaritza Gomez||8099621266', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Isa -', '8098630590') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Isa -||8098630590', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Wendely Díaz', '8093438667') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Wendely Díaz||8093438667', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Nayi torres', '8483651595') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Nayi torres||8483651595', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Wanda ESMERLIN', '8098270453') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Wanda ESMERLIN||8098270453', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Luis Martinez', '8294481626') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Luis Martinez||8294481626', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Magaly guzman', '8493586508') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Magaly guzman||8493586508', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Kenia Berenice', '8294652349') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Kenia Berenice||8294652349', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Efrain Díaz', '7874108976') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Efrain Díaz||7874108976', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Zuleyky Guzmán', '8492495911') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Zuleyky Guzmán||8492495911', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Erick Pérez', '8296935857') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Erick Pérez||8296935857', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Valentina castro', '8297120871') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Valentina castro||8297120871', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('María Santana', '8096775094') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('María Santana||8096775094', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Liliana viola', '8099946210') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Liliana viola||8099946210', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Angela Del Rosario', '8298627648') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Angela Del Rosario||8298627648', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Anna -', '8297874975') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Anna -||8297874975', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Massiel -', '8493606212') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Massiel -||8493606212', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Kenia -', '8495425353') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Kenia -||8495425353', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Deyanira -', '2039421948') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Deyanira -||2039421948', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Marvelin Ovalle Guzmán', '8297514060') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Marvelin Ovalle Guzmán||8297514060', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Janice Vasquez', '8492030626') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Janice Vasquez||8492030626', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Julio Vallejo', '8092324975') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Julio Vallejo||8092324975', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Nelson Mercedes', '8098415123') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Nelson Mercedes||8098415123', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Isaac Ogando Rojas', '8092308451') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Isaac Ogando Rojas||8092308451', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Deyani Santana', '8099099352') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Deyani Santana||8099099352', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Carlos Ferreras', '8092702369') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Carlos Ferreras||8092702369', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Jennifer Jean Louis', '8293549511') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Jennifer Jean Louis||8293549511', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Julio Gómez', '8297626778') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Julio Gómez||8297626778', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Luis moises vanderhorst García', '8098674587') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Luis moises vanderhorst García||8098674587', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Manuela Gómez', '8297880131') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Manuela Gómez||8297880131', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Ignaqui Estevez', '8092237592') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Ignaqui Estevez||8092237592', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Nayeli Mora', '8496523069') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Nayeli Mora||8496523069', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Genesis Mejía', '8295809754') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Genesis Mejía||8295809754', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Yesenia Hernández', '8297561981') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Yesenia Hernández||8297561981', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Sires y encarnacion jaquez', '8092080883') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Sires y encarnacion jaquez||8092080883', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Robeli morel', '8296374877') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Robeli morel||8296374877', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Maria del pilar hernandez', '8493527346') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Maria del pilar hernandez||8493527346', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Sheila Maria Ciscal Almaguer', '8495818159') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Sheila Maria Ciscal Almaguer||8495818159', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('francis rosario', '8093033305') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('francis rosario||8093033305', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Arlene Faneyte', '8092584145') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Arlene Faneyte||8092584145', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Altagracia De Pimentel', '8298755544') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Altagracia De Pimentel||8298755544', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Wismehylin geronimo', '8495297930') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Wismehylin geronimo||8495297930', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Samira santana', '8096091142') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Samira santana||8096091142', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('𝑀𝒶𝓇𝓎 -', '8296642030') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('𝑀𝒶𝓇𝓎 -||8296642030', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Miguel Angel Domínguez', '8298852219') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Miguel Angel Domínguez||8298852219', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Anabel -', '8098734510') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Anabel -||8098734510', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Adilca -', '8293034232') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Adilca -||8293034232', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Rosa miguelina', '8292082581') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Rosa miguelina||8292082581', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('AzLIM MAICA', '8292974315') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('AzLIM MAICA||8292974315', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Manuela -', '8292603526') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Manuela -||8292603526', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Rachel -', '8094601929') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Rachel -||8094601929', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Katherine Sánchez', '8096379236') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Katherine Sánchez||8096379236', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Dinelys -', '8295639307') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Dinelys -||8295639307', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Dessire Taveras', '8492624904') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Dessire Taveras||8492624904', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Maricela cruz', '8299801716') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Maricela cruz||8299801716', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Prueba -', '8496300294') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Prueba -||8496300294', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Maria orquidea franco', '8293362430') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Maria orquidea franco||8293362430', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Madelyn carela', '8292203816') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Madelyn carela||8292203816', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('JoséFrancisco -', '8299227346') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('JoséFrancisco -||8299227346', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Ebony Rivera severino', '8492453912') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Ebony Rivera severino||8492453912', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Yuniffer Viloria', '8296525265') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Yuniffer Viloria||8296525265', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Xiomara -', '8299322055') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Xiomara -||8299322055', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Yelixfer -', '4802384270') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Yelixfer -||4802384270', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Yesenia García', '8296497684') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Yesenia García||8296497684', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Ruhaiddy -', '8494545779') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Ruhaiddy -||8494545779', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Danna yibelis', '8295742430') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Danna yibelis||8295742430', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Raquel -', '8293273843') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Raquel -||8293273843', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Tomairy Ramirez Delgadillo', '8495262164') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Tomairy Ramirez Delgadillo||8495262164', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Mileidys segura', '8097814639') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Mileidys segura||8097814639', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Estefany Paulino', '8498597684') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Estefany Paulino||8498597684', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('sagrario isabel', '8098350530') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('sagrario isabel||8098350530', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Anabell -', '8093862130') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Anabell -||8093862130', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('María Pimentel', '8098932150') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('María Pimentel||8098932150', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Luzbiliana -', '8297551124') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Luzbiliana -||8297551124', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Aracelis -', '8298530501') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Aracelis -||8298530501', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Janna Delgado', '8292525114') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Janna Delgado||8292525114', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Miliangela Veliz', '8494497873') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Miliangela Veliz||8494497873', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Daniela espallat', '8094609908') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Daniela espallat||8094609908', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Cristal veloz', '8296616755') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Cristal veloz||8296616755', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Paulina -', '8292083525') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Paulina -||8292083525', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Anyela María', '8293758025') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Anyela María||8293758025', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Lissette Vásquez', '8298650850') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Lissette Vásquez||8298650850', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Laysha aracena', '8296025625') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Laysha aracena||8296025625', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Eliusy garcia', '8296462717') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Eliusy garcia||8296462717', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Elgin Alberto Richiez', '8093505632') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Elgin Alberto Richiez||8093505632', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Ysmeli Mendoza', '8098531287') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Ysmeli Mendoza||8098531287', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Yulisa de oleo', '8492018121') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Yulisa de oleo||8492018121', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Virgey Mateo Tavarez', '8494561968') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Virgey Mateo Tavarez||8494561968', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Juan Carlos', '8495761702') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Juan Carlos||8495761702', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Julia Hernandez', '8098992101') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Julia Hernandez||8098992101', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Juana -', '8295271780') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Juana -||8295271780', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Evangeline Janice', '8299124056') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Evangeline Janice||8299124056', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Sugeiry magdalin', '8295508009') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Sugeiry magdalin||8295508009', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Anabelis -', '8293844745') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Anabelis -||8293844745', _id);
+END $$;
+DO $$ DECLARE _id uuid; BEGIN
+  INSERT INTO clientes (nombre, telefono) VALUES ('Julieta jiemenez Martinez', '8296348505') RETURNING id INTO _id;
+  INSERT INTO _clientes_map VALUES ('Julieta jiemenez Martinez||8296348505', _id);
+END $$;
 
 -- ── Couriers ─────────────────────────────────────────
 CREATE TEMP TABLE _couriers_map (nombre text PRIMARY KEY, id uuid);
