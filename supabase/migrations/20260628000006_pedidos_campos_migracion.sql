@@ -19,4 +19,10 @@ CREATE INDEX IF NOT EXISTS idx_pedidos_es_prueba_interna ON pedidos(es_prueba_in
 CREATE INDEX IF NOT EXISTS idx_pedidos_pedido_num        ON pedidos(pedido_num);
 
 -- Unique constraint en canales_cobro.nombre (necesario para upsert en migración)
-ALTER TABLE canales_cobro ADD CONSTRAINT canales_cobro_nombre_unique UNIQUE (nombre);
+DO $$ BEGIN
+  IF NOT EXISTS (
+    SELECT 1 FROM pg_constraint WHERE conname = 'canales_cobro_nombre_unique'
+  ) THEN
+    ALTER TABLE canales_cobro ADD CONSTRAINT canales_cobro_nombre_unique UNIQUE (nombre);
+  END IF;
+END $$;
