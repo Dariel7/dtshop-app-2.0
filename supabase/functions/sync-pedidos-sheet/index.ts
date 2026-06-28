@@ -11,20 +11,25 @@ const TERMINAL_SYSTEM_STATES = new Set(['entregado', 'devuelto', 'cancelado'])
 // El estado del Sheet puede venir como "COMPLETADO AUREL" → parseamos solo la primera palabra
 const SHEET_STATE_MAP: Record<string, string> = {
   EN_ESPERA:              'pendiente',
+  EN_ESPERA_:             'pendiente',
   LLAMAR:                 'pendiente',
   NOVEDAD:                'pendiente',
   NUEVO:                  'pendiente',
   SIN_WHATSAP:            'pendiente',
   SIN_WHATSAPP:           'pendiente',
   DUPLICADO_SIN_WHATSAP:  'pendiente',
+  DUPLICADO_SIN_WHATSAPP: 'pendiente',
+  PRUEBA:                 'pendiente',
   CONFIRMADO:             'confirmado',
   EN_RUTA:                'confirmado',
-  COMPLETADO:             'entregado',   // dispara confirmar_venta_entregada
-  PARA_DEVOLUCION:        'para_devolucion',
-  DEVOLUCION:             'devuelto',    // dispara marcar_pedido_para_devolucion
-  CANCELADO:              'cancelado',
   SIN_COBERTURA:          'cancelado',
+  COMPLETADO:             'entregado',
+  PARA_DEVOLUCION:        'para_devolucion',
+  DEVOLUCION:             'devuelto',
+  DEVOLUCIÓN:             'devuelto',    // con tilde
+  CANCELADO:              'cancelado',
   CONFIRMADO_SIN_STOCK:   'cancelado',
+  CONFIRMADO_SIN:         'cancelado',
 }
 
 // ── Tipos ────────────────────────────────────────────────────────────────────
@@ -101,10 +106,22 @@ function parseSheetState(raw: string): ParsedSheetState {
     return { systemState: 'pendiente', rawCourier: null, isTesteo: false, isPruebaInterna: true }
   }
 
-  // Extraer primera palabra (el estado) y el resto (posible courier)
-  const parts      = upper.split(' ')
-  const stateKey   = parts[0].replace(/-/g, '_')
-  const courierRaw = parts.length > 1 ? parts.slice(1).join(' ') : null
+  // Estados de dos palabras que deben tratarse como una clave compuesta
+  const TWO_WORD_STATES = ['EN RUTA', 'EN ESPERA', 'SIN COBERTURA', 'SIN WHATSAP', 'SIN WHATSAPP',
+    'PARA DEVOLUCION', 'PARA DEVOLUCIÓN', 'CONFIRMADO SIN', 'DUPLICADO SIN']
+
+  const matchedTwo = TWO_WORD_STATES.find(s => upper.startsWith(s))
+  let stateKey: string
+  let courierRaw: string | null
+
+  if (matchedTwo) {
+    stateKey   = matchedTwo.replace(/ /g, '_')
+    courierRaw = upper.slice(matchedTwo.length).trim() || null
+  } else {
+    const parts = upper.split(' ')
+    stateKey    = parts[0].replace(/-/g, '_')
+    courierRaw  = parts.length > 1 ? parts.slice(1).join(' ') : null
+  }
 
   const systemState = SHEET_STATE_MAP[stateKey] ?? null
 
