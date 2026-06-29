@@ -252,16 +252,28 @@ async function procesarFila(
     return { accion: 'omitido', pedidoNum: null, detalle: 'sin numero de pedido' }
   }
 
+  // Fila sin estado — saltar silenciosamente (cabeceras extra, filas vacías, etc.)
+  if (!row.estadoRaw.trim()) {
+    return { accion: 'omitido', pedidoNum: row.pedidoNum, detalle: 'estado vacío' }
+  }
+
   const { systemState, rawCourier, isTesteo, isPruebaInterna, esNovedad } = parseSheetState(row.estadoRaw)
 
   if (!systemState) {
-    await supabase.from('sync_errors').insert({
-      sync_log_id: syncLogId,
-      pedido_num:  row.pedidoNum,
-      mensaje:     `Estado desconocido: "${row.estadoRaw}"`,
-      fila_raw:    row as unknown as Record<string, unknown>,
-    })
-    return { accion: 'error', pedidoNum: row.pedidoNum, detalle: `estado desconocido: ${row.estadoRaw}` }
+    // Solo insertar el error si no existe ya uno igual para este pedido (evita duplicados en cada ciclo)
+    const { count } = await supabase.from('sync_errors')
+      .select('id', { count: 'exact', head: true })
+      .eq('pedido_num', row.pedidoNum)
+      .ilike('mensaje', `Estado desconocido%`)
+    if ((count ?? 0) === 0) {
+      await supabase.from('sync_errors').insert({
+        sync_log_id: syncLogId,
+        pedido_num:  row.pedidoNum,
+        mensaje:     `Estado desconocido: "${row.estadoRaw}"`,
+        fila_raw:    row as unknown as Record<string, unknown>,
+      })
+    }
+    return { accion: 'omitido', pedidoNum: row.pedidoNum, detalle: `estado desconocido: ${row.estadoRaw}` }
   }
 
   // Buscar pedido existente
@@ -484,14 +496,6 @@ Deno.serve(async () => {
   const syncLogId = logRow?.id as string
 
   try {
-    const sheetId = syncState?.sheet_id ?? SHEET_ID
-    const { headers, rows } = await fetchSheetRows(apiKey, sheetId)
-
-    if (!headers.length) {
-      await supabase.from('sync_log').update({ detalle: { error: 'Sheet vacío o sin encabezados' } }).eq('id', syncLogId)
-      return new Response(JSON.stringify({ ok: false, error: 'Sheet vacío' }), { status: 200 })
-    }
-
     // Obtener configuración y verificar si el sync está activo
     const { data: syncState } = await supabase
       .from('sync_state')
@@ -506,6 +510,14 @@ Deno.serve(async () => {
         detalle: { info: 'sync desactivado manualmente' },
       }).eq('id', syncLogId)
       return new Response(JSON.stringify({ ok: true, info: 'sync desactivado' }), { status: 200 })
+    }
+
+    const sheetId = syncState?.sheet_id ?? SHEET_ID
+    const { headers, rows } = await fetchSheetRows(apiKey, sheetId)
+
+    if (!headers.length) {
+      await supabase.from('sync_log').update({ detalle: { error: 'Sheet vacío o sin encabezados' } }).eq('id', syncLogId)
+      return new Response(JSON.stringify({ ok: false, error: 'Sheet vacío' }), { status: 200 })
     }
 
     // Si es la primera ejecución, detectar el punto de corte automáticamente
