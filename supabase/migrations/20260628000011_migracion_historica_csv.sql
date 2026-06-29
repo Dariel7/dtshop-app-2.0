@@ -13440,7 +13440,7 @@ BEGIN
     es_testeo, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
-    _cid, _ccid, 'cancelado', 'CONFIRMADO AUREL, Sin stock',
+    _cid, _ccid, 'confirmado', 'CONFIRMADO AUREL, Sin stock',
     false, '2026-04-12'::date, 3490.0,
     'Higüey (Salvaleón de Higüey)', 'La Altagracia', 1349, NULL
   ) RETURNING id INTO _pid;
