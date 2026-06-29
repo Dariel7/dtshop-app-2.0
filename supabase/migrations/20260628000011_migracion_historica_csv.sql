@@ -2283,11 +2283,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-01-25'::date, 2000.0,
+    false, false, '2026-01-25'::date, 2000.0,
     'Mao', 'Valverde', 1004, NULL
   ) RETURNING id INTO _pid;
 
@@ -2316,11 +2316,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-01-25'::date, 2000.0,
+    false, false, '2026-01-25'::date, 2000.0,
     'Mao', 'Valverde', 1005, NULL
   ) RETURNING id INTO _pid;
 
@@ -2349,11 +2349,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-01-25'::date, 2000.0,
+    false, false, '2026-01-25'::date, 2000.0,
     'Mao', 'Valverde', 1006, NULL
   ) RETURNING id INTO _pid;
 
@@ -2382,11 +2382,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-01-25'::date, 2000.0,
+    false, false, '2026-01-25'::date, 2000.0,
     'Mao', 'Valverde', 1007, NULL
   ) RETURNING id INTO _pid;
 
@@ -2415,11 +2415,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-01-27'::date, 2300.0,
+    false, false, '2026-01-27'::date, 2300.0,
     'Vabaro', 'La Altagracia', 1008, NULL
   ) RETURNING id INTO _pid;
 
@@ -2448,11 +2448,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-01-27'::date, 1950.0,
+    false, false, '2026-01-27'::date, 1950.0,
     'Nagua', 'María Trinidad Sánchez', 1009, NULL
   ) RETURNING id INTO _pid;
 
@@ -2481,11 +2481,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-01-28'::date, 1950.0,
+    false, false, '2026-01-28'::date, 1950.0,
     'Santo Domingo', 'Distrito Nacional', 1010, NULL
   ) RETURNING id INTO _pid;
 
@@ -2514,11 +2514,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-01-28'::date, 1950.0,
+    false, false, '2026-01-28'::date, 1950.0,
     'Monte Cristi', 'Monte Cristi', 1011, NULL
   ) RETURNING id INTO _pid;
 
@@ -2547,11 +2547,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-01-28'::date, 1950.0,
+    false, false, '2026-01-28'::date, 1950.0,
     'República Dominicana', 'La Romana', 1012, NULL
   ) RETURNING id INTO _pid;
 
@@ -2580,11 +2580,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-01-28'::date, 1950.0,
+    false, false, '2026-01-28'::date, 1950.0,
     'Distrito Nacional', 'Santo Domingo, Distrito Nacional', 1013, NULL
   ) RETURNING id INTO _pid;
 
@@ -2613,11 +2613,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-01-28'::date, 1950.0,
+    false, false, '2026-01-28'::date, 1950.0,
     'Santo domingo', 'Distrito nacional', 1014, NULL
   ) RETURNING id INTO _pid;
 
@@ -2646,11 +2646,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-01-28'::date, 1950.0,
+    false, false, '2026-01-28'::date, 1950.0,
     'La Vega', 'LA VEGA', 1015, NULL
   ) RETURNING id INTO _pid;
 
@@ -2679,11 +2679,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-01-28'::date, 1950.0,
+    false, false, '2026-01-28'::date, 1950.0,
     'La Vega', 'LA VEGA', 1016, NULL
   ) RETURNING id INTO _pid;
 
@@ -2712,11 +2712,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-01-28'::date, 1950.0,
+    false, false, '2026-01-28'::date, 1950.0,
     'La Vega', 'LA VEGA', 1017, NULL
   ) RETURNING id INTO _pid;
 
@@ -2745,11 +2745,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-01-28'::date, 1950.0,
+    false, false, '2026-01-28'::date, 1950.0,
     'Santo Domingo Esté', 'Santo Domingo', 1018, NULL
   ) RETURNING id INTO _pid;
 
@@ -2778,11 +2778,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-01-29'::date, 1950.0,
+    false, false, '2026-01-29'::date, 1950.0,
     'Santo Domingo', 'Santo Domingo', 1019, NULL
   ) RETURNING id INTO _pid;
 
@@ -2811,11 +2811,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-01-29'::date, 1950.0,
+    false, false, '2026-01-29'::date, 1950.0,
     'Veron', 'La altagracia', 1020, NULL
   ) RETURNING id INTO _pid;
 
@@ -2844,11 +2844,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'devuelto', 'DEVUELTO',
-    false, '2026-01-30'::date, 1950.0,
+    false, false, '2026-01-30'::date, 1950.0,
     'Santo Domingo Este', 'Santo Domingo', 1021, NULL
   ) RETURNING id INTO _pid;
 
@@ -2877,11 +2877,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-01-30'::date, 1950.0,
+    false, false, '2026-01-30'::date, 1950.0,
     'Santiago De Los Caballeros', 'Santiago', 1022, NULL
   ) RETURNING id INTO _pid;
 
@@ -2910,11 +2910,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-01-31'::date, 1950.0,
+    false, false, '2026-01-31'::date, 1950.0,
     'Santo domingo', 'Distrito nacional', 1023, NULL
   ) RETURNING id INTO _pid;
 
@@ -2943,11 +2943,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-01-31'::date, 1950.0,
+    false, false, '2026-01-31'::date, 1950.0,
     'Boca de Cachón', 'Independencia', 1024, NULL
   ) RETURNING id INTO _pid;
 
@@ -2976,11 +2976,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-01-31'::date, 1950.0,
+    false, false, '2026-01-31'::date, 1950.0,
     'Barahona', 'Barahona', 1025, NULL
   ) RETURNING id INTO _pid;
 
@@ -3009,11 +3009,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-02-01'::date, 1950.0,
+    false, false, '2026-02-01'::date, 1950.0,
     'Sánchez', 'Samana', 1026, NULL
   ) RETURNING id INTO _pid;
 
@@ -3042,11 +3042,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-02-01'::date, 1950.0,
+    false, false, '2026-02-01'::date, 1950.0,
     'Bonao', 'Monseñor Nouel', 1027, NULL
   ) RETURNING id INTO _pid;
 
@@ -3075,11 +3075,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'devuelto', 'DEVUELTO',
-    false, '2026-02-01'::date, 2925.0,
+    false, false, '2026-02-01'::date, 2925.0,
     'Puerto plata', 'Puerto plata', 1028, NULL
   ) RETURNING id INTO _pid;
 
@@ -3108,11 +3108,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'pendiente', 'TESTEO',
-    true, '2026-02-04'::date, 2450.0,
+    true, false, '2026-02-04'::date, 2450.0,
     'Santo Domingo', 'Distrito Nacional', 1029, NULL
   ) RETURNING id INTO _pid;
 
@@ -3141,11 +3141,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'pendiente', 'TESTEO',
-    true, '2026-02-04'::date, 2450.0,
+    true, false, '2026-02-04'::date, 2450.0,
     'San cristobal', 'San cristobal', 1030, NULL
   ) RETURNING id INTO _pid;
 
@@ -3174,11 +3174,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'pendiente', 'TESTEO',
-    true, '2026-02-05'::date, 3449.88,
+    true, false, '2026-02-05'::date, 3449.88,
     'Sanjuan de la maguana', 'Sanjuan de la maguana', 1031, NULL
   ) RETURNING id INTO _pid;
 
@@ -3207,11 +3207,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'pendiente', 'TESTEO',
-    true, '2026-02-05'::date, 2450.0,
+    true, false, '2026-02-05'::date, 2450.0,
     'Santo Domingo', 'Santo Domingo, Distrito Nacional', 1032, NULL
   ) RETURNING id INTO _pid;
 
@@ -3240,11 +3240,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'pendiente', 'TESTEO',
-    true, '2026-02-05'::date, 3449.88,
+    true, false, '2026-02-05'::date, 3449.88,
     'San Pedro de Macoris', 'San Pedro de Macoris', 1033, NULL
   ) RETURNING id INTO _pid;
 
@@ -3273,11 +3273,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'pendiente', 'TESTEO',
-    true, '2026-02-05'::date, 3450.0,
+    true, false, '2026-02-05'::date, 3450.0,
     'San Pedro de Macoris', 'San Pedro de Macoris', 1034, NULL
   ) RETURNING id INTO _pid;
 
@@ -3306,11 +3306,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'pendiente', 'TESTEO',
-    true, '2026-02-05'::date, 3450.0,
+    true, false, '2026-02-05'::date, 3450.0,
     'La Vega', 'La Vega', 1035, NULL
   ) RETURNING id INTO _pid;
 
@@ -3339,11 +3339,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'pendiente', 'TESTEO',
-    true, '2026-02-06'::date, 3450.0,
+    true, false, '2026-02-06'::date, 3450.0,
     'Pedro Corto', 'San Juan de maguana', 1036, NULL
   ) RETURNING id INTO _pid;
 
@@ -3372,11 +3372,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'pendiente', 'TESTEO',
-    true, '2026-02-06'::date, 3450.0,
+    true, false, '2026-02-06'::date, 3450.0,
     'Santo Domingo', 'Distrito Nacional', 1037, NULL
   ) RETURNING id INTO _pid;
 
@@ -3405,11 +3405,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'pendiente', 'TESTEO',
-    true, '2026-02-06'::date, 2100.0,
+    true, false, '2026-02-06'::date, 2100.0,
     'Santo Domingo Este', 'Santo Domingo', 1038, NULL
   ) RETURNING id INTO _pid;
 
@@ -3438,11 +3438,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-02-12'::date, 2950.0,
+    false, false, '2026-02-12'::date, 2950.0,
     'Santiago', 'Santiago', 1039, NULL
   ) RETURNING id INTO _pid;
 
@@ -3471,11 +3471,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-02-12'::date, 1950.0,
+    false, false, '2026-02-12'::date, 1950.0,
     'Dajabon', 'Dajabon', 1040, NULL
   ) RETURNING id INTO _pid;
 
@@ -3504,11 +3504,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-02-12'::date, 1950.0,
+    false, false, '2026-02-12'::date, 1950.0,
     'San Cristóbal', 'San Cristóbal', 1041, NULL
   ) RETURNING id INTO _pid;
 
@@ -3537,11 +3537,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-02-14'::date, 2950.0,
+    false, false, '2026-02-14'::date, 2950.0,
     'Santos domingo', 'Santos domingo este', 1042, NULL
   ) RETURNING id INTO _pid;
 
@@ -3570,11 +3570,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-02-17'::date, 1950.0,
+    false, false, '2026-02-17'::date, 1950.0,
     'Santo Domingo Oeste', 'Santo Domingo Oeste', 1043, NULL
   ) RETURNING id INTO _pid;
 
@@ -3603,11 +3603,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-02-17'::date, 1950.0,
+    false, false, '2026-02-17'::date, 1950.0,
     'La vega', 'La vega', 1044, NULL
   ) RETURNING id INTO _pid;
 
@@ -3636,11 +3636,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'devuelto', 'DEVUELTO',
-    false, '2026-02-17'::date, 1950.0,
+    false, false, '2026-02-17'::date, 1950.0,
     'Prado las cañas de guerra', 'Santo Domingo', 1045, NULL
   ) RETURNING id INTO _pid;
 
@@ -3669,11 +3669,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-02-17'::date, 3450.0,
+    false, false, '2026-02-17'::date, 3450.0,
     'Santo Domingo Oeste', 'SANTO DOMINGO ESTE', 1046, NULL
   ) RETURNING id INTO _pid;
 
@@ -3702,11 +3702,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'devuelto', 'DEVUELTO',
-    false, '2026-02-18'::date, 3450.0,
+    false, false, '2026-02-18'::date, 3450.0,
     'San Francisco tenare Layaguiza', 'Duarte', 1047, NULL
   ) RETURNING id INTO _pid;
 
@@ -3735,11 +3735,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'devuelto', 'DEVUELTO',
-    false, '2026-02-18'::date, 3450.0,
+    false, false, '2026-02-18'::date, 3450.0,
     'Santo Domingo Norte', 'SANTO DOMINGO NORTE', 1048, NULL
   ) RETURNING id INTO _pid;
 
@@ -3768,11 +3768,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-02-18'::date, 3450.0,
+    false, false, '2026-02-18'::date, 3450.0,
     'Santo Domingo Este', 'Santo Domingo Este', 1049, NULL
   ) RETURNING id INTO _pid;
 
@@ -3801,11 +3801,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-02-18'::date, 3450.0,
+    false, false, '2026-02-18'::date, 3450.0,
     'San Juan', 'San Juan de la Maguana', 1050, NULL
   ) RETURNING id INTO _pid;
 
@@ -3834,11 +3834,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-02-19'::date, 3450.0,
+    false, false, '2026-02-19'::date, 3450.0,
     'Santiago', 'Santiago', 1051, NULL
   ) RETURNING id INTO _pid;
 
@@ -3867,11 +3867,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'devuelto', 'DEVUELTO',
-    false, '2026-02-19'::date, 1950.0,
+    false, false, '2026-02-19'::date, 1950.0,
     'Distrito Nacional', 'Santo domingo', 1052, NULL
   ) RETURNING id INTO _pid;
 
@@ -3900,11 +3900,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-02-19'::date, 3950.0,
+    false, false, '2026-02-19'::date, 3950.0,
     'Santo Domingo', 'Distrito nacional', 1053, NULL
   ) RETURNING id INTO _pid;
 
@@ -3933,11 +3933,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-02-19'::date, 3950.0,
+    false, false, '2026-02-19'::date, 3950.0,
     'Sto.Dgo. Este', 'Sto.Dgo.', 1054, NULL
   ) RETURNING id INTO _pid;
 
@@ -3966,11 +3966,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-02-19'::date, 3950.0,
+    false, false, '2026-02-19'::date, 3950.0,
     'Tamboril', 'Santiago', 1055, NULL
   ) RETURNING id INTO _pid;
 
@@ -3999,11 +3999,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-02-20'::date, 3950.0,
+    false, false, '2026-02-20'::date, 3950.0,
     'Puerto Plata', 'PUERTO PLATA', 1056, NULL
   ) RETURNING id INTO _pid;
 
@@ -4032,11 +4032,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-02-20'::date, 3950.0,
+    false, false, '2026-02-20'::date, 3950.0,
     'Miches', 'El Seibo', 1057, NULL
   ) RETURNING id INTO _pid;
 
@@ -4065,11 +4065,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-02-20'::date, 3950.0,
+    false, false, '2026-02-20'::date, 3950.0,
     'Miches', 'SEIBO', 1058, NULL
   ) RETURNING id INTO _pid;
 
@@ -4098,11 +4098,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'devuelto', 'DEVUELTO',
-    false, '2026-02-21'::date, 2450.0,
+    false, false, '2026-02-21'::date, 2450.0,
     'Jimaní', 'Independencia', 1059, NULL
   ) RETURNING id INTO _pid;
 
@@ -4131,11 +4131,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-02-21'::date, 2450.0,
+    false, false, '2026-02-21'::date, 2450.0,
     'BÁvaro', 'BÁVARO PUNTA CANA', 1060, NULL
   ) RETURNING id INTO _pid;
 
@@ -4164,11 +4164,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-02-21'::date, 3950.0,
+    false, false, '2026-02-21'::date, 3950.0,
     'Santo domingo', 'Santos Domingo', 1061, NULL
   ) RETURNING id INTO _pid;
 
@@ -4197,11 +4197,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-02-21'::date, 3950.0,
+    false, false, '2026-02-21'::date, 3950.0,
     'Santo Domingo este', 'SANTO DOMINGO este', 1062, NULL
   ) RETURNING id INTO _pid;
 
@@ -4230,11 +4230,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-02-22'::date, 2450.0,
+    false, false, '2026-02-22'::date, 2450.0,
     'Bonao', 'Monseñor Noel', 1063, NULL
   ) RETURNING id INTO _pid;
 
@@ -4263,11 +4263,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-02-22'::date, 2450.0,
+    false, false, '2026-02-22'::date, 2450.0,
     'Sábana grande de boya', 'Monte plata', 1064, NULL
   ) RETURNING id INTO _pid;
 
@@ -4296,11 +4296,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-02-22'::date, 3950.0,
+    false, false, '2026-02-22'::date, 3950.0,
     '165', 'DN', 1065, NULL
   ) RETURNING id INTO _pid;
 
@@ -4329,11 +4329,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-02-22'::date, 3950.0,
+    false, false, '2026-02-22'::date, 3950.0,
     'Villa Vasque', 'Montecristi', 1066, NULL
   ) RETURNING id INTO _pid;
 
@@ -4362,11 +4362,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-02-22'::date, 3950.0,
+    false, false, '2026-02-22'::date, 3950.0,
     'Nagua', 'María Trinidad Sánchez', 1067, NULL
   ) RETURNING id INTO _pid;
 
@@ -4395,11 +4395,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-02-23'::date, 3950.0,
+    false, false, '2026-02-23'::date, 3950.0,
     'Bonao', '-', 1068, NULL
   ) RETURNING id INTO _pid;
 
@@ -4428,11 +4428,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-02-23'::date, 3950.0,
+    false, false, '2026-02-23'::date, 3950.0,
     'Santo Domingo Norte', '-', 1069, NULL
   ) RETURNING id INTO _pid;
 
@@ -4461,11 +4461,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-02-23'::date, 3950.0,
+    false, false, '2026-02-23'::date, 3950.0,
     'higuey', '-', 1070, NULL
   ) RETURNING id INTO _pid;
 
@@ -4494,11 +4494,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-02-23'::date, 3950.0,
+    false, false, '2026-02-23'::date, 3950.0,
     'La Romana', '-', 1071, NULL
   ) RETURNING id INTO _pid;
 
@@ -4527,11 +4527,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-02-23'::date, 3950.0,
+    false, false, '2026-02-23'::date, 3950.0,
     'Las Terrenas', '-', 1072, NULL
   ) RETURNING id INTO _pid;
 
@@ -4560,11 +4560,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-02-24'::date, 3950.0,
+    false, false, '2026-02-24'::date, 3950.0,
     'Higuey', 'La Altagracia', 1073, NULL
   ) RETURNING id INTO _pid;
 
@@ -4593,11 +4593,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-02-26'::date, 3950.0,
+    false, false, '2026-02-26'::date, 3950.0,
     'concepsio de la vega', 'La vega', 1074, NULL
   ) RETURNING id INTO _pid;
 
@@ -4626,11 +4626,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-02-26'::date, 3950.0,
+    false, false, '2026-02-26'::date, 3950.0,
     'Higüey', 'La Altagracia', 1075, NULL
   ) RETURNING id INTO _pid;
 
@@ -4659,11 +4659,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-02-27'::date, 3950.0,
+    false, false, '2026-02-27'::date, 3950.0,
     'Santo Domingo', 'C/HATILLO CHAMPAÑA NO 30', 1076, NULL
   ) RETURNING id INTO _pid;
 
@@ -4692,11 +4692,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'devuelto', 'DEVUELTO',
-    false, '2026-02-27'::date, 3950.0,
+    false, false, '2026-02-27'::date, 3950.0,
     'Los ríos Neyba', 'Bahoruco', 1077, NULL
   ) RETURNING id INTO _pid;
 
@@ -4725,11 +4725,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-02-27'::date, 3950.0,
+    false, false, '2026-02-27'::date, 3950.0,
     'Colonial', 'Santo Domingo', 1078, NULL
   ) RETURNING id INTO _pid;
 
@@ -4758,11 +4758,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'devuelto', 'DEVUELTO',
-    false, '2026-02-27'::date, 3550.0,
+    false, false, '2026-02-27'::date, 3550.0,
     'HIGUEY (SALVALEÓN DE HIGUEY)', 'LA ALTAGRACIA', 1079, NULL
   ) RETURNING id INTO _pid;
 
@@ -4791,11 +4791,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-02-27'::date, 3950.0,
+    false, false, '2026-02-27'::date, 3950.0,
     'SANTO DOMINGO OESTE', 'SANTO DOMINGO', 1080, NULL
   ) RETURNING id INTO _pid;
 
@@ -4824,11 +4824,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-02-28'::date, 1775.0,
+    false, false, '2026-02-28'::date, 1775.0,
     'HATO MAYOR (HATO MAYOR DEL REY)', 'HATO MAYOR', 1081, NULL
   ) RETURNING id INTO _pid;
 
@@ -4857,11 +4857,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-02-28'::date, 3950.0,
+    false, false, '2026-02-28'::date, 3950.0,
     'EL SEIBO (SANTA CRUZ DEL SEIBO)', 'EL SEIBO', 1082, NULL
   ) RETURNING id INTO _pid;
 
@@ -4890,11 +4890,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-02-28'::date, 3950.0,
+    false, false, '2026-02-28'::date, 3950.0,
     'PUNTA CANA', 'LA ALTAGRACIA', 1083, NULL
   ) RETURNING id INTO _pid;
 
@@ -4923,11 +4923,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-02-28'::date, 3950.0,
+    false, false, '2026-02-28'::date, 3950.0,
     'SAN CRISTOBAL', 'SAN CRISTOBAL', 1084, NULL
   ) RETURNING id INTO _pid;
 
@@ -4956,11 +4956,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-02-28'::date, 3950.0,
+    false, false, '2026-02-28'::date, 3950.0,
     'LAS TERRENAS', 'SAMANÁ', 1085, NULL
   ) RETURNING id INTO _pid;
 
@@ -4989,11 +4989,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-01'::date, 2450.0,
+    false, false, '2026-03-01'::date, 2450.0,
     'SANTO DOMINGO', 'DISTRITO NACIONAL', 1086, NULL
   ) RETURNING id INTO _pid;
 
@@ -5022,11 +5022,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-01'::date, 3950.0,
+    false, false, '2026-03-01'::date, 3950.0,
     'LA OTRA BANDA (HIGUEY)', 'LA ALTAGRACIA', 1087, NULL
   ) RETURNING id INTO _pid;
 
@@ -5055,11 +5055,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-01'::date, 3950.0,
+    false, false, '2026-03-01'::date, 3950.0,
     'LA VEGA (CONCEPCIÓN DE LA VEGA)', 'LA VEGA', 1088, NULL
   ) RETURNING id INTO _pid;
 
@@ -5088,11 +5088,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-01'::date, 3950.0,
+    false, false, '2026-03-01'::date, 3950.0,
     'SAN CRISTOBAL', 'SAN CRISTOBAL', 1089, NULL
   ) RETURNING id INTO _pid;
 
@@ -5121,11 +5121,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-02'::date, 3950.0,
+    false, false, '2026-03-02'::date, 3950.0,
     'SANTIAGO DE LOS CABALLEROS', 'SANTIAGO', 1090, NULL
   ) RETURNING id INTO _pid;
 
@@ -5154,11 +5154,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'devuelto', 'DEVUELTO',
-    false, '2026-03-02'::date, 3550.0,
+    false, false, '2026-03-02'::date, 3550.0,
     'BARAHONA (SANTA CRUZ DE BARAHONA)', 'BARAHONA', 1091, NULL
   ) RETURNING id INTO _pid;
 
@@ -5187,11 +5187,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-02'::date, 3950.0,
+    false, false, '2026-03-02'::date, 3950.0,
     'BONAO', 'MONSEÑOR NOUEL', 1092, NULL
   ) RETURNING id INTO _pid;
 
@@ -5220,11 +5220,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'devuelto', 'DEVUELTO',
-    false, '2026-03-02'::date, 2450.0,
+    false, false, '2026-03-02'::date, 2450.0,
     'SAN FRANCISCO DE MACORÍS', 'DUARTE', 1093, NULL
   ) RETURNING id INTO _pid;
 
@@ -5253,11 +5253,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-03'::date, 3950.0,
+    false, false, '2026-03-03'::date, 3950.0,
     'San Cristóbal', 'San Cristóbal', 1094, NULL
   ) RETURNING id INTO _pid;
 
@@ -5286,11 +5286,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-03'::date, 3950.0,
+    false, false, '2026-03-03'::date, 3950.0,
     'Sosúa', 'Puerto Plata', 1095, NULL
   ) RETURNING id INTO _pid;
 
@@ -5319,11 +5319,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-04'::date, 3950.0,
+    false, false, '2026-03-04'::date, 3950.0,
     'Santo Domingo Este', 'Santo Domingo', 1096, NULL
   ) RETURNING id INTO _pid;
 
@@ -5352,11 +5352,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-04'::date, 3550.0,
+    false, false, '2026-03-04'::date, 3550.0,
     'Punta Cana', 'La Altagracia', 1097, NULL
   ) RETURNING id INTO _pid;
 
@@ -5385,11 +5385,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'devuelto', 'DEVUELTO',
-    false, '2026-03-04'::date, 3950.0,
+    false, false, '2026-03-04'::date, 3950.0,
     'Verón', 'La Altagracia', 1098, NULL
   ) RETURNING id INTO _pid;
 
@@ -5418,11 +5418,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-04'::date, 3950.0,
+    false, false, '2026-03-04'::date, 3950.0,
     'Puerto Plata (San Felipe de Puerto Plata)', 'Puerto Plata', 1099, NULL
   ) RETURNING id INTO _pid;
 
@@ -5451,11 +5451,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-04'::date, 3950.0,
+    false, false, '2026-03-04'::date, 3950.0,
     'Mao (Santa Cruz de Mao)', 'Valverde', 1100, NULL
   ) RETURNING id INTO _pid;
 
@@ -5484,11 +5484,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-04'::date, 3950.0,
+    false, false, '2026-03-04'::date, 3950.0,
     'Quisqueya', 'San Pedro de Macorís', 1101, NULL
   ) RETURNING id INTO _pid;
 
@@ -5517,11 +5517,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'pendiente', 'ESPERA DE CONFIRMACION',
-    false, '2026-03-04'::date, 3950.0,
+    false, false, '2026-03-04'::date, 3950.0,
     'Santo Domingo', 'Distrito Nacional', 1102, NULL
   ) RETURNING id INTO _pid;
 
@@ -5550,11 +5550,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-04'::date, 3950.0,
+    false, false, '2026-03-04'::date, 3950.0,
     'San José de las Matas', 'Santiago', 1103, NULL
   ) RETURNING id INTO _pid;
 
@@ -5583,11 +5583,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-05'::date, 3550.0,
+    false, false, '2026-03-05'::date, 3550.0,
     'Santo Domingo', 'Distrito Nacional', 1104, NULL
   ) RETURNING id INTO _pid;
 
@@ -5616,11 +5616,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-05'::date, 3950.0,
+    false, false, '2026-03-05'::date, 3950.0,
     'Río Verde Arriba', 'La Vega', 1105, NULL
   ) RETURNING id INTO _pid;
 
@@ -5649,11 +5649,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-05'::date, 3950.0,
+    false, false, '2026-03-05'::date, 3950.0,
     'Santo Domingo', 'Distrito Nacional', 1106, NULL
   ) RETURNING id INTO _pid;
 
@@ -5682,11 +5682,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-05'::date, 3950.0,
+    false, false, '2026-03-05'::date, 3950.0,
     'Higüey (Salvaleón de Higüey)', 'La Altagracia', 1107, NULL
   ) RETURNING id INTO _pid;
 
@@ -5715,11 +5715,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-05'::date, 3950.0,
+    false, false, '2026-03-05'::date, 3950.0,
     'Partido', 'Dajabón', 1108, NULL
   ) RETURNING id INTO _pid;
 
@@ -5748,11 +5748,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-05'::date, 3950.0,
+    false, false, '2026-03-05'::date, 3950.0,
     'Haina (Bajos de Haina)', 'San Cristóbal', 1109, NULL
   ) RETURNING id INTO _pid;
 
@@ -5781,11 +5781,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-06'::date, 3950.0,
+    false, false, '2026-03-06'::date, 3950.0,
     'Baní', 'Peravia', 1110, NULL
   ) RETURNING id INTO _pid;
 
@@ -5814,11 +5814,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-06'::date, 3950.0,
+    false, false, '2026-03-06'::date, 3950.0,
     'Baní', 'Peravia', 1111, NULL
   ) RETURNING id INTO _pid;
 
@@ -5847,11 +5847,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-06'::date, 3950.0,
+    false, false, '2026-03-06'::date, 3950.0,
     'Santo Domingo Norte', 'Santo Domingo', 1112, NULL
   ) RETURNING id INTO _pid;
 
@@ -5880,11 +5880,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-08'::date, 2595.0,
+    false, false, '2026-03-08'::date, 2595.0,
     'Santo Domingo Oeste', 'Santo Domingo', 1113, NULL
   ) RETURNING id INTO _pid;
 
@@ -5913,11 +5913,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'devuelto', 'DEVUELTO',
-    false, '2026-03-09'::date, 3950.0,
+    false, false, '2026-03-09'::date, 3950.0,
     'El Seibo (Santa Cruz del Seibo)', 'El Seibo', 1114, NULL
   ) RETURNING id INTO _pid;
 
@@ -5946,11 +5946,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-09'::date, 3490.0,
+    false, false, '2026-03-09'::date, 3490.0,
     'Santo Domingo Este', 'Santo Domingo', 1115, NULL
   ) RETURNING id INTO _pid;
 
@@ -5979,11 +5979,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-10'::date, 3490.0,
+    false, false, '2026-03-10'::date, 3490.0,
     'Baní', 'Peravia', 1116, NULL
   ) RETURNING id INTO _pid;
 
@@ -6012,11 +6012,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-10'::date, 3490.0,
+    false, false, '2026-03-10'::date, 3490.0,
     'Matanzas20', 'Peravia', 1117, NULL
   ) RETURNING id INTO _pid;
 
@@ -6045,11 +6045,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-10'::date, 2390.0,
+    false, false, '2026-03-10'::date, 2390.0,
     'Dajabón', 'Dajabón', 1118, NULL
   ) RETURNING id INTO _pid;
 
@@ -6078,11 +6078,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-10'::date, 3490.0,
+    false, false, '2026-03-10'::date, 3490.0,
     'Santiago de los Caballeros', 'Santiago', 1119, NULL
   ) RETURNING id INTO _pid;
 
@@ -6111,11 +6111,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-10'::date, 3490.0,
+    false, false, '2026-03-10'::date, 3490.0,
     'Santo Domingo', 'Distrito Nacional', 1120, NULL
   ) RETURNING id INTO _pid;
 
@@ -6144,11 +6144,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-10'::date, 3490.0,
+    false, false, '2026-03-10'::date, 3490.0,
     'Santo Domingo', 'Distrito Nacional', 1121, NULL
   ) RETURNING id INTO _pid;
 
@@ -6177,11 +6177,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-10'::date, 3490.0,
+    false, false, '2026-03-10'::date, 3490.0,
     'Santo Domingo', 'Distrito Nacional', 1122, NULL
   ) RETURNING id INTO _pid;
 
@@ -6210,11 +6210,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'devuelto', 'DEVUELTO',
-    false, '2026-03-10'::date, 4290.0,
+    false, false, '2026-03-10'::date, 4290.0,
     'Bávaro', 'La Altagracia', 1123, NULL
   ) RETURNING id INTO _pid;
 
@@ -6243,11 +6243,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-11'::date, 4290.0,
+    false, false, '2026-03-11'::date, 4290.0,
     'La Romana', 'La Romana', 1124, NULL
   ) RETURNING id INTO _pid;
 
@@ -6276,11 +6276,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-11'::date, 3490.0,
+    false, false, '2026-03-11'::date, 3490.0,
     'Monte Cristi (San Fernando de Monte Cristi)', 'Monte Cristi', 1125, NULL
   ) RETURNING id INTO _pid;
 
@@ -6309,11 +6309,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'devuelto', 'DEVUELTO',
-    false, '2026-03-11'::date, 3490.0,
+    false, false, '2026-03-11'::date, 3490.0,
     'BOCA CHICA', 'SANTO DOMINGO', 1126, NULL
   ) RETURNING id INTO _pid;
 
@@ -6342,11 +6342,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-11'::date, 3490.0,
+    false, false, '2026-03-11'::date, 3490.0,
     'Santiago de los Caballeros', 'Santiago', 1127, NULL
   ) RETURNING id INTO _pid;
 
@@ -6375,11 +6375,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-12'::date, 3490.0,
+    false, false, '2026-03-12'::date, 3490.0,
     'Santiago de los Caballeros', 'Santiago', 1128, NULL
   ) RETURNING id INTO _pid;
 
@@ -6408,11 +6408,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-12'::date, 4290.0,
+    false, false, '2026-03-12'::date, 4290.0,
     'Higüey (Salvaleón de Higüey)', 'La Altagracia', 1129, NULL
   ) RETURNING id INTO _pid;
 
@@ -6441,11 +6441,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'devuelto', 'DEVUELTO',
-    false, '2026-03-12'::date, 3490.0,
+    false, false, '2026-03-12'::date, 3490.0,
     'Las Lagunas de Nisibón (Higüey)', 'La Altagracia', 1130, NULL
   ) RETURNING id INTO _pid;
 
@@ -6474,11 +6474,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-12'::date, 3490.0,
+    false, false, '2026-03-12'::date, 3490.0,
     'Punta Cana', 'La Altagracia', 1131, NULL
   ) RETURNING id INTO _pid;
 
@@ -6507,11 +6507,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-12'::date, 3490.0,
+    false, false, '2026-03-12'::date, 3490.0,
     'El Seibo (Santa Cruz del Seibo)', 'El Seibo', 1132, NULL
   ) RETURNING id INTO _pid;
 
@@ -6540,11 +6540,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-12'::date, 3490.0,
+    false, false, '2026-03-12'::date, 3490.0,
     'San Juan', 'San Juan', 1133, NULL
   ) RETURNING id INTO _pid;
 
@@ -6573,11 +6573,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-12'::date, 3490.0,
+    false, false, '2026-03-12'::date, 3490.0,
     'San Pedro de Macorís', 'San Pedro de Macorís', 1134, NULL
   ) RETURNING id INTO _pid;
 
@@ -6606,11 +6606,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-12'::date, 3490.0,
+    false, false, '2026-03-12'::date, 3490.0,
     'Punta Cana', 'La Altagracia', 1135, NULL
   ) RETURNING id INTO _pid;
 
@@ -6639,11 +6639,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-13'::date, 2990.0,
+    false, false, '2026-03-13'::date, 2990.0,
     'Mao (Santa Cruz de Mao)', 'Valverde', 1136, NULL
   ) RETURNING id INTO _pid;
 
@@ -6672,11 +6672,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-13'::date, 3490.0,
+    false, false, '2026-03-13'::date, 3490.0,
     'Santo Domingo Este', 'Santo Domingo', 1137, NULL
   ) RETURNING id INTO _pid;
 
@@ -6705,11 +6705,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-13'::date, 3490.0,
+    false, false, '2026-03-13'::date, 3490.0,
     'Verón', 'La Altagracia', 1138, NULL
   ) RETURNING id INTO _pid;
 
@@ -6738,11 +6738,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-13'::date, 3490.0,
+    false, false, '2026-03-13'::date, 3490.0,
     'Higüey (Salvaleón de Higüey)', 'La Altagracia', 1139, NULL
   ) RETURNING id INTO _pid;
 
@@ -6771,11 +6771,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'devuelto', 'DEVUELTO',
-    false, '2026-03-13'::date, 3490.0,
+    false, false, '2026-03-13'::date, 3490.0,
     'La Mata', 'Sánchez Ramírez', 1140, NULL
   ) RETURNING id INTO _pid;
 
@@ -6804,11 +6804,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-13'::date, 3490.0,
+    false, false, '2026-03-13'::date, 3490.0,
     'Los Alcarrizos', 'Santo Domingo', 1141, NULL
   ) RETURNING id INTO _pid;
 
@@ -6837,11 +6837,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-13'::date, 2990.0,
+    false, false, '2026-03-13'::date, 2990.0,
     'La Mata', 'Sánchez Ramírez', 1142, NULL
   ) RETURNING id INTO _pid;
 
@@ -6870,11 +6870,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-13'::date, 3490.0,
+    false, false, '2026-03-13'::date, 3490.0,
     'Santo Domingo', 'Distrito Nacional', 1143, NULL
   ) RETURNING id INTO _pid;
 
@@ -6903,11 +6903,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-13'::date, 4290.0,
+    false, false, '2026-03-13'::date, 4290.0,
     'Santo Domingo Norte', 'Santo Domingo', 1144, NULL
   ) RETURNING id INTO _pid;
 
@@ -6936,11 +6936,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-13'::date, 3490.0,
+    false, false, '2026-03-13'::date, 3490.0,
     'San Cristóbal', 'San Cristóbal', 1145, NULL
   ) RETURNING id INTO _pid;
 
@@ -6969,11 +6969,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-13'::date, 3490.0,
+    false, false, '2026-03-13'::date, 3490.0,
     'Verón', 'La Altagracia', 1146, NULL
   ) RETURNING id INTO _pid;
 
@@ -7002,11 +7002,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-13'::date, 3490.0,
+    false, false, '2026-03-13'::date, 3490.0,
     'Puerto Plata (San Felipe de Puerto Plata)', 'Puerto Plata', 1147, NULL
   ) RETURNING id INTO _pid;
 
@@ -7035,11 +7035,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-13'::date, 4290.0,
+    false, false, '2026-03-13'::date, 4290.0,
     'La Romana', 'La Romana', 1148, NULL
   ) RETURNING id INTO _pid;
 
@@ -7068,11 +7068,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-13'::date, 3490.0,
+    false, false, '2026-03-13'::date, 3490.0,
     'Santo Domingo', 'Distrito Nacional', 1149, NULL
   ) RETURNING id INTO _pid;
 
@@ -7101,11 +7101,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-13'::date, 3490.0,
+    false, false, '2026-03-13'::date, 3490.0,
     'Azua (Azua de Compostela)', 'Azua', 1150, NULL
   ) RETURNING id INTO _pid;
 
@@ -7134,11 +7134,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-13'::date, 3490.0,
+    false, false, '2026-03-13'::date, 3490.0,
     'Verón', 'La Altagracia', 1151, NULL
   ) RETURNING id INTO _pid;
 
@@ -7167,11 +7167,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-13'::date, 3490.0,
+    false, false, '2026-03-13'::date, 3490.0,
     'La Vega (Concepción de la Vega)', 'La Vega', 1152, NULL
   ) RETURNING id INTO _pid;
 
@@ -7200,11 +7200,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-13'::date, 3490.0,
+    false, false, '2026-03-13'::date, 3490.0,
     'Santo Domingo Norte', 'Santo Domingo', 1153, NULL
   ) RETURNING id INTO _pid;
 
@@ -7233,11 +7233,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-13'::date, 3490.0,
+    false, false, '2026-03-13'::date, 3490.0,
     'Monción', 'Santiago Rodríguez', 1154, NULL
   ) RETURNING id INTO _pid;
 
@@ -7266,11 +7266,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-13'::date, 3490.0,
+    false, false, '2026-03-13'::date, 3490.0,
     'San Pedro de Macorís', 'San Pedro de Macorís', 1155, NULL
   ) RETURNING id INTO _pid;
 
@@ -7299,11 +7299,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-13'::date, 3490.0,
+    false, false, '2026-03-13'::date, 3490.0,
     'Bávaro', 'La Altagracia', 1156, NULL
   ) RETURNING id INTO _pid;
 
@@ -7332,11 +7332,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-13'::date, 3490.0,
+    false, false, '2026-03-13'::date, 3490.0,
     'Santo Domingo Este', 'Santo Domingo', 1157, NULL
   ) RETURNING id INTO _pid;
 
@@ -7365,11 +7365,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-13'::date, 2990.0,
+    false, false, '2026-03-13'::date, 2990.0,
     'Villa Hermosa', 'La Romana', 1158, NULL
   ) RETURNING id INTO _pid;
 
@@ -7398,11 +7398,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-13'::date, 3490.0,
+    false, false, '2026-03-13'::date, 3490.0,
     'Higüey (Salvaleón de Higüey)', 'La Altagracia', 1159, NULL
   ) RETURNING id INTO _pid;
 
@@ -7431,11 +7431,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-13'::date, 3490.0,
+    false, false, '2026-03-13'::date, 3490.0,
     'Puerto Plata (San Felipe de Puerto Plata)', 'Puerto Plata', 1160, NULL
   ) RETURNING id INTO _pid;
 
@@ -7464,11 +7464,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-13'::date, 4290.0,
+    false, false, '2026-03-13'::date, 4290.0,
     'Punta Cana', 'La Altagracia', 1161, NULL
   ) RETURNING id INTO _pid;
 
@@ -7497,11 +7497,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-14'::date, 3490.0,
+    false, false, '2026-03-14'::date, 3490.0,
     'San Pedro de Macorís', 'San Pedro de Macorís', 1162, NULL
   ) RETURNING id INTO _pid;
 
@@ -7530,11 +7530,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-14'::date, 3490.0,
+    false, false, '2026-03-14'::date, 3490.0,
     'Santo Domingo', 'Distrito Nacional', 1163, NULL
   ) RETURNING id INTO _pid;
 
@@ -7563,11 +7563,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-14'::date, 3490.0,
+    false, false, '2026-03-14'::date, 3490.0,
     'JIMANÍ', 'INDEPENDENCIA', 1164, NULL
   ) RETURNING id INTO _pid;
 
@@ -7596,11 +7596,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-14'::date, 3490.0,
+    false, false, '2026-03-14'::date, 3490.0,
     'Guayubín', 'Monte Cristi', 1165, NULL
   ) RETURNING id INTO _pid;
 
@@ -7629,11 +7629,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-14'::date, 2990.0,
+    false, false, '2026-03-14'::date, 2990.0,
     'Juan de Herrera', 'San Juan', 1166, NULL
   ) RETURNING id INTO _pid;
 
@@ -7662,11 +7662,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-14'::date, 3490.0,
+    false, false, '2026-03-14'::date, 3490.0,
     'Cevicos', 'Sánchez Ramírez', 1167, NULL
   ) RETURNING id INTO _pid;
 
@@ -7695,11 +7695,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-14'::date, 3490.0,
+    false, false, '2026-03-14'::date, 3490.0,
     'Moca', 'Espaillat', 1168, NULL
   ) RETURNING id INTO _pid;
 
@@ -7728,11 +7728,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-14'::date, 3490.0,
+    false, false, '2026-03-14'::date, 3490.0,
     'Higüey (Salvaleón de Higüey)', 'La Altagracia', 1169, NULL
   ) RETURNING id INTO _pid;
 
@@ -7761,11 +7761,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-14'::date, 3490.0,
+    false, false, '2026-03-14'::date, 3490.0,
     'Caleta', 'La Romana', 1170, NULL
   ) RETURNING id INTO _pid;
 
@@ -7794,11 +7794,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-15'::date, 3490.0,
+    false, false, '2026-03-15'::date, 3490.0,
     'Santo Domingo', 'Distrito Nacional', 1171, NULL
   ) RETURNING id INTO _pid;
 
@@ -7827,11 +7827,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-15'::date, 4290.0,
+    false, false, '2026-03-15'::date, 4290.0,
     'Santo Domingo', 'Distrito Nacional', 1172, NULL
   ) RETURNING id INTO _pid;
 
@@ -7860,11 +7860,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-15'::date, 2990.0,
+    false, false, '2026-03-15'::date, 2990.0,
     'Santo Domingo', 'Distrito Nacional', 1173, NULL
   ) RETURNING id INTO _pid;
 
@@ -7893,11 +7893,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-15'::date, 3490.0,
+    false, false, '2026-03-15'::date, 3490.0,
     'Santo Domingo', 'Distrito Nacional', 1174, NULL
   ) RETURNING id INTO _pid;
 
@@ -7926,11 +7926,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-15'::date, 3490.0,
+    false, false, '2026-03-15'::date, 3490.0,
     'Santo Domingo Este', 'Santo Domingo', 1175, NULL
   ) RETURNING id INTO _pid;
 
@@ -7959,11 +7959,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-15'::date, 3490.0,
+    false, false, '2026-03-15'::date, 3490.0,
     'Jarabacoa', 'La Vega', 1176, NULL
   ) RETURNING id INTO _pid;
 
@@ -7992,11 +7992,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-15'::date, 3490.0,
+    false, false, '2026-03-15'::date, 3490.0,
     'Río San Juan', 'Maria Trinidad Sanchez', 1177, NULL
   ) RETURNING id INTO _pid;
 
@@ -8025,11 +8025,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-15'::date, 3490.0,
+    false, false, '2026-03-15'::date, 3490.0,
     'Río San Juan', 'Maria Trinidad Sanchez', 1178, NULL
   ) RETURNING id INTO _pid;
 
@@ -8058,11 +8058,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-15'::date, 5500.0,
+    false, false, '2026-03-15'::date, 5500.0,
     'Santo Domingo', 'Distrito Nacional', 1179, NULL
   ) RETURNING id INTO _pid;
 
@@ -8091,11 +8091,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-15'::date, 3490.0,
+    false, false, '2026-03-15'::date, 3490.0,
     'Villa Altagracia', 'San Cristóbal', 1180, NULL
   ) RETURNING id INTO _pid;
 
@@ -8124,11 +8124,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-15'::date, 2990.0,
+    false, false, '2026-03-15'::date, 2990.0,
     'SANTO DOMINGO', 'DISTRITO NACIONAL', 1181, NULL
   ) RETURNING id INTO _pid;
 
@@ -8157,11 +8157,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-15'::date, 3490.0,
+    false, false, '2026-03-15'::date, 3490.0,
     'Santo Domingo', 'Distrito Nacional', 1182, NULL
   ) RETURNING id INTO _pid;
 
@@ -8190,11 +8190,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-15'::date, 3490.0,
+    false, false, '2026-03-15'::date, 3490.0,
     'SANTO DOMINGO', 'DISTRITO NACIONAL', 1183, NULL
   ) RETURNING id INTO _pid;
 
@@ -8223,11 +8223,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-15'::date, 3490.0,
+    false, false, '2026-03-15'::date, 3490.0,
     'San Cristóbal', 'San Cristóbal', 1184, NULL
   ) RETURNING id INTO _pid;
 
@@ -8256,11 +8256,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-15'::date, 1163.0,
+    false, false, '2026-03-15'::date, 1163.0,
     'San Juan', 'San Juan', 1185, NULL
   ) RETURNING id INTO _pid;
 
@@ -8289,11 +8289,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-15'::date, 3490.0,
+    false, false, '2026-03-15'::date, 3490.0,
     'San Antonio de Guerra', 'Santo Domingo', 1186, NULL
   ) RETURNING id INTO _pid;
 
@@ -8322,11 +8322,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-15'::date, 3490.0,
+    false, false, '2026-03-15'::date, 3490.0,
     'Pedro Brand', 'Santo Domingo', 1187, NULL
   ) RETURNING id INTO _pid;
 
@@ -8355,11 +8355,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-15'::date, 2990.0,
+    false, false, '2026-03-15'::date, 2990.0,
     'Azua (Azua de Compostela)', 'Azua', 1188, NULL
   ) RETURNING id INTO _pid;
 
@@ -8388,11 +8388,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-16'::date, 3490.0,
+    false, false, '2026-03-16'::date, 3490.0,
     'Baní', 'Peravia', 1189, NULL
   ) RETURNING id INTO _pid;
 
@@ -8421,11 +8421,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-16'::date, 3490.0,
+    false, false, '2026-03-16'::date, 3490.0,
     'Villa Montellano', 'Puerto Plata', 1190, NULL
   ) RETURNING id INTO _pid;
 
@@ -8454,11 +8454,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-16'::date, 3490.0,
+    false, false, '2026-03-16'::date, 3490.0,
     'Villa Montellano', 'Puerto Plata', 1191, NULL
   ) RETURNING id INTO _pid;
 
@@ -8487,11 +8487,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-16'::date, 3490.0,
+    false, false, '2026-03-16'::date, 3490.0,
     'Hato Mayor (Hato Mayor del Rey)', 'Hato Mayor', 1192, NULL
   ) RETURNING id INTO _pid;
 
@@ -8520,11 +8520,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-16'::date, 3490.0,
+    false, false, '2026-03-16'::date, 3490.0,
     'Hato Mayor (Hato Mayor del Rey)', 'Hato Mayor', 1193, NULL
   ) RETURNING id INTO _pid;
 
@@ -8553,11 +8553,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-16'::date, 3490.0,
+    false, false, '2026-03-16'::date, 3490.0,
     'Jarabacoa', 'La Vega', 1194, NULL
   ) RETURNING id INTO _pid;
 
@@ -8586,11 +8586,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-16'::date, 2990.0,
+    false, false, '2026-03-16'::date, 2990.0,
     'La Caleta', 'Santo Domingo', 1195, NULL
   ) RETURNING id INTO _pid;
 
@@ -8619,11 +8619,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-16'::date, 3490.0,
+    false, false, '2026-03-16'::date, 3490.0,
     'Piedra Blanca', 'Monseñor Nouel', 1196, NULL
   ) RETURNING id INTO _pid;
 
@@ -8652,11 +8652,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-17'::date, 4290.0,
+    false, false, '2026-03-17'::date, 4290.0,
     'Santo Domingo', 'Santo Domingo', 1197, NULL
   ) RETURNING id INTO _pid;
 
@@ -8685,11 +8685,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-17'::date, 1495.0,
+    false, false, '2026-03-17'::date, 1495.0,
     'Las Matas de Farfán', 'San Juan', 1198, NULL
   ) RETURNING id INTO _pid;
 
@@ -8718,11 +8718,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'devuelto', 'DEVUELTO',
-    false, '2026-03-17'::date, 3490.0,
+    false, false, '2026-03-17'::date, 3490.0,
     'San Cristóbal', 'San Cristóbal', 1199, NULL
   ) RETURNING id INTO _pid;
 
@@ -8751,11 +8751,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'devuelto', 'DEVUELTO',
-    false, '2026-03-17'::date, 4290.0,
+    false, false, '2026-03-17'::date, 4290.0,
     'Bávaro', 'La Altagracia', 1200, NULL
   ) RETURNING id INTO _pid;
 
@@ -8784,11 +8784,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-17'::date, 2990.0,
+    false, false, '2026-03-17'::date, 2990.0,
     'San Pedro de Macorís', 'San Pedro de Macorís', 1201, NULL
   ) RETURNING id INTO _pid;
 
@@ -8817,11 +8817,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-17'::date, 3490.0,
+    false, false, '2026-03-17'::date, 3490.0,
     'La Vega (Concepción de la Vega)', 'La Vega', 1202, NULL
   ) RETURNING id INTO _pid;
 
@@ -8850,11 +8850,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-17'::date, 3490.0,
+    false, false, '2026-03-17'::date, 3490.0,
     'Santo Domingo Este', 'Santo Domingo', 1203, NULL
   ) RETURNING id INTO _pid;
 
@@ -8883,11 +8883,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-17'::date, 3490.0,
+    false, false, '2026-03-17'::date, 3490.0,
     'Las Charcas', 'Azua', 1204, NULL
   ) RETURNING id INTO _pid;
 
@@ -8916,11 +8916,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-17'::date, 3490.0,
+    false, false, '2026-03-17'::date, 3490.0,
     'El Cercado', 'San Juan', 1205, NULL
   ) RETURNING id INTO _pid;
 
@@ -8949,11 +8949,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-17'::date, 3490.0,
+    false, false, '2026-03-17'::date, 3490.0,
     'Constanza', 'La Vega', 1206, NULL
   ) RETURNING id INTO _pid;
 
@@ -8982,11 +8982,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-18'::date, 3490.0,
+    false, false, '2026-03-18'::date, 3490.0,
     'Santo Domingo Este', 'Santo Domingo', 1207, NULL
   ) RETURNING id INTO _pid;
 
@@ -9015,11 +9015,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-18'::date, 3490.0,
+    false, false, '2026-03-18'::date, 3490.0,
     'Licey al Medio', 'Santiago', 1208, NULL
   ) RETURNING id INTO _pid;
 
@@ -9048,11 +9048,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-18'::date, 3490.0,
+    false, false, '2026-03-18'::date, 3490.0,
     'Santiago de los Caballeros', 'Santiago', 1209, NULL
   ) RETURNING id INTO _pid;
 
@@ -9081,11 +9081,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-18'::date, 3490.0,
+    false, false, '2026-03-18'::date, 3490.0,
     'Santo Domingo', 'Distrito Nacional', 1210, NULL
   ) RETURNING id INTO _pid;
 
@@ -9114,11 +9114,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-18'::date, 3490.0,
+    false, false, '2026-03-18'::date, 3490.0,
     'Jarabacoa', 'La Vega', 1211, NULL
   ) RETURNING id INTO _pid;
 
@@ -9147,11 +9147,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-18'::date, 3490.0,
+    false, false, '2026-03-18'::date, 3490.0,
     'San Francisco de Macorís', 'Duarte', 1212, NULL
   ) RETURNING id INTO _pid;
 
@@ -9180,11 +9180,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-18'::date, 3490.0,
+    false, false, '2026-03-18'::date, 3490.0,
     'San Francisco de Macorís', 'Duarte', 1213, NULL
   ) RETURNING id INTO _pid;
 
@@ -9213,11 +9213,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-18'::date, 3490.0,
+    false, false, '2026-03-18'::date, 3490.0,
     'Santo Domingo Este', 'Santo Domingo', 1214, NULL
   ) RETURNING id INTO _pid;
 
@@ -9246,11 +9246,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-18'::date, 3490.0,
+    false, false, '2026-03-18'::date, 3490.0,
     'La Romana', 'La Romana', 1215, NULL
   ) RETURNING id INTO _pid;
 
@@ -9279,11 +9279,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-18'::date, 2990.0,
+    false, false, '2026-03-18'::date, 2990.0,
     'Las Terrenas', 'Samaná', 1216, NULL
   ) RETURNING id INTO _pid;
 
@@ -9312,11 +9312,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-19'::date, 3490.0,
+    false, false, '2026-03-19'::date, 3490.0,
     'Higüey (Salvaleón de Higüey)', 'La Altagracia', 1217, NULL
   ) RETURNING id INTO _pid;
 
@@ -9345,11 +9345,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-19'::date, 3490.0,
+    false, false, '2026-03-19'::date, 3490.0,
     'Santo Domingo', 'Distrito Nacional', 1218, NULL
   ) RETURNING id INTO _pid;
 
@@ -9378,11 +9378,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-19'::date, 3490.0,
+    false, false, '2026-03-19'::date, 3490.0,
     'Santo Domingo', 'Distrito Nacional', 1219, NULL
   ) RETURNING id INTO _pid;
 
@@ -9411,11 +9411,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-19'::date, 3490.0,
+    false, false, '2026-03-19'::date, 3490.0,
     'Comendador', 'Elías Piña', 1220, NULL
   ) RETURNING id INTO _pid;
 
@@ -9444,11 +9444,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'devuelto', 'DEVUELTO',
-    false, '2026-03-19'::date, 3490.0,
+    false, false, '2026-03-19'::date, 3490.0,
     'Santo Domingo Este', 'Santo Domingo', 1221, NULL
   ) RETURNING id INTO _pid;
 
@@ -9477,11 +9477,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-19'::date, 3490.0,
+    false, false, '2026-03-19'::date, 3490.0,
     'Higüey (Salvaleón de Higüey)', 'La Altagracia', 1222, NULL
   ) RETURNING id INTO _pid;
 
@@ -9510,11 +9510,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-19'::date, 8970.0,
+    false, false, '2026-03-19'::date, 8970.0,
     'Higüey (Salvaleón de Higüey)', 'La Altagracia', 1223, NULL
   ) RETURNING id INTO _pid;
 
@@ -9543,11 +9543,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-19'::date, 4290.0,
+    false, false, '2026-03-19'::date, 4290.0,
     'Neiba', 'Bahoruco', 1224, NULL
   ) RETURNING id INTO _pid;
 
@@ -9576,11 +9576,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-19'::date, 4290.0,
+    false, false, '2026-03-19'::date, 4290.0,
     'Barahona (Santa Cruz de Barahona)', 'Barahona', 1225, NULL
   ) RETURNING id INTO _pid;
 
@@ -9609,11 +9609,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-19'::date, 3490.0,
+    false, false, '2026-03-19'::date, 3490.0,
     'Villa Tapia (La Jagua)', 'Hermanas Mirabal (Salcedo)', 1226, NULL
   ) RETURNING id INTO _pid;
 
@@ -9642,11 +9642,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-19'::date, 2990.0,
+    false, false, '2026-03-19'::date, 2990.0,
     'Verón', 'La Altagracia', 1227, NULL
   ) RETURNING id INTO _pid;
 
@@ -9675,11 +9675,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'devuelto', 'DEVUELTO',
-    false, '2026-03-19'::date, 3490.0,
+    false, false, '2026-03-19'::date, 3490.0,
     'Santo Domingo', 'Distrito Nacional', 1228, NULL
   ) RETURNING id INTO _pid;
 
@@ -9708,11 +9708,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-19'::date, 2990.0,
+    false, false, '2026-03-19'::date, 2990.0,
     'Puerto Plata (San Felipe de Puerto Plata)', 'Puerto Plata', 1229, NULL
   ) RETURNING id INTO _pid;
 
@@ -9741,11 +9741,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-20'::date, 3490.0,
+    false, false, '2026-03-20'::date, 3490.0,
     'La otra Banda (Higüey)', 'Santo Domingo', 1230, NULL
   ) RETURNING id INTO _pid;
 
@@ -9774,11 +9774,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-20'::date, 3490.0,
+    false, false, '2026-03-20'::date, 3490.0,
     'Los Alcarrizos', 'Santo Domingo', 1231, NULL
   ) RETURNING id INTO _pid;
 
@@ -9807,11 +9807,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'pendiente', 'NOVEDAD',
-    false, '2026-03-20'::date, 3490.0,
+    false, true, '2026-03-20'::date, 3490.0,
     'Santiago de los Caballeros', 'Santiago', 1232, NULL
   ) RETURNING id INTO _pid;
 
@@ -9840,11 +9840,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-20'::date, 3490.0,
+    false, false, '2026-03-20'::date, 3490.0,
     'La Romana', 'La Romana', 1233, NULL
   ) RETURNING id INTO _pid;
 
@@ -9873,11 +9873,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-20'::date, 3490.0,
+    false, false, '2026-03-20'::date, 3490.0,
     'Castañuelas', 'Monte Cristi', 1234, NULL
   ) RETURNING id INTO _pid;
 
@@ -9906,11 +9906,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-20'::date, 3490.0,
+    false, false, '2026-03-20'::date, 3490.0,
     'Jaquimeyes', 'Barahona', 1235, NULL
   ) RETURNING id INTO _pid;
 
@@ -9939,11 +9939,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-20'::date, 3490.0,
+    false, false, '2026-03-20'::date, 3490.0,
     'La Romana', 'La Romana', 1236, NULL
   ) RETURNING id INTO _pid;
 
@@ -9972,11 +9972,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-21'::date, 3490.0,
+    false, false, '2026-03-21'::date, 3490.0,
     'El Seibo (Santa Cruz del Seibo)', 'El Seibo', 1237, NULL
   ) RETURNING id INTO _pid;
 
@@ -10005,11 +10005,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-21'::date, 2990.0,
+    false, false, '2026-03-21'::date, 2990.0,
     'Moca', 'Espaillat', 1238, NULL
   ) RETURNING id INTO _pid;
 
@@ -10038,11 +10038,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-21'::date, 3490.0,
+    false, false, '2026-03-21'::date, 3490.0,
     'Higüey (Salvaleón de Higüey)', 'La Altagracia', 1239, NULL
   ) RETURNING id INTO _pid;
 
@@ -10071,11 +10071,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-21'::date, 3490.0,
+    false, false, '2026-03-21'::date, 3490.0,
     'Gaspar Hernández', 'Espaillat', 1240, NULL
   ) RETURNING id INTO _pid;
 
@@ -10104,11 +10104,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-21'::date, 2990.0,
+    false, false, '2026-03-21'::date, 2990.0,
     'Santo Domingo Norte', 'Santo Domingo', 1241, NULL
   ) RETURNING id INTO _pid;
 
@@ -10137,11 +10137,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-21'::date, 3490.0,
+    false, false, '2026-03-21'::date, 3490.0,
     'San Pedro de Macorís', 'San Pedro de Macorís', 1242, NULL
   ) RETURNING id INTO _pid;
 
@@ -10170,11 +10170,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-21'::date, 3490.0,
+    false, false, '2026-03-21'::date, 3490.0,
     'La otra Banda (Higüey)', 'La Altagracia', 1243, NULL
   ) RETURNING id INTO _pid;
 
@@ -10203,11 +10203,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-21'::date, 3490.0,
+    false, false, '2026-03-21'::date, 3490.0,
     'San Cristóbal', 'San Cristóbal', 1244, NULL
   ) RETURNING id INTO _pid;
 
@@ -10236,11 +10236,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-21'::date, 3490.0,
+    false, false, '2026-03-21'::date, 3490.0,
     'Santo Domingo', 'Distrito Nacional', 1245, NULL
   ) RETURNING id INTO _pid;
 
@@ -10269,11 +10269,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-21'::date, 3490.0,
+    false, false, '2026-03-21'::date, 3490.0,
     'San Francisco de Macorís', 'Duarte', 1246, NULL
   ) RETURNING id INTO _pid;
 
@@ -10302,11 +10302,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-21'::date, 3490.0,
+    false, false, '2026-03-21'::date, 3490.0,
     'Santo Domingo', 'Distrito Nacional', 1247, NULL
   ) RETURNING id INTO _pid;
 
@@ -10335,11 +10335,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-21'::date, 4290.0,
+    false, false, '2026-03-21'::date, 4290.0,
     'Azua (Azua de Compostela)', 'Azua', 1248, NULL
   ) RETURNING id INTO _pid;
 
@@ -10368,11 +10368,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-22'::date, 3490.0,
+    false, false, '2026-03-22'::date, 3490.0,
     'La Vega (Concepción de la Vega)', 'La Vega', 1249, NULL
   ) RETURNING id INTO _pid;
 
@@ -10401,11 +10401,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'devuelto', 'DEVUELTO',
-    false, '2026-03-22'::date, 2990.0,
+    false, false, '2026-03-22'::date, 2990.0,
     'Tenares', 'Hermanas Mirabal (Salcedo)', 1250, NULL
   ) RETURNING id INTO _pid;
 
@@ -10434,11 +10434,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-22'::date, 3490.0,
+    false, false, '2026-03-22'::date, 3490.0,
     'Santo Domingo', 'Distrito Nacional', 1251, NULL
   ) RETURNING id INTO _pid;
 
@@ -10467,11 +10467,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-22'::date, 3490.0,
+    false, false, '2026-03-22'::date, 3490.0,
     'Punta Cana', 'La Altagracia', 1252, NULL
   ) RETURNING id INTO _pid;
 
@@ -10500,11 +10500,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-22'::date, 3490.0,
+    false, false, '2026-03-22'::date, 3490.0,
     'Santiago de los Caballeros', 'Santiago', 1253, NULL
   ) RETURNING id INTO _pid;
 
@@ -10533,11 +10533,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-22'::date, 3490.0,
+    false, false, '2026-03-22'::date, 3490.0,
     'El Naranjal', 'San José de Ocoa', 1254, NULL
   ) RETURNING id INTO _pid;
 
@@ -10566,11 +10566,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-22'::date, 3490.0,
+    false, false, '2026-03-22'::date, 3490.0,
     'Santiago de los Caballeros', 'Santiago', 1255, NULL
   ) RETURNING id INTO _pid;
 
@@ -10599,11 +10599,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'devuelto', 'DEVUELTO',
-    false, '2026-03-22'::date, 3290.0,
+    false, false, '2026-03-22'::date, 3290.0,
     'Bayahíbe (San Rafael del Yuma)', 'La Altagracia', 1256, NULL
   ) RETURNING id INTO _pid;
 
@@ -10632,11 +10632,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-22'::date, 2990.0,
+    false, false, '2026-03-22'::date, 2990.0,
     'Punta Cana', 'La Altagracia', 1257, NULL
   ) RETURNING id INTO _pid;
 
@@ -10665,11 +10665,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'devuelto', 'DEVUELTO',
-    false, '2026-03-23'::date, 2990.0,
+    false, false, '2026-03-23'::date, 2990.0,
     'San Francisco de Macorís', 'Duarte', 1258, NULL
   ) RETURNING id INTO _pid;
 
@@ -10698,11 +10698,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-23'::date, 3490.0,
+    false, false, '2026-03-23'::date, 3490.0,
     'Santo Domingo', 'Distrito Nacional', 1259, NULL
   ) RETURNING id INTO _pid;
 
@@ -10731,11 +10731,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-23'::date, 3490.0,
+    false, false, '2026-03-23'::date, 3490.0,
     'La Romana', 'La Romana', 1260, NULL
   ) RETURNING id INTO _pid;
 
@@ -10764,11 +10764,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-23'::date, 2990.0,
+    false, false, '2026-03-23'::date, 2990.0,
     'Cotuí', 'Sánchez Ramírez', 1261, NULL
   ) RETURNING id INTO _pid;
 
@@ -10797,11 +10797,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-23'::date, 3490.0,
+    false, false, '2026-03-23'::date, 3490.0,
     'Santo Domingo Este', 'Santo Domingo', 1262, NULL
   ) RETURNING id INTO _pid;
 
@@ -10830,11 +10830,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-23'::date, 3490.0,
+    false, false, '2026-03-23'::date, 3490.0,
     'Tenares', 'Hermanas Mirabal (Salcedo)', 1263, NULL
   ) RETURNING id INTO _pid;
 
@@ -10863,11 +10863,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-23'::date, 2990.0,
+    false, false, '2026-03-23'::date, 2990.0,
     'Santo Domingo Oeste', 'Santo Domingo', 1264, NULL
   ) RETURNING id INTO _pid;
 
@@ -10896,11 +10896,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-23'::date, 3490.0,
+    false, false, '2026-03-23'::date, 3490.0,
     'San Pedro de Macorís', 'San Pedro de Macorís', 1265, NULL
   ) RETURNING id INTO _pid;
 
@@ -10929,11 +10929,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-23'::date, 3490.0,
+    false, false, '2026-03-23'::date, 3490.0,
     'Cabrera (Tres Amarras)', 'Maria Trinidad Sanchez', 1266, NULL
   ) RETURNING id INTO _pid;
 
@@ -10962,11 +10962,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-23'::date, 2990.0,
+    false, false, '2026-03-23'::date, 2990.0,
     'Bávaro', 'La Altagracia', 1267, NULL
   ) RETURNING id INTO _pid;
 
@@ -10995,11 +10995,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-24'::date, 3490.0,
+    false, false, '2026-03-24'::date, 3490.0,
     'Constanza', 'La Vega', 1268, NULL
   ) RETURNING id INTO _pid;
 
@@ -11028,11 +11028,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-24'::date, 3490.0,
+    false, false, '2026-03-24'::date, 3490.0,
     'Santo Domingo', 'Distrito Nacional', 1269, NULL
   ) RETURNING id INTO _pid;
 
@@ -11061,11 +11061,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-24'::date, 3490.0,
+    false, false, '2026-03-24'::date, 3490.0,
     'San Juan', 'San Juan', 1270, NULL
   ) RETURNING id INTO _pid;
 
@@ -11094,11 +11094,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'devuelto', 'DEVUELTO',
-    false, '2026-03-24'::date, 3490.0,
+    false, false, '2026-03-24'::date, 3490.0,
     'Higüey (Salvaleón de Higüey)', 'La Altagracia', 1271, NULL
   ) RETURNING id INTO _pid;
 
@@ -11127,11 +11127,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-24'::date, 3490.0,
+    false, false, '2026-03-24'::date, 3490.0,
     'Santo Domingo Este', 'Santo Domingo', 1272, NULL
   ) RETURNING id INTO _pid;
 
@@ -11160,11 +11160,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-24'::date, 3490.0,
+    false, false, '2026-03-24'::date, 3490.0,
     'San Pedro de Macorís', 'San Pedro de Macorís', 1273, NULL
   ) RETURNING id INTO _pid;
 
@@ -11193,11 +11193,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-25'::date, 2990.0,
+    false, false, '2026-03-25'::date, 2990.0,
     'Cevicos', 'Sánchez Ramírez', 1274, NULL
   ) RETURNING id INTO _pid;
 
@@ -11226,11 +11226,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-25'::date, 2990.0,
+    false, false, '2026-03-25'::date, 2990.0,
     'San Pedro de Macorís', 'San Pedro de Macorís', 1275, NULL
   ) RETURNING id INTO _pid;
 
@@ -11259,11 +11259,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-25'::date, 3490.0,
+    false, false, '2026-03-25'::date, 3490.0,
     'La Vega (Concepción de la Vega)', 'La Vega', 1276, NULL
   ) RETURNING id INTO _pid;
 
@@ -11292,11 +11292,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-25'::date, 4290.0,
+    false, false, '2026-03-25'::date, 4290.0,
     'San Juan', 'San Juan', 1277, NULL
   ) RETURNING id INTO _pid;
 
@@ -11325,11 +11325,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-25'::date, 3490.0,
+    false, false, '2026-03-25'::date, 3490.0,
     'Santo Domingo Norte', 'Santo Domingo', 1278, NULL
   ) RETURNING id INTO _pid;
 
@@ -11358,11 +11358,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'devuelto', 'DEVUELTO',
-    false, '2026-03-25'::date, 3490.0,
+    false, false, '2026-03-25'::date, 3490.0,
     'Santo Domingo Este', 'Santo Domingo', 1279, NULL
   ) RETURNING id INTO _pid;
 
@@ -11391,11 +11391,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-25'::date, 3490.0,
+    false, false, '2026-03-25'::date, 3490.0,
     'Higüey (Salvaleón de Higüey)', 'La Altagracia', 1280, NULL
   ) RETURNING id INTO _pid;
 
@@ -11424,11 +11424,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-25'::date, 2990.0,
+    false, false, '2026-03-25'::date, 2990.0,
     'La Romana', 'La Romana', 1281, NULL
   ) RETURNING id INTO _pid;
 
@@ -11457,11 +11457,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-25'::date, 3490.0,
+    false, false, '2026-03-25'::date, 3490.0,
     'Barahona (Santa Cruz de Barahona)', 'Barahona', 1282, NULL
   ) RETURNING id INTO _pid;
 
@@ -11490,11 +11490,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-25'::date, 3490.0,
+    false, false, '2026-03-25'::date, 3490.0,
     'San Pedro de Macorís', 'San Pedro de Macorís', 1283, NULL
   ) RETURNING id INTO _pid;
 
@@ -11523,11 +11523,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-26'::date, 2990.0,
+    false, false, '2026-03-26'::date, 2990.0,
     'San Francisco de Macorís', 'Duarte', 1284, NULL
   ) RETURNING id INTO _pid;
 
@@ -11556,11 +11556,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-26'::date, 3490.0,
+    false, false, '2026-03-26'::date, 3490.0,
     'Santiago de los Caballeros', 'Santiago', 1285, NULL
   ) RETURNING id INTO _pid;
 
@@ -11589,11 +11589,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-26'::date, 3490.0,
+    false, false, '2026-03-26'::date, 3490.0,
     'Santiago de los Caballeros', 'Santiago', 1286, NULL
   ) RETURNING id INTO _pid;
 
@@ -11622,11 +11622,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-26'::date, 4290.0,
+    false, false, '2026-03-26'::date, 4290.0,
     'Santo Domingo Norte', 'Santo Domingo', 1287, NULL
   ) RETURNING id INTO _pid;
 
@@ -11655,11 +11655,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-26'::date, 4290.0,
+    false, false, '2026-03-26'::date, 4290.0,
     'Cotuí', 'Sánchez Ramírez', 1288, NULL
   ) RETURNING id INTO _pid;
 
@@ -11688,11 +11688,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-26'::date, 3490.0,
+    false, false, '2026-03-26'::date, 3490.0,
     'Santiago de los Caballeros', 'Santiago', 1289, NULL
   ) RETURNING id INTO _pid;
 
@@ -11721,11 +11721,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-26'::date, 3490.0,
+    false, false, '2026-03-26'::date, 3490.0,
     'La Salvia - Los Quemados', 'Monseñor Nouel', 1290, NULL
   ) RETURNING id INTO _pid;
 
@@ -11754,11 +11754,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-27'::date, 3490.0,
+    false, false, '2026-03-27'::date, 3490.0,
     'Puerto Plata (San Felipe de Puerto Plata)', 'Puerto Plata', 1291, NULL
   ) RETURNING id INTO _pid;
 
@@ -11787,11 +11787,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-27'::date, 4290.0,
+    false, false, '2026-03-27'::date, 4290.0,
     'Santiago de los Caballeros', 'Santiago', 1292, NULL
   ) RETURNING id INTO _pid;
 
@@ -11820,11 +11820,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-27'::date, 2990.0,
+    false, false, '2026-03-27'::date, 2990.0,
     'Bonao', 'Monseñor Nouel', 1293, NULL
   ) RETURNING id INTO _pid;
 
@@ -11853,11 +11853,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'devuelto', 'DEVUELTO',
-    false, '2026-03-27'::date, 2990.0,
+    false, false, '2026-03-27'::date, 2990.0,
     'Santiago de los Caballeros', 'Santiago', 1294, NULL
   ) RETURNING id INTO _pid;
 
@@ -11886,11 +11886,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-27'::date, 3490.0,
+    false, false, '2026-03-27'::date, 3490.0,
     'San Pedro de Macorís', 'San Pedro de Macorís', 1295, NULL
   ) RETURNING id INTO _pid;
 
@@ -11919,11 +11919,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-27'::date, 3490.0,
+    false, false, '2026-03-27'::date, 3490.0,
     'San Pedro de Macorís', 'San Pedro de Macorís', 1296, NULL
   ) RETURNING id INTO _pid;
 
@@ -11952,11 +11952,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-27'::date, 3490.0,
+    false, false, '2026-03-27'::date, 3490.0,
     'Fantino', 'Sánchez Ramírez', 1297, NULL
   ) RETURNING id INTO _pid;
 
@@ -11985,11 +11985,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-27'::date, 3490.0,
+    false, false, '2026-03-27'::date, 3490.0,
     'San Pedro de Macorís', 'San Pedro de Macorís', 1298, NULL
   ) RETURNING id INTO _pid;
 
@@ -12018,11 +12018,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-28'::date, 3490.0,
+    false, false, '2026-03-28'::date, 3490.0,
     'Sabaneta (San Ignacio de Sabaneta)', 'Santiago Rodríguez', 1299, NULL
   ) RETURNING id INTO _pid;
 
@@ -12051,11 +12051,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-28'::date, 3490.0,
+    false, false, '2026-03-28'::date, 3490.0,
     'Santiago de los Caballeros', 'Santiago', 1300, NULL
   ) RETURNING id INTO _pid;
 
@@ -12084,11 +12084,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'devuelto', 'DEVUELTO',
-    false, '2026-03-28'::date, 3490.0,
+    false, false, '2026-03-28'::date, 3490.0,
     'Higüey (Salvaleón de Higüey)', 'La Altagracia', 1302, NULL
   ) RETURNING id INTO _pid;
 
@@ -12117,11 +12117,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-28'::date, 3490.0,
+    false, false, '2026-03-28'::date, 3490.0,
     'La Romana', 'La Romana', 1303, NULL
   ) RETURNING id INTO _pid;
 
@@ -12150,11 +12150,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-28'::date, 3490.0,
+    false, false, '2026-03-28'::date, 3490.0,
     'Nigua (San Gregorio de Nigua)', 'San Cristóbal', 1304, NULL
   ) RETURNING id INTO _pid;
 
@@ -12183,11 +12183,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-28'::date, 3490.0,
+    false, false, '2026-03-28'::date, 3490.0,
     'Santo Domingo Este', 'Santo Domingo', 1305, NULL
   ) RETURNING id INTO _pid;
 
@@ -12216,11 +12216,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-28'::date, 3490.0,
+    false, false, '2026-03-28'::date, 3490.0,
     'Santo Domingo', 'Distrito Nacional', 1306, NULL
   ) RETURNING id INTO _pid;
 
@@ -12249,11 +12249,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-28'::date, 3490.0,
+    false, false, '2026-03-28'::date, 3490.0,
     'Santo Domingo', 'Distrito Nacional', 1307, NULL
   ) RETURNING id INTO _pid;
 
@@ -12282,11 +12282,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-28'::date, 2990.0,
+    false, false, '2026-03-28'::date, 2990.0,
     'Higüey (Salvaleón de Higüey)', 'La Altagracia', 1308, NULL
   ) RETURNING id INTO _pid;
 
@@ -12315,11 +12315,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-28'::date, 3490.0,
+    false, false, '2026-03-28'::date, 3490.0,
     'San José de Ocoa', 'San José de Ocoa', 1309, NULL
   ) RETURNING id INTO _pid;
 
@@ -12348,11 +12348,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'devuelto', 'DEVUELTO',
-    false, '2026-03-29'::date, 3490.0,
+    false, false, '2026-03-29'::date, 3490.0,
     'Cotuí', 'Sánchez Ramírez', 1310, NULL
   ) RETURNING id INTO _pid;
 
@@ -12381,11 +12381,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-29'::date, 2990.0,
+    false, false, '2026-03-29'::date, 2990.0,
     'Hato Mayor (Hato Mayor del Rey)', 'Hato Mayor', 1311, NULL
   ) RETURNING id INTO _pid;
 
@@ -12414,11 +12414,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-29'::date, 4290.0,
+    false, false, '2026-03-29'::date, 4290.0,
     'Jarabacoa', 'La Vega', 1312, NULL
   ) RETURNING id INTO _pid;
 
@@ -12447,11 +12447,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-29'::date, 3490.0,
+    false, false, '2026-03-29'::date, 3490.0,
     'Haina (Bajos de Haina)', 'San Cristóbal', 1313, NULL
   ) RETURNING id INTO _pid;
 
@@ -12480,11 +12480,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-03-29'::date, 3490.0,
+    false, false, '2026-03-29'::date, 3490.0,
     'Santo Domingo Este', 'Santo Domingo', 1314, NULL
   ) RETURNING id INTO _pid;
 
@@ -12513,11 +12513,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-03-29'::date, 3490.0,
+    false, false, '2026-03-29'::date, 3490.0,
     'Santo Domingo Este', 'Santo Domingo', 1315, NULL
   ) RETURNING id INTO _pid;
 
@@ -12546,11 +12546,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-04-05'::date, 2990.0,
+    false, false, '2026-04-05'::date, 2990.0,
     'Santiago de los Caballeros', 'Santiago', 1316, NULL
   ) RETURNING id INTO _pid;
 
@@ -12579,11 +12579,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-04-05'::date, 3490.0,
+    false, false, '2026-04-05'::date, 3490.0,
     'Santiago de los Caballeros', 'Santiago', 1317, NULL
   ) RETURNING id INTO _pid;
 
@@ -12612,11 +12612,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-04-05'::date, 2990.0,
+    false, false, '2026-04-05'::date, 2990.0,
     'Cotuí', 'Sánchez Ramírez', 1318, NULL
   ) RETURNING id INTO _pid;
 
@@ -12645,11 +12645,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-04-05'::date, 3490.0,
+    false, false, '2026-04-05'::date, 3490.0,
     'Las Lagunas de Nisibón (Higüey)', 'La Altagracia', 1319, NULL
   ) RETURNING id INTO _pid;
 
@@ -12678,11 +12678,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-04-05'::date, 3490.0,
+    false, false, '2026-04-05'::date, 3490.0,
     'San Juan', 'San Juan', 1320, NULL
   ) RETURNING id INTO _pid;
 
@@ -12711,11 +12711,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-04-05'::date, 4290.0,
+    false, false, '2026-04-05'::date, 4290.0,
     'Bávaro', 'La Altagracia', 1321, NULL
   ) RETURNING id INTO _pid;
 
@@ -12744,11 +12744,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-04-06'::date, 3490.0,
+    false, false, '2026-04-06'::date, 3490.0,
     'San Cristóbal', 'San Cristóbal', 1322, NULL
   ) RETURNING id INTO _pid;
 
@@ -12777,11 +12777,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-04-06'::date, 3490.0,
+    false, false, '2026-04-06'::date, 3490.0,
     'Licey al Medio', 'Santiago', 1323, NULL
   ) RETURNING id INTO _pid;
 
@@ -12810,11 +12810,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-04-06'::date, 3490.0,
+    false, false, '2026-04-06'::date, 3490.0,
     'Santo Domingo Este', 'Santo Domingo', 1324, NULL
   ) RETURNING id INTO _pid;
 
@@ -12843,11 +12843,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-04-06'::date, 3490.0,
+    false, false, '2026-04-06'::date, 3490.0,
     'Santo Domingo Este', 'Santo Domingo', 1325, NULL
   ) RETURNING id INTO _pid;
 
@@ -12876,11 +12876,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-04-06'::date, 3490.0,
+    false, false, '2026-04-06'::date, 3490.0,
     'Cotuí', 'Sánchez Ramírez', 1326, NULL
   ) RETURNING id INTO _pid;
 
@@ -12909,11 +12909,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-04-06'::date, 3490.0,
+    false, false, '2026-04-06'::date, 3490.0,
     'San Juan', 'San Juan', 1327, NULL
   ) RETURNING id INTO _pid;
 
@@ -12942,11 +12942,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'pendiente', 'ESPERA DE CONFIRMACION',
-    false, '2026-04-07'::date, 3490.0,
+    false, false, '2026-04-07'::date, 3490.0,
     'Santo Domingo Este', 'Santo Domingo', 1328, NULL
   ) RETURNING id INTO _pid;
 
@@ -12975,11 +12975,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-04-07'::date, 4290.0,
+    false, false, '2026-04-07'::date, 4290.0,
     'Santo Domingo Oeste', 'Santo Domingo', 1329, NULL
   ) RETURNING id INTO _pid;
 
@@ -13008,11 +13008,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-04-07'::date, 3490.0,
+    false, false, '2026-04-07'::date, 3490.0,
     'Verón', 'La Altagracia', 1330, NULL
   ) RETURNING id INTO _pid;
 
@@ -13041,11 +13041,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-04-07'::date, 3490.0,
+    false, false, '2026-04-07'::date, 3490.0,
     'Santo Domingo Este', 'Santo Domingo', 1331, NULL
   ) RETURNING id INTO _pid;
 
@@ -13074,11 +13074,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'CANCELADO',
-    false, '2026-04-08'::date, 3490.0,
+    false, false, '2026-04-08'::date, 3490.0,
     'La Vega (Concepción de la Vega)', 'La Vega', 1332, NULL
   ) RETURNING id INTO _pid;
 
@@ -13107,11 +13107,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-04-08'::date, 3490.0,
+    false, false, '2026-04-08'::date, 3490.0,
     'Monte Plata', 'Monte Plata', 1333, NULL
   ) RETURNING id INTO _pid;
 
@@ -13140,11 +13140,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'entregado', 'ENTREGADO',
-    false, '2026-04-08'::date, 3490.0,
+    false, false, '2026-04-08'::date, 3490.0,
     'Nagua', 'Maria Trinidad Sanchez', 1334, NULL
   ) RETURNING id INTO _pid;
 
@@ -13173,11 +13173,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, _ccid, 'devuelto', 'DEVOLUCION MOTORIZADA',
-    false, '2026-04-08'::date, 2990.0,
+    false, false, '2026-04-08'::date, 2990.0,
     'Santo Domingo Este', 'Santo Domingo', 1336, NULL
   ) RETURNING id INTO _pid;
 
@@ -13206,11 +13206,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, _ccid, 'devuelto', 'DEVOLUCION AUREL',
-    false, '2026-04-09'::date, 4290.0,
+    false, false, '2026-04-09'::date, 4290.0,
     'La otra Banda (Higüey)', 'La Altagracia', 1337, NULL
   ) RETURNING id INTO _pid;
 
@@ -13239,11 +13239,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, _ccid, 'entregado', 'COMPLETADO AUREL',
-    false, '2026-04-09'::date, 4290.0,
+    false, false, '2026-04-09'::date, 4290.0,
     'Santiago de los Caballeros', 'Santiago', 1338, NULL
   ) RETURNING id INTO _pid;
 
@@ -13272,11 +13272,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, _ccid, 'entregado', 'COMPLETADO AUREL',
-    false, '2026-04-09'::date, 4290.0,
+    false, false, '2026-04-09'::date, 4290.0,
     'Hato Mayor (Hato Mayor del Rey)', 'Hato Mayor', 1339, NULL
   ) RETURNING id INTO _pid;
 
@@ -13305,11 +13305,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, _ccid, 'entregado', 'COMPLETADO AUREL',
-    false, '2026-04-10'::date, 3490.0,
+    false, false, '2026-04-10'::date, 3490.0,
     'La Romana', 'La Romana', 1341, 'entregado 05/05'
   ) RETURNING id INTO _pid;
 
@@ -13338,11 +13338,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, NULL, 'cancelado', 'SIN COBERTURA',
-    false, '2026-04-10'::date, 3490.0,
+    false, false, '2026-04-10'::date, 3490.0,
     'Yaguate (San Gregorio de Yaguate)', 'San Cristóbal', 1342, 'NO LLEGAMOS A YAGUATE'
   ) RETURNING id INTO _pid;
 
@@ -13371,11 +13371,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, _ccid, 'cancelado', 'CANCELADO',
-    false, '2026-04-10'::date, 2990.0,
+    false, false, '2026-04-10'::date, 2990.0,
     'Punta Cana', 'La Altagracia', 1343, 'no preparado'
   ) RETURNING id INTO _pid;
 
@@ -13404,11 +13404,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, _ccid, 'entregado', 'COMPLETADO AUREL',
-    false, '2026-04-11'::date, 1950.0,
+    false, false, '2026-04-11'::date, 1950.0,
     'Nagua', 'Maria Trinidad Sanchez', 1347, NULL
   ) RETURNING id INTO _pid;
 
@@ -13437,11 +13437,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, _ccid, 'confirmado', 'CONFIRMADO AUREL, Sin stock',
-    false, '2026-04-12'::date, 3490.0,
+    false, false, '2026-04-12'::date, 3490.0,
     'Higüey (Salvaleón de Higüey)', 'La Altagracia', 1349, NULL
   ) RETURNING id INTO _pid;
 
@@ -13470,11 +13470,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, _ccid, 'cancelado', 'CANCELADO',
-    false, '2026-04-13'::date, 3390.0,
+    false, false, '2026-04-13'::date, 3390.0,
     'La Vega (Concepción de la Vega)', 'La Vega', 1350, '5 intentos de contacto sin respuesta'
   ) RETURNING id INTO _pid;
 
@@ -13503,11 +13503,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, _ccid, 'entregado', 'COMPLETADO MOTORIZADO',
-    false, '2026-04-14'::date, 2490.0,
+    false, false, '2026-04-14'::date, 2490.0,
     'Santo Domingo', 'Distrito Nacional', 1352, 'ACT EL 15-04 COMPLETADO'
   ) RETURNING id INTO _pid;
 
@@ -13536,11 +13536,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, _ccid, 'devuelto', 'DEVOLUCIÓN MOTORIZADO',
-    false, '2026-04-14'::date, 1990.0,
+    false, false, '2026-04-14'::date, 1990.0,
     'Santo Domingo Este', 'Santo Domingo', 1353, NULL
   ) RETURNING id INTO _pid;
 
@@ -13569,11 +13569,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, _ccid, 'cancelado', 'CANCELADO',
-    false, '2026-04-14'::date, 2490.0,
+    false, false, '2026-04-14'::date, 2490.0,
     'Samaná (Santa Bárbara de Samaná)', 'Samaná', 1354, NULL
   ) RETURNING id INTO _pid;
 
@@ -13602,11 +13602,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, _ccid, 'devuelto', 'DEVOLUCIÓN MOTORIZADO',
-    false, '2026-04-15'::date, 2490.0,
+    false, false, '2026-04-15'::date, 2490.0,
     'San Luis', 'Santo Domingo', 1355, 'cliente indica que si desea recibir el dia sabado, no tenia el dinero.'
   ) RETURNING id INTO _pid;
 
@@ -13635,11 +13635,11 @@ BEGIN
   -- Insert pedido
   INSERT INTO pedidos (
     cliente_id, canal_cobro_id, estado, estado_original,
-    es_testeo, fecha_pedido, precio_total,
+    es_testeo, es_novedad, fecha_pedido, precio_total,
     ciudad, provincia, pedido_num, notas
   ) VALUES (
     _cid, _ccid, 'devuelto', 'DEVOLUCION AUREL',
-    false, '2026-04-15'::date, 2490.0,
+    false, false, '2026-04-15'::date, 2490.0,
     'Monte Plata', 'Monte Plata', 1357, 'PARA EL MARTES 21'
   ) RETURNING id INTO _pid;
 

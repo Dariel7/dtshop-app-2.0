@@ -39,6 +39,7 @@ interface ParsedSheetState {
   rawCourier: string | null   // courier extraído del texto del estado, ej "AUREL" de "COMPLETADO AUREL"
   isTesteo: boolean
   isPruebaInterna: boolean
+  esNovedad: boolean          // inconveniente activo con la entrega (cliente no contesta, dirección incorrecta, etc.)
 }
 
 interface ParsedRow {
@@ -100,10 +101,10 @@ function parseSheetState(raw: string): ParsedSheetState {
   const upper = raw.trim().toUpperCase().replace(/\s+/g, ' ')
 
   if (upper.startsWith('TESTEO')) {
-    return { systemState: 'pendiente', rawCourier: null, isTesteo: true, isPruebaInterna: false }
+    return { systemState: 'pendiente', rawCourier: null, isTesteo: true, isPruebaInterna: false, esNovedad: false }
   }
   if (upper.startsWith('PRUEBA_INTERNA') || upper.startsWith('PRUEBA INTERNA')) {
-    return { systemState: 'pendiente', rawCourier: null, isTesteo: false, isPruebaInterna: true }
+    return { systemState: 'pendiente', rawCourier: null, isTesteo: false, isPruebaInterna: true, esNovedad: false }
   }
 
   // Estados de dos palabras que deben tratarse como una clave compuesta
@@ -123,9 +124,15 @@ function parseSheetState(raw: string): ParsedSheetState {
     courierRaw  = parts.length > 1 ? parts.slice(1).join(' ') : null
   }
 
-  const systemState = SHEET_STATE_MAP[stateKey] ?? null
+  let systemState = SHEET_STATE_MAP[stateKey] ?? null
 
-  return { systemState, rawCourier: courierRaw, isTesteo: false, isPruebaInterna: false }
+  // DUPLICADO → always cancelado
+  if (stateKey.startsWith('DUPLICADO')) systemState = 'cancelado'
+
+  // NOVEDAD: inconveniente activo con la entrega
+  const esNovedad = upper.includes('NOVEDAD')
+
+  return { systemState, rawCourier: courierRaw, isTesteo: false, isPruebaInterna: false, esNovedad }
 }
 
 // ── Parsear fila del Sheet ────────────────────────────────────────────────────
@@ -245,7 +252,7 @@ async function procesarFila(
     return { accion: 'omitido', pedidoNum: null, detalle: 'sin numero de pedido' }
   }
 
-  const { systemState, rawCourier, isTesteo, isPruebaInterna } = parseSheetState(row.estadoRaw)
+  const { systemState, rawCourier, isTesteo, isPruebaInterna, esNovedad } = parseSheetState(row.estadoRaw)
 
   if (!systemState) {
     await supabase.from('sync_errors').insert({
@@ -278,6 +285,7 @@ async function procesarFila(
     if (estadoActual === systemState) {
       // Actualizar campos descriptivos igualmente
       await supabase.from('pedidos').update({
+        es_novedad:                 esNovedad,
         direccion:                  row.direccion,
         ciudad:                     row.ciudad,
         provincia:                  row.provincia,
@@ -348,14 +356,15 @@ async function procesarFila(
     } else {
       // Actualización directa de estado (sin asiento contable)
       await supabase.from('pedidos').update({
-        estado:          systemState,
-        canal_cobro_id:  courierId ?? pedidoExistente.canal_cobro_id,
-        es_testeo:       isTesteo || undefined,
+        estado:            systemState,
+        canal_cobro_id:    courierId ?? pedidoExistente.canal_cobro_id,
+        es_testeo:         isTesteo || undefined,
         es_prueba_interna: isPruebaInterna || undefined,
-        direccion:       row.direccion,
-        ciudad:          row.ciudad,
-        provincia:       row.provincia,
-        notas:           row.comentario,
+        es_novedad:        esNovedad,
+        direccion:         row.direccion,
+        ciudad:            row.ciudad,
+        provincia:         row.provincia,
+        notas:             row.comentario,
         ultima_actualizacion_sheet: safeDate(row.ultimaActualizacion),
       }).eq('id', pedidoId)
     }
@@ -391,6 +400,7 @@ async function procesarFila(
         pedido_num:    row.pedidoNum,
         es_testeo:     isTesteo,
         es_prueba_interna: isPruebaInterna,
+        es_novedad:    esNovedad,
         ultima_actualizacion_sheet: safeDate(row.ultimaActualizacion),
       })
       .select('id')
