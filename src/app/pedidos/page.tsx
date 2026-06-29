@@ -19,7 +19,7 @@ export default async function Pedidos({
   let query = supabase
     .from('pedidos')
     .select(`
-      id, pedido_num, estado, fecha_pedido, fecha_entrega, precio_total, metodo_pago_confirmado,
+      id, pedido_num, estado, es_novedad, fecha_pedido, fecha_entrega, precio_total, metodo_pago_confirmado,
       clientes(nombre, telefono),
       canales_cobro(nombre)
     `, { count: 'exact' })
@@ -77,7 +77,7 @@ export default async function Pedidos({
             </thead>
             <tbody className="table-divider">
               {(pedidos ?? []).map((p: {
-                id: string; pedido_num: number | null; estado: string
+                id: string; pedido_num: number | null; estado: string; es_novedad: boolean
                 fecha_pedido: string; fecha_entrega: string
                 precio_total: number; metodo_pago_confirmado: string | null
                 clientes: { nombre: string; telefono: string }[] | null
@@ -97,9 +97,16 @@ export default async function Pedidos({
                     <td className="td text-muted">{courier?.nombre ?? '—'}</td>
                     <td className="td text-muted">{fmtFecha(p.fecha_pedido)}</td>
                     <td className="td">
-                      <span className={ESTADO_BADGE[p.estado] ?? 'badge-neutral'}>
-                        {ESTADO_LABEL[p.estado] ?? p.estado}
-                      </span>
+                      <div className="flex items-center gap-1.5 flex-wrap">
+                        <span className={ESTADO_BADGE[p.estado] ?? 'badge-neutral'}>
+                          {ESTADO_LABEL[p.estado] ?? p.estado}
+                        </span>
+                        {p.es_novedad && (
+                          <span className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-xs font-semibold bg-amber-500/15 text-amber-400 border border-amber-500/30">
+                            ⚠ NOVEDAD
+                          </span>
+                        )}
+                      </div>
                     </td>
                     <td className="td text-right font-medium">RD$ {fmt(p.precio_total)}</td>
                     <td className="td text-muted capitalize">{p.metodo_pago_confirmado ?? '—'}</td>
